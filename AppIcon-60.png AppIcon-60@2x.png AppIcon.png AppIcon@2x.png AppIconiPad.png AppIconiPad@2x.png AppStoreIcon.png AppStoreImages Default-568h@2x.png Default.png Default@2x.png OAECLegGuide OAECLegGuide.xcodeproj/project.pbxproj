@@ -1463,7 +1463,7 @@
 					};
 				};
 			};
-			buildConfigurationList = AF24819915BB6A250070924E /* Build configuration list for PBXProject "OAECLegGuide" */;
+			buildConfigurationList = AF24819915BB6A250070924E /* Build configuration list for PBXProject "AppIcon-60.png AppIcon-60@2x.png AppIcon.png AppIcon@2x.png AppIconiPad.png AppIconiPad@2x.png AppStoreIcon.png AppStoreImages Default-568h@2x.png Default.png Default@2x.png OAECLegGuide OAECLegGuide" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -1984,7 +1984,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AF24819915BB6A250070924E /* Build configuration list for PBXProject "OAECLegGuide" */ = {
+		AF24819915BB6A250070924E /* Build configuration list for PBXProject "AppIcon-60.png AppIcon-60@2x.png AppIcon.png AppIcon@2x.png AppIconiPad.png AppIconiPad@2x.png AppStoreIcon.png AppStoreImages Default-568h@2x.png Default.png Default@2x.png OAECLegGuide OAECLegGuide" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AF2481C915BB6A260070924E /* Debug */,
