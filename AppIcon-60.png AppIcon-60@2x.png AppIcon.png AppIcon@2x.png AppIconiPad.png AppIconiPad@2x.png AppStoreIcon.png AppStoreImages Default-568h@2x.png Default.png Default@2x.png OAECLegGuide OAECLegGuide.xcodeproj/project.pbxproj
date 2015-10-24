@@ -379,6 +379,7 @@
 		AFEF4BD715C7971D00896FA9 /* NSString+Stuff.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEF4BD615C7971D00896FA9 /* NSString+Stuff.m */; };
 		AFF2BB1815C860BB00F1B379 /* CommitteeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF2BB1715C860BB00F1B379 /* CommitteeListViewController.m */; };
 		AFF2BB1B15C8610100F1B379 /* CommitteeListView-iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFF2BB1A15C8610100F1B379 /* CommitteeListView-iPhone.xib */; };
+		CE0530521BDC14F800C01EBA /* OAECLegGuide-55 in Resources */ = {isa = PBXBuildFile; fileRef = CE0530511BDC14F800C01EBA /* OAECLegGuide-55 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -797,6 +798,7 @@
 		AFF2BB1615C860BB00F1B379 /* CommitteeListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommitteeListViewController.h; sourceTree = "<group>"; };
 		AFF2BB1715C860BB00F1B379 /* CommitteeListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommitteeListViewController.m; sourceTree = "<group>"; };
 		AFF2BB1A15C8610100F1B379 /* CommitteeListView-iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "CommitteeListView-iPhone.xib"; sourceTree = "<group>"; };
+		CE0530511BDC14F800C01EBA /* OAECLegGuide-55 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "OAECLegGuide-55"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -833,6 +835,7 @@
 		AF24819415BB6A250070924E = {
 			isa = PBXGroup;
 			children = (
+				CE0530511BDC14F800C01EBA /* OAECLegGuide-55 */,
 				AF255CC3184CBAF60053CC73 /* AppIcon-60.png */,
 				AF255CC4184CBAF60053CC73 /* AppIcon-60@2x.png */,
 				AFC926A51614408D009538FD /* Default-568h@2x.png */,
@@ -1485,6 +1488,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE0530521BDC14F800C01EBA /* OAECLegGuide-55 in Resources */,
 				AF2481AE15BB6A260070924E /* InfoPlist.strings in Resources */,
 				AF2481E615BB6C5E0070924E /* MainStoryboard_iPhone.storyboard in Resources */,
 				AF2482D615BDDA2A0070924E /* iconplaceholder.png in Resources */,
