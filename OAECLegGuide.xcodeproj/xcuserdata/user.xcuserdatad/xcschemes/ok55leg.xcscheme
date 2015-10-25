@@ -17,7 +17,7 @@
                BlueprintIdentifier = "AF24819E15BB6A250070924E"
                BuildableName = "ok55leg.app"
                BlueprintName = "ok55leg"
-               ReferencedContainer = "container:AppIcon-60.png AppIcon-60@2x.png AppIcon.png AppIcon@2x.png AppIconiPad.png AppIconiPad@2x.png AppStoreIcon.png AppStoreImages Default-568h@2x.png Default.png Default@2x.png OAECLegGuide OAECLegGuide.xcodeproj">
+               ReferencedContainer = "container:OAECLegGuide.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
             BlueprintIdentifier = "AF24819E15BB6A250070924E"
             BuildableName = "ok55leg.app"
             BlueprintName = "ok55leg"
-            ReferencedContainer = "container:AppIcon-60.png AppIcon-60@2x.png AppIcon.png AppIcon@2x.png AppIconiPad.png AppIconiPad@2x.png AppStoreIcon.png AppStoreImages Default-568h@2x.png Default.png Default@2x.png OAECLegGuide OAECLegGuide.xcodeproj">
+            ReferencedContainer = "container:OAECLegGuide.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -58,7 +58,7 @@
             BlueprintIdentifier = "AF24819E15BB6A250070924E"
             BuildableName = "ok55leg.app"
             BlueprintName = "ok55leg"
-            ReferencedContainer = "container:AppIcon-60.png AppIcon-60@2x.png AppIcon.png AppIcon@2x.png AppIconiPad.png AppIconiPad@2x.png AppStoreIcon.png AppStoreImages Default-568h@2x.png Default.png Default@2x.png OAECLegGuide OAECLegGuide.xcodeproj">
+            ReferencedContainer = "container:OAECLegGuide.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -77,7 +77,7 @@
             BlueprintIdentifier = "AF24819E15BB6A250070924E"
             BuildableName = "ok55leg.app"
             BlueprintName = "ok55leg"
-            ReferencedContainer = "container:AppIcon-60.png AppIcon-60@2x.png AppIcon.png AppIcon@2x.png AppIconiPad.png AppIconiPad@2x.png AppStoreIcon.png AppStoreImages Default-568h@2x.png Default.png Default@2x.png OAECLegGuide OAECLegGuide.xcodeproj">
+            ReferencedContainer = "container:OAECLegGuide.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

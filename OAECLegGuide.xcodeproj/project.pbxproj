@@ -379,7 +379,9 @@
 		AFEF4BD715C7971D00896FA9 /* NSString+Stuff.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEF4BD615C7971D00896FA9 /* NSString+Stuff.m */; };
 		AFF2BB1815C860BB00F1B379 /* CommitteeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF2BB1715C860BB00F1B379 /* CommitteeListViewController.m */; };
 		AFF2BB1B15C8610100F1B379 /* CommitteeListView-iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFF2BB1A15C8610100F1B379 /* CommitteeListView-iPhone.xib */; };
-		CE0530521BDC14F800C01EBA /* OAECLegGuide-55 in Resources */ = {isa = PBXBuildFile; fileRef = CE0530511BDC14F800C01EBA /* OAECLegGuide-55 */; };
+		CEB7D56C1BC9A54100AD5CD2 /* MunsonCyndi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEB7D56B1BC9A54100AD5CD2 /* MunsonCyndi.jpg */; };
+		CEB7D56E1BC9A55000AD5CD2 /* GoodwinRegina.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEB7D56D1BC9A55000AD5CD2 /* GoodwinRegina.jpg */; };
+		CEB7D5701BC9A57200AD5CD2 /* JonMiles.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEB7D56F1BC9A57200AD5CD2 /* JonMiles.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -798,7 +800,9 @@
 		AFF2BB1615C860BB00F1B379 /* CommitteeListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommitteeListViewController.h; sourceTree = "<group>"; };
 		AFF2BB1715C860BB00F1B379 /* CommitteeListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommitteeListViewController.m; sourceTree = "<group>"; };
 		AFF2BB1A15C8610100F1B379 /* CommitteeListView-iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "CommitteeListView-iPhone.xib"; sourceTree = "<group>"; };
-		CE0530511BDC14F800C01EBA /* OAECLegGuide-55 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "OAECLegGuide-55"; sourceTree = "<group>"; };
+		CEB7D56B1BC9A54100AD5CD2 /* MunsonCyndi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MunsonCyndi.jpg; sourceTree = "<group>"; };
+		CEB7D56D1BC9A55000AD5CD2 /* GoodwinRegina.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GoodwinRegina.jpg; sourceTree = "<group>"; };
+		CEB7D56F1BC9A57200AD5CD2 /* JonMiles.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = JonMiles.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -835,7 +839,6 @@
 		AF24819415BB6A250070924E = {
 			isa = PBXGroup;
 			children = (
-				CE0530511BDC14F800C01EBA /* OAECLegGuide-55 */,
 				AF255CC3184CBAF60053CC73 /* AppIcon-60.png */,
 				AF255CC4184CBAF60053CC73 /* AppIcon-60@2x.png */,
 				AFC926A51614408D009538FD /* Default-568h@2x.png */,
@@ -1088,6 +1091,7 @@
 		AFBC6D9C16B0BF740052E385 /* OAEC Member Photos */ = {
 			isa = PBXGroup;
 			children = (
+				CEB7D56F1BC9A57200AD5CD2 /* JonMiles.jpg */,
 				AF577E681A0BF5E500994EA1 /* ClintPack.jpg */,
 				AF577E691A0BF5E500994EA1 /* TimRodriguez.jpg */,
 				AFDAD5BE18602FCB00366D99 /* MarkFuller.jpg */,
@@ -1127,6 +1131,8 @@
 		AFBC6DBE16B0BF740052E385 /* State Representatives */ = {
 			isa = PBXGroup;
 			children = (
+				CEB7D56D1BC9A55000AD5CD2 /* GoodwinRegina.jpg */,
+				CEB7D56B1BC9A54100AD5CD2 /* MunsonCyndi.jpg */,
 				AF82A23C1A7789B600A91552 /* CaldwellChad.jpg */,
 				AF82A23D1A7789B600A91552 /* CalveyKevin.jpg */,
 				AF82A23E1A7789B600A91552 /* CoodyJeff.jpg */,
@@ -1458,7 +1464,7 @@
 		AF24819615BB6A250070924E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Architactile LLC";
 				TargetAttributes = {
 					AF24819E15BB6A250070924E = {
@@ -1466,7 +1472,7 @@
 					};
 				};
 			};
-			buildConfigurationList = AF24819915BB6A250070924E /* Build configuration list for PBXProject "AppIcon-60.png AppIcon-60@2x.png AppIcon.png AppIcon@2x.png AppIconiPad.png AppIconiPad@2x.png AppStoreIcon.png AppStoreImages Default-568h@2x.png Default.png Default@2x.png OAECLegGuide OAECLegGuide" */;
+			buildConfigurationList = AF24819915BB6A250070924E /* Build configuration list for PBXProject "OAECLegGuide" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -1488,7 +1494,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE0530521BDC14F800C01EBA /* OAECLegGuide-55 in Resources */,
 				AF2481AE15BB6A260070924E /* InfoPlist.strings in Resources */,
 				AF2481E615BB6C5E0070924E /* MainStoryboard_iPhone.storyboard in Resources */,
 				AF2482D615BDDA2A0070924E /* iconplaceholder.png in Resources */,
@@ -1518,6 +1523,7 @@
 				AF092D4115DA0FD200AA4B6B /* Default.png in Resources */,
 				AF092D4315DA0FDC00AA4B6B /* Default@2x.png in Resources */,
 				AF0A15D515DAD75C0063B0E7 /* Background.png in Resources */,
+				CEB7D5701BC9A57200AD5CD2 /* JonMiles.jpg in Resources */,
 				AF0A15D615DAD75C0063B0E7 /* Background@2x.png in Resources */,
 				AF3DEE5815DD3D5800151661 /* CongressionalDistricts.json in Resources */,
 				AF3DEE5915DD3D5800151661 /* Counties.json in Resources */,
@@ -1614,6 +1620,7 @@
 				AFBC6E8716B0BF740052E385 /* TysonLittau.jpg in Resources */,
 				AFBC6E8816B0BF740052E385 /* WarrenLangford.jpg in Resources */,
 				AFBC6E8916B0BF740052E385 /* WilliamPeters.jpg in Resources */,
+				CEB7D56E1BC9A55000AD5CD2 /* GoodwinRegina.jpg in Resources */,
 				AFBC6E8A16B0BF740052E385 /* silhouette_head_small.png in Resources */,
 				AFBC6E8B16B0BF740052E385 /* silhouette_head.png in Resources */,
 				AFBC6E8C16B0BF740052E385 /* ArmesDon.jpg in Resources */,
@@ -1769,6 +1776,7 @@
 				AFBC6F0916B0BF740052E385 /* HoltDavid.jpg in Resources */,
 				AFBC6F0A16B0BF740052E385 /* IvesterTom.jpg in Resources */,
 				AFBC6F0B16B0BF740052E385 /* JohnsonConstance.jpg in Resources */,
+				CEB7D56C1BC9A54100AD5CD2 /* MunsonCyndi.jpg in Resources */,
 				AFBC6F0C16B0BF740052E385 /* JohnsonRob.jpg in Resources */,
 				AF577E621A0BED8D00994EA1 /* senateIcon.png in Resources */,
 				AF82A2651A7789B600A91552 /* StoneShane.jpg in Resources */,
@@ -1896,8 +1904,10 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Matt Galloway (F569XG59W4)";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -1912,10 +1922,11 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "F11141AB-2D7C-45D1-9F84-E9C0C0EE6A61";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				"VALID_ARCHS[sdk=*]" = "armv7 arm64 armv7s";
 			};
 			name = Debug;
 		};
@@ -1934,6 +1945,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -1947,6 +1959,7 @@
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				"VALID_ARCHS[sdk=iphoneos*]" = "armv7 arm64 armv7s";
 			};
 			name = Release;
 		};
@@ -1959,6 +1972,8 @@
 				GCC_PREFIX_HEADER = "OAECLegGuide/OAECLegGuide-Prefix.pch";
 				INFOPLIST_FILE = "OAECLegGuide/OAECLegGuide-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = coop.oaec.ok55leg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1970,17 +1985,19 @@
 		AF2481CD15BB6A260070924E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Oklahoma Association of Electric Cooperative Inc.";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Oklahoma Association of Electric Cooperative Inc.";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OAECLegGuide/OAECLegGuide-Prefix.pch";
 				INFOPLIST_FILE = "OAECLegGuide/OAECLegGuide-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_BUNDLE_IDENTIFIER = coop.oaec.ok55leg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e7bbb1d0-afc7-4284-a892-e24dd98297cb";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "e7bbb1d0-afc7-4284-a892-e24dd98297cb";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "arm64 armv7 armv7s";
+				"VALID_ARCHS[sdk=iphoneos*]" = "arm64 armv7s armv7";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -1988,7 +2005,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AF24819915BB6A250070924E /* Build configuration list for PBXProject "AppIcon-60.png AppIcon-60@2x.png AppIcon.png AppIcon@2x.png AppIconiPad.png AppIconiPad@2x.png AppStoreIcon.png AppStoreImages Default-568h@2x.png Default.png Default@2x.png OAECLegGuide OAECLegGuide" */ = {
+		AF24819915BB6A250070924E /* Build configuration list for PBXProject "OAECLegGuide" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AF2481C915BB6A260070924E /* Debug */,
