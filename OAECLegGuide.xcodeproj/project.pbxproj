@@ -382,6 +382,7 @@
 		CEB7D56C1BC9A54100AD5CD2 /* MunsonCyndi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEB7D56B1BC9A54100AD5CD2 /* MunsonCyndi.jpg */; };
 		CEB7D56E1BC9A55000AD5CD2 /* GoodwinRegina.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEB7D56D1BC9A55000AD5CD2 /* GoodwinRegina.jpg */; };
 		CEB7D5701BC9A57200AD5CD2 /* JonMiles.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEB7D56F1BC9A57200AD5CD2 /* JonMiles.jpg */; };
+		CEC2E9C21BE05DBD00E78D67 /* auction-hammer-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC2E9C11BE05DBD00E78D67 /* auction-hammer-icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -803,6 +804,7 @@
 		CEB7D56B1BC9A54100AD5CD2 /* MunsonCyndi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MunsonCyndi.jpg; sourceTree = "<group>"; };
 		CEB7D56D1BC9A55000AD5CD2 /* GoodwinRegina.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GoodwinRegina.jpg; sourceTree = "<group>"; };
 		CEB7D56F1BC9A57200AD5CD2 /* JonMiles.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = JonMiles.jpg; sourceTree = "<group>"; };
+		CEC2E9C11BE05DBD00E78D67 /* auction-hammer-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "auction-hammer-icon.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1010,6 +1012,7 @@
 		AF577E471A0BED8D00994EA1 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
+				CEC2E9C11BE05DBD00E78D67 /* auction-hammer-icon.png */,
 				AF577E481A0BED8D00994EA1 /* All.png */,
 				AF577E491A0BED8D00994EA1 /* All@2x.png */,
 				AF577E4A1A0BED8D00994EA1 /* houseCommittee.png */,
@@ -1658,6 +1661,7 @@
 				AFBC6EA716B0BF740052E385 /* GlennLarry.jpg in Resources */,
 				AF82A2571A7789B600A91552 /* DunningtonJason.jpg in Resources */,
 				AFBC6EA816B0BF740052E385 /* GrauRandy.jpg in Resources */,
+				CEC2E9C21BE05DBD00E78D67 /* auction-hammer-icon.png in Resources */,
 				AFBC6EA916B0BF740052E385 /* HallElise.jpg in Resources */,
 				AFBC6EAA16B0BF740052E385 /* HamiltonRebecca.jpg in Resources */,
 				AFBC6EAB16B0BF740052E385 /* HardinTommy.jpg in Resources */,
