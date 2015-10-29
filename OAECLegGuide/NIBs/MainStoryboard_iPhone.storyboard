@@ -400,6 +400,9 @@
                                             <color key="titleColor" red="0.45321407824607829" green="1" blue="0.091604655462661611" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="judicialButtonPressed:" destination="3" eventType="touchUpInside" id="8wo-It-fpA"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Judiciary" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="PRJ-NF-cx4">
                                         <rect key="frame" x="129" y="391" width="62" height="21"/>

@@ -204,6 +204,12 @@
         title = self.titleLeadership;
         partyAndDistrict = self.party;
         personTitle=partyAndDistrict;
+    } else if ([self.type isEqualToString:STATE_JUDICIARY]) {
+        prefix = @"Sen. ";
+        office = @"US Senator";
+        title = self.titleLeadership;
+        partyAndDistrict = self.party;
+        personTitle=partyAndDistrict;
     } else if ([self.type isEqualToString:OAEC_MEMBER]) {
         personTitle = self.titleLeadership;
     }

@@ -404,7 +404,10 @@
         CELL_TITLE.frame = CGRectMake(CELL_TITLE.frame.origin.x, CELL_TITLE.frame.origin.y, 222.0f, CELL_TITLE.frame.size.height);
         CELL_TITLE.text=person.coopName;
         CELL_SUBTITLE.text=person.titleLeadership;
-
+    } else if ([person.type isEqualToString:STATE_JUDICIARY]) {
+        CELL_TITLE.frame = CGRectMake(CELL_TITLE.frame.origin.x, CELL_TITLE.frame.origin.y, 222.0f, CELL_TITLE.frame.size.height);
+        CELL_TITLE.text=@"State Supreme Court Justice";
+        CELL_SUBTITLE.text=person.titleLeadership;
     }
     
     if (member!=nil) {

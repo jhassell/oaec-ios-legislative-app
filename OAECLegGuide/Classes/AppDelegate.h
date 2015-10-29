@@ -10,6 +10,7 @@
 
 #define STATE_SENATE    @"Oklahoma Senate"
 #define STATE_HOUSE     @"Oklahoma House"
+#define STATE_JUDICIARY @"Oklahoma Judiciary"
 #define FEDERAL_SENATE  @"US Senate"
 #define FEDERAL_HOUSE   @"US House"
 #define STATEWIDE       @"Statewide"
@@ -34,6 +35,7 @@
 @property (nonatomic, strong) NSArray *statewide; 
 @property (nonatomic, strong) NSArray *oaecMembers;
 @property (nonatomic, strong) NSArray *legislativeContacts;
+@property (nonatomic, strong) NSArray *stateJudiciary;
 
 @property (nonatomic, strong) NSArray *calendar;
 

@@ -22,8 +22,9 @@
 
 @synthesize all=_all; 
 @synthesize stateSenate=_stateSenate; 
-@synthesize stateHouse=_stateHouse; 
-@synthesize federalSenate=_federalSenate; 
+@synthesize stateHouse=_stateHouse;
+@synthesize stateJudiciary=_stateJudiciary;
+@synthesize federalSenate=_federalSenate;
 @synthesize federalHouse=_federalHouse; 
 @synthesize statewide=_statewide;
 @synthesize oaecMembers=_oaecMembers;
@@ -62,7 +63,8 @@
     
     self.stateSenate   = [self.all filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"Type=%@",STATE_SENATE]];
     self.stateHouse    = [self.all filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"Type=%@",STATE_HOUSE]];
-    self.federalSenate = [self.all filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"Type=%@",FEDERAL_SENATE]];
+    self.stateJudiciary = [self.all filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"Type=%@",STATE_JUDICIARY]];
+     self.federalSenate = [self.all filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"Type=%@",FEDERAL_SENATE]];
     self.federalHouse  = [self.all filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"Type=%@",FEDERAL_HOUSE]];
     self.statewide     = [self.all filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"Type=%@",STATEWIDE]];
     self.oaecMembers     = [self.all filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"Type=%@",OAEC_MEMBER]];
@@ -77,10 +79,12 @@
     
     self.stateSenate = [self.stateSenate sortedArrayUsingDescriptors:sortDescriptors];
     self.stateHouse = [self.stateHouse sortedArrayUsingDescriptors:sortDescriptors];
+    self.stateJudiciary = [self.stateJudiciary sortedArrayUsingDescriptors:sortDescriptors];
+    
     
     NSLog(@"all count %lu",(unsigned long)[self.all count]);
     NSLog(@"state senate count %lu",(unsigned long)[self.stateSenate count]);
-    
+    NSLog(@"state judiciary count %lu",(unsigned long)[self.stateJudiciary count]);
     
     self.stateSenateStandingCommittees = [DataLoader buildCommitteesFromPeople:self.stateSenate committeeKey:STANDING];
     self.stateHouseStandingCommittees  = [DataLoader buildCommitteesFromPeople:self.stateHouse committeeKey:STANDING];

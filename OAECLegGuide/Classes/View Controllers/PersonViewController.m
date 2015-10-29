@@ -720,6 +720,10 @@
             self.officeLabel.text=@"US Senator";
             self.titleLabel.text=self.person.titleLeadership;
             self.partyAndDistrictLabel.text = self.person.party;
+        } else if ([self.person.type isEqualToString:STATE_JUDICIARY]) {
+            self.officeLabel.text=@"State Judge";
+            self.titleLabel.text=self.person.titleLeadership;
+            self.partyAndDistrictLabel.text = self.person.party;
         } else if ([self.person.type isEqualToString:OAEC_MEMBER]) {
             workAddressName = @"Contact Info";
             self.countiesListTitleLabel.text=@"Counties Covered";

@@ -22,6 +22,7 @@
 - (IBAction)houseLeadershipButtonPressed:(id)sender;
 - (IBAction)houseCommitteesButtonpressed:(id)sender;
 - (IBAction)allButtonPressed:(id)sender;
+- (IBAction)judicialButtonPressed:(id)sender;
 
 
 @end
@@ -156,6 +157,20 @@
     [self.navigationController pushViewController:plvc animated:YES];
 
 }
+
+
+- (IBAction)judicialButtonPressed:(id)sender {
+    AppDelegate *ad = [[UIApplication sharedApplication] delegate];
+    
+    PeopleListViewController *plvc = [[[PeopleListViewController alloc] initWithNibName:@"PeopleListView-iPhone" bundle:nil] autorelease];
+    plvc.sections = [ListSection buildSectionsFrom:ad.stateJudiciary dividedBy:@"Type" catchAllKey:nil includeKeys:[NSArray arrayWithObjects: STATE_JUDICIARY, nil]];
+    
+    [self.navigationController pushViewController:plvc animated:YES];
+    
+}
+
+
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
