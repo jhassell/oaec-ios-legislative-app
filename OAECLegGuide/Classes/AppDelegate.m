@@ -79,7 +79,19 @@
     
     self.stateSenate = [self.stateSenate sortedArrayUsingDescriptors:sortDescriptors];
     self.stateHouse = [self.stateHouse sortedArrayUsingDescriptors:sortDescriptors];
+
+
+    
+    
+    // Resort State Judiciary by sort order, then contact name
+    
+    NSSortDescriptor *sortOrderSort = [NSSortDescriptor sortDescriptorWithKey:@"Sort Order Number" ascending:YES];
+    NSSortDescriptor *lastNameSort = [NSSortDescriptor sortDescriptorWithKey:@"Last Name" ascending:YES];
+    NSSortDescriptor *firstNameSort = [NSSortDescriptor sortDescriptorWithKey:@"First Name" ascending:YES];
+    sortDescriptors = [NSArray arrayWithObjects:sortOrderSort,lastNameSort,firstNameSort,nil];
     self.stateJudiciary = [self.stateJudiciary sortedArrayUsingDescriptors:sortDescriptors];
+   
+
     
     
     NSLog(@"all count %lu",(unsigned long)[self.all count]);
@@ -91,16 +103,14 @@
     self.stateSenateAppropriationsSubcommittees  = [DataLoader buildCommitteesFromPeople:self.stateSenate committeeKey:APPROPRIATIONS];
     self.stateHouseAppropriationsSubcommittees = [DataLoader buildCommitteesFromPeople:self.stateHouse committeeKey:APPROPRIATIONS];
    
-    // Resort OAEC Member Systems by company name then contact name
 
-    NSSortDescriptor *sortOrderSort = [NSSortDescriptor sortDescriptorWithKey:@"Sort Order Number" ascending:YES];
+    
+    // Resort OAEC Member Systems by company name then contact name
     NSSortDescriptor *companySort = [NSSortDescriptor sortDescriptorWithKey:@"Cooperative Name" ascending:YES];
-    NSSortDescriptor *lastNameSort = [NSSortDescriptor sortDescriptorWithKey:@"Last Name" ascending:YES];
-    NSSortDescriptor *firstNameSort = [NSSortDescriptor sortDescriptorWithKey:@"First Name" ascending:YES];
-    
     sortDescriptors = [NSArray arrayWithObjects:sortOrderSort,companySort,lastNameSort,firstNameSort,nil];
-    
     self.oaecMembers = [self.oaecMembers sortedArrayUsingDescriptors:sortDescriptors];
+    
+
     
     NSMutableArray *allCommittees = [NSMutableArray arrayWithCapacity:self.stateSenateStandingCommittees.count+
                                      self.stateHouseStandingCommittees.count+

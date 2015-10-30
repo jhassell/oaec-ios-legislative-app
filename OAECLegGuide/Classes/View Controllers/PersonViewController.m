@@ -721,7 +721,7 @@
             self.titleLabel.text=self.person.titleLeadership;
             self.partyAndDistrictLabel.text = self.person.party;
         } else if ([self.person.type isEqualToString:STATE_JUDICIARY]) {
-            self.officeLabel.text=@"State Judge";
+            self.officeLabel.text=@"Oklahoma Supreme Court Justice";
             self.titleLabel.text=self.person.titleLeadership;
             self.partyAndDistrictLabel.text = self.person.party;
         } else if ([self.person.type isEqualToString:OAEC_MEMBER]) {

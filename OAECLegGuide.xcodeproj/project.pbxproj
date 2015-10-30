@@ -1047,6 +1047,7 @@
 		AFBC69E016B0BA7B0052E385 /* People */ = {
 			isa = PBXGroup;
 			children = (
+				CEC2E9C31BE2FB4300E78D67 /* State Judges */,
 				AFBC6D8F16B0BF740052E385 /* Federal Representatives */,
 				AFBC6D9516B0BF740052E385 /* Federal Senators */,
 				AFBC6D9816B0BF740052E385 /* Legislative Contacts */,
@@ -1439,6 +1440,13 @@
 				AFDAD5D61861DA1300366D99 /* Notes.m */,
 			);
 			path = Miscellaneous;
+			sourceTree = "<group>";
+		};
+		CEC2E9C31BE2FB4300E78D67 /* State Judges */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "State Judges";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
