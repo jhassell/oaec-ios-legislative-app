@@ -6,6 +6,7 @@
 //  Copyright (c) 2012 Architactile LLC. All rights reserved.
 //
 
+#import <Parse/Parse.h>
 #import "AppDelegate.h"
 #import "DataLoader.h"
 #import "Boundary.h"
@@ -14,6 +15,8 @@
 #import "NSString+Stuff.h"
 #import "Committee.h"
 #import "NSDictionary+Committee.h"
+
+
 
 @implementation AppDelegate
 
@@ -43,6 +46,16 @@
 @synthesize coopBoundaries=_coopBoundaries;
 @synthesize alertView=_alertView;
 
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    // Store the deviceToken in the current installation and save it to Parse.
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation setDeviceTokenFromData:deviceToken];
+    [currentInstallation saveInBackground];
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    [PFPush handlePush:userInfo];
+}
 
 - (void)weblink {
     NSURL *url = [NSURL URLWithString:@"http://www.oaec.coop"];
@@ -52,6 +65,18 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [Parse setApplicationId:@"CAyQsLynTJcl5D93CGysLwghBdDnawaOnn51tdgy"
+                  clientKey:@"Gn3uq5QhvmtFq0U1GH9qyb9vF2SsqZqhvxbAj8Qs"];
+    
+    // Register for Push Notitications
+    UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert |
+                                                    UIUserNotificationTypeBadge |
+                                                    UIUserNotificationTypeSound);
+    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:userNotificationTypes
+                                                                             categories:nil];
+    [application registerUserNotificationSettings:settings];
+    [application registerForRemoteNotifications];
+    
     mapDataLoaded = NO;
     NSString *dataFilename = [[NSBundle mainBundle] pathForResource:@"data" ofType:@"csv"];
     

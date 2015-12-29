@@ -379,6 +379,16 @@
 		AFEF4BD715C7971D00896FA9 /* NSString+Stuff.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEF4BD615C7971D00896FA9 /* NSString+Stuff.m */; };
 		AFF2BB1815C860BB00F1B379 /* CommitteeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF2BB1715C860BB00F1B379 /* CommitteeListViewController.m */; };
 		AFF2BB1B15C8610100F1B379 /* CommitteeListView-iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFF2BB1A15C8610100F1B379 /* CommitteeListView-iPhone.xib */; };
+		CEB3DA5B1C2F98D10003A4B9 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB3DA591C2F98D10003A4B9 /* Bolts.framework */; };
+		CEB3DA5C1C2F98D10003A4B9 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB3DA5A1C2F98D10003A4B9 /* Parse.framework */; };
+		CEB3DA5F1C2F9A7F0003A4B9 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB3DA5D1C2F9A7F0003A4B9 /* libsqlite3.tbd */; };
+		CEB3DA601C2F9A7F0003A4B9 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB3DA5E1C2F9A7F0003A4B9 /* libz.tbd */; };
+		CEB3DA631C2F9ABC0003A4B9 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB3DA611C2F9ABC0003A4B9 /* AudioToolbox.framework */; };
+		CEB3DA641C2F9ABC0003A4B9 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB3DA621C2F9ABC0003A4B9 /* CFNetwork.framework */; };
+		CEB3DA691C2F9AE90003A4B9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB3DA651C2F9AE90003A4B9 /* QuartzCore.framework */; };
+		CEB3DA6A1C2F9AE90003A4B9 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB3DA661C2F9AE90003A4B9 /* Security.framework */; };
+		CEB3DA6B1C2F9AE90003A4B9 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB3DA671C2F9AE90003A4B9 /* StoreKit.framework */; };
+		CEB3DA6C1C2F9AE90003A4B9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB3DA681C2F9AE90003A4B9 /* SystemConfiguration.framework */; };
 		CEB7D56C1BC9A54100AD5CD2 /* MunsonCyndi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEB7D56B1BC9A54100AD5CD2 /* MunsonCyndi.jpg */; };
 		CEB7D56E1BC9A55000AD5CD2 /* GoodwinRegina.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEB7D56D1BC9A55000AD5CD2 /* GoodwinRegina.jpg */; };
 		CEB7D5701BC9A57200AD5CD2 /* JonMiles.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEB7D56F1BC9A57200AD5CD2 /* JonMiles.jpg */; };
@@ -811,6 +821,16 @@
 		AFF2BB1615C860BB00F1B379 /* CommitteeListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommitteeListViewController.h; sourceTree = "<group>"; };
 		AFF2BB1715C860BB00F1B379 /* CommitteeListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommitteeListViewController.m; sourceTree = "<group>"; };
 		AFF2BB1A15C8610100F1B379 /* CommitteeListView-iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "CommitteeListView-iPhone.xib"; sourceTree = "<group>"; };
+		CEB3DA591C2F98D10003A4B9 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		CEB3DA5A1C2F98D10003A4B9 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		CEB3DA5D1C2F9A7F0003A4B9 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		CEB3DA5E1C2F9A7F0003A4B9 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		CEB3DA611C2F9ABC0003A4B9 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		CEB3DA621C2F9ABC0003A4B9 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		CEB3DA651C2F9AE90003A4B9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		CEB3DA661C2F9AE90003A4B9 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		CEB3DA671C2F9AE90003A4B9 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		CEB3DA681C2F9AE90003A4B9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		CEB7D56B1BC9A54100AD5CD2 /* MunsonCyndi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MunsonCyndi.jpg; sourceTree = "<group>"; };
 		CEB7D56D1BC9A55000AD5CD2 /* GoodwinRegina.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GoodwinRegina.jpg; sourceTree = "<group>"; };
 		CEB7D56F1BC9A57200AD5CD2 /* JonMiles.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = JonMiles.jpg; sourceTree = "<group>"; };
@@ -832,12 +852,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF14BD4F160E373A003D2052 /* MessageUI.framework in Frameworks */,
+				CEB3DA691C2F9AE90003A4B9 /* QuartzCore.framework in Frameworks */,
+				CEB3DA6A1C2F9AE90003A4B9 /* Security.framework in Frameworks */,
+				CEB3DA6B1C2F9AE90003A4B9 /* StoreKit.framework in Frameworks */,
+				CEB3DA6C1C2F9AE90003A4B9 /* SystemConfiguration.framework in Frameworks */,
+				AF2481A815BB6A260070924E /* CoreGraphics.framework in Frameworks */,
 				AF3DEE5215DD3AA500151661 /* CoreLocation.framework in Frameworks */,
+				CEB3DA631C2F9ABC0003A4B9 /* AudioToolbox.framework in Frameworks */,
+				CEB3DA641C2F9ABC0003A4B9 /* CFNetwork.framework in Frameworks */,
+				CEB3DA5F1C2F9A7F0003A4B9 /* libsqlite3.tbd in Frameworks */,
+				CEB3DA601C2F9A7F0003A4B9 /* libz.tbd in Frameworks */,
+				AF14BD4F160E373A003D2052 /* MessageUI.framework in Frameworks */,
 				AF2482DA15BDE2AE0070924E /* MapKit.framework in Frameworks */,
 				AF2481A415BB6A260070924E /* UIKit.framework in Frameworks */,
 				AF2481A615BB6A260070924E /* Foundation.framework in Frameworks */,
-				AF2481A815BB6A260070924E /* CoreGraphics.framework in Frameworks */,
+				CEB3DA5C1C2F98D10003A4B9 /* Parse.framework in Frameworks */,
+				CEB3DA5B1C2F98D10003A4B9 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -883,6 +913,16 @@
 		AF2481A215BB6A260070924E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CEB3DA651C2F9AE90003A4B9 /* QuartzCore.framework */,
+				CEB3DA661C2F9AE90003A4B9 /* Security.framework */,
+				CEB3DA671C2F9AE90003A4B9 /* StoreKit.framework */,
+				CEB3DA681C2F9AE90003A4B9 /* SystemConfiguration.framework */,
+				CEB3DA611C2F9ABC0003A4B9 /* AudioToolbox.framework */,
+				CEB3DA621C2F9ABC0003A4B9 /* CFNetwork.framework */,
+				CEB3DA5D1C2F9A7F0003A4B9 /* libsqlite3.tbd */,
+				CEB3DA5E1C2F9A7F0003A4B9 /* libz.tbd */,
+				CEB3DA591C2F98D10003A4B9 /* Bolts.framework */,
+				CEB3DA5A1C2F98D10003A4B9 /* Parse.framework */,
 				AF14BD4E160E373A003D2052 /* MessageUI.framework */,
 				AF3DEE5115DD3AA500151661 /* CoreLocation.framework */,
 				AF2482D915BDE2AE0070924E /* MapKit.framework */,
@@ -1505,11 +1545,16 @@
 		AF24819615BB6A250070924E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Architactile LLC";
 				TargetAttributes = {
 					AF24819E15BB6A250070924E = {
 						DevelopmentTeam = EH6BL4VM24;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -1953,8 +1998,9 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: John Hassell (H4QR9NTX3Q)";
+				CODE_SIGN_IDENTITY = "Apple Development IOS Push Services: coop.oaec.ok55leg";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "Apple Development IOS Push Services: coop.oaec.ok55leg";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development IOS Push Services: coop.oaec.ok55leg";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -1975,7 +2021,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1995,6 +2041,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development IOS Push Services: coop.oaec.ok55leg";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: John Hassell (H4QR9NTX3Q)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -2023,11 +2070,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Distribution: Oklahoma Association of Electric Cooperative Inc. (EH6BL4VM24)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Oklahoma Association of Electric Cooperative Inc. (EH6BL4VM24)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OAECLegGuide/OAECLegGuide-Prefix.pch";
 				INFOPLIST_FILE = "OAECLegGuide/OAECLegGuide-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = coop.oaec.ok55leg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2041,12 +2093,16 @@
 		AF2481CD15BB6A260070924E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Oklahoma Association of Electric Cooperative Inc. (EH6BL4VM24)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Oklahoma Association of Electric Cooperative Inc. (EH6BL4VM24)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OAECLegGuide/OAECLegGuide-Prefix.pch";
 				INFOPLIST_FILE = "OAECLegGuide/OAECLegGuide-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_BUNDLE_IDENTIFIER = coop.oaec.ok55leg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
