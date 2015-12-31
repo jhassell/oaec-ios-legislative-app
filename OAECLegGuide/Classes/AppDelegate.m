@@ -15,12 +15,23 @@
 #import "NSString+Stuff.h"
 #import "Committee.h"
 #import "NSDictionary+Committee.h"
+#import "PersonViewController.h"
+#import "ListSection.h"
+
+#import "PeopleListDelegate.h"
+#import "CommitteeMember.h"
+#import "SearchViewCell.h"
+#import "CommitteeHeaderView.h"
+
 
 
 
 @implementation AppDelegate
 
+
+
 @synthesize window = _window;
+
 
 
 @synthesize all=_all; 
@@ -53,9 +64,43 @@
     [currentInstallation saveInBackground];
 }
 
-- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
-    [PFPush handlePush:userInfo];
+//- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+//    [PFPush handlePush:userInfo];
+//}
+
+- (void)application:(UIApplication *)application
+didReceiveRemoteNotification:(NSDictionary *)userInfo  fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))handler {
+    // Create empty photo object
+    NSDictionary *dic = [userInfo objectForKey:@"aps"];
+    NSString *strMsg = [dic objectForKey:@"alert"];
+    
+    NSDictionary *person = nil;
+    
+    person = self.all[0];
+    
+    PersonViewController *pvc = [[[PersonViewController alloc]
+      initWithNibName:@"PersonView-iPhone" bundle:nil] autorelease];
+  
+    pvc.person=person;
+    
+    [self.window.rootViewController presentViewController:pvc animated:YES completion:Nil];
+    
+    // Fetch photo object
+    //[targetPhoto fetchIfNeededInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+        // Show photo view controller
+      //  if (error) {
+      //      handler(UIBackgroundFetchResultFailed);
+      //  } else if ([PFUser currentUser]) {
+      //      PhotoVC *viewController = [[PhotoVC alloc] initWithPhoto:object];
+      //      [self.navController pushViewController:viewController animated:YES];
+      //      handler(UIBackgroundFetchResultNewData);
+      //  } else {
+      //      handler(UIBackgroundModeNoData);
+      //  }
+    //}];
 }
+
+
 
 - (void)weblink {
     NSURL *url = [NSURL URLWithString:@"http://www.oaec.coop"];
