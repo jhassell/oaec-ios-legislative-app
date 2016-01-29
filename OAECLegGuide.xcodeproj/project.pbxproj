@@ -379,6 +379,7 @@
 		AFEF4BD715C7971D00896FA9 /* NSString+Stuff.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEF4BD615C7971D00896FA9 /* NSString+Stuff.m */; };
 		AFF2BB1815C860BB00F1B379 /* CommitteeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF2BB1715C860BB00F1B379 /* CommitteeListViewController.m */; };
 		AFF2BB1B15C8610100F1B379 /* CommitteeListView-iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFF2BB1A15C8610100F1B379 /* CommitteeListView-iPhone.xib */; };
+		CEA749651C572771007271E5 /* DossettJJ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEA749641C572771007271E5 /* DossettJJ.jpg */; };
 		CEB3DA5B1C2F98D10003A4B9 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB3DA591C2F98D10003A4B9 /* Bolts.framework */; };
 		CEB3DA5C1C2F98D10003A4B9 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB3DA5A1C2F98D10003A4B9 /* Parse.framework */; };
 		CEB3DA5F1C2F9A7F0003A4B9 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB3DA5D1C2F9A7F0003A4B9 /* libsqlite3.tbd */; };
@@ -821,6 +822,7 @@
 		AFF2BB1615C860BB00F1B379 /* CommitteeListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommitteeListViewController.h; sourceTree = "<group>"; };
 		AFF2BB1715C860BB00F1B379 /* CommitteeListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommitteeListViewController.m; sourceTree = "<group>"; };
 		AFF2BB1A15C8610100F1B379 /* CommitteeListView-iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "CommitteeListView-iPhone.xib"; sourceTree = "<group>"; };
+		CEA749641C572771007271E5 /* DossettJJ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DossettJJ.jpg; sourceTree = "<group>"; };
 		CEB3DA591C2F98D10003A4B9 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		CEB3DA5A1C2F98D10003A4B9 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		CEB3DA5D1C2F9A7F0003A4B9 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
@@ -1326,6 +1328,7 @@
 		AFBC6E2416B0BF740052E385 /* State Senators */ = {
 			isa = PBXGroup;
 			children = (
+				CEA749641C572771007271E5 /* DossettJJ.jpg */,
 				AF82A26A1A7789C500A91552 /* BiceStephanie.jpg */,
 				AF82A26C1A7789C500A91552 /* FryJack.jpg */,
 				AF82A26D1A7789C500A91552 /* JechDarcy.jpg */,
@@ -1789,6 +1792,7 @@
 				AFBC6EC916B0BF740052E385 /* NewellTom.jpg in Resources */,
 				AFBC6ECA16B0BF740052E385 /* NollanJadine.jpg in Resources */,
 				AFBC6ECB16B0BF740052E385 /* O'DonnellTerry.jpg in Resources */,
+				CEA749651C572771007271E5 /* DossettJJ.jpg in Resources */,
 				CEDEF0E21C0034BF0024A43F /* TaylorSteven.jpg in Resources */,
 				AFBC6ECC16B0BF740052E385 /* OrtegaCharles.jpg in Resources */,
 				AFBC6ECD16B0BF740052E385 /* OsbornLeslie.jpg in Resources */,
@@ -2070,8 +2074,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Distribution: Oklahoma Association of Electric Cooperative Inc. (EH6BL4VM24)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Oklahoma Association of Electric Cooperative Inc. (EH6BL4VM24)";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -2084,6 +2088,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = coop.oaec.ok55leg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7s armv7 arm64";
 				WRAPPER_EXTENSION = app;
@@ -2093,8 +2098,8 @@
 		AF2481CD15BB6A260070924E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Oklahoma Association of Electric Cooperative Inc. (EH6BL4VM24)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Oklahoma Association of Electric Cooperative Inc. (EH6BL4VM24)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

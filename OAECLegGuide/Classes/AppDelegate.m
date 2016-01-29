@@ -77,6 +77,7 @@
     [application registerUserNotificationSettings:settings];
     [application registerForRemoteNotifications];
     
+    
     mapDataLoaded = NO;
     NSString *dataFilename = [[NSBundle mainBundle] pathForResource:@"data" ofType:@"csv"];
     
