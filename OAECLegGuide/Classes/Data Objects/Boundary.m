@@ -24,7 +24,7 @@
     BOOL isInside = NO; 
     for(BoundaryPolygon *boundaryPolygon in self.polygons) {
         MKPolygon *polygon = boundaryPolygon.polygon;
-        MKPolygonView *polygonView = [[MKPolygonView alloc] initWithPolygon:polygon];
+        MKPolygonRenderer *polygonView = [[MKPolygonRenderer alloc] initWithPolygon:polygon];
         MKMapPoint mapPoint = MKMapPointForCoordinate(point);        
         CGPoint polygonViewPoint = [polygonView pointForMapPoint:mapPoint];
         BOOL mapCoordinateIsInPolygon = CGPathContainsPoint(polygonView.path, NULL, 

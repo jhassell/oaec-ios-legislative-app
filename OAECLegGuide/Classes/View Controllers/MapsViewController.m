@@ -115,15 +115,16 @@
 }
 
 
-- (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id <MKOverlay>)overlay
+- (MKPolygonRenderer *)mapView:(MKMapView *)mapView viewForOverlay:(id <MKOverlay>)overlay
 {
     BoundaryPolygon *boundaryPolygon = (BoundaryPolygon *) overlay;
     
-    MKPolygonView *view = [[MKPolygonView alloc] initWithPolygon:boundaryPolygon.polygon];
+//    MKPolygonView *view = [[MKPolygonView alloc] initWithPolygon:boundaryPolygon.polygon];
+    MKPolygonRenderer *view = [[MKPolygonRenderer alloc] initWithPolygon:boundaryPolygon.polygon];
     view.lineWidth=1;
     view.fillColor=[boundaryPolygon.boundary.color colorWithAlphaComponent:0.3];
     view.strokeColor=[boundaryPolygon.boundary.color colorWithAlphaComponent:1.0];
-    return [view autorelease];
+    return view;
 }
 
 #pragma mark - IB Hooks
