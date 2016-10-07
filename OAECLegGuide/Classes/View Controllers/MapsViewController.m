@@ -202,7 +202,7 @@
         [self.districtBoundaries removeAllObjects];
     }
     
-    AppDelegate *ad = [[UIApplication sharedApplication] delegate];
+    AppDelegate *ad = (AppDelegate *)[[UIApplication sharedApplication] delegate];
 
     for(Boundary *boundary in [ad.stateHouseBoundaries allValues]) {
         if ([boundary pointInside:coordinate]) {
@@ -286,7 +286,7 @@
 
         Boundary *boundaryToFrame = [self.districtBoundaries objectAtIndex:self.mapSelectIndex];
         
-        AppDelegate *ad = [[UIApplication sharedApplication] delegate];
+        AppDelegate *ad = (AppDelegate *)[[UIApplication sharedApplication] delegate];
         
         NSString *districtNumber = nil;
         NSArray *peopleList=nil;
@@ -390,7 +390,7 @@
 }
 
 -(void) displayDistrictForPerson {
-    AppDelegate *ad = [[UIApplication sharedApplication] delegate];
+    AppDelegate *ad = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
     if (self.person!=nil) {
         NSString *districtNumber = nil;

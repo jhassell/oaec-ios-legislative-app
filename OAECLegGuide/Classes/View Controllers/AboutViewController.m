@@ -41,7 +41,7 @@
 }
 
 - (IBAction)memberSystemsButtonPressed:(id)sender {
-    AppDelegate *ad = [[UIApplication sharedApplication] delegate];
+    AppDelegate *ad = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
     PeopleListViewController *plvc = [[[PeopleListViewController alloc] initWithNibName:@"PeopleListView-iPhone" bundle:nil] autorelease];
     plvc.sections = [ListSection buildSectionsFrom:ad.all dividedBy:@"Type" catchAllKey:nil includeKeys:[NSArray arrayWithObjects:OAEC_MEMBER, nil]];
@@ -51,7 +51,7 @@
 }
 
 - (IBAction)legContactsButtonPressed:(id)sender {
-    AppDelegate *ad = [[UIApplication sharedApplication] delegate];
+    AppDelegate *ad = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
     PeopleListViewController *plvc = [[[PeopleListViewController alloc] initWithNibName:@"PeopleListView-iPhone" bundle:nil] autorelease];
     plvc.sections = [ListSection buildSectionsFrom:ad.all dividedBy:@"Type" catchAllKey:nil includeKeys:[NSArray arrayWithObjects:LEGISLATIVE_CONTACT, nil]];
@@ -72,7 +72,7 @@
     [super viewDidAppear:animated];
     if (firstLaunch) {
         firstLaunch=NO;
-        AppDelegate *ap = [[UIApplication sharedApplication] delegate];
+        AppDelegate *ap = (AppDelegate *)[[UIApplication sharedApplication] delegate];
         [ap loadBoundaries];
     }
 }

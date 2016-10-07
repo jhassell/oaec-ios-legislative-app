@@ -35,7 +35,7 @@
 
 
 - (IBAction)statewideButtonPressed:(id)sender {
-    AppDelegate *ad = [[UIApplication sharedApplication] delegate];
+    AppDelegate *ad = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
     PeopleListViewController *plvc = [[[PeopleListViewController alloc] initWithNibName:@"PeopleListView-iPhone" bundle:nil] autorelease];
     plvc.sections = [ListSection buildSectionsFrom:ad.all dividedBy:@"Type" catchAllKey:nil includeKeys:[NSArray arrayWithObjects:STATEWIDE, nil]];    
@@ -45,7 +45,7 @@
 }
 
 - (IBAction)senateButtonPressed:(id)sender {
-    AppDelegate *ad = [[UIApplication sharedApplication] delegate];
+    AppDelegate *ad = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
     PeopleListViewController *plvc = [[[PeopleListViewController alloc] initWithNibName:@"PeopleListView-iPhone" bundle:nil] autorelease];
     plvc.sections = [ListSection buildSectionsFrom:ad.stateSenate dividedBy:@"Type" catchAllKey:nil includeKeys:[NSArray arrayWithObjects:STATE_SENATE, nil]];
@@ -55,7 +55,7 @@
 }
 
 - (IBAction)senateLeadershipButtonPressed:(id)sender {
-    AppDelegate *ad = [[UIApplication sharedApplication] delegate];
+    AppDelegate *ad = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
     PeopleListViewController *plvc = [[[PeopleListViewController alloc] initWithNibName:@"PeopleListView-iPhone" bundle:nil] autorelease];
     plvc.sections = [ListSection buildSectionsFrom:ad.all dividedBy:@"Type" catchAllKey:nil includeKeys:[NSArray arrayWithObjects: STATE_SENATE, nil] withTitlesOnly:YES];    
@@ -65,7 +65,7 @@
 
 - (IBAction)senateCommitteesButtonPressed:(id)sender {
     
-    AppDelegate *ad = [[UIApplication sharedApplication] delegate];
+    AppDelegate *ad = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
     CommitteeListViewController *clvc = [[[CommitteeListViewController alloc] initWithNibName:@"CommitteeListView-iPhone" bundle:nil] autorelease];
     
@@ -85,7 +85,7 @@
 }
 
 - (IBAction)houseButtonPressed:(id)sender {
-    AppDelegate *ad = [[UIApplication sharedApplication] delegate];
+    AppDelegate *ad = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
     PeopleListViewController *plvc = [[[PeopleListViewController alloc] initWithNibName:@"PeopleListView-iPhone" bundle:nil] autorelease];
     plvc.sections = [ListSection buildSectionsFrom:ad.stateHouse dividedBy:@"Type" catchAllKey:nil includeKeys:[NSArray arrayWithObjects: STATE_HOUSE, nil]];
@@ -95,7 +95,7 @@
 }
 
 - (IBAction)houseLeadershipButtonPressed:(id)sender {
-    AppDelegate *ad = [[UIApplication sharedApplication] delegate];
+    AppDelegate *ad = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
     PeopleListViewController *plvc = [[[PeopleListViewController alloc] initWithNibName:@"PeopleListView-iPhone" bundle:nil] autorelease];
     plvc.sections = [ListSection buildSectionsFrom:ad.all dividedBy:@"Type" catchAllKey:nil includeKeys:[NSArray arrayWithObjects: STATE_HOUSE, nil] withTitlesOnly:YES];    
@@ -106,7 +106,7 @@
 
 - (IBAction)houseCommitteesButtonpressed:(id)sender {
     
-    AppDelegate *ad = [[UIApplication sharedApplication] delegate];
+    AppDelegate *ad = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
     CommitteeListViewController *clvc = [[[CommitteeListViewController alloc] initWithNibName:@"CommitteeListView-iPhone" bundle:nil] autorelease];
     
@@ -126,7 +126,7 @@
 
 - (IBAction)allButtonPressed:(id)sender {
     
-    AppDelegate *ad = [[UIApplication sharedApplication] delegate];
+    AppDelegate *ad = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
     PeopleListViewController *plvc = [[PeopleListViewController alloc] initWithNibName:@"PeopleListView-iPhone" bundle:nil];
     
@@ -160,7 +160,7 @@
 
 
 - (IBAction)judicialButtonPressed:(id)sender {
-    AppDelegate *ad = [[UIApplication sharedApplication] delegate];
+    AppDelegate *ad = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
     PeopleListViewController *plvc = [[[PeopleListViewController alloc] initWithNibName:@"PeopleListView-iPhone" bundle:nil] autorelease];
     plvc.sections = [ListSection buildSectionsFrom:ad.stateJudiciary dividedBy:@"Type" catchAllKey:nil includeKeys:[NSArray arrayWithObjects: STATE_JUDICIARY, nil]];
