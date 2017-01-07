@@ -440,7 +440,7 @@
 		AF15543215EB5E6700AA7794 /* PersonViewAddressLACell-iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "PersonViewAddressLACell-iPhone.xib"; sourceTree = "<group>"; };
 		AF15543515EB5FE400AA7794 /* AddressLAViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressLAViewCell.h; sourceTree = "<group>"; };
 		AF15543615EB5FE400AA7794 /* AddressLAViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressLAViewCell.m; sourceTree = "<group>"; };
-		AF24819F15BB6A250070924E /* ok55leg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ok55leg.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF24819F15BB6A250070924E /* ok56leg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ok56leg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF2481A315BB6A260070924E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AF2481A515BB6A260070924E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AF2481A715BB6A260070924E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -822,6 +822,7 @@
 		AFF2BB1615C860BB00F1B379 /* CommitteeListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommitteeListViewController.h; sourceTree = "<group>"; };
 		AFF2BB1715C860BB00F1B379 /* CommitteeListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommitteeListViewController.m; sourceTree = "<group>"; };
 		AFF2BB1A15C8610100F1B379 /* CommitteeListView-iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "CommitteeListView-iPhone.xib"; sourceTree = "<group>"; };
+		CE4ACD331E215057003A6655 /* ok56leg.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ok56leg.entitlements; sourceTree = "<group>"; };
 		CEA749641C572771007271E5 /* DossettJJ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DossettJJ.jpg; sourceTree = "<group>"; };
 		CEB3DA591C2F98D10003A4B9 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		CEB3DA5A1C2F98D10003A4B9 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
@@ -893,6 +894,7 @@
 		AF24819415BB6A250070924E = {
 			isa = PBXGroup;
 			children = (
+				CE4ACD331E215057003A6655 /* ok56leg.entitlements */,
 				AF255CC4184CBAF60053CC73 /* AppIcon-60@2x.png */,
 				AFC926A51614408D009538FD /* Default-568h@2x.png */,
 				AF255CC3184CBAF60053CC73 /* AppIcon-60.png */,
@@ -907,7 +909,7 @@
 		AF2481A015BB6A250070924E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AF24819F15BB6A250070924E /* ok55leg.app */,
+				AF24819F15BB6A250070924E /* ok56leg.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1525,9 +1527,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AF24819E15BB6A250070924E /* ok55leg */ = {
+		AF24819E15BB6A250070924E /* ok56leg */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AF2481CB15BB6A260070924E /* Build configuration list for PBXNativeTarget "ok55leg" */;
+			buildConfigurationList = AF2481CB15BB6A260070924E /* Build configuration list for PBXNativeTarget "ok56leg" */;
 			buildPhases = (
 				AF24819B15BB6A250070924E /* Sources */,
 				AF24819C15BB6A250070924E /* Frameworks */,
@@ -1537,9 +1539,9 @@
 			);
 			dependencies = (
 			);
-			name = ok55leg;
+			name = ok56leg;
 			productName = OAECLegGuide;
-			productReference = AF24819F15BB6A250070924E /* ok55leg.app */;
+			productReference = AF24819F15BB6A250070924E /* ok56leg.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1553,6 +1555,7 @@
 				TargetAttributes = {
 					AF24819E15BB6A250070924E = {
 						DevelopmentTeam = EH6BL4VM24;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
 								enabled = 1;
@@ -1573,7 +1576,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AF24819E15BB6A250070924E /* ok55leg */,
+				AF24819E15BB6A250070924E /* ok56leg */,
 			);
 		};
 /* End PBXProject section */
@@ -2077,9 +2080,11 @@
 		AF2481CC15BB6A260070924E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ok56leg.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = EH6BL4VM24;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -2089,7 +2094,7 @@
 				INFOPLIST_FILE = "OAECLegGuide/OAECLegGuide-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = coop.oaec.ok55leg;
+				PRODUCT_BUNDLE_IDENTIFIER = coop.oaec.ok56leg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -2102,8 +2107,10 @@
 		AF2481CD15BB6A260070924E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ok56leg.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = EH6BL4VM24;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -2112,7 +2119,7 @@
 				GCC_PREFIX_HEADER = "OAECLegGuide/OAECLegGuide-Prefix.pch";
 				INFOPLIST_FILE = "OAECLegGuide/OAECLegGuide-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_BUNDLE_IDENTIFIER = coop.oaec.ok55leg;
+				PRODUCT_BUNDLE_IDENTIFIER = coop.oaec.ok56leg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -2134,7 +2141,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AF2481CB15BB6A260070924E /* Build configuration list for PBXNativeTarget "ok55leg" */ = {
+		AF2481CB15BB6A260070924E /* Build configuration list for PBXNativeTarget "ok56leg" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AF2481CC15BB6A260070924E /* Debug */,
