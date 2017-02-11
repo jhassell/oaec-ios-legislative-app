@@ -227,12 +227,18 @@
         
         chv.chamberLabel.text=self.committee.body;
         chv.committeeNameLabel.text=self.committee.name;
-        chv.meetsLabel.text = [NSString stringWithFormat:@"%@%@%@",
-                               (self.committee.dow==nil?@"":self.committee.dow),
-                               (self.committee.time==nil?@"":@" "),
-                               (self.committee.time==nil?@"":[NSString stringWithFormat:@"@ %@",self.committee.time])
-                               ];
+        
+        //if ((self.committee.dow != nil) && (self.committee.time != nil)) {
+            chv.meetsLabel.text = [NSString stringWithFormat:@"%@%@%@",
+                ([self.committee.dow length]==0?@"":self.committee.dow),
+                ([self.committee.time length]==0?@"":@" "),
+                ([self.committee.time length]==0?@"":[NSString stringWithFormat:@"@ %@",self.committee.time])
+                ];
+        //} else {
+        //    chv.meetsLabel.text=nil;
+        //}
 
+            
         chv.committeeSubtypeLabel.text=self.committee.type;
         
         CGSize size = [chv.meetsLabel sizeThatFits:chv.meetsLabel.frame.size];
@@ -246,10 +252,10 @@
         if (chv.roomLabel.text==nil || [chv.roomLabel.text trim].length==0) {
             chv.roomLabelLabel.hidden=YES;
         } else {
-            chv.roomLabelLabel.hidden=NO;
+            chv.roomLabelLabel.hidden=NO;	
         }
         
-        if (chv.meetsLabel.text==nil || [chv.meetsLabel.text trim].length==0) {
+        if ([chv.meetsLabel.text length]==0 || [chv.meetsLabel.text trim].length==0) {
             chv.meetsLabelLabel.hidden=YES;
         } else {
             chv.meetsLabelLabel.hidden=NO;

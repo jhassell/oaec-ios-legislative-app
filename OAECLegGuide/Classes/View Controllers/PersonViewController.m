@@ -881,7 +881,7 @@
         
         OutlinkCell *outlinkCell = [[[NSBundle mainBundle] loadNibNamed:@"OutlinkCell-iPhone" owner:nil options:nil] objectAtIndex:0];
         
-        outlinkCell.linkUrlString=@"http://oaec.coop/legislative_center/?page=requestappupdates";
+        outlinkCell.linkUrlString=@"mailto:showeth@oaec.coop?subject=OAEC%20iPhone%20App,%20Inaccuracy";
         
         [findAnErrorSection.children addObject:outlinkCell];
         [self.sections addObject:findAnErrorSection];

@@ -298,6 +298,7 @@
 		CE2DAF8E1E4EACFD002BCD60 /* DunningtonJason.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE2DAF8B1E4EACFD002BCD60 /* DunningtonJason.jpg */; };
 		CE2DAF901E4EB2A1002BCD60 /* BergstromMicheal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE2DAF8F1E4EB2A1002BCD60 /* BergstromMicheal.jpg */; };
 		CE2DAF921E4EC6D1002BCD60 /* GriffinAJ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE2DAF911E4EC6D1002BCD60 /* GriffinAJ.jpg */; };
+		CE2DAF961E4EC8A4002BCD60 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2DAF951E4EC8A4002BCD60 /* StoreKit.framework */; };
 		CE7C6D0C1E385F4C00874B14 /* BabinecGreg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6CE61E385F4C00874B14 /* BabinecGreg.jpg */; };
 		CE7C6D0D1E385F4C00874B14 /* BakerRhonda.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6CE71E385F4C00874B14 /* BakerRhonda.jpg */; };
 		CE7C6D0E1E385F4C00874B14 /* BennettForrest.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6CE81E385F4C00874B14 /* BennettForrest.jpg */; };
@@ -713,6 +714,7 @@
 		CE2DAF8B1E4EACFD002BCD60 /* DunningtonJason.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DunningtonJason.jpg; sourceTree = "<group>"; };
 		CE2DAF8F1E4EB2A1002BCD60 /* BergstromMicheal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BergstromMicheal.jpg; sourceTree = "<group>"; };
 		CE2DAF911E4EC6D1002BCD60 /* GriffinAJ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GriffinAJ.jpg; sourceTree = "<group>"; };
+		CE2DAF951E4EC8A4002BCD60 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		CE4ACD331E215057003A6655 /* ok56leg.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ok56leg.entitlements; sourceTree = "<group>"; };
 		CE7C6CE61E385F4C00874B14 /* BabinecGreg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BabinecGreg.jpg; sourceTree = "<group>"; };
 		CE7C6CE71E385F4C00874B14 /* BakerRhonda.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BakerRhonda.jpg; sourceTree = "<group>"; };
@@ -802,6 +804,7 @@
 				CEB3DA691C2F9AE90003A4B9 /* QuartzCore.framework in Frameworks */,
 				CEB3DA6A1C2F9AE90003A4B9 /* Security.framework in Frameworks */,
 				CEB3DA6C1C2F9AE90003A4B9 /* SystemConfiguration.framework in Frameworks */,
+				CE2DAF961E4EC8A4002BCD60 /* StoreKit.framework in Frameworks */,
 				AF2481A815BB6A260070924E /* CoreGraphics.framework in Frameworks */,
 				AF3DEE5215DD3AA500151661 /* CoreLocation.framework in Frameworks */,
 				CEB3DA631C2F9ABC0003A4B9 /* AudioToolbox.framework in Frameworks */,
@@ -860,6 +863,7 @@
 		AF2481A215BB6A260070924E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE2DAF951E4EC8A4002BCD60 /* StoreKit.framework */,
 				CEB3DA651C2F9AE90003A4B9 /* QuartzCore.framework */,
 				CEB3DA661C2F9AE90003A4B9 /* Security.framework */,
 				CEB3DA681C2F9AE90003A4B9 /* SystemConfiguration.framework */,
@@ -1473,10 +1477,13 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
-								enabled = 0;
+								enabled = 1;
 							};
 							com.apple.Push = {
 								enabled = 1;
+							};
+							com.apple.Wallet = {
+								enabled = 0;
 							};
 						};
 					};
@@ -1989,7 +1996,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7s armv7 arm64";
 				WRAPPER_EXTENSION = app;
 			};
@@ -2014,7 +2021,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
