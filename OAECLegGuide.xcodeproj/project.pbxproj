@@ -293,6 +293,30 @@
 		AFEF4BD715C7971D00896FA9 /* NSString+Stuff.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEF4BD615C7971D00896FA9 /* NSString+Stuff.m */; };
 		AFF2BB1815C860BB00F1B379 /* CommitteeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF2BB1715C860BB00F1B379 /* CommitteeListViewController.m */; };
 		AFF2BB1B15C8610100F1B379 /* CommitteeListView-iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFF2BB1A15C8610100F1B379 /* CommitteeListView-iPhone.xib */; };
+		CE18B5411E4F72930067DCC1 /* Icon-App-20x20@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE18B52B1E4F72930067DCC1 /* Icon-App-20x20@1x.png */; };
+		CE18B5421E4F72930067DCC1 /* Icon-App-20x20@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE18B52C1E4F72930067DCC1 /* Icon-App-20x20@2x.png */; };
+		CE18B5431E4F72930067DCC1 /* Icon-App-20x20@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE18B52D1E4F72930067DCC1 /* Icon-App-20x20@3x.png */; };
+		CE18B5441E4F72930067DCC1 /* Icon-App-29x29@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE18B52E1E4F72930067DCC1 /* Icon-App-29x29@1x.png */; };
+		CE18B5451E4F72930067DCC1 /* Icon-App-29x29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE18B52F1E4F72930067DCC1 /* Icon-App-29x29@2x.png */; };
+		CE18B5461E4F72930067DCC1 /* Icon-App-29x29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE18B5301E4F72930067DCC1 /* Icon-App-29x29@3x.png */; };
+		CE18B5471E4F72930067DCC1 /* Icon-App-40x40@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE18B5311E4F72930067DCC1 /* Icon-App-40x40@1x.png */; };
+		CE18B5481E4F72930067DCC1 /* Icon-App-40x40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE18B5321E4F72930067DCC1 /* Icon-App-40x40@2x.png */; };
+		CE18B5491E4F72930067DCC1 /* Icon-App-40x40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE18B5331E4F72930067DCC1 /* Icon-App-40x40@3x.png */; };
+		CE18B54A1E4F72930067DCC1 /* Icon-App-57x57@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE18B5341E4F72930067DCC1 /* Icon-App-57x57@1x.png */; };
+		CE18B54B1E4F72930067DCC1 /* Icon-App-57x57@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE18B5351E4F72930067DCC1 /* Icon-App-57x57@2x.png */; };
+		CE18B54C1E4F72930067DCC1 /* Icon-App-60x60@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE18B5361E4F72930067DCC1 /* Icon-App-60x60@1x.png */; };
+		CE18B54D1E4F72930067DCC1 /* Icon-App-60x60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE18B5371E4F72930067DCC1 /* Icon-App-60x60@2x.png */; };
+		CE18B54E1E4F72930067DCC1 /* Icon-App-72x72@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE18B5381E4F72930067DCC1 /* Icon-App-72x72@1x.png */; };
+		CE18B54F1E4F72930067DCC1 /* Icon-App-72x72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE18B5391E4F72930067DCC1 /* Icon-App-72x72@2x.png */; };
+		CE18B5501E4F72930067DCC1 /* Icon-App-76x76@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE18B53A1E4F72930067DCC1 /* Icon-App-76x76@1x.png */; };
+		CE18B5511E4F72930067DCC1 /* Icon-App-76x76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE18B53B1E4F72930067DCC1 /* Icon-App-76x76@2x.png */; };
+		CE18B5521E4F72930067DCC1 /* Icon-App-76x76@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE18B53C1E4F72930067DCC1 /* Icon-App-76x76@3x.png */; };
+		CE18B5531E4F72930067DCC1 /* Icon-App-83.5x83.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE18B53D1E4F72930067DCC1 /* Icon-App-83.5x83.5@2x.png */; };
+		CE18B5541E4F72930067DCC1 /* Icon-Small-50x50@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE18B53E1E4F72930067DCC1 /* Icon-Small-50x50@1x.png */; };
+		CE18B5551E4F72930067DCC1 /* Icon-Small-50x50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE18B53F1E4F72930067DCC1 /* Icon-Small-50x50@2x.png */; };
+		CE18B5561E4F72930067DCC1 /* Icon-App-60x60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE18B5401E4F72930067DCC1 /* Icon-App-60x60@3x.png */; };
+		CE18B5591E4F78020067DCC1 /* Icon-App-152x152@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE18B5571E4F78020067DCC1 /* Icon-App-152x152@1x.png */; };
+		CE18B55A1E4F78020067DCC1 /* Icon-App-167x167@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE18B5581E4F78020067DCC1 /* Icon-App-167x167@1x.png */; };
 		CE2DAF8C1E4EACFD002BCD60 /* BlancettMeloyde.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE2DAF891E4EACFD002BCD60 /* BlancettMeloyde.jpg */; };
 		CE2DAF8D1E4EACFD002BCD60 /* ConditDonnie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE2DAF8A1E4EACFD002BCD60 /* ConditDonnie.jpg */; };
 		CE2DAF8E1E4EACFD002BCD60 /* DunningtonJason.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE2DAF8B1E4EACFD002BCD60 /* DunningtonJason.jpg */; };
@@ -709,6 +733,30 @@
 		AFF2BB1615C860BB00F1B379 /* CommitteeListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommitteeListViewController.h; sourceTree = "<group>"; };
 		AFF2BB1715C860BB00F1B379 /* CommitteeListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommitteeListViewController.m; sourceTree = "<group>"; };
 		AFF2BB1A15C8610100F1B379 /* CommitteeListView-iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "CommitteeListView-iPhone.xib"; sourceTree = "<group>"; };
+		CE18B52B1E4F72930067DCC1 /* Icon-App-20x20@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-20x20@1x.png"; sourceTree = "<group>"; };
+		CE18B52C1E4F72930067DCC1 /* Icon-App-20x20@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-20x20@2x.png"; sourceTree = "<group>"; };
+		CE18B52D1E4F72930067DCC1 /* Icon-App-20x20@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-20x20@3x.png"; sourceTree = "<group>"; };
+		CE18B52E1E4F72930067DCC1 /* Icon-App-29x29@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-29x29@1x.png"; sourceTree = "<group>"; };
+		CE18B52F1E4F72930067DCC1 /* Icon-App-29x29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-29x29@2x.png"; sourceTree = "<group>"; };
+		CE18B5301E4F72930067DCC1 /* Icon-App-29x29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-29x29@3x.png"; sourceTree = "<group>"; };
+		CE18B5311E4F72930067DCC1 /* Icon-App-40x40@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-40x40@1x.png"; sourceTree = "<group>"; };
+		CE18B5321E4F72930067DCC1 /* Icon-App-40x40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-40x40@2x.png"; sourceTree = "<group>"; };
+		CE18B5331E4F72930067DCC1 /* Icon-App-40x40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-40x40@3x.png"; sourceTree = "<group>"; };
+		CE18B5341E4F72930067DCC1 /* Icon-App-57x57@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-57x57@1x.png"; sourceTree = "<group>"; };
+		CE18B5351E4F72930067DCC1 /* Icon-App-57x57@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-57x57@2x.png"; sourceTree = "<group>"; };
+		CE18B5361E4F72930067DCC1 /* Icon-App-60x60@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-60x60@1x.png"; sourceTree = "<group>"; };
+		CE18B5371E4F72930067DCC1 /* Icon-App-60x60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-60x60@2x.png"; sourceTree = "<group>"; };
+		CE18B5381E4F72930067DCC1 /* Icon-App-72x72@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-72x72@1x.png"; sourceTree = "<group>"; };
+		CE18B5391E4F72930067DCC1 /* Icon-App-72x72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-72x72@2x.png"; sourceTree = "<group>"; };
+		CE18B53A1E4F72930067DCC1 /* Icon-App-76x76@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-76x76@1x.png"; sourceTree = "<group>"; };
+		CE18B53B1E4F72930067DCC1 /* Icon-App-76x76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-76x76@2x.png"; sourceTree = "<group>"; };
+		CE18B53C1E4F72930067DCC1 /* Icon-App-76x76@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-76x76@3x.png"; sourceTree = "<group>"; };
+		CE18B53D1E4F72930067DCC1 /* Icon-App-83.5x83.5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-83.5x83.5@2x.png"; sourceTree = "<group>"; };
+		CE18B53E1E4F72930067DCC1 /* Icon-Small-50x50@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50x50@1x.png"; sourceTree = "<group>"; };
+		CE18B53F1E4F72930067DCC1 /* Icon-Small-50x50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50x50@2x.png"; sourceTree = "<group>"; };
+		CE18B5401E4F72930067DCC1 /* Icon-App-60x60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-60x60@3x.png"; sourceTree = "<group>"; };
+		CE18B5571E4F78020067DCC1 /* Icon-App-152x152@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-152x152@1x.png"; sourceTree = "<group>"; };
+		CE18B5581E4F78020067DCC1 /* Icon-App-167x167@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-167x167@1x.png"; sourceTree = "<group>"; };
 		CE2DAF891E4EACFD002BCD60 /* BlancettMeloyde.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BlancettMeloyde.jpg; sourceTree = "<group>"; };
 		CE2DAF8A1E4EACFD002BCD60 /* ConditDonnie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ConditDonnie.jpg; sourceTree = "<group>"; };
 		CE2DAF8B1E4EACFD002BCD60 /* DunningtonJason.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DunningtonJason.jpg; sourceTree = "<group>"; };
@@ -898,6 +946,30 @@
 		AF2481AA15BB6A260070924E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CE18B5571E4F78020067DCC1 /* Icon-App-152x152@1x.png */,
+				CE18B5581E4F78020067DCC1 /* Icon-App-167x167@1x.png */,
+				CE18B52B1E4F72930067DCC1 /* Icon-App-20x20@1x.png */,
+				CE18B52C1E4F72930067DCC1 /* Icon-App-20x20@2x.png */,
+				CE18B52D1E4F72930067DCC1 /* Icon-App-20x20@3x.png */,
+				CE18B52E1E4F72930067DCC1 /* Icon-App-29x29@1x.png */,
+				CE18B52F1E4F72930067DCC1 /* Icon-App-29x29@2x.png */,
+				CE18B5301E4F72930067DCC1 /* Icon-App-29x29@3x.png */,
+				CE18B5311E4F72930067DCC1 /* Icon-App-40x40@1x.png */,
+				CE18B5321E4F72930067DCC1 /* Icon-App-40x40@2x.png */,
+				CE18B5331E4F72930067DCC1 /* Icon-App-40x40@3x.png */,
+				CE18B5341E4F72930067DCC1 /* Icon-App-57x57@1x.png */,
+				CE18B5351E4F72930067DCC1 /* Icon-App-57x57@2x.png */,
+				CE18B5361E4F72930067DCC1 /* Icon-App-60x60@1x.png */,
+				CE18B5371E4F72930067DCC1 /* Icon-App-60x60@2x.png */,
+				CE18B5381E4F72930067DCC1 /* Icon-App-72x72@1x.png */,
+				CE18B5391E4F72930067DCC1 /* Icon-App-72x72@2x.png */,
+				CE18B53A1E4F72930067DCC1 /* Icon-App-76x76@1x.png */,
+				CE18B53B1E4F72930067DCC1 /* Icon-App-76x76@2x.png */,
+				CE18B53C1E4F72930067DCC1 /* Icon-App-76x76@3x.png */,
+				CE18B53D1E4F72930067DCC1 /* Icon-App-83.5x83.5@2x.png */,
+				CE18B53E1E4F72930067DCC1 /* Icon-Small-50x50@1x.png */,
+				CE18B53F1E4F72930067DCC1 /* Icon-Small-50x50@2x.png */,
+				CE18B5401E4F72930067DCC1 /* Icon-App-60x60@3x.png */,
 				AF2481AB15BB6A260070924E /* OAECLegGuide-Info.plist */,
 				AF2481AC15BB6A260070924E /* InfoPlist.strings */,
 				AF2481AF15BB6A260070924E /* main.m */,
@@ -1512,9 +1584,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF2481AE15BB6A260070924E /* InfoPlist.strings in Resources */,
+				CE18B5551E4F72930067DCC1 /* Icon-Small-50x50@2x.png in Resources */,
 				AF2481E615BB6C5E0070924E /* MainStoryboard_iPhone.storyboard in Resources */,
+				CE18B5421E4F72930067DCC1 /* Icon-App-20x20@2x.png in Resources */,
 				AF2482D615BDDA2A0070924E /* iconplaceholder.png in Resources */,
 				AF2482D715BDDA2A0070924E /* iconplaceholder@2x.png in Resources */,
+				CE18B5461E4F72930067DCC1 /* Icon-App-29x29@3x.png in Resources */,
 				AFDB1E5B15C0C62300862F0F /* data.csv in Resources */,
 				AFEF4BAD15C50ECB00896FA9 /* PeopleListCell-iPhone.xib in Resources */,
 				CE7C6D281E385F4C00874B14 /* NewtonCarl.jpg in Resources */,
@@ -1526,9 +1601,11 @@
 				AF0D4B1215CB15570046F663 /* browser.png in Resources */,
 				AF0D4B1315CB15570046F663 /* email.png in Resources */,
 				AF0D4B1415CB15570046F663 /* facebook.png in Resources */,
+				CE18B5501E4F72930067DCC1 /* Icon-App-76x76@1x.png in Resources */,
 				AF0D4B1515CB15570046F663 /* linkedin.png in Resources */,
 				AF577E671A0BED8D00994EA1 /* Statewide@2x.png in Resources */,
 				AF0D4B1615CB15570046F663 /* twitter.png in Resources */,
+				CE18B5521E4F72930067DCC1 /* Icon-App-76x76@3x.png in Resources */,
 				AF71B98D15CB236700D0D43B /* map.png in Resources */,
 				AF71B99015CB278800D0D43B /* phone.png in Resources */,
 				CEDEF0E41C0034BF0024A43F /* WinchesterJames.jpg in Resources */,
@@ -1559,7 +1636,9 @@
 				AF9B4A8F15DEA8E60071CB88 /* Arrow_Left@2x.png in Resources */,
 				AF82A2671A7789B600A91552 /* TadlockJohnny.jpg in Resources */,
 				AF9B4A9015DEA8E60071CB88 /* Arrow_Right.png in Resources */,
+				CE18B5591E4F78020067DCC1 /* Icon-App-152x152@1x.png in Resources */,
 				AF82A2631A7789B600A91552 /* PfeifferJohn.jpg in Resources */,
+				CE18B54D1E4F72930067DCC1 /* Icon-App-60x60@2x.png in Resources */,
 				AF9B4A9115DEA8E60071CB88 /* Arrow_Right@2x.png in Resources */,
 				AF577E5D1A0BED8D00994EA1 /* houseIcon@2x.png in Resources */,
 				CE7C6D4E1E385F7600874B14 /* NewhouseJoe.jpg in Resources */,
@@ -1574,7 +1653,9 @@
 				AF14BD75160E73A5003D2052 /* About.png in Resources */,
 				AF14BD76160E73A5003D2052 /* About@2x.png in Resources */,
 				CE7C6D4C1E385F7600874B14 /* MatthewsKevin.jpg in Resources */,
+				CE18B54A1E4F72930067DCC1 /* Icon-App-57x57@1x.png in Resources */,
 				CEDEF0E31C0034BF0024A43F /* WattJoseph.jpg in Resources */,
+				CE18B5441E4F72930067DCC1 /* Icon-App-29x29@1x.png in Resources */,
 				AF14BD7B160E73A5003D2052 /* Federal.png in Resources */,
 				AF14BD7C160E73A5003D2052 /* Federal@2x.png in Resources */,
 				CE2DAF901E4EB2A1002BCD60 /* BergstromMicheal.jpg in Resources */,
@@ -1626,6 +1707,7 @@
 				AF6987F918E17E7100144B92 /* CommitteeHeaderView-iPhone.xib in Resources */,
 				AFBC6E6B16B0BF740052E385 /* AliceHouston.jpg in Resources */,
 				AFBC6E6C16B0BF740052E385 /* AnthonyDue.jpg in Resources */,
+				CE18B5561E4F72930067DCC1 /* Icon-App-60x60@3x.png in Resources */,
 				AFBC6E6E16B0BF740052E385 /* BrentHartin.jpg in Resources */,
 				AFBC6E6F16B0BF740052E385 /* CharlesPaxton.jpg in Resources */,
 				AFBC6E7016B0BF740052E385 /* ChrisCariker.jpg in Resources */,
@@ -1652,6 +1734,7 @@
 				CE7C6D251E385F4C00874B14 /* McEntireMarcus.jpg in Resources */,
 				AFBC6E8316B0BF740052E385 /* RandyEthridge.jpg in Resources */,
 				AFBC6E8416B0BF740052E385 /* ScottCopeland.jpg in Resources */,
+				CE18B54F1E4F72930067DCC1 /* Icon-App-72x72@2x.png in Resources */,
 				AFBC6E8516B0BF740052E385 /* TerryMatlock.jpg in Resources */,
 				AFBC6E8616B0BF740052E385 /* TimSmith.jpg in Resources */,
 				CE7C6D4B1E385F7600874B14 /* LeewrightJames.jpg in Resources */,
@@ -1672,9 +1755,11 @@
 				CE7C6D6A1E39B41F00874B14 /* PatrickGrace.jpg in Resources */,
 				CE7C6D2F1E385F4C00874B14 /* WestRick.jpg in Resources */,
 				AFBC6E9416B0BF740052E385 /* CannadayEd.jpg in Resources */,
+				CE18B5481E4F72930067DCC1 /* Icon-App-40x40@2x.png in Resources */,
 				AFBC6E9516B0BF740052E385 /* CaseyDennis.jpg in Resources */,
 				AF82A2531A7789B600A91552 /* CaldwellChad.jpg in Resources */,
 				CE7C6D231E385F4C00874B14 /* McDugleKevin.jpg in Resources */,
+				CE18B5431E4F72930067DCC1 /* Icon-App-20x20@3x.png in Resources */,
 				CE7C6D5B1E3872CD00874B14 /* FloydKay.jpg in Resources */,
 				AFBC6E9716B0BF740052E385 /* ClevelandBobby.jpg in Resources */,
 				AF577E5B1A0BED8D00994EA1 /* houseCommittee@2x.png in Resources */,
@@ -1690,6 +1775,7 @@
 				AFBC6EA216B0BF740052E385 /* EcholsJon.jpg in Resources */,
 				AFBC6EA316B0BF740052E385 /* EnnsJohn.jpg in Resources */,
 				AFBC6EA616B0BF740052E385 /* FourkillerWilliam.jpg in Resources */,
+				CE18B5541E4F72930067DCC1 /* Icon-Small-50x50@1x.png in Resources */,
 				AFBC6EA916B0BF740052E385 /* HallElise.jpg in Resources */,
 				AFBC6EAB16B0BF740052E385 /* HardinTommy.jpg in Resources */,
 				AFBC6EAC16B0BF740052E385 /* HenkeKatie.jpg in Resources */,
@@ -1708,16 +1794,19 @@
 				CE7C6D4F1E385F7600874B14 /* PaxtonLonnie.jpg in Resources */,
 				AFBC6EB916B0BF740052E385 /* MartinScott.jpg in Resources */,
 				CE7C6D671E39B41F00874B14 /* JenniferMeason.jpg in Resources */,
+				CE18B5511E4F72930067DCC1 /* Icon-App-76x76@2x.png in Resources */,
 				AFBC6EBC16B0BF740052E385 /* McBrideMark.jpg in Resources */,
 				AFBC6EBD16B0BF740052E385 /* McCallCharles.jpg in Resources */,
 				AFBC6EC116B0BF740052E385 /* McDanielRandy.jpg in Resources */,
 				CE7C6D1B1E385F4C00874B14 /* HilbertKyle.jpg in Resources */,
 				AFBC6EC416B0BF740052E385 /* MooreLewis.jpg in Resources */,
 				CE7C6D181E385F4C00874B14 /* FordRoger.jpg in Resources */,
+				CE18B5411E4F72930067DCC1 /* Icon-App-20x20@1x.png in Resources */,
 				AFBC6EC616B0BF740052E385 /* MulreadyGlen.jpg in Resources */,
 				AFBC6EC716B0BF740052E385 /* MurpheyJason.jpg in Resources */,
 				AFBC6ECA16B0BF740052E385 /* NollanJadine.jpg in Resources */,
 				AFBC6ECB16B0BF740052E385 /* O'DonnellTerry.jpg in Resources */,
+				CE18B55A1E4F78020067DCC1 /* Icon-App-167x167@1x.png in Resources */,
 				CEA749651C572771007271E5 /* DossettJJ.jpg in Resources */,
 				CE7C6D2D1E385F4C00874B14 /* WestJosh.jpg in Resources */,
 				CEDEF0E21C0034BF0024A43F /* TaylorSteven.jpg in Resources */,
@@ -1758,6 +1847,7 @@
 				AF82A2691A7789B600A91552 /* YoungGeorge.jpg in Resources */,
 				CE7C6D511E385F7600874B14 /* PembertonDewayne.jpg in Resources */,
 				AF82A2831A7789D100A91552 /* RussellSteve.jpg in Resources */,
+				CE18B54E1E4F72930067DCC1 /* Icon-App-72x72@1x.png in Resources */,
 				AFBC6EE916B0BF740052E385 /* VaughanSteve.jpg in Resources */,
 				AFBC6EEA16B0BF740052E385 /* VirginEmily.jpg in Resources */,
 				AFBC6EEC16B0BF740052E385 /* WatsonWeldon.jpg in Resources */,
@@ -1769,6 +1859,7 @@
 				AFBC6EF616B0BF740052E385 /* BassRandy.jpg in Resources */,
 				AFBC6EF816B0BF740052E385 /* BoggsLarry.jpg in Resources */,
 				AFBC6EFA16B0BF740052E385 /* BrecheenJosh.jpg in Resources */,
+				CE18B5531E4F72930067DCC1 /* Icon-App-83.5x83.5@2x.png in Resources */,
 				AF577E5F1A0BED8D00994EA1 /* houseLeadership@2x.png in Resources */,
 				AFBC6EFD16B0BF740052E385 /* BrownBill.jpg in Resources */,
 				AF82A2561A7789B600A91552 /* DunlapTravis.jpg in Resources */,
@@ -1787,6 +1878,7 @@
 				AF82A27D1A7789C500A91552 /* YenErvin.jpg in Resources */,
 				AFBC6F1016B0BF740052E385 /* MarlattBryce.jpg in Resources */,
 				AF82A2581A7789B600A91552 /* FaughtGeorge.jpg in Resources */,
+				CE18B5451E4F72930067DCC1 /* Icon-App-29x29@2x.png in Resources */,
 				AFBC6F1316B0BF740052E385 /* NewberryDan.jpg in Resources */,
 				CE7C6D151E385F4C00874B14 /* DowningTim.jpg in Resources */,
 				AFBC6F1516B0BF740052E385 /* SchulzMike.jpg in Resources */,
@@ -1808,6 +1900,7 @@
 				AFBC6F2216B0BF740052E385 /* BarresiJanet.jpg in Resources */,
 				AFBC6F2316B0BF740052E385 /* CostelloMark.jpg in Resources */,
 				AFBC6F2416B0BF740052E385 /* DoakJohn.jpg in Resources */,
+				CE18B5471E4F72930067DCC1 /* Icon-App-40x40@1x.png in Resources */,
 				AFBC6F2516B0BF740052E385 /* DouglasPatrice.jpg in Resources */,
 				CE7C6D541E385F7600874B14 /* RaderDave.jpg in Resources */,
 				AF82A2551A7789B600A91552 /* CoodyJeff.jpg in Resources */,
@@ -1819,10 +1912,13 @@
 				AFBC6F2916B0BF740052E385 /* MillerKen.jpg in Resources */,
 				AF82A2771A7789C500A91552 /* JechDarcy.jpg in Resources */,
 				AFBC6F2A16B0BF740052E385 /* MurphyDana.jpg in Resources */,
+				CE18B54B1E4F72930067DCC1 /* Icon-App-57x57@2x.png in Resources */,
 				AFBC6F2B16B0BF740052E385 /* PruittScott.jpg in Resources */,
 				AF866C9616B8F9C700E9DF01 /* OutlinkCell-iPhone.xib in Resources */,
 				CE7C6D1E1E385F4C00874B14 /* KerbsDell.jpg in Resources */,
+				CE18B5491E4F72930067DCC1 /* Icon-App-40x40@3x.png in Resources */,
 				AF82A2641A7789B600A91552 /* RogersMichael.jpg in Resources */,
+				CE18B54C1E4F72930067DCC1 /* Icon-App-60x60@1x.png in Resources */,
 				AF255CC5184CBAF60053CC73 /* AppIcon-60.png in Resources */,
 				AF255CC6184CBAF60053CC73 /* AppIcon-60@2x.png in Resources */,
 			);

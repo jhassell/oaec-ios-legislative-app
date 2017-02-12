@@ -22,6 +22,10 @@
 				<string>AppIconiPad@2x.png</string>
 				<string>AppIcon-60@2x.png</string>
 				<string>AppIcon-60.png</string>
+				<string>Icon-App-72x72@1x.png</string>
+				<string>Icon-App-76x76@1x.png</string>
+				<string>Icon-App-167x167@1x.png</string>
+				<string>Icon-App-152x152@1x.png</string>
 			</array>
 		</dict>
 	</dict>
@@ -38,7 +42,7 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1.1.0</string>
+	<string>5</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
