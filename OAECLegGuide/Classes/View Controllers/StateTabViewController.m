@@ -6,6 +6,7 @@
 //  Copyright (c) 2012 Architactile LLC. All rights reserved.
 //
 
+#import <Realm/Realm.h>
 #import "StateTabViewController.h"
 #import "PeopleListViewController.h"
 #import "AppDelegate.h"

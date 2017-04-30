@@ -380,6 +380,8 @@
 		CEA749651C572771007271E5 /* DossettJJ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEA749641C572771007271E5 /* DossettJJ.jpg */; };
 		CEA7EC541E61CD58008031BF /* MarkWSchwirtz.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEA7EC531E61CD58008031BF /* MarkWSchwirtz.jpg */; };
 		CEA7EC561E61CD6E008031BF /* WyrickPatrick.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEA7EC551E61CD6E008031BF /* WyrickPatrick.jpg */; };
+		CEAA26F41EB5A17A0012CEA5 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEAA26F31EB5A17A0012CEA5 /* Realm.framework */; };
+		CEAA26F51EB5A17A0012CEA5 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEAA26F31EB5A17A0012CEA5 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CEB3DA5B1C2F98D10003A4B9 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB3DA591C2F98D10003A4B9 /* Bolts.framework */; };
 		CEB3DA5C1C2F98D10003A4B9 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB3DA5A1C2F98D10003A4B9 /* Parse.framework */; };
 		CEB3DA5F1C2F9A7F0003A4B9 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB3DA5D1C2F9A7F0003A4B9 /* libsqlite3.tbd */; };
@@ -403,6 +405,20 @@
 		CEDEF0E31C0034BF0024A43F /* WattJoseph.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEDEF0DA1C0034BF0024A43F /* WattJoseph.jpg */; };
 		CEDEF0E41C0034BF0024A43F /* WinchesterJames.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEDEF0DB1C0034BF0024A43F /* WinchesterJames.jpg */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CEAA26F61EB5A17A0012CEA5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CEAA26F51EB5A17A0012CEA5 /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		AF092D3115DA0DC700AA4B6B /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
@@ -822,6 +838,7 @@
 		CEA749641C572771007271E5 /* DossettJJ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DossettJJ.jpg; sourceTree = "<group>"; };
 		CEA7EC531E61CD58008031BF /* MarkWSchwirtz.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MarkWSchwirtz.jpg; sourceTree = "<group>"; };
 		CEA7EC551E61CD6E008031BF /* WyrickPatrick.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = WyrickPatrick.jpg; path = "State Judges/WyrickPatrick.jpg"; sourceTree = "<group>"; };
+		CEAA26F31EB5A17A0012CEA5 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		CEB3DA591C2F98D10003A4B9 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		CEB3DA5A1C2F98D10003A4B9 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		CEB3DA5D1C2F9A7F0003A4B9 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
@@ -866,6 +883,7 @@
 				AF2481A415BB6A260070924E /* UIKit.framework in Frameworks */,
 				AF2481A615BB6A260070924E /* Foundation.framework in Frameworks */,
 				CEB3DA5C1C2F98D10003A4B9 /* Parse.framework in Frameworks */,
+				CEAA26F41EB5A17A0012CEA5 /* Realm.framework in Frameworks */,
 				CEB3DA5B1C2F98D10003A4B9 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -890,6 +908,7 @@
 		AF24819415BB6A250070924E = {
 			isa = PBXGroup;
 			children = (
+				CEAA26F31EB5A17A0012CEA5 /* Realm.framework */,
 				CE4ACD331E215057003A6655 /* ok56leg.entitlements */,
 				AF255CC4184CBAF60053CC73 /* AppIcon-60@2x.png */,
 				AFC926A51614408D009538FD /* Default-568h@2x.png */,
@@ -1528,6 +1547,8 @@
 				AF24819B15BB6A250070924E /* Sources */,
 				AF24819C15BB6A250070924E /* Frameworks */,
 				AF24819D15BB6A250070924E /* Resources */,
+				CEAA26F61EB5A17A0012CEA5 /* Embed Frameworks */,
+				CEAA26F71EB5A37B0012CEA5 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1930,6 +1951,22 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		CEAA26F71EB5A37B0012CEA5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework/strip-frameworks.sh\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AF24819B15BB6A250070924E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -2091,6 +2128,7 @@
 				GCC_PREFIX_HEADER = "OAECLegGuide/OAECLegGuide-Prefix.pch";
 				INFOPLIST_FILE = "OAECLegGuide/OAECLegGuide-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = coop.oaec.ok56leg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2117,6 +2155,7 @@
 				GCC_PREFIX_HEADER = "OAECLegGuide/OAECLegGuide-Prefix.pch";
 				INFOPLIST_FILE = "OAECLegGuide/OAECLegGuide-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = coop.oaec.ok56leg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
