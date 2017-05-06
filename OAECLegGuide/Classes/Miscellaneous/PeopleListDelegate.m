@@ -23,6 +23,9 @@
 #define CELL_SUBTITLE       ((UILabel *)[cell viewWithTag:103])
 #define CELL_DISTRICT       ((UILabel *)[cell viewWithTag:104])
 #define CELL_PHOTO_NA       ((UIView *)[cell viewWithTag:105])
+#define CELL_YEA_VOTE       ((UIButton *)[cell viewWithTag:106])
+#define CELL_NAY_VOTE       ((UIButton *)[cell viewWithTag:107])
+
 
 @interface PeopleListDelegate ()
 
@@ -309,6 +312,21 @@
     return rowCount;
 }
 
+-(void) yeaCheckButtonTapped:(UIButton *) sender {
+
+    NSLog(@"Check button tapped");
+    [sender setBackgroundImage:[UIImage imageNamed:@"CheckYea.png"] forState:UIControlStateNormal];
+
+}
+
+
+-(void) nayCheckButtonTapped:(UIButton *) sender {
+    
+    NSLog(@"Check button tapped");
+    [sender setBackgroundImage:[UIImage imageNamed:@"CheckNay.png"] forState:UIControlStateNormal];
+    
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
@@ -357,11 +375,12 @@
     
 
     
-    static NSString *CellIdentifier = @"PeopleListCell";
+    static NSString *CellIdentifier = @"VotingListCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (cell==nil) {
-        cell =  [[[NSBundle mainBundle] loadNibNamed:@"PeopleListCell-iPhone" owner:nil options:nil] objectAtIndex:0];
+        //cell =  [[[NSBundle mainBundle] loadNibNamed:@"PeopleListCell-iPhone" owner:nil options:nil] objectAtIndex:0];
+        cell =  [[[NSBundle mainBundle] loadNibNamed:@"VotingListCell-iPhone" owner:nil options:nil] objectAtIndex:0];
     }
     
 
@@ -445,8 +464,51 @@
         CELL_PHOTO_NA.hidden=NO;
     }
     
+    //BOOL checked =  [[itsToDoChecked objectAtIndex:indexPath.row] boolValue];
+    BOOL yeaChecked = false;
+    UIImage *yeaImage = (yeaChecked) ? [UIImage imageNamed:@"MapPin.png"] : [UIImage imageNamed:@"BlankYeaSlice.png"];
+    UIButton *yeaButton = CELL_YEA_VOTE;
+    [yeaButton setBackgroundImage:yeaImage forState:UIControlStateNormal];
+    // set the button's target to this table view controller so we can interpret touch events and map that to a NSIndexSet
+    [yeaButton addTarget:self action:@selector(yeaCheckButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    
+    //BOOL checked =  [[itsToDoChecked objectAtIndex:indexPath.row] boolValue];
+    BOOL nayChecked = false;
+    UIImage *nayImage = (nayChecked) ? [UIImage imageNamed:@"CheckNay.png"] : [UIImage imageNamed:@"BlankNay.png"];
+    UIButton *nayButton = CELL_NAY_VOTE;
+    [nayButton setBackgroundImage:nayImage forState:UIControlStateNormal];
+    // set the button's target to this table view controller so we can interpret touch events and map that to a NSIndexSet
+    [nayButton addTarget:self action:@selector(nayCheckButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+
+    
+    
     return cell;
 }
+
+
+
+- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
+{
+
+    NSLog(@"At accessoryButtonTappedForRowWithIndexPath" );
+
+    //BOOL checked = [[itsToDoChecked objectAtIndex:indexPath.row] boolValue];
+    //[itsToDoChecked removeObjectAtIndex:indexPath.row];
+    //[itsToDoChecked insertObject:(checked) ? @"FALSE":@"TRUE" atIndex:indexPath.row];
+    //UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    //UIButton *button = (UIButton *)cell.accessoryView;
+    
+    //UIImage *newImage = (checked) ? [UIImage imageNamed:@"unchecked.png"] : [UIImage imageNamed:@"checked.png"];
+    //[button setBackgroundImage:newImage forState:UIControlStateNormal];
+    
+    //UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Save"
+    //                                                               //style:UIBarButtonItemStylePlain target:self action:@selector(saveChecklist:)];
+    //self.navigationItem.rightBarButtonItem = backButton;
+    //[backButton release];
+    
+}
+
+
 
 #pragma mark - Table view delegate
 
@@ -471,9 +533,12 @@
 }
 
 -(NSIndexPath *) tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section==0 && indexPath.row==0) return nil;
-    return indexPath;
+    //if (indexPath.section==0 && indexPath.row==0) return nil;
+    //return indexPath;
+    return nil;
 }
+
+
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -510,7 +575,7 @@
     
     pvc.person=person;
     
-    [self.viewController.navigationController pushViewController:pvc animated:YES];
+    //JWH [self.viewController.navigationController pushViewController:pvc animated:YES];
 
     
     /*

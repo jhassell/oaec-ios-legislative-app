@@ -542,6 +542,7 @@
 #pragma mark - Table view delegate
 
 -(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"Row index %i",(int)indexPath.row);
     NSLog(@"Height for %li->%i",(long)indexPath.section,(int)indexPath.row);
     ListSection *listSection = [self.sections objectAtIndex:indexPath.section];
     

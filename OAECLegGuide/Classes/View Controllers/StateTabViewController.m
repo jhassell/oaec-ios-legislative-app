@@ -24,6 +24,7 @@
 - (IBAction)houseCommitteesButtonpressed:(id)sender;
 - (IBAction)allButtonPressed:(id)sender;
 - (IBAction)judicialButtonPressed:(id)sender;
+- (IBAction)voteTallyButtonPressed:(id)sender;
 
 
 @end
@@ -158,6 +159,41 @@
     [self.navigationController pushViewController:plvc animated:YES];
 
 }
+
+
+
+
+- (IBAction)voteTallyButtonPressed:(id)sender {
+    
+    AppDelegate *ad = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    PeopleListViewController *plvc = [[PeopleListViewController alloc] initWithNibName:@"PeopleListView-iPhone" bundle:nil];
+    
+    ListSection *ls1 = [[[ListSection alloc] init] autorelease];
+    ls1.title=@"All Oklahoma";
+    
+    NSMutableArray *all = [NSMutableArray arrayWithArray:ad.stateHouse];
+    [all addObjectsFromArray:ad.stateSenate];
+    [all addObjectsFromArray:ad.statewide];
+    
+    NSSortDescriptor *lastSort = [NSSortDescriptor sortDescriptorWithKey:@"Last Name" ascending:YES];
+    NSSortDescriptor *firstSort = [NSSortDescriptor sortDescriptorWithKey:@"First Name" ascending:YES];
+    
+    [all sortUsingDescriptors:[NSArray arrayWithObjects:lastSort,firstSort,nil]];
+    
+    ls1.children=[[NSArray arrayWithArray:all] mutableCopy];
+    
+    plvc.sections = [NSArray arrayWithObject:ls1];
+    
+    
+    [self.navigationController pushViewController:plvc animated:YES];
+    
+}
+
+
+
+
+
 
 
 - (IBAction)judicialButtonPressed:(id)sender {

@@ -377,6 +377,11 @@
 		CE7C6D691E39B41F00874B14 /* KevinWood.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6D631E39B41F00874B14 /* KevinWood.jpg */; };
 		CE7C6D6A1E39B41F00874B14 /* PatrickGrace.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6D641E39B41F00874B14 /* PatrickGrace.jpg */; };
 		CE7C6D6B1E39B41F00874B14 /* ZacPerkins.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6D651E39B41F00874B14 /* ZacPerkins.jpg */; };
+		CE9CAE871EB80D0000C20CAF /* VoteTallIcon-09.png in Resources */ = {isa = PBXBuildFile; fileRef = CE9CAE861EB80D0000C20CAF /* VoteTallIcon-09.png */; };
+		CE9CAE891EB8AB9100C20CAF /* VotingListCell-iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE9CAE881EB8AB9100C20CAF /* VotingListCell-iPhone.xib */; };
+		CE9CAE8C1EBAD31000C20CAF /* VoteCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9CAE8B1EBAD31000C20CAF /* VoteCheckViewController.m */; };
+		CE9CAE8F1EBC08FD00C20CAF /* MyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9CAE8E1EBC08FD00C20CAF /* MyButton.m */; };
+		CE9CAE921EBC095D00C20CAF /* VoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9CAE911EBC095D00C20CAF /* VoteView.m */; };
 		CEA749651C572771007271E5 /* DossettJJ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEA749641C572771007271E5 /* DossettJJ.jpg */; };
 		CEA7EC541E61CD58008031BF /* MarkWSchwirtz.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEA7EC531E61CD58008031BF /* MarkWSchwirtz.jpg */; };
 		CEA7EC561E61CD6E008031BF /* WyrickPatrick.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEA7EC551E61CD6E008031BF /* WyrickPatrick.jpg */; };
@@ -394,6 +399,10 @@
 		CEB7D56C1BC9A54100AD5CD2 /* MunsonCyndi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEB7D56B1BC9A54100AD5CD2 /* MunsonCyndi.jpg */; };
 		CEB7D56E1BC9A55000AD5CD2 /* GoodwinRegina.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEB7D56D1BC9A55000AD5CD2 /* GoodwinRegina.jpg */; };
 		CEB7D5701BC9A57200AD5CD2 /* JonMiles.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEB7D56F1BC9A57200AD5CD2 /* JonMiles.jpg */; };
+		CEC865411EBDF7BC00363665 /* BlankYeaSlice.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC865401EBDF7BC00363665 /* BlankYeaSlice.png */; };
+		CEC865431EBE0F9300363665 /* CheckYea.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC865421EBE0F9300363665 /* CheckYea.png */; };
+		CEC865461EBE149100363665 /* CheckNay.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC865441EBE149100363665 /* CheckNay.png */; };
+		CEC865471EBE149100363665 /* BlankNay.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC865451EBE149100363665 /* BlankNay.png */; };
 		CEDEF0D01C002ACF0024A43F /* judicialIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDEF0CF1C002ACF0024A43F /* judicialIcon@2x.png */; };
 		CEDEF0D21C0031230024A43F /* McLawhornHoustonMelissa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEDEF0D11C0031230024A43F /* McLawhornHoustonMelissa.jpg */; };
 		CEDEF0DC1C0034BF0024A43F /* ColbertTom.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEDEF0D31C0034BF0024A43F /* ColbertTom.jpg */; };
@@ -835,6 +844,14 @@
 		CE7C6D631E39B41F00874B14 /* KevinWood.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = KevinWood.jpg; sourceTree = "<group>"; };
 		CE7C6D641E39B41F00874B14 /* PatrickGrace.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PatrickGrace.jpg; sourceTree = "<group>"; };
 		CE7C6D651E39B41F00874B14 /* ZacPerkins.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ZacPerkins.jpg; sourceTree = "<group>"; };
+		CE9CAE861EB80D0000C20CAF /* VoteTallIcon-09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VoteTallIcon-09.png"; sourceTree = "<group>"; };
+		CE9CAE881EB8AB9100C20CAF /* VotingListCell-iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "VotingListCell-iPhone.xib"; sourceTree = "<group>"; };
+		CE9CAE8A1EBAD31000C20CAF /* VoteCheckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VoteCheckViewController.h; path = "../View Controllers/VoteCheckViewController.h"; sourceTree = "<group>"; };
+		CE9CAE8B1EBAD31000C20CAF /* VoteCheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VoteCheckViewController.m; path = "../View Controllers/VoteCheckViewController.m"; sourceTree = "<group>"; };
+		CE9CAE8D1EBC08FD00C20CAF /* MyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyButton.h; sourceTree = "<group>"; };
+		CE9CAE8E1EBC08FD00C20CAF /* MyButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyButton.m; sourceTree = "<group>"; };
+		CE9CAE901EBC095D00C20CAF /* VoteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoteView.h; sourceTree = "<group>"; };
+		CE9CAE911EBC095D00C20CAF /* VoteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoteView.m; sourceTree = "<group>"; };
 		CEA749641C572771007271E5 /* DossettJJ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DossettJJ.jpg; sourceTree = "<group>"; };
 		CEA7EC531E61CD58008031BF /* MarkWSchwirtz.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MarkWSchwirtz.jpg; sourceTree = "<group>"; };
 		CEA7EC551E61CD6E008031BF /* WyrickPatrick.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = WyrickPatrick.jpg; path = "State Judges/WyrickPatrick.jpg"; sourceTree = "<group>"; };
@@ -851,6 +868,10 @@
 		CEB7D56B1BC9A54100AD5CD2 /* MunsonCyndi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MunsonCyndi.jpg; sourceTree = "<group>"; };
 		CEB7D56D1BC9A55000AD5CD2 /* GoodwinRegina.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GoodwinRegina.jpg; sourceTree = "<group>"; };
 		CEB7D56F1BC9A57200AD5CD2 /* JonMiles.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = JonMiles.jpg; sourceTree = "<group>"; };
+		CEC865401EBDF7BC00363665 /* BlankYeaSlice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlankYeaSlice.png; sourceTree = "<group>"; };
+		CEC865421EBE0F9300363665 /* CheckYea.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CheckYea.png; sourceTree = "<group>"; };
+		CEC865441EBE149100363665 /* CheckNay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CheckNay.png; sourceTree = "<group>"; };
+		CEC865451EBE149100363665 /* BlankNay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlankNay.png; sourceTree = "<group>"; };
 		CEDEF0CF1C002ACF0024A43F /* judicialIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "judicialIcon@2x.png"; sourceTree = "<group>"; };
 		CEDEF0D11C0031230024A43F /* McLawhornHoustonMelissa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = McLawhornHoustonMelissa.jpg; sourceTree = "<group>"; };
 		CEDEF0D31C0034BF0024A43F /* ColbertTom.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = ColbertTom.jpg; path = "State Judges/ColbertTom.jpg"; sourceTree = "<group>"; };
@@ -1046,6 +1067,10 @@
 		AF2481D615BB6C5E0070924E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				CEC865441EBE149100363665 /* CheckNay.png */,
+				CEC865451EBE149100363665 /* BlankNay.png */,
+				CEC865421EBE0F9300363665 /* CheckYea.png */,
+				CEC865401EBDF7BC00363665 /* BlankYeaSlice.png */,
 				AF577E471A0BED8D00994EA1 /* Buttons */,
 				AFDAD5D31861D22C00366D99 /* share.png */,
 				AFDAD5B01860070400366D99 /* Calendar.png */,
@@ -1100,6 +1125,7 @@
 				AF15543215EB5E6700AA7794 /* PersonViewAddressLACell-iPhone.xib */,
 				AF2481DD15BB6C5E0070924E /* MainStoryboard_iPhone.storyboard */,
 				AFEF4BAC15C50ECB00896FA9 /* PeopleListCell-iPhone.xib */,
+				CE9CAE881EB8AB9100C20CAF /* VotingListCell-iPhone.xib */,
 				AFEF4BB615C530F800896FA9 /* PeopleListView-iPhone.xib */,
 				AFF2BB1A15C8610100F1B379 /* CommitteeListView-iPhone.xib */,
 				AF0D4B0915CB0E940046F663 /* PersonView-iPhone.xib */,
@@ -1115,6 +1141,7 @@
 		AF577E471A0BED8D00994EA1 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
+				CE9CAE861EB80D0000C20CAF /* VoteTallIcon-09.png */,
 				CEDEF0CF1C002ACF0024A43F /* judicialIcon@2x.png */,
 				AF577E481A0BED8D00994EA1 /* All.png */,
 				AF577E491A0BED8D00994EA1 /* All@2x.png */,
@@ -1472,6 +1499,8 @@
 		AFDB1E6315C1D18600862F0F /* Miscellaneous */ = {
 			isa = PBXGroup;
 			children = (
+				CE9CAE8A1EBAD31000C20CAF /* VoteCheckViewController.h */,
+				CE9CAE8B1EBAD31000C20CAF /* VoteCheckViewController.m */,
 				AF6987FD18E183A700144B92 /* NSDictionary+Committee.h */,
 				AF6987FE18E183A700144B92 /* NSDictionary+Committee.m */,
 				AF6987FA18E17EF200144B92 /* CommitteeHeaderView.h */,
@@ -1517,6 +1546,10 @@
 				AF2B152616B08C1100A3A7F4 /* OutlinkCell.m */,
 				AFDAD5D51861DA1300366D99 /* Notes.h */,
 				AFDAD5D61861DA1300366D99 /* Notes.m */,
+				CE9CAE8D1EBC08FD00C20CAF /* MyButton.h */,
+				CE9CAE8E1EBC08FD00C20CAF /* MyButton.m */,
+				CE9CAE901EBC095D00C20CAF /* VoteView.h */,
+				CE9CAE911EBC095D00C20CAF /* VoteView.m */,
 			);
 			path = Miscellaneous;
 			sourceTree = "<group>";
@@ -1748,6 +1781,7 @@
 				AFBC6E7716B0BF740052E385 /* HamidVahdatipour.jpg in Resources */,
 				AFBC6E7816B0BF740052E385 /* JackClinkscale.jpg in Resources */,
 				AFBC6E7916B0BF740052E385 /* JackPerkins.jpg in Resources */,
+				CEC865461EBE149100363665 /* CheckNay.png in Resources */,
 				AFBC6E7A16B0BF740052E385 /* JamesHanna.jpg in Resources */,
 				AF577E581A0BED8D00994EA1 /* All.png in Resources */,
 				AFBC6E7B16B0BF740052E385 /* JimJackson.jpg in Resources */,
@@ -1803,6 +1837,7 @@
 				AFBC6EA616B0BF740052E385 /* FourkillerWilliam.jpg in Resources */,
 				CE18B5541E4F72930067DCC1 /* Icon-Small-50x50@1x.png in Resources */,
 				AFBC6EA916B0BF740052E385 /* HallElise.jpg in Resources */,
+				CE9CAE871EB80D0000C20CAF /* VoteTallIcon-09.png in Resources */,
 				AFBC6EAB16B0BF740052E385 /* HardinTommy.jpg in Resources */,
 				AFBC6EAC16B0BF740052E385 /* HenkeKatie.jpg in Resources */,
 				AF82A2821A7789D100A91552 /* HofmeisterJoy.jpg in Resources */,
@@ -1815,6 +1850,7 @@
 				AF577E5C1A0BED8D00994EA1 /* houseIcon.png in Resources */,
 				AF82A27C1A7789C500A91552 /* ThompsonRoger.jpg in Resources */,
 				AFBC6EB616B0BF740052E385 /* KirbyDan.jpg in Resources */,
+				CEC865411EBDF7BC00363665 /* BlankYeaSlice.png in Resources */,
 				CE7C6D681E39B41F00874B14 /* KenGates.jpg in Resources */,
 				AFBC6EB716B0BF740052E385 /* KouplenSteve.jpg in Resources */,
 				CE7C6D4F1E385F7600874B14 /* PaxtonLonnie.jpg in Resources */,
@@ -1841,6 +1877,7 @@
 				AF577E611A0BED8D00994EA1 /* senateCommittee@2x.png in Resources */,
 				CEDEF0D21C0031230024A43F /* McLawhornHoustonMelissa.jpg in Resources */,
 				AFBC6ECF16B0BF740052E385 /* PerrymanDavid.jpg in Resources */,
+				CE9CAE891EB8AB9100C20CAF /* VotingListCell-iPhone.xib in Resources */,
 				CEDEF0DD1C0034BF0024A43F /* CombsDouglas.jpg in Resources */,
 				AF82A27B1A7789C500A91552 /* SmalleyJason.jpg in Resources */,
 				AFBC6ED216B0BF740052E385 /* ProctorEric.jpg in Resources */,
@@ -1907,6 +1944,7 @@
 				AFBC6F1316B0BF740052E385 /* NewberryDan.jpg in Resources */,
 				CE7C6D151E385F4C00874B14 /* DowningTim.jpg in Resources */,
 				AFBC6F1516B0BF740052E385 /* SchulzMike.jpg in Resources */,
+				CEC865431EBE0F9300363665 /* CheckYea.png in Resources */,
 				AFBC6F1616B0BF740052E385 /* SharpRon.jpg in Resources */,
 				AFBC6F1716B0BF740052E385 /* ShawWayne.jpg in Resources */,
 				CE2DAF8C1E4EACFD002BCD60 /* BlancettMeloyde.jpg in Resources */,
@@ -1933,6 +1971,7 @@
 				AF82A2811A7789D100A91552 /* HiettTodd.jpg in Resources */,
 				AFBC6F2716B0BF740052E385 /* JonesGary.jpg in Resources */,
 				AFBC6F2816B0BF740052E385 /* LambTodd.jpg in Resources */,
+				CEC865471EBE149100363665 /* BlankNay.png in Resources */,
 				CE7C6D1A1E385F4C00874B14 /* GannTom.jpg in Resources */,
 				AFBC6F2916B0BF740052E385 /* MillerKen.jpg in Resources */,
 				AF82A2771A7789C500A91552 /* JechDarcy.jpg in Resources */,
@@ -1981,6 +2020,7 @@
 				AFDB1E5615C0C5D200862F0F /* CSVParser.m in Sources */,
 				AFDB1E5F15C16A7600862F0F /* DataLoader.m in Sources */,
 				AFDAD5D21861D21F00366D99 /* NotesViewController.m in Sources */,
+				CE9CAE8F1EBC08FD00C20CAF /* MyButton.m in Sources */,
 				AFDAD5D71861DA1300366D99 /* Notes.m in Sources */,
 				AFDB1E6615C1D1B300862F0F /* ListSection.m in Sources */,
 				AFDAD5BA1860096900366D99 /* CalendarCell.m in Sources */,
@@ -2012,6 +2052,8 @@
 				AF9385FF1610FF9A00B34E92 /* RedButton.m in Sources */,
 				AFDAD5AE186006AB00366D99 /* CustomTabBarController.m in Sources */,
 				AF2B152716B08C1100A3A7F4 /* OutlinkCell.m in Sources */,
+				CE9CAE921EBC095D00C20CAF /* VoteView.m in Sources */,
+				CE9CAE8C1EBAD31000C20CAF /* VoteCheckViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

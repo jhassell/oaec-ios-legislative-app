@@ -11,6 +11,10 @@
 #import "AppDelegate.h"
 #import "Committee.h"
 
+#import <Realm/Realm.h>
+
+
+
 @interface PeopleListViewController ()
 
 @property (nonatomic, retain) PeopleListDelegate *peopleListDelegate;
