@@ -16,6 +16,8 @@
 #import "SearchViewCell.h"
 #import "CommitteeHeaderView.h"
 #import "Committee.h"
+#import "Tally.h"
+//#import "voteButton.h"
 
 #define CELL_HEADSHOT       ((UIImageView *)[cell viewWithTag:100])
 #define CELL_NAME           ((UILabel *)[cell viewWithTag:101])
@@ -32,6 +34,11 @@
 @property (readonly) SearchViewCell *searchViewCell;
 @property (nonatomic, strong) NSMutableArray *filteredSections;
 @property (retain, nonatomic) UITableViewCell *committeeHeaderView;
+@property (nonatomic, strong) NSMutableArray *yeaVotes;
+@property (nonatomic, strong) NSMutableArray *nayVotes;
+@property (nonatomic, strong) Tally *sectionTally;
+
+
 
 -(void) buildDisplaySections;
 
@@ -139,13 +146,18 @@
 }
 
 -(void) buildDisplaySectionsWithFilterType:(NSInteger)filterType filterText:(NSString *) filterText {
+
+    // Store the data
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
     if (self.filteredSections==nil) {
         self.filteredSections = [NSMutableArray arrayWithCapacity:[self.sections count]];
+        [defaults setObject:false forKey:@"yeaStatus"];
     }
     [self.filteredSections removeAllObjects];
     
     if ([self.sections count]==0) return;
+    
     
     for(ListSection *section in self.sections) {
         
@@ -309,22 +321,58 @@
         rowCount+=1;
     }
     
+    self.sectionTally = [Tally new];
+    [self.sectionTally initWithParams:rowCount];
+    
     return rowCount;
 }
 
--(void) yeaCheckButtonTapped:(UIButton *) sender {
+-(void) yeaButtonTapped:(UIButton *)sender forEvent:(UIEvent *)event {
 
-    NSLog(@"Check button tapped");
-    [sender setBackgroundImage:[UIImage imageNamed:@"CheckYea.png"] forState:UIControlStateNormal];
+    NSInteger rowTapped = [sender.titleLabel.text integerValue];
 
+    UITouch *touch = [[event allTouches] anyObject];
+    
+    if (touch.tapCount > 0) {
+        
+        if ([self.sectionTally.votes[rowTapped] isEqual:@"yea"]) {
+            self.sectionTally.votes[rowTapped] = @"blank";
+        } else {
+            self.sectionTally.votes[rowTapped] = @"yea";
+        }
+    }
+    
+    if ([self.sectionTally.votes[rowTapped] isEqualToString:@"yea"]) {
+        [sender setImage:[UIImage imageNamed:@"CheckYea.png"] forState:UIControlStateNormal];
+        [self.sectionTally.nayButtonRef[rowTapped] setImage:[UIImage imageNamed:@"BlankNay.png"] forState:UIControlStateNormal];
+    } else {
+        [sender setImage:[UIImage imageNamed:@"BlankYeaSlice.png"]forState:UIControlStateNormal];
+    }
+    
+    
 }
 
 
--(void) nayCheckButtonTapped:(UIButton *) sender {
+-(void) nayCheckButtonTapped:(UIButton *) sender forEvent:(UIEvent *)event {
     
-    NSLog(@"Check button tapped");
-    [sender setBackgroundImage:[UIImage imageNamed:@"CheckNay.png"] forState:UIControlStateNormal];
+    NSInteger rowTapped = [sender.titleLabel.text integerValue];
     
+    UITouch *touch = [[event allTouches] anyObject];
+    
+    if (touch.tapCount > 0) {
+        if ([self.sectionTally.votes[rowTapped] isEqual:@"nay"]) {
+            self.sectionTally.votes[rowTapped] = @"blank";
+        } else {
+            self.sectionTally.votes[rowTapped] = @"nay";
+        }
+    }
+    
+    if ([self.sectionTally.votes[rowTapped] isEqualToString:@"nay"]) {
+        [sender setImage:[UIImage imageNamed:@"CheckNay.png"] forState:UIControlStateNormal];
+        [self.sectionTally.yeaButtonRef[rowTapped] setImage:[UIImage imageNamed:@"BlankYeaSlice.png"] forState:UIControlStateNormal];
+    } else {
+        [sender setImage:[UIImage imageNamed:@"BlankNay.png"]forState:UIControlStateNormal];
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -464,24 +512,33 @@
         CELL_PHOTO_NA.hidden=NO;
     }
     
-    //BOOL checked =  [[itsToDoChecked objectAtIndex:indexPath.row] boolValue];
-    BOOL yeaChecked = false;
-    UIImage *yeaImage = (yeaChecked) ? [UIImage imageNamed:@"MapPin.png"] : [UIImage imageNamed:@"BlankYeaSlice.png"];
+    [self.yeaVotes addObject:@"false"];
+    [self.nayVotes addObject:@"false"];
+    
+    //BOOL yeaChecked =  [[self.itsToDoChecked objectAtIndex:indexPath.row] boolValue];
+    UIImage *yeaImage = [UIImage imageNamed:@"BlankYeaSlice.png"];
+    
     UIButton *yeaButton = CELL_YEA_VOTE;
-    [yeaButton setBackgroundImage:yeaImage forState:UIControlStateNormal];
+    UIButton *nayButton = CELL_NAY_VOTE;
+    self.sectionTally.yeaButtonRef[row] = yeaButton;
+    self.sectionTally.nayButtonRef[row] = nayButton;
+    
+    
+    [yeaButton setImage:yeaImage forState:UIControlStateNormal];
+    [yeaButton setTitle:[NSString stringWithFormat:@"%ld",(long)row] forState:UIControlStateNormal];
+    [yeaButton setTitleColor:yeaButton.backgroundColor forState:UIControlStateNormal];
     // set the button's target to this table view controller so we can interpret touch events and map that to a NSIndexSet
-    [yeaButton addTarget:self action:@selector(yeaCheckButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    [yeaButton addTarget:self action:@selector(yeaButtonTapped:forEvent:) forControlEvents:UIControlEventTouchUpInside];
     
     //BOOL checked =  [[itsToDoChecked objectAtIndex:indexPath.row] boolValue];
-    BOOL nayChecked = false;
-    UIImage *nayImage = (nayChecked) ? [UIImage imageNamed:@"CheckNay.png"] : [UIImage imageNamed:@"BlankNay.png"];
-    UIButton *nayButton = CELL_NAY_VOTE;
-    [nayButton setBackgroundImage:nayImage forState:UIControlStateNormal];
-    // set the button's target to this table view controller so we can interpret touch events and map that to a NSIndexSet
-    [nayButton addTarget:self action:@selector(nayCheckButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    UIImage *nayImage = [UIImage imageNamed:@"BlankNay.png"];
 
-    
-    
+    [nayButton setImage:nayImage forState:UIControlStateNormal];
+    [nayButton setTitle:[NSString stringWithFormat:@"%ld",(long)row] forState:UIControlStateNormal];
+    [nayButton setTitleColor:nayButton.backgroundColor forState:UIControlStateNormal];
+    // set the button's target to this table view controller so we can interpret touch events and map that to a NSIndexSet
+    [nayButton addTarget:self action:@selector(nayCheckButtonTapped:forEvent:) forControlEvents:UIControlEventTouchUpInside];
+
     return cell;
 }
 
