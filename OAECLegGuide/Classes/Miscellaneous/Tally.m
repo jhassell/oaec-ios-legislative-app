@@ -7,11 +7,14 @@
 //
 
 #import "Tally.h"
+#import <Realm/Realm.h>
+
 
 @implementation Tally
 
 -(instancetype)initWithParams:(NSInteger)voteCount
 {
+
     int i;
     self = [super init];
     self.votes = [[NSMutableArray alloc] init];
