@@ -399,7 +399,7 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="voteTallyButtonPressed:" destination="3" eventType="touchUpInside" id="2Iw-1z-le2"/>
+                                            <segue destination="ZZz-nX-fYD" kind="push" id="nbD-ga-5qp"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="f9u-N7-lAN">
@@ -438,7 +438,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1134" y="480"/>
+            <point key="canvasLocation" x="1126" y="621"/>
         </scene>
         <!--  State-->
         <scene sceneID="aH5-He-Cj9">
@@ -456,7 +456,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sjj-Yx-Bwk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="659" y="436"/>
+            <point key="canvasLocation" x="598" y="516"/>
         </scene>
         <!--Federal-->
         <scene sceneID="er5-4l-7t6">
@@ -505,7 +505,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gPm-MP-qWc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1610" y="939"/>
+            <point key="canvasLocation" x="1865" y="1288"/>
         </scene>
         <!--Map-->
         <scene sceneID="LgI-CX-a1w">
@@ -1022,17 +1022,228 @@
             </objects>
             <point key="canvasLocation" x="1727" y="2269"/>
         </scene>
+        <!--Voting Groups-->
+        <scene sceneID="Fe6-cL-Z3g">
+            <objects>
+                <viewController title="Voting Groups" id="ZZz-nX-fYD" customClass="StateTabViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h3K-VO-0fq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="Background.png" id="BkG-UI-XIS">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="bottomRight" image="logo.png" id="78k-e2-KGy">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="52"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="SRb-1U-vct">
+                                <rect key="frame" x="145" y="0.0" width="230" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="weblink" destination="ZZz-nX-fYD" eventType="touchUpInside" id="G0v-zZ-Oiz"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" id="bgh-dj-UqG">
+                                <rect key="frame" x="27.5" y="76" width="320" height="591"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="szL-vu-hpc">
+                                        <rect key="frame" x="35" y="82" width="72" height="72"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" image="Senate_VoteTallyIcon.png">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="senateVoteButtonPressed:" destination="ZZz-nX-fYD" eventType="touchUpInside" id="nwS-dN-9tC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="brw-HE-PRA">
+                                        <rect key="frame" x="35" y="174" width="72" height="72"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" image="SenateCommittees__VoteTallyIcon.png">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="senateCommitteesButtonPressed:" destination="ZZz-nX-fYD" eventType="touchUpInside" id="gpc-Mc-zeU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="GPn-gD-ejc">
+                                        <rect key="frame" x="32" y="280" width="72" height="72"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" image="House__VoteTallyIcon.png">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="houseButtonPressed:" destination="ZZz-nX-fYD" eventType="touchUpInside" id="Dtd-s3-MsO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Uvo-TP-KQZ">
+                                        <rect key="frame" x="35" y="495" width="72" height="72"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" image="All_VoteTallyIcon.png">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="allButtonPressed:" destination="3" eventType="touchUpInside" id="AA3-98-0vM"/>
+                                            <action selector="allButtonPressed:" destination="ZZz-nX-fYD" eventType="touchUpInside" id="Vgz-Mg-sVh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="aJd-b6-GoY">
+                                        <rect key="frame" x="35" y="382" width="72" height="72"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" image="HouseCommittees_VoteTallyIcon.png">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="houseCommitteesButtonpressed:" destination="ZZz-nX-fYD" eventType="touchUpInside" id="ROH-Rn-pJY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zym-35-Zck">
+                                        <rect key="frame" x="115" y="96" width="175" height="43"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <state key="normal" title="Senate">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="senateVoteButtonPressed:" destination="ZZz-nX-fYD" eventType="touchUpInside" id="uOE-ha-CKr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" id="Us6-a3-RK6">
+                                        <rect key="frame" x="115" y="174" width="152" height="72"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <state key="normal" title="Senate Committees">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="senateCommitteesButtonPressed:" destination="ZZz-nX-fYD" eventType="touchUpInside" id="IZA-Wj-kfs"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vzM-nx-J8S">
+                                        <rect key="frame" x="115" y="291" width="152" height="51"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <state key="normal" title="House">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="houseButtonPressed:" destination="ZZz-nX-fYD" eventType="touchUpInside" id="JwZ-g5-gfa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" id="0cW-HM-8N3">
+                                        <rect key="frame" x="115" y="403" width="175" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <state key="normal" title="House Committees">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="houseCommitteesButtonpressed:" destination="ZZz-nX-fYD" eventType="touchUpInside" id="V2g-jg-Opv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aYh-XQ-ZbE">
+                                        <rect key="frame" x="115" y="516" width="152" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <state key="normal" title="All">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="allButtonPressed:" destination="ZZz-nX-fYD" eventType="touchUpInside" id="JoU-a9-Zv3"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Select to Record Your Vote Tally" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XEc-dX-2Gd">
+                                        <rect key="frame" x="24" y="-8" width="272" height="61"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="cr3-tz-diq">
+                                <rect key="frame" x="5" y="5" width="72" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="  Back" backgroundImage="backButton.png">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="2" eventType="touchUpInside" id="hcV-RL-KO9"/>
+                                    <action selector="backButtonPressed:" destination="ZZz-nX-fYD" eventType="touchUpInside" id="ls7-eb-gRa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="State" id="bxq-Ag-Nrl"/>
+                    <navigationItem key="navigationItem" id="kCv-Z1-hjS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="brv-7I-dF4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2490.5" y="906.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="DGl-1c-m70">
+            <objects>
+                <navigationController id="eZZ-gd-mpJ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="rjl-Ei-7gk"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0ah-nz-0m2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rN8-HT-kUU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2552" y="2159"/>
+        </scene>
     </scenes>
     <resources>
         <image name="About.png" width="30" height="30"/>
         <image name="AboutBackground.png" width="320" height="600"/>
         <image name="All.png" width="65" height="61"/>
+        <image name="All_VoteTallyIcon.png" width="63" height="63"/>
         <image name="Arrow_Left.png" width="50" height="47"/>
         <image name="Arrow_Right.png" width="50" height="47"/>
         <image name="Background.png" width="320" height="600"/>
         <image name="Calendar.png" width="40" height="30"/>
         <image name="Federal.png" width="30" height="30"/>
+        <image name="HouseCommittees_VoteTallyIcon.png" width="63" height="63"/>
+        <image name="House__VoteTallyIcon.png" width="63" height="63"/>
         <image name="MapPin.png" width="30" height="30"/>
+        <image name="SenateCommittees__VoteTallyIcon.png" width="63" height="63"/>
+        <image name="Senate_VoteTallyIcon.png" width="63" height="63"/>
         <image name="State.png" width="40" height="30"/>
         <image name="Statewide.png" width="65" height="61"/>
         <image name="VoteTallIcon-09.png" width="63" height="62"/>

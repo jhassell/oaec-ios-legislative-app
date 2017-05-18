@@ -384,6 +384,12 @@
 		CEA749651C572771007271E5 /* DossettJJ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEA749641C572771007271E5 /* DossettJJ.jpg */; };
 		CEA7EC541E61CD58008031BF /* MarkWSchwirtz.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEA7EC531E61CD58008031BF /* MarkWSchwirtz.jpg */; };
 		CEA7EC561E61CD6E008031BF /* WyrickPatrick.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEA7EC551E61CD6E008031BF /* WyrickPatrick.jpg */; };
+		CEA9B5321ECA9E7300035FF6 /* SenateCommittees__VoteTallyIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA9B52D1ECA9E7300035FF6 /* SenateCommittees__VoteTallyIcon.png */; };
+		CEA9B5331ECA9E7300035FF6 /* Senate_VoteTallyIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA9B52E1ECA9E7300035FF6 /* Senate_VoteTallyIcon.png */; };
+		CEA9B5341ECA9E7300035FF6 /* HouseCommittees_VoteTallyIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA9B52F1ECA9E7300035FF6 /* HouseCommittees_VoteTallyIcon.png */; };
+		CEA9B5351ECA9E7300035FF6 /* House__VoteTallyIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA9B5301ECA9E7300035FF6 /* House__VoteTallyIcon.png */; };
+		CEA9B5361ECA9E7300035FF6 /* All_VoteTallyIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA9B5311ECA9E7300035FF6 /* All_VoteTallyIcon.png */; };
+		CEA9B55C1ECD4AF300035FF6 /* VotingListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA9B5591ECD4AF300035FF6 /* VotingListViewController.m */; };
 		CEAA26F41EB5A17A0012CEA5 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEAA26F31EB5A17A0012CEA5 /* Realm.framework */; };
 		CEAA26F51EB5A17A0012CEA5 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEAA26F31EB5A17A0012CEA5 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CEB3DA5B1C2F98D10003A4B9 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB3DA591C2F98D10003A4B9 /* Bolts.framework */; };
@@ -854,6 +860,13 @@
 		CEA749641C572771007271E5 /* DossettJJ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DossettJJ.jpg; sourceTree = "<group>"; };
 		CEA7EC531E61CD58008031BF /* MarkWSchwirtz.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MarkWSchwirtz.jpg; sourceTree = "<group>"; };
 		CEA7EC551E61CD6E008031BF /* WyrickPatrick.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = WyrickPatrick.jpg; path = "State Judges/WyrickPatrick.jpg"; sourceTree = "<group>"; };
+		CEA9B52D1ECA9E7300035FF6 /* SenateCommittees__VoteTallyIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SenateCommittees__VoteTallyIcon.png; sourceTree = "<group>"; };
+		CEA9B52E1ECA9E7300035FF6 /* Senate_VoteTallyIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Senate_VoteTallyIcon.png; sourceTree = "<group>"; };
+		CEA9B52F1ECA9E7300035FF6 /* HouseCommittees_VoteTallyIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HouseCommittees_VoteTallyIcon.png; sourceTree = "<group>"; };
+		CEA9B5301ECA9E7300035FF6 /* House__VoteTallyIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = House__VoteTallyIcon.png; sourceTree = "<group>"; };
+		CEA9B5311ECA9E7300035FF6 /* All_VoteTallyIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = All_VoteTallyIcon.png; sourceTree = "<group>"; };
+		CEA9B5581ECD4AF300035FF6 /* VotingListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VotingListViewController.h; sourceTree = "<group>"; };
+		CEA9B5591ECD4AF300035FF6 /* VotingListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VotingListViewController.m; sourceTree = "<group>"; };
 		CEAA26F31EB5A17A0012CEA5 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		CEB3DA591C2F98D10003A4B9 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		CEB3DA5A1C2F98D10003A4B9 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
@@ -1041,6 +1054,8 @@
 		AF2481D115BB6C5E0070924E /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				CEA9B5581ECD4AF300035FF6 /* VotingListViewController.h */,
+				CEA9B5591ECD4AF300035FF6 /* VotingListViewController.m */,
 				AFDAD5A8186006AB00366D99 /* CustomTabBarController.m */,
 				AFDAD5AB186006AB00366D99 /* CustomTabBarController.h */,
 				AFDAD5A9186006AB00366D99 /* IOS7AdjustmentViewController.m */,
@@ -1070,6 +1085,11 @@
 		AF2481D615BB6C5E0070924E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				CEA9B52D1ECA9E7300035FF6 /* SenateCommittees__VoteTallyIcon.png */,
+				CEA9B52E1ECA9E7300035FF6 /* Senate_VoteTallyIcon.png */,
+				CEA9B52F1ECA9E7300035FF6 /* HouseCommittees_VoteTallyIcon.png */,
+				CEA9B5301ECA9E7300035FF6 /* House__VoteTallyIcon.png */,
+				CEA9B5311ECA9E7300035FF6 /* All_VoteTallyIcon.png */,
 				CEC865441EBE149100363665 /* CheckNay.png */,
 				CEC865451EBE149100363665 /* BlankNay.png */,
 				CEC865421EBE0F9300363665 /* CheckYea.png */,
@@ -1802,6 +1822,7 @@
 				CE18B54F1E4F72930067DCC1 /* Icon-App-72x72@2x.png in Resources */,
 				AFBC6E8516B0BF740052E385 /* TerryMatlock.jpg in Resources */,
 				AFBC6E8616B0BF740052E385 /* TimSmith.jpg in Resources */,
+				CEA9B5331ECA9E7300035FF6 /* Senate_VoteTallyIcon.png in Resources */,
 				CE7C6D4B1E385F7600874B14 /* LeewrightJames.jpg in Resources */,
 				AFBC6E8716B0BF740052E385 /* TysonLittau.jpg in Resources */,
 				AFBC6E8816B0BF740052E385 /* WarrenLangford.jpg in Resources */,
@@ -1884,6 +1905,7 @@
 				AFBC6ECF16B0BF740052E385 /* PerrymanDavid.jpg in Resources */,
 				CE9CAE891EB8AB9100C20CAF /* VotingListCell-iPhone.xib in Resources */,
 				CEDEF0DD1C0034BF0024A43F /* CombsDouglas.jpg in Resources */,
+				CEA9B5321ECA9E7300035FF6 /* SenateCommittees__VoteTallyIcon.png in Resources */,
 				AF82A27B1A7789C500A91552 /* SmalleyJason.jpg in Resources */,
 				AFBC6ED216B0BF740052E385 /* ProctorEric.jpg in Resources */,
 				CE7C6D0E1E385F4C00874B14 /* BennettForrest.jpg in Resources */,
@@ -1893,6 +1915,7 @@
 				AF577E6A1A0BF5E500994EA1 /* ClintPack.jpg in Resources */,
 				CE7C6D141E385F4C00874B14 /* DollensMickey.jpg in Resources */,
 				AFBC6ED716B0BF740052E385 /* RitzeMike.jpg in Resources */,
+				CEA9B5341ECA9E7300035FF6 /* HouseCommittees_VoteTallyIcon.png in Resources */,
 				CE7C6D0D1E385F4C00874B14 /* BakerRhonda.jpg in Resources */,
 				AFBC6ED816B0BF740052E385 /* RobertsDustin.jpg in Resources */,
 				CE7C6D661E39B41F00874B14 /* BrettOrme.jpg in Resources */,
@@ -1981,9 +2004,11 @@
 				AFBC6F2916B0BF740052E385 /* MillerKen.jpg in Resources */,
 				AF82A2771A7789C500A91552 /* JechDarcy.jpg in Resources */,
 				AFBC6F2A16B0BF740052E385 /* MurphyDana.jpg in Resources */,
+				CEA9B5351ECA9E7300035FF6 /* House__VoteTallyIcon.png in Resources */,
 				CE18B54B1E4F72930067DCC1 /* Icon-App-57x57@2x.png in Resources */,
 				AFBC6F2B16B0BF740052E385 /* PruittScott.jpg in Resources */,
 				AF866C9616B8F9C700E9DF01 /* OutlinkCell-iPhone.xib in Resources */,
+				CEA9B5361ECA9E7300035FF6 /* All_VoteTallyIcon.png in Resources */,
 				CE7C6D1E1E385F4C00874B14 /* KerbsDell.jpg in Resources */,
 				CE18B5491E4F72930067DCC1 /* Icon-App-40x40@3x.png in Resources */,
 				AF82A2641A7789B600A91552 /* RogersMichael.jpg in Resources */,
@@ -2040,6 +2065,7 @@
 				AFEF4BD715C7971D00896FA9 /* NSString+Stuff.m in Sources */,
 				AF47A83D18620A8E0041C5B3 /* EmailHelper.m in Sources */,
 				AFF2BB1815C860BB00F1B379 /* CommitteeListViewController.m in Sources */,
+				CEA9B55C1ECD4AF300035FF6 /* VotingListViewController.m in Sources */,
 				AF71B99715CB3B0C00D0D43B /* PersonViewController.m in Sources */,
 				AF71B99A15CC4B0400D0D43B /* Address.m in Sources */,
 				AF71B99D15CC4E4A00D0D43B /* AddressViewCell.m in Sources */,
