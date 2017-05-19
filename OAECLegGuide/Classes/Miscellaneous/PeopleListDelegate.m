@@ -11,7 +11,7 @@
 #import "NSDictionary+People.h"
 #import "AppDelegate.h"
 #import "CommitteeMember.h"
-#import "PersonViewController.h"
+#import "PersonViewController.h" 
 #import "NSString+Stuff.h"
 #import "SearchViewCell.h"
 #import "CommitteeHeaderView.h"
@@ -507,8 +507,18 @@ RLM_ARRAY_TYPE(Realm_tally)
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
+    static NSString *BlankCellIdentifier = @"BlankCell";
+    UITableViewCell *blankCell = [tableView dequeueReusableCellWithIdentifier:BlankCellIdentifier];
+    
+    if (blankCell==nil) {
+        blankCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:BlankCellIdentifier];
+        blankCell.selectionStyle=UITableViewCellSelectionStyleNone;
+        blankCell.backgroundColor=[UIColor clearColor];
+    }
+    
     if (indexPath.section==0 && indexPath.row==0) {
-        return self.searchViewCell;
+        //return self.searchViewCell;
+        return blankCell;
     }
     
     if (indexPath.section==1 && indexPath.row==0 && self.committeeHeaderView!=nil) {
@@ -521,20 +531,16 @@ RLM_ARRAY_TYPE(Realm_tally)
         row--;
     }
     
-    ListSection *section = [self.filteredSections objectAtIndex:(indexPath.section-1)];
+    ListSection *section = [[ListSection alloc] init];
     
+    if (indexPath.section == 0) {
+        section = [self.filteredSections objectAtIndex:(indexPath.section)];
+    } else {
+        section = [self.filteredSections objectAtIndex:(indexPath.section-1)];
+    }
+        
     if (row >= [section.children count]) {
-        
-        static NSString *BlankCellIdentifier = @"BlankCell";
-        UITableViewCell *blankCell = [tableView dequeueReusableCellWithIdentifier:BlankCellIdentifier];
-
-        if (blankCell==nil) {
-            blankCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:BlankCellIdentifier];
-            blankCell.selectionStyle=UITableViewCellSelectionStyleNone;
-            blankCell.backgroundColor=[UIColor clearColor];
-        }
         return blankCell;
-        
     }
     
     CommitteeMember *member = nil;
