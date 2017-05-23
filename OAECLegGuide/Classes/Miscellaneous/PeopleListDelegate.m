@@ -789,7 +789,7 @@ RLM_ARRAY_TYPE(Realm_tally)
 {
     
     UIView * customHeaderCell = [[UIView alloc] init];
-    if (section == 0) {
+    if (section == 1) {
         customHeaderCell = [tableView dequeueReusableCellWithIdentifier:@"TableHeader"];
         customHeaderCell.backgroundColor = [UIColor colorWithWhite: 1.0 alpha:1.0];
     }
@@ -803,7 +803,7 @@ RLM_ARRAY_TYPE(Realm_tally)
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    if (section == 0) {
+    if (section == 1) {
         return 160.0;
     } else {
         return 0.0;
