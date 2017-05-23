@@ -19,6 +19,7 @@
 #import "Tally.h"
 //#import "voteButton.h"
 #import <Realm/Realm.h>
+#import "CustomTableViewHeaderCell.h"
 
 #define CELL_HEADSHOT       ((UIImageView *)[cell viewWithTag:100])
 #define CELL_NAME           ((UILabel *)[cell viewWithTag:101])
@@ -322,15 +323,19 @@ RLM_ARRAY_TYPE(Realm_tally)
 #pragma mark - Table view data source
 
 -(NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    if (self.filteredSections==nil) return nil;
 
-    if (section==0) return nil;
+    return nil;
+    //if (self.filteredSections==nil) return nil;
+
+    //if (section==0) return nil;
     
-    if (section==1 && self.committeeHeaderView!=nil) return nil;
+    //if (section==1 && self.committeeHeaderView!=nil) return nil;
     
-    if ([self.filteredSections count]<=(section-1)) return nil;
-    ListSection *listSection = [self.filteredSections objectAtIndex:(section-1)];
-    return listSection.title;
+    //if ([self.filteredSections count]<=(section-1)) return nil;
+    //ListSection *listSection = [self.filteredSections objectAtIndex:(section-1)];
+    //return listSection.title;
+    //if (section==1) return nil;
+    //return @"Dog                                                     ";
 }
 
 
@@ -413,7 +418,7 @@ RLM_ARRAY_TYPE(Realm_tally)
         }];
     }
     
-
+    //[tableView registerNib:[UINib nibWithNibName:@"CustomTableViewHeader" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"CustomIdentifier"];
     
     //int i;
     
@@ -422,7 +427,8 @@ RLM_ARRAY_TYPE(Realm_tally)
     //    self.parent.tallies[0].votes[i] = [Realm_vote new];
     //    self.parent.tallies[0].votes[i].status = @"Unknown";
     //}
-    
+
+    [self.peopleTable registerNib:[UINib nibWithNibName:@"VoteTallyHeaderView-iPhone" bundle:nil] forCellReuseIdentifier:@"TableHeader"];
     
     return rowCount;
 }
@@ -433,6 +439,11 @@ RLM_ARRAY_TYPE(Realm_tally)
     ListSection *listSection = [self.sections objectAtIndex:0];
     NSString *sectionTitle = listSection.title;
     Realm_tally *realmTally = [[Realm_tally objectsWhere:@"name == %@ AND body == %@", sectionTitle, self.committee.body] firstObject];
+
+    
+    
+    
+
     
     NSString *yeaBoxStatus = [[NSString alloc] init];
     if ([realmTally.votes[rowTapped].status isEqual:@"yea"]) {
@@ -452,6 +463,31 @@ RLM_ARRAY_TYPE(Realm_tally)
     } else {
         [sender setImage:[UIImage imageNamed:@"BlankYeaSlice.png"]forState:UIControlStateNormal];
     }
+    
+    //NSUInteger yeaCount = [[Realm_tally objectsWhere:@"name == %@ AND body == %@", sectionTitle, self.committee.body] count];
+    
+    int yesVotes = 0;
+    int noVotes = 0;
+    int unknownVotes = 0;
+    NSString *voteStatus = [[NSString alloc] init];
+    NSInteger i;
+    for (i=0; i<realmTally.voteCount; i++) {
+        voteStatus = realmTally.votes[i].status;
+        if ([voteStatus isEqual:@"yea"]) {
+            yesVotes++;
+        } else if ([voteStatus isEqual:@"nay"]) {
+            noVotes++;
+        } else {
+            unknownVotes++;
+        }
+    }
+
+    
+    //[self.peopleTable headerViewForSection:1].textLabel.text = [NSString stringWithFormat:@"%@ %ld", @"Yeas", (unsigned long)yesVotes];
+    //[self.peopleTable headerViewForSection:1].textLabel.text = [NSString stringWithFormat:@"%ld", (unsigned long)yesVotes];
+    NSString *voteHeader = [[NSString alloc] init];
+    voteHeader = [NSString stringWithFormat:@"Yea:%d Nay:%d\n Unknown:%d", yesVotes, noVotes, unknownVotes];
+    [self.peopleTable headerViewForSection:1].textLabel.text = voteHeader;
 }
 
 
@@ -480,6 +516,27 @@ RLM_ARRAY_TYPE(Realm_tally)
     } else {
         [sender setImage:[UIImage imageNamed:@"BlankNay.png"]forState:UIControlStateNormal];
     }
+
+    int yesVotes = 0;
+    int noVotes = 0;
+    int unknownVotes = 0;
+    NSString *voteStatus = [[NSString alloc] init];
+    NSInteger i;
+    for (i=0; i<realmTally.voteCount; i++) {
+        voteStatus = realmTally.votes[i].status;
+        if ([voteStatus isEqual:@"yea"]) {
+            yesVotes++;
+        } else if ([voteStatus isEqual:@"nay"]) {
+            noVotes++;
+        } else {
+            unknownVotes++;
+        }
+    }
+    
+    
+    NSString *voteHeader = [[NSString alloc] init];
+    voteHeader = [NSString stringWithFormat:@"Yea:%d Nay:%d Unknown:%d", yesVotes, noVotes, unknownVotes];
+    [self.peopleTable headerViewForSection:1].textLabel.text = voteHeader;
     
 //    NSInteger rowTapped = [sender.titleLabel.text integerValue];
 //    
@@ -721,6 +778,74 @@ RLM_ARRAY_TYPE(Realm_tally)
 
 
 #pragma mark - Table view delegate
+
+
+- (void)infoButtonClicked:(id)sender {
+    NSLog(@"infoButtonClicked");
+}
+
+
+- (UIView *) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    //static NSString *CustomIdentifier = @"Vote Tally";
+    
+    UIView * customHeaderCell = [tableView dequeueReusableCellWithIdentifier:@"TableHeader"];
+    
+    if (customHeaderCell == nil) {
+        //customHeaderCell = [[UIView alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"TableHeader"];
+    }
+    
+
+        //CustomTableViewHeaderCell *header=[tableView dequeueReusableHeaderFooterViewWithIdentifier:@"TableHeader"];
+        return customHeaderCell;
+        //customHeaderCell.sectionHeaderLabel.text = @"What you want";
+    //return customHeaderCell;
+    
+    
+    
+    UIView *headerView = [[UIView alloc] init];
+    if (section == 0) {
+        headerView = [[UIView alloc] initWithFrame:CGRectMake(0,0,302,18)];
+        [headerView setBackgroundColor:[UIColor whiteColor]];
+        
+        // Label 1
+        UILabel *dateLbl = [[UILabel alloc] initWithFrame:CGRectMake(5, 2, 130, 15)];
+        dateLbl.text = @"5/05/2013";
+        //[headerView addSubview:dateLbl];
+        
+        [headerView addSubview:customHeaderCell];
+    
+    
+        //// Label 2
+        //UILabel *yrLbl = [[UILabel alloc] initWithFrame:CGRectMake(235, 2, 130, 15)];
+        //yrLbl.text = @"2013";
+        //[headerView addSubview:yrLbl];
+        
+        // Label 2
+   //     UIButton *yrButton = [[UIButton alloc] initWithFrame:CGRectMake(235, 2, 130, 15)];
+  //      [yrButton setTitle:@"Hey Mon" forState:UIControlStateNormal];
+        // yrButton.text text = @"2013";
+
+    //    [yrButton setImage:[UIImage imageNamed:@"BlankNay.png"] forState:UIControlStateNormal];
+     //   [yrButton addTarget:self action:@selector(infoButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+        
+    //    [headerView addSubview:yrButton];
+   // }
+   // else {
+   //     headerView = nil;
+    }
+    
+   return customHeaderCell;
+}
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+
+        return 140.0;
+}
+
+
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
