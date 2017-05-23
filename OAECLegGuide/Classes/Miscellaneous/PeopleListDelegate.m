@@ -787,62 +787,27 @@ RLM_ARRAY_TYPE(Realm_tally)
 
 - (UIView *) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    //static NSString *CustomIdentifier = @"Vote Tally";
     
-    UIView * customHeaderCell = [tableView dequeueReusableCellWithIdentifier:@"TableHeader"];
-    
-    if (customHeaderCell == nil) {
-        //customHeaderCell = [[UIView alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"TableHeader"];
-    }
-    
-
-        //CustomTableViewHeaderCell *header=[tableView dequeueReusableHeaderFooterViewWithIdentifier:@"TableHeader"];
-        return customHeaderCell;
-        //customHeaderCell.sectionHeaderLabel.text = @"What you want";
-    //return customHeaderCell;
-    
-    
-    
-    UIView *headerView = [[UIView alloc] init];
+    UIView * customHeaderCell = [[UIView alloc] init];
     if (section == 0) {
-        headerView = [[UIView alloc] initWithFrame:CGRectMake(0,0,302,18)];
-        [headerView setBackgroundColor:[UIColor whiteColor]];
-        
-        // Label 1
-        UILabel *dateLbl = [[UILabel alloc] initWithFrame:CGRectMake(5, 2, 130, 15)];
-        dateLbl.text = @"5/05/2013";
-        //[headerView addSubview:dateLbl];
-        
-        [headerView addSubview:customHeaderCell];
-    
-    
-        //// Label 2
-        //UILabel *yrLbl = [[UILabel alloc] initWithFrame:CGRectMake(235, 2, 130, 15)];
-        //yrLbl.text = @"2013";
-        //[headerView addSubview:yrLbl];
-        
-        // Label 2
-   //     UIButton *yrButton = [[UIButton alloc] initWithFrame:CGRectMake(235, 2, 130, 15)];
-  //      [yrButton setTitle:@"Hey Mon" forState:UIControlStateNormal];
-        // yrButton.text text = @"2013";
-
-    //    [yrButton setImage:[UIImage imageNamed:@"BlankNay.png"] forState:UIControlStateNormal];
-     //   [yrButton addTarget:self action:@selector(infoButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
-        
-    //    [headerView addSubview:yrButton];
-   // }
-   // else {
-   //     headerView = nil;
+        customHeaderCell = [tableView dequeueReusableCellWithIdentifier:@"TableHeader"];
+        customHeaderCell.backgroundColor = [UIColor colorWithWhite: 1.0 alpha:1.0];
     }
-    
+    else {
+        customHeaderCell =  nil;
+    }
+
    return customHeaderCell;
 }
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-
-        return 140.0;
+    if (section == 0) {
+        return 160.0;
+    } else {
+        return 0.0;
+    }
 }
 
 
@@ -850,7 +815,8 @@ RLM_ARRAY_TYPE(Realm_tally)
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (indexPath.section==0 && indexPath.row==0) {
-        return SEARCH_VIEW_HEIGHT;
+        //return SEARCH_VIEW_HEIGHT;
+        return 0;
     }
     
     if (indexPath.section==1 && indexPath.row==0 && self.committeeHeaderView!=nil) {

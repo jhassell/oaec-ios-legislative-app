@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface CustomTableViewHeaderCell : UITableViewCell
+@interface CustomTableViewHeaderCell : UIView
 
 @property (strong, nonatomic) IBOutlet UILabel *sectionHeaderLabel;
 
