@@ -10,4 +10,8 @@
 
 @implementation CustomTableViewHeaderCell
 
+- (void)dealloc {
+
+    [super dealloc];
+}
 @end

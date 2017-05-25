@@ -788,10 +788,14 @@ RLM_ARRAY_TYPE(Realm_tally)
 - (UIView *) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     
-    UIView * customHeaderCell = [[UIView alloc] init];
+    CustomTableViewHeaderCell * customHeaderCell = [[CustomTableViewHeaderCell alloc] init];
     if (section == 1) {
         customHeaderCell = [tableView dequeueReusableCellWithIdentifier:@"TableHeader"];
         customHeaderCell.backgroundColor = [UIColor colorWithWhite: 1.0 alpha:1.0];
+    
+        //customHeaderCell.title.text = @"Hey";
+        //customHeaderCell.title.text = @"Hey";
+    
     }
     else {
         customHeaderCell =  nil;
