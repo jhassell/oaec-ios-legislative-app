@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CustomTableViewHeaderCell.h"
 
 #define SEARCH_VIEW_HEIGHT 88.0f
 
@@ -20,6 +21,13 @@
 @property (nonatomic, assign) Committee *committee;
 @property (nonatomic, strong) NSString *yeaVoteEntry;
 @property (nonatomic, strong) NSString *nayVoteEntry;
+@property (nonatomic, strong) CustomTableViewHeaderCell * customHeaderCell;
+@property (nonatomic, strong) NSString *tallyGroupTitle;
+@property (nonatomic) NSInteger headerYesVotes;
+@property (nonatomic) NSInteger headerNoVotes;
+@property (nonatomic) NSInteger headerUnknownVotes;
+
+
 
 -(void) yeaButtonTapped:(UIButton *)sender forEvent:(UIEvent *)event;
 -(void) nayCheckButtonTapped:(UIButton *) sender forEvent:(UIEvent *)event;

@@ -29,6 +29,7 @@
 #define CELL_PHOTO_NA       ((UIView *)[cell viewWithTag:105])
 #define CELL_YEA_VOTE       ((UIButton *)[cell viewWithTag:106])
 #define CELL_NAY_VOTE       ((UIButton *)[cell viewWithTag:107])
+#define Rgb2UIColor(r, g, b)  [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:1.0]
 
 
 // Data models: GroupParent contains all of the data for a TableView, with a
@@ -418,6 +419,25 @@ RLM_ARRAY_TYPE(Realm_tally)
         }];
     }
     
+    
+    self.headerYesVotes = 0;
+    self.headerNoVotes = 0;
+    self.headerUnknownVotes = 0;
+    NSString *voteStatus = [[NSString alloc] init];
+    NSInteger i;
+    for (i=0; i<realmTally.voteCount; i++) {
+        voteStatus = realmTally.votes[i].status;
+        if ([voteStatus isEqual:@"yea"]) {
+            self.headerYesVotes++;
+        } else if ([voteStatus isEqual:@"nay"]) {
+            self.headerNoVotes++;
+        } else {
+            self.headerUnknownVotes++;
+        }
+    }
+    
+    
+    
     //[tableView registerNib:[UINib nibWithNibName:@"CustomTableViewHeader" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"CustomIdentifier"];
     
     //int i;
@@ -429,6 +449,10 @@ RLM_ARRAY_TYPE(Realm_tally)
     //}
 
     [self.peopleTable registerNib:[UINib nibWithNibName:@"VoteTallyHeaderView-iPhone" bundle:nil] forCellReuseIdentifier:@"TableHeader"];
+
+    
+    
+    
     
     return rowCount;
 }
@@ -466,28 +490,30 @@ RLM_ARRAY_TYPE(Realm_tally)
     
     //NSUInteger yeaCount = [[Realm_tally objectsWhere:@"name == %@ AND body == %@", sectionTitle, self.committee.body] count];
     
-    int yesVotes = 0;
-    int noVotes = 0;
-    int unknownVotes = 0;
+    self.headerYesVotes = 0;
+    self.headerNoVotes = 0;
+    self.headerUnknownVotes = 0;
     NSString *voteStatus = [[NSString alloc] init];
     NSInteger i;
     for (i=0; i<realmTally.voteCount; i++) {
         voteStatus = realmTally.votes[i].status;
         if ([voteStatus isEqual:@"yea"]) {
-            yesVotes++;
+            self.headerYesVotes++;
         } else if ([voteStatus isEqual:@"nay"]) {
-            noVotes++;
+            self.headerNoVotes++;
         } else {
-            unknownVotes++;
+            self.headerUnknownVotes++;
         }
     }
 
+    UILabel *yeaHeaderLabel = (UILabel *)[self.customHeaderCell.contentView viewWithTag:11];
+    yeaHeaderLabel.text = [NSString stringWithFormat:@"%ld", (long)self.headerYesVotes];
+
+    UILabel *nayHeaderLabel = (UILabel *)[self.customHeaderCell.contentView viewWithTag:12];
+    nayHeaderLabel.text = [NSString stringWithFormat:@"%ld", (long)self.headerNoVotes];
     
-    //[self.peopleTable headerViewForSection:1].textLabel.text = [NSString stringWithFormat:@"%@ %ld", @"Yeas", (unsigned long)yesVotes];
-    //[self.peopleTable headerViewForSection:1].textLabel.text = [NSString stringWithFormat:@"%ld", (unsigned long)yesVotes];
-    NSString *voteHeader = [[NSString alloc] init];
-    voteHeader = [NSString stringWithFormat:@"Yea:%d Nay:%d\n Unknown:%d", yesVotes, noVotes, unknownVotes];
-    [self.peopleTable headerViewForSection:1].textLabel.text = voteHeader;
+    UILabel *undecidedHeaderLabel = (UILabel *)[self.customHeaderCell.contentView viewWithTag:13];
+    undecidedHeaderLabel.text = [NSString stringWithFormat:@"%ld", (long)self.headerUnknownVotes];
 }
 
 
@@ -517,26 +543,31 @@ RLM_ARRAY_TYPE(Realm_tally)
         [sender setImage:[UIImage imageNamed:@"BlankNay.png"]forState:UIControlStateNormal];
     }
 
-    int yesVotes = 0;
-    int noVotes = 0;
-    int unknownVotes = 0;
+    self.headerYesVotes = 0;
+    self.headerNoVotes = 0;
+    self.headerUnknownVotes = 0;
     NSString *voteStatus = [[NSString alloc] init];
     NSInteger i;
     for (i=0; i<realmTally.voteCount; i++) {
         voteStatus = realmTally.votes[i].status;
         if ([voteStatus isEqual:@"yea"]) {
-            yesVotes++;
+            self.headerYesVotes++;
         } else if ([voteStatus isEqual:@"nay"]) {
-            noVotes++;
+            self.headerNoVotes++;
         } else {
-            unknownVotes++;
+            self.headerUnknownVotes++;
         }
     }
     
+    UILabel *yeaHeaderLabel = (UILabel *)[self.customHeaderCell.contentView viewWithTag:11];
+    yeaHeaderLabel.text = [NSString stringWithFormat:@"%ld", (long)self.headerYesVotes];
     
-    NSString *voteHeader = [[NSString alloc] init];
-    voteHeader = [NSString stringWithFormat:@"Yea:%d Nay:%d Unknown:%d", yesVotes, noVotes, unknownVotes];
-    [self.peopleTable headerViewForSection:1].textLabel.text = voteHeader;
+    UILabel *nayHeaderLabel = (UILabel *)[self.customHeaderCell.contentView viewWithTag:12];
+    nayHeaderLabel.text = [NSString stringWithFormat:@"%ld", (long)self.headerNoVotes];
+    
+    UILabel *undecidedHeaderLabel = (UILabel *)[self.customHeaderCell.contentView viewWithTag:13];
+    undecidedHeaderLabel.text = [NSString stringWithFormat:@"%ld", (long)self.headerUnknownVotes];
+    
     
 //    NSInteger rowTapped = [sender.titleLabel.text integerValue];
 //    
@@ -710,8 +741,8 @@ RLM_ARRAY_TYPE(Realm_tally)
     
 
     NSString *governmentBody = self.committee.body;
-    NSString *listSectionTitle = section.title;
-    Realm_tally *realmTally = [[Realm_tally objectsWhere:@"name == %@ AND body == %@", listSectionTitle, governmentBody] firstObject];
+    self.tallyGroupTitle = section.title;
+    Realm_tally *realmTally = [[Realm_tally objectsWhere:@"name == %@ AND body == %@", self.tallyGroupTitle, governmentBody] firstObject];
     
     UIImage *yeaImage = [[UIImage alloc] init];
     if ([realmTally.votes[row].status isEqual:@"yea"]) {
@@ -788,27 +819,52 @@ RLM_ARRAY_TYPE(Realm_tally)
 - (UIView *) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     
-    CustomTableViewHeaderCell * customHeaderCell = [[CustomTableViewHeaderCell alloc] init];
+    //CustomTableViewHeaderCell * customHeaderCell = [[CustomTableViewHeaderCell alloc] init];
     if (section == 1) {
-        customHeaderCell = [tableView dequeueReusableCellWithIdentifier:@"TableHeader"];
-        customHeaderCell.backgroundColor = [UIColor colorWithWhite: 1.0 alpha:1.0];
+        self.customHeaderCell = [tableView dequeueReusableCellWithIdentifier:@"TableHeader"];
+        self.customHeaderCell.backgroundColor = [UIColor colorWithWhite: 1.0 alpha:1.0];
     
+        //UILabel *label = (UILabel *)[self.customHeaderCell.contentView viewWithTag:21];
+        //label.text = @"Hey man";
         //customHeaderCell.title.text = @"Hey";
         //customHeaderCell.title.text = @"Hey";
-    
+        
+        
+        
+        UILabel *headerTitle = (UILabel *)[self.customHeaderCell.contentView viewWithTag:10];
+        headerTitle.text = [NSString stringWithFormat:@"Your %@ Roll Call Tally", self.tallyGroupTitle];
+        
+        UILabel *yeaHeaderLabel = (UILabel *)[self.customHeaderCell.contentView viewWithTag:11];
+        yeaHeaderLabel.text = [NSString stringWithFormat:@"%ld", (long)self.headerYesVotes];
+        
+        UILabel *nayHeaderLabel = (UILabel *)[self.customHeaderCell.contentView viewWithTag:12];
+        nayHeaderLabel.text = [NSString stringWithFormat:@"%ld", (long)self.headerNoVotes];
+        
+        UILabel *undecidedHeaderLabel = (UILabel *)[self.customHeaderCell.contentView viewWithTag:13];
+        undecidedHeaderLabel.text = [NSString stringWithFormat:@"%ld", (long)self.headerUnknownVotes];
+
+        yeaHeaderLabel.layer.borderColor = [UIColor greenColor].CGColor;
+        yeaHeaderLabel.layer.borderWidth = 4.0;
+        nayHeaderLabel.layer.borderColor = [UIColor redColor].CGColor;
+        nayHeaderLabel.layer.borderWidth = 4.0;
+        undecidedHeaderLabel.layer.borderColor = [UIColor lightGrayColor].CGColor;
+        undecidedHeaderLabel.layer.borderWidth = 4.0;
+
     }
     else {
-        customHeaderCell =  nil;
+        self.customHeaderCell =  nil;
     }
-
-   return customHeaderCell;
+    
+    
+    
+   return self.customHeaderCell;
 }
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     if (section == 1) {
-        return 160.0;
+        return 150.0;
     } else {
         return 0.0;
     }
