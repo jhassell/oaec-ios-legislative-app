@@ -896,6 +896,81 @@ RLM_ARRAY_TYPE(Realm_tally)
 -(NSIndexPath *) tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     //if (indexPath.section==0 && indexPath.row==0) return nil;
     //return indexPath;
+
+    
+    NSInteger rowTapped = indexPath.row;
+    ListSection *listSection = [self.sections objectAtIndex:0];
+    NSString *sectionTitle = listSection.title;
+    Realm_tally *realmTally = [[Realm_tally objectsWhere:@"name == %@ AND body == %@", sectionTitle, self.committee.body] firstObject];
+    
+    
+    NSString *voteStatus = [[NSString alloc] init];
+    if ([realmTally.votes[rowTapped].status isEqual:@"yea"]) {
+        voteStatus = @"nay";
+    } else if ([realmTally.votes[rowTapped].status isEqual:@"nay"]){
+        voteStatus = @"unknown";
+    } else {
+        voteStatus = @"yea";
+    }
+    
+    RLMRealm *realm = RLMRealm.defaultRealm;
+    [realm beginWriteTransaction];
+    realmTally.votes[rowTapped].status = voteStatus;
+    [realm commitWriteTransaction];
+    
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    
+    UIButton *yeaButton = CELL_YEA_VOTE;
+    UIButton *nayButton = CELL_NAY_VOTE;
+    self.sectionTally.yeaButtonRef[rowTapped] = yeaButton;
+    self.sectionTally.nayButtonRef[rowTapped] = nayButton;
+    
+    UIImage *yeaImage = [[UIImage alloc] init];
+    if ([realmTally.votes[rowTapped].status isEqual:@"yea"]) {
+        yeaImage = [UIImage imageNamed:@"CheckYea.png"];
+    } else {
+        yeaImage = [UIImage imageNamed:@"BlankYeaSlice.png"];
+    }
+    [yeaButton setImage:yeaImage forState:UIControlStateNormal];
+    
+    //BOOL checked =  [[itsToDoChecked objectAtIndex:indexPath.row] boolValue];
+    //UIImage *nayImage = [UIImage imageNamed:@"BlankNay.png"];
+    
+    UIImage *nayImage = [[UIImage alloc] init];
+    if ([realmTally.votes[rowTapped].status isEqual:@"nay"]) {
+        nayImage = [UIImage imageNamed:@"CheckNay.png"];
+    } else {
+        nayImage = [UIImage imageNamed:@"BlankNay.png"];
+    }
+    [nayButton setImage:nayImage forState:UIControlStateNormal];
+    
+    self.headerYesVotes = 0;
+    self.headerNoVotes = 0;
+    self.headerUnknownVotes = 0;
+    NSInteger i;
+    for (i=0; i<realmTally.voteCount; i++) {
+        voteStatus = realmTally.votes[i].status;
+        if ([voteStatus isEqual:@"yea"]) {
+            self.headerYesVotes++;
+        } else if ([voteStatus isEqual:@"nay"]) {
+            self.headerNoVotes++;
+        } else {
+            self.headerUnknownVotes++;
+        }
+    }
+    
+    UILabel *yeaHeaderLabel = (UILabel *)[self.customHeaderCell.contentView viewWithTag:11];
+    yeaHeaderLabel.text = [NSString stringWithFormat:@"%ld", (long)self.headerYesVotes];
+    
+    UILabel *nayHeaderLabel = (UILabel *)[self.customHeaderCell.contentView viewWithTag:12];
+    nayHeaderLabel.text = [NSString stringWithFormat:@"%ld", (long)self.headerNoVotes];
+    
+    UILabel *undecidedHeaderLabel = (UILabel *)[self.customHeaderCell.contentView viewWithTag:13];
+    undecidedHeaderLabel.text = [NSString stringWithFormat:@"%ld", (long)self.headerUnknownVotes];
+    
+    
+    
+    
     return nil;
 }
 
