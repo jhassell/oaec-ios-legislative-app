@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "CustomTableViewHeaderCell.h"
 
+
 #define SEARCH_VIEW_HEIGHT 88.0f
 
 @class Committee;

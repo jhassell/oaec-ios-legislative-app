@@ -48,9 +48,6 @@ RLM_ARRAY_TYPE(Realm_tally)
 @property (nonatomic, strong) RLMArray<Realm_vote *><Realm_vote> *votes;
 @end
 
-@interface Realm_tally_parent : RLMObject
-@property (nonatomic, strong) RLMArray<Realm_tally *><Realm_tally> *tallies;
-@end
 
 @implementation Realm_vote
 // Nothing needed
@@ -58,9 +55,7 @@ RLM_ARRAY_TYPE(Realm_tally)
 @implementation Realm_tally
 // Nothing needed
 @end
-@implementation Realm_tally_parent
-// Nothing needed
-@end
+
 
 
 
@@ -75,7 +70,7 @@ RLM_ARRAY_TYPE(Realm_tally)
 @property (nonatomic, strong) NSMutableArray *yeaVotes;
 @property (nonatomic, strong) NSMutableArray *nayVotes;
 @property (nonatomic, strong) Tally *sectionTally;
-@property (nonatomic, strong) Realm_tally_parent *parent;
+
 
 
 
@@ -323,27 +318,6 @@ RLM_ARRAY_TYPE(Realm_tally)
 
 #pragma mark - Table view data source
 
--(NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-
-    return nil;
-    //if (self.filteredSections==nil) return nil;
-
-    //if (section==0) return nil;
-    
-    //if (section==1 && self.committeeHeaderView!=nil) return nil;
-    
-    //if ([self.filteredSections count]<=(section-1)) return nil;
-    //ListSection *listSection = [self.filteredSections objectAtIndex:(section-1)];
-    //return listSection.title;
-    //if (section==1) return nil;
-    //return @"Dog                                                     ";
-}
-
-
-
-
-
-
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -372,33 +346,11 @@ RLM_ARRAY_TYPE(Realm_tally)
     
     self.sectionTally = [Tally new];
     [self.sectionTally initWithParams:rowCount];
-    
-
-    //RLMRealm *realm = RLMRealm.defaultRealm;
-    
-    
-    
-    
-    
-    self.parent = Realm_tally_parent.allObjects.firstObject;
-    NSLog(@"%@", self.parent.tallies[0].votes[0].status);
-    NSLog(@"%@", self.parent.tallies[0].votes[1].status);
-    NSLog(@"%@", self.parent.tallies[0].votes[2].status);
-    NSLog(@"%@", self.parent.tallies[0].votes[3].status);
-    NSLog(@"%@", self.parent.tallies[0].votes[4].status);
 
     NSString *listSectionTitle = listSection.title;
-    NSLog(@"Section title: %@", listSection.title);
     Realm_tally *realmTally = [[Realm_tally objectsWhere:@"name == %@ AND body == %@", listSectionTitle, self.committee.body] firstObject];
-    NSLog(@"Here's the name of the found entity: %@ in body: %@", realmTally.name, self.committee.body);
 
-    if (realmTally) {
-        int i;
-        for (i=0; i<rowCount; i++) {
-            //self.sectionTally.votes[i] = realmTally.votes[i].status;
-        }
-    } else {
-
+    if (!realmTally) {
         Realm_tally *firstTally = [[Realm_tally alloc] init];
         firstTally.name = listSectionTitle;
         firstTally.body = self.committee.body;
@@ -410,16 +362,16 @@ RLM_ARRAY_TYPE(Realm_tally)
             [firstTally.votes addObject:blankVote];
             self.sectionTally.votes[i] = blankVote.status;
         }
-        
-        self.parent = [Realm_tally_parent new];
-        [self.parent.tallies addObject:firstTally];
-        RLMRealm *realm = RLMRealm.defaultRealm;
-        [realm transactionWithBlock:^{
-            [realm addObject:self.parent];
-        }];
     }
     
-    
+    [self sumVotes:realmTally];
+    [self.peopleTable registerNib:[UINib nibWithNibName:@"VoteTallyHeaderView-iPhone" bundle:nil] forCellReuseIdentifier:@"TableHeader"];
+
+    return rowCount;
+}
+
+
+-(void) sumVotes:(Realm_tally *)realmTally {
     self.headerYesVotes = 0;
     self.headerNoVotes = 0;
     self.headerUnknownVotes = 0;
@@ -435,27 +387,10 @@ RLM_ARRAY_TYPE(Realm_tally)
             self.headerUnknownVotes++;
         }
     }
-    
-    
-    
-    //[tableView registerNib:[UINib nibWithNibName:@"CustomTableViewHeader" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"CustomIdentifier"];
-    
-    //int i;
-    
-    //for (i=0; i<rowCount; i++)
-    //{
-    //    self.parent.tallies[0].votes[i] = [Realm_vote new];
-    //    self.parent.tallies[0].votes[i].status = @"Unknown";
-    //}
-
-    [self.peopleTable registerNib:[UINib nibWithNibName:@"VoteTallyHeaderView-iPhone" bundle:nil] forCellReuseIdentifier:@"TableHeader"];
-
-    
-    
-    
-    
-    return rowCount;
 }
+
+
+
 
 -(void) emailTallyButtonTapped:(UIButton *)sender forEvent:(UIEvent *)event {
     NSLog(@"Email Tally Button Tapped");
@@ -471,64 +406,60 @@ RLM_ARRAY_TYPE(Realm_tally)
 }
 
 
--(void) yeaButtonTapped:(UIButton *)sender forEvent:(UIEvent *)event {
-
-    NSInteger rowTapped = [sender.titleLabel.text integerValue];
-    ListSection *listSection = [self.sections objectAtIndex:0];
-    NSString *sectionTitle = listSection.title;
-    Realm_tally *realmTally = [[Realm_tally objectsWhere:@"name == %@ AND body == %@", sectionTitle, self.committee.body] firstObject];
-
+-(void) populateHeaderVotes:(Realm_tally *)activeTally{
+    [self sumVotes:activeTally];
     
-    
-    
-
-    
-    NSString *yeaBoxStatus = [[NSString alloc] init];
-    if ([realmTally.votes[rowTapped].status isEqual:@"yea"]) {
-        yeaBoxStatus = @"blank";
-    } else {
-        yeaBoxStatus = @"yea";
-    }
-    
-    RLMRealm *realm = RLMRealm.defaultRealm;
-    [realm beginWriteTransaction];
-    realmTally.votes[rowTapped].status = yeaBoxStatus;
-    [realm commitWriteTransaction];
-
-    if ([realmTally.votes[rowTapped].status isEqualToString:@"yea"]) {
-        [sender setImage:[UIImage imageNamed:@"CheckYea.png"] forState:UIControlStateNormal];
-        [self.sectionTally.nayButtonRef[rowTapped] setImage:[UIImage imageNamed:@"BlankNay.png"] forState:UIControlStateNormal];
-    } else {
-        [sender setImage:[UIImage imageNamed:@"BlankYeaSlice.png"]forState:UIControlStateNormal];
-    }
-    
-    //NSUInteger yeaCount = [[Realm_tally objectsWhere:@"name == %@ AND body == %@", sectionTitle, self.committee.body] count];
-    
-    self.headerYesVotes = 0;
-    self.headerNoVotes = 0;
-    self.headerUnknownVotes = 0;
-    NSString *voteStatus = [[NSString alloc] init];
-    NSInteger i;
-    for (i=0; i<realmTally.voteCount; i++) {
-        voteStatus = realmTally.votes[i].status;
-        if ([voteStatus isEqual:@"yea"]) {
-            self.headerYesVotes++;
-        } else if ([voteStatus isEqual:@"nay"]) {
-            self.headerNoVotes++;
-        } else {
-            self.headerUnknownVotes++;
-        }
-    }
-
     UILabel *yeaHeaderLabel = (UILabel *)[self.customHeaderCell.contentView viewWithTag:11];
     yeaHeaderLabel.text = [NSString stringWithFormat:@"%ld", (long)self.headerYesVotes];
-
+    
     UILabel *nayHeaderLabel = (UILabel *)[self.customHeaderCell.contentView viewWithTag:12];
     nayHeaderLabel.text = [NSString stringWithFormat:@"%ld", (long)self.headerNoVotes];
     
     UILabel *undecidedHeaderLabel = (UILabel *)[self.customHeaderCell.contentView viewWithTag:13];
     undecidedHeaderLabel.text = [NSString stringWithFormat:@"%ld", (long)self.headerUnknownVotes];
 }
+
+
+-(Realm_tally *) getActiveTally:(UIButton *)sender {
+    ListSection *listSection = [self.sections objectAtIndex:0];
+    NSString *sectionTitle = listSection.title;
+    Realm_tally *activeTally = [[Realm_tally objectsWhere:@"name == %@ AND body == %@", sectionTitle, self.committee.body] firstObject];
+    return activeTally;
+}
+
+-(void) yeaButtonTapped:(UIButton *)sender forEvent:(UIEvent *)event {
+
+    NSInteger rowTapped = [sender.titleLabel.text integerValue];
+    Realm_tally *activeTally = [[Realm_tally alloc] init];
+    activeTally = [self getActiveTally:sender];
+   
+    NSString *voteStatus = [[NSString alloc] init];
+    if ([activeTally.votes[rowTapped].status isEqual:@"yea"]) {
+        voteStatus = @"blank";
+    } else {
+        voteStatus = @"yea";
+    }
+    
+    RLMRealm *realm = RLMRealm.defaultRealm;
+    [realm beginWriteTransaction];
+    activeTally.votes[rowTapped].status = voteStatus;
+    [realm commitWriteTransaction];
+
+    if ([activeTally.votes[rowTapped].status isEqualToString:@"yea"]) {
+        //Check Yea Button
+        [sender setImage:[UIImage imageNamed:@"CheckYea.png"] forState:UIControlStateNormal];
+        //Blank Nay Button
+        [self.sectionTally.nayButtonRef[rowTapped] setImage:[UIImage imageNamed:@"BlankNay.png"] forState:UIControlStateNormal];
+    } else {
+        //Vote is not yea, so blank the yea box
+        [sender setImage:[UIImage imageNamed:@"BlankYeaSlice.png"]forState:UIControlStateNormal];
+    }
+    
+    [self populateHeaderVotes:activeTally];
+    
+}
+
+
 
 
 -(void) nayCheckButtonTapped:(UIButton *) sender forEvent:(UIEvent *)event {
@@ -538,16 +469,16 @@ RLM_ARRAY_TYPE(Realm_tally)
     NSString *sectionTitle = listSection.title;
     Realm_tally *realmTally = [[Realm_tally objectsWhere:@"name == %@ AND body == %@", sectionTitle, self.committee.body] firstObject];
     
-    NSString *nayBoxStatus = [[NSString alloc] init];
+    NSString *voteStatus = [[NSString alloc] init];
     if ([realmTally.votes[rowTapped].status isEqual:@"nay"]) {
-        nayBoxStatus = @"blank";
+        voteStatus = @"blank";
     } else {
-        nayBoxStatus = @"nay";
+        voteStatus = @"nay";
     }
     
     RLMRealm *realm = RLMRealm.defaultRealm;
     [realm beginWriteTransaction];
-    realmTally.votes[rowTapped].status = nayBoxStatus;
+    realmTally.votes[rowTapped].status = voteStatus;
     [realm commitWriteTransaction];
     
     if ([realmTally.votes[rowTapped].status isEqualToString:@"nay"]) {
@@ -557,50 +488,7 @@ RLM_ARRAY_TYPE(Realm_tally)
         [sender setImage:[UIImage imageNamed:@"BlankNay.png"]forState:UIControlStateNormal];
     }
 
-    self.headerYesVotes = 0;
-    self.headerNoVotes = 0;
-    self.headerUnknownVotes = 0;
-    NSString *voteStatus = [[NSString alloc] init];
-    NSInteger i;
-    for (i=0; i<realmTally.voteCount; i++) {
-        voteStatus = realmTally.votes[i].status;
-        if ([voteStatus isEqual:@"yea"]) {
-            self.headerYesVotes++;
-        } else if ([voteStatus isEqual:@"nay"]) {
-            self.headerNoVotes++;
-        } else {
-            self.headerUnknownVotes++;
-        }
-    }
-    
-    UILabel *yeaHeaderLabel = (UILabel *)[self.customHeaderCell.contentView viewWithTag:11];
-    yeaHeaderLabel.text = [NSString stringWithFormat:@"%ld", (long)self.headerYesVotes];
-    
-    UILabel *nayHeaderLabel = (UILabel *)[self.customHeaderCell.contentView viewWithTag:12];
-    nayHeaderLabel.text = [NSString stringWithFormat:@"%ld", (long)self.headerNoVotes];
-    
-    UILabel *undecidedHeaderLabel = (UILabel *)[self.customHeaderCell.contentView viewWithTag:13];
-    undecidedHeaderLabel.text = [NSString stringWithFormat:@"%ld", (long)self.headerUnknownVotes];
-    
-    
-//    NSInteger rowTapped = [sender.titleLabel.text integerValue];
-//    
-//    UITouch *touch = [[event allTouches] anyObject];
-//    
-//    if (touch.tapCount > 0) {
-//        if ([self.sectionTally.votes[rowTapped] isEqual:@"nay"]) {
-//            self.sectionTally.votes[rowTapped] = @"blank";
-//        } else {
-//            self.sectionTally.votes[rowTapped] = @"nay";
-//        }
-//    }
-//    
-//    if ([self.sectionTally.votes[rowTapped] isEqualToString:@"nay"]) {
-//        [sender setImage:[UIImage imageNamed:@"CheckNay.png"] forState:UIControlStateNormal];
-//        [self.sectionTally.yeaButtonRef[rowTapped] setImage:[UIImage imageNamed:@"BlankYeaSlice.png"] forState:UIControlStateNormal];
-//    } else {
-//        [sender setImage:[UIImage imageNamed:@"BlankNay.png"]forState:UIControlStateNormal];
-//    }
+    [self populateHeaderVotes:realmTally];
 }
 
 
@@ -848,6 +736,8 @@ RLM_ARRAY_TYPE(Realm_tally)
         UILabel *headerTitle = (UILabel *)[self.customHeaderCell.contentView viewWithTag:10];
         headerTitle.text = [NSString stringWithFormat:@"Your %@ Roll Call Tally", self.tallyGroupTitle];
         
+
+        
         UILabel *yeaHeaderLabel = (UILabel *)[self.customHeaderCell.contentView viewWithTag:11];
         yeaHeaderLabel.text = [NSString stringWithFormat:@"%ld", (long)self.headerYesVotes];
         
@@ -856,6 +746,7 @@ RLM_ARRAY_TYPE(Realm_tally)
         
         UILabel *undecidedHeaderLabel = (UILabel *)[self.customHeaderCell.contentView viewWithTag:13];
         undecidedHeaderLabel.text = [NSString stringWithFormat:@"%ld", (long)self.headerUnknownVotes];
+
 
         yeaHeaderLabel.layer.borderColor = [UIColor greenColor].CGColor;
         yeaHeaderLabel.layer.borderWidth = 4.0;
@@ -965,32 +856,8 @@ RLM_ARRAY_TYPE(Realm_tally)
     }
     [nayButton setImage:nayImage forState:UIControlStateNormal];
     
-    self.headerYesVotes = 0;
-    self.headerNoVotes = 0;
-    self.headerUnknownVotes = 0;
-    NSInteger i;
-    for (i=0; i<realmTally.voteCount; i++) {
-        voteStatus = realmTally.votes[i].status;
-        if ([voteStatus isEqual:@"yea"]) {
-            self.headerYesVotes++;
-        } else if ([voteStatus isEqual:@"nay"]) {
-            self.headerNoVotes++;
-        } else {
-            self.headerUnknownVotes++;
-        }
-    }
-    
-    UILabel *yeaHeaderLabel = (UILabel *)[self.customHeaderCell.contentView viewWithTag:11];
-    yeaHeaderLabel.text = [NSString stringWithFormat:@"%ld", (long)self.headerYesVotes];
-    
-    UILabel *nayHeaderLabel = (UILabel *)[self.customHeaderCell.contentView viewWithTag:12];
-    nayHeaderLabel.text = [NSString stringWithFormat:@"%ld", (long)self.headerNoVotes];
-    
-    UILabel *undecidedHeaderLabel = (UILabel *)[self.customHeaderCell.contentView viewWithTag:13];
-    undecidedHeaderLabel.text = [NSString stringWithFormat:@"%ld", (long)self.headerUnknownVotes];
-    
-    
-    
+
+    [self populateHeaderVotes:realmTally];
     
     return nil;
 }
@@ -1034,27 +901,6 @@ RLM_ARRAY_TYPE(Realm_tally)
     
     pvc.person=person;
     
-    //JWH [self.viewController.navigationController pushViewController:pvc animated:YES];
-
-    
-    /*
-    if (indexPath.row>=[section.children count]) return;
-    
-    if ( [[section.children objectAtIndex:indexPath.row] isKindOfClass:[CommitteeMember class]]) {
-        member = [section.children objectAtIndex:indexPath.row];
-        person = member.person;
-    } else {
-        person = [section.children objectAtIndex:indexPath.row];
-    }
-
-    PersonViewController *pvc = [[[PersonViewController alloc] initWithNibName:@"PersonView-iPhone" bundle:nil] autorelease];
-    
-    pvc.person=person;
-    
-    [self.viewController.navigationController pushViewController:pvc animated:YES];
-     
-     */
-
 }
 
 - (void)dealloc

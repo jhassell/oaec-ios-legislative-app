@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OAECLegGuide/Classes/Miscellaneous/PeopleListDelegate.m"
-            timestampString = "517542846.678826"
+            timestampString = "517693793.770083"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1010"
-            endingLineNumber = "1010"
+            startingLineNumber = "877"
+            endingLineNumber = "877"
             landmarkName = "-tableView:didSelectRowAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OAECLegGuide/Classes/Miscellaneous/PeopleListDelegate.m"
-            timestampString = "517542846.678826"
+            timestampString = "517693793.770083"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "921"
-            endingLineNumber = "921"
+            startingLineNumber = "812"
+            endingLineNumber = "812"
             landmarkName = "-tableView:willSelectRowAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OAECLegGuide/Classes/Miscellaneous/PeopleListDelegate.m"
-            timestampString = "517542846.678826"
+            timestampString = "517693793.770083"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "922"
-            endingLineNumber = "922"
+            startingLineNumber = "813"
+            endingLineNumber = "813"
             landmarkName = "-tableView:willSelectRowAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OAECLegGuide/Classes/Miscellaneous/PeopleListDelegate.m"
-            timestampString = "517542846.678826"
+            timestampString = "517693793.770083"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "928"
-            endingLineNumber = "928"
+            startingLineNumber = "819"
+            endingLineNumber = "819"
             landmarkName = "-tableView:willSelectRowAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OAECLegGuide/Classes/Miscellaneous/PeopleListDelegate.m"
-            timestampString = "517542846.678826"
+            timestampString = "517676396.109529"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "469"
-            endingLineNumber = "469"
+            startingLineNumber = "404"
+            endingLineNumber = "404"
             landmarkName = "-emailTallyButtonTapped:forEvent:"
             landmarkType = "7">
          </BreakpointContent>
