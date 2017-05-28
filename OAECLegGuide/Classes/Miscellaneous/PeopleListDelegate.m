@@ -457,6 +457,20 @@ RLM_ARRAY_TYPE(Realm_tally)
     return rowCount;
 }
 
+-(void) emailTallyButtonTapped:(UIButton *)sender forEvent:(UIEvent *)event {
+    NSLog(@"Email Tally Button Tapped");
+    
+    ListSection *listSection = [self.sections objectAtIndex:0];
+    NSString *sectionTitle = listSection.title;
+    
+    NSString *sectionTitleEncoded = [sectionTitle stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    
+    
+    [[UIApplication sharedApplication]
+     openURL:[NSURL URLWithString:@"mailto:?subject=AppButton%200.8.3&body=77777%0A7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777778"]];
+}
+
+
 -(void) yeaButtonTapped:(UIButton *)sender forEvent:(UIEvent *)event {
 
     NSInteger rowTapped = [sender.titleLabel.text integerValue];
@@ -849,6 +863,13 @@ RLM_ARRAY_TYPE(Realm_tally)
         nayHeaderLabel.layer.borderWidth = 4.0;
         undecidedHeaderLabel.layer.borderColor = [UIColor lightGrayColor].CGColor;
         undecidedHeaderLabel.layer.borderWidth = 4.0;
+        
+        UIButton *emailTallyButton = (UIButton *)[self.customHeaderCell.contentView viewWithTag:14];
+        
+        [emailTallyButton addTarget:self action:@selector(emailTallyButtonTapped:forEvent:) forControlEvents:UIControlEventTouchUpInside];
+        
+        //PersonViewController *pvc = [[[PersonViewController alloc] initWithNibName:@"PersonView-iPhone" bundle:nil] autorelease];
+        //[pvc emailButtonPressed:sender];
 
     }
     else {
