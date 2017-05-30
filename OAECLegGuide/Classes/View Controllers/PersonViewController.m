@@ -288,6 +288,10 @@
     
 }
 
+
+
+
+
 - (IBAction)facebookButtonPressed:(id)sender {
     NSURL *url = [NSURL URLWithString:[self.person.facebook trim]];
     if (![[UIApplication sharedApplication] openURL:url])

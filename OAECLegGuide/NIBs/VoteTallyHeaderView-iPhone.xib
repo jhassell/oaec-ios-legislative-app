@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -78,7 +79,7 @@
                                 <color key="backgroundColor" red="0.043137254899999998" green="0.33333333329999998" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
-                                <state key="normal" title="Email my roll call tally">
+                                <state key="normal" title="Share my roll call tally">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>

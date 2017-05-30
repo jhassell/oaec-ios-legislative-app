@@ -405,8 +405,8 @@
 		CEB7D56C1BC9A54100AD5CD2 /* MunsonCyndi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEB7D56B1BC9A54100AD5CD2 /* MunsonCyndi.jpg */; };
 		CEB7D56E1BC9A55000AD5CD2 /* GoodwinRegina.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEB7D56D1BC9A55000AD5CD2 /* GoodwinRegina.jpg */; };
 		CEB7D5701BC9A57200AD5CD2 /* JonMiles.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEB7D56F1BC9A57200AD5CD2 /* JonMiles.jpg */; };
-		CEC68C981EDB668C00193036 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC68C971EDB668C00193036 /* Realm.framework */; };
-		CEC68C991EDB668C00193036 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEC68C971EDB668C00193036 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CEC68CA31EDD29AF00193036 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC68CA21EDD29AF00193036 /* Realm.framework */; };
+		CEC68CA41EDD2B8000193036 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEC68CA21EDD29AF00193036 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CEC865411EBDF7BC00363665 /* BlankYeaSlice.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC865401EBDF7BC00363665 /* BlankYeaSlice.png */; };
 		CEC865431EBE0F9300363665 /* CheckYea.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC865421EBE0F9300363665 /* CheckYea.png */; };
 		CEC865461EBE149100363665 /* CheckNay.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC865441EBE149100363665 /* CheckNay.png */; };
@@ -426,13 +426,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		CEC68C9A1EDB668C00193036 /* Embed Frameworks */ = {
+		CEC68C9D1EDCFC8800193036 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CEC68C991EDB668C00193036 /* Realm.framework in Embed Frameworks */,
+				CEC68CA41EDD2B8000193036 /* Realm.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -887,7 +887,7 @@
 		CEB7D56B1BC9A54100AD5CD2 /* MunsonCyndi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MunsonCyndi.jpg; sourceTree = "<group>"; };
 		CEB7D56D1BC9A55000AD5CD2 /* GoodwinRegina.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GoodwinRegina.jpg; sourceTree = "<group>"; };
 		CEB7D56F1BC9A57200AD5CD2 /* JonMiles.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = JonMiles.jpg; sourceTree = "<group>"; };
-		CEC68C971EDB668C00193036 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		CEC68CA21EDD29AF00193036 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		CEC865401EBDF7BC00363665 /* BlankYeaSlice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlankYeaSlice.png; sourceTree = "<group>"; };
 		CEC865421EBE0F9300363665 /* CheckYea.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CheckYea.png; sourceTree = "<group>"; };
 		CEC865441EBE149100363665 /* CheckNay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CheckNay.png; sourceTree = "<group>"; };
@@ -928,7 +928,7 @@
 				AF2481A415BB6A260070924E /* UIKit.framework in Frameworks */,
 				AF2481A615BB6A260070924E /* Foundation.framework in Frameworks */,
 				CEB3DA5C1C2F98D10003A4B9 /* Parse.framework in Frameworks */,
-				CEC68C981EDB668C00193036 /* Realm.framework in Frameworks */,
+				CEC68CA31EDD29AF00193036 /* Realm.framework in Frameworks */,
 				CEB3DA5B1C2F98D10003A4B9 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -953,12 +953,12 @@
 		AF24819415BB6A250070924E = {
 			isa = PBXGroup;
 			children = (
-				CEC68C971EDB668C00193036 /* Realm.framework */,
 				CE16008E1ED2556A00058C4D /* VoteTallyHeaderView-iPhone.xib */,
 				CE4ACD331E215057003A6655 /* ok56leg.entitlements */,
 				AF255CC4184CBAF60053CC73 /* AppIcon-60@2x.png */,
 				AFC926A51614408D009538FD /* Default-568h@2x.png */,
 				AF255CC3184CBAF60053CC73 /* AppIcon-60.png */,
+				CEC68CA21EDD29AF00193036 /* Realm.framework */,
 				AF092D4215DA0FDC00AA4B6B /* Default@2x.png */,
 				AF092D4015DA0FD100AA4B6B /* Default.png */,
 				AF2481A915BB6A260070924E /* OAECLegGuide */,
@@ -1618,8 +1618,8 @@
 				AF24819B15BB6A250070924E /* Sources */,
 				AF24819C15BB6A250070924E /* Frameworks */,
 				AF24819D15BB6A250070924E /* Resources */,
+				CEC68C9D1EDCFC8800193036 /* Embed Frameworks */,
 				CEAA26F71EB5A37B0012CEA5 /* ShellScript */,
-				CEC68C9A1EDB668C00193036 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -2038,7 +2038,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		CEAA26F71EB5A37B0012CEA5 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
