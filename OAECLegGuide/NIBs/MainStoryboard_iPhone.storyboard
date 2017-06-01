@@ -1068,7 +1068,7 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="senateVoteButtonPressed:" destination="ZZz-nX-fYD" eventType="touchUpInside" id="nwS-dN-9tC"/>
+                                            <action selector="senateVoteButtonPressed:" destination="ZZz-nX-fYD" eventType="touchUpInside" id="oFf-jx-RwN"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="brw-HE-PRA">
@@ -1135,7 +1135,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="senateVoteButtonPressed:" destination="ZZz-nX-fYD" eventType="touchUpInside" id="uOE-ha-CKr"/>
+                                            <action selector="senateVoteButtonPressed:" destination="ZZz-nX-fYD" eventType="touchUpInside" id="43Q-ex-TU2"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" id="Us6-a3-RK6">

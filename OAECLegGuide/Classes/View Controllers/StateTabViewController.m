@@ -61,8 +61,8 @@
 - (IBAction)senateVoteButtonPressed:(id)sender {
     AppDelegate *ad = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
-    VotingListViewController *vlvc = [[[VotingListViewController alloc] initWithNibName:@"PeopleListView-iPhone" bundle:nil] autorelease];
-    vlvc.sections = [ListSection buildSectionsFrom:ad.stateSenate dividedBy:@"Type" catchAllKey:nil includeKeys:[NSArray arrayWithObjects:STATE_SENATE, nil]];
+    VotingListViewController *vlvc = [[[VotingListViewController alloc] initWithNibName:@"VoteListView-iPhone" bundle:nil] autorelease];
+    vlvc.rc_sections = [ListSection buildSectionsFrom:ad.stateSenate dividedBy:@"Type" catchAllKey:nil includeKeys:[NSArray arrayWithObjects:STATE_SENATE, nil]];
     
     [self.navigationController pushViewController:vlvc animated:YES];
     
@@ -179,7 +179,7 @@
     
     AppDelegate *ad = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
-    PeopleListViewController *plvc = [[PeopleListViewController alloc] initWithNibName:@"PeopleListView-iPhone" bundle:nil];
+    VotingListViewController *vlvc = [[VotingListViewController alloc] initWithNibName:@"PeopleListView-iPhone" bundle:nil];
     
     ListSection *ls1 = [[[ListSection alloc] init] autorelease];
     ls1.title=@"All Oklahoma";
@@ -195,10 +195,10 @@
     
     ls1.children=[[NSArray arrayWithArray:all] mutableCopy];
     
-    plvc.sections = [NSArray arrayWithObject:ls1];
+    vlvc.rc_sections = [NSArray arrayWithObject:ls1];
     
     
-    [self.navigationController pushViewController:plvc animated:YES];
+    [self.navigationController pushViewController:vlvc animated:YES];
     
 }
 

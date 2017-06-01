@@ -11,7 +11,7 @@
 
 
 #import "VotingListViewController.h"
-#import "PeopleListDelegate.h"
+#import "RollCallListDelegate.h"
 #import "AppDelegate.h"
 #import "Committee.h"
 
@@ -20,9 +20,9 @@
 
 
 @interface VotingListViewController ()
+@property (unsafe_unretained, nonatomic) IBOutlet UITableView *rc_peopleTable;
 
-@property (nonatomic, retain) PeopleListDelegate *peopleListDelegate;
-@property (retain, nonatomic) IBOutlet UITableView *peopleTable;
+@property (nonatomic, retain) RollCallListDelegate *rollCallListDelegate;
 
 - (IBAction)backButtonPushed:(id)sender;
 
@@ -30,10 +30,10 @@
 
 @implementation VotingListViewController
 
-@synthesize peopleListDelegate=_peopleListDelegate;
-@synthesize peopleTable=_peopleTable;
-@synthesize sections=_sections;
-@synthesize committee=_committee;
+//@synthesize rollCallListDelegate=_rollCallListDelegate;
+//@synthesize rc_peopleTable=_rc_peopleTable;
+//@synthesize rc_sections=_rc_sections;
+//@synthesize rc_committee=_rc_committee;
 
 #pragma mark - UI Hooks
 
@@ -62,6 +62,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.rc_peopleTable.dataSource = self;
+    self.rc_peopleTable.delegate = self;
+    
     // Do any additional setup after loading the view.
 }
 
@@ -72,22 +75,22 @@
 
 -(void) viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    if (self.peopleTable.indexPathForSelectedRow!=nil) {
-        [self.peopleTable deselectRowAtIndexPath:self.peopleTable.indexPathForSelectedRow animated:YES];
+    if (self.rc_peopleTable.indexPathForSelectedRow!=nil) {
+        [self.rc_peopleTable deselectRowAtIndexPath:self.rc_peopleTable.indexPathForSelectedRow animated:YES];
     }
 }
 
 -(void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    if (self.peopleListDelegate==nil) {
-        self.peopleListDelegate = [[[PeopleListDelegate alloc] init] autorelease];
-        self.peopleListDelegate.viewController = self;
-        self.peopleListDelegate.committee=self.committee;
-        self.peopleListDelegate.sections = self.sections;
-        self.peopleTable.delegate=self.peopleListDelegate;
-        self.peopleTable.dataSource=self.peopleListDelegate;
-        self.peopleTable.contentOffset = CGPointMake(0, SEARCH_VIEW_HEIGHT);
-        self.peopleListDelegate.peopleTable=self.peopleTable;
+    if (self.rollCallListDelegate==nil) {
+        self.rollCallListDelegate = [[[RollCallListDelegate alloc] init] autorelease];
+        self.rollCallListDelegate.rc_viewController = self;
+        self.rollCallListDelegate.rc_committee=self.rc_committee;
+        self.rollCallListDelegate.rc_sections = self.rc_sections;
+        self.rc_peopleTable.delegate=self.rollCallListDelegate;
+        self.rc_peopleTable.dataSource=self.rollCallListDelegate;
+        self.rc_peopleTable.contentOffset = CGPointMake(0, SEARCH_VIEW_HEIGHT);
+        self.rollCallListDelegate.rc_peopleTable=self.rc_peopleTable;
         
         
         
@@ -102,10 +105,10 @@
 
 - (void)dealloc
 {
-    [_committee release];
-    [_sections release];
-    [_peopleTable release];
-    [_peopleListDelegate release];
+    [_rc_committee release];
+    [_rc_sections release];
+    [_rc_peopleTable release];
+    [_rollCallListDelegate release];
     [super dealloc];
 }
 

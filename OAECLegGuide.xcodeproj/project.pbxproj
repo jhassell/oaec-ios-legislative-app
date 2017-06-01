@@ -326,6 +326,11 @@
 		CE2DAF901E4EB2A1002BCD60 /* BergstromMicheal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE2DAF8F1E4EB2A1002BCD60 /* BergstromMicheal.jpg */; };
 		CE2DAF921E4EC6D1002BCD60 /* GriffinAJ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE2DAF911E4EC6D1002BCD60 /* GriffinAJ.jpg */; };
 		CE2DAF961E4EC8A4002BCD60 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2DAF951E4EC8A4002BCD60 /* StoreKit.framework */; };
+		CE64C2C01EDFBC9E00FEF384 /* VoteListView-iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE7014831EDFB81200BE7B25 /* VoteListView-iPhone.xib */; };
+		CE64C2C11EDFBDA900FEF384 /* VotingListViewController.h in Resources */ = {isa = PBXBuildFile; fileRef = CEA9B5581ECD4AF300035FF6 /* VotingListViewController.h */; };
+		CE64C2C21EDFBDA900FEF384 /* VotingListViewController.m in Resources */ = {isa = PBXBuildFile; fileRef = CEA9B5591ECD4AF300035FF6 /* VotingListViewController.m */; };
+		CE64C2C31EDFBDC300FEF384 /* RollCallListDelegate.m in Resources */ = {isa = PBXBuildFile; fileRef = CE8BBB891EDE3B3400CF5448 /* RollCallListDelegate.m */; };
+		CE64C2C41EDFBDC300FEF384 /* RollCallListDelegate.h in Resources */ = {isa = PBXBuildFile; fileRef = CE8BBB8A1EDE3B3400CF5448 /* RollCallListDelegate.h */; };
 		CE7C6D0C1E385F4C00874B14 /* BabinecGreg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6CE61E385F4C00874B14 /* BabinecGreg.jpg */; };
 		CE7C6D0D1E385F4C00874B14 /* BakerRhonda.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6CE71E385F4C00874B14 /* BakerRhonda.jpg */; };
 		CE7C6D0E1E385F4C00874B14 /* BennettForrest.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6CE81E385F4C00874B14 /* BennettForrest.jpg */; };
@@ -380,6 +385,7 @@
 		CE7C6D691E39B41F00874B14 /* KevinWood.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6D631E39B41F00874B14 /* KevinWood.jpg */; };
 		CE7C6D6A1E39B41F00874B14 /* PatrickGrace.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6D641E39B41F00874B14 /* PatrickGrace.jpg */; };
 		CE7C6D6B1E39B41F00874B14 /* ZacPerkins.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6D651E39B41F00874B14 /* ZacPerkins.jpg */; };
+		CE8BBB8B1EDE3B3400CF5448 /* RollCallListDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8BBB891EDE3B3400CF5448 /* RollCallListDelegate.m */; };
 		CE9CAE871EB80D0000C20CAF /* VoteTallIcon-09.png in Resources */ = {isa = PBXBuildFile; fileRef = CE9CAE861EB80D0000C20CAF /* VoteTallIcon-09.png */; };
 		CE9CAE891EB8AB9100C20CAF /* VotingListCell-iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE9CAE881EB8AB9100C20CAF /* VotingListCell-iPhone.xib */; };
 		CE9CAE8C1EBAD31000C20CAF /* VoteCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9CAE8B1EBAD31000C20CAF /* VoteCheckViewController.m */; };
@@ -805,6 +811,8 @@
 		CE2DAF911E4EC6D1002BCD60 /* GriffinAJ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GriffinAJ.jpg; sourceTree = "<group>"; };
 		CE2DAF951E4EC8A4002BCD60 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		CE4ACD331E215057003A6655 /* ok56leg.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ok56leg.entitlements; sourceTree = "<group>"; };
+		CE64C2BE1EDFBB1900FEF384 /* VoteListView-iPhone.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "VoteListView-iPhone.xib"; path = "OAECLegGuide/NIBs/VoteListView-iPhone.xib"; sourceTree = "<group>"; };
+		CE7014831EDFB81200BE7B25 /* VoteListView-iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "VoteListView-iPhone.xib"; sourceTree = "<group>"; };
 		CE7C6CE61E385F4C00874B14 /* BabinecGreg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BabinecGreg.jpg; sourceTree = "<group>"; };
 		CE7C6CE71E385F4C00874B14 /* BakerRhonda.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BakerRhonda.jpg; sourceTree = "<group>"; };
 		CE7C6CE81E385F4C00874B14 /* BennettForrest.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BennettForrest.jpg; sourceTree = "<group>"; };
@@ -859,6 +867,8 @@
 		CE7C6D631E39B41F00874B14 /* KevinWood.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = KevinWood.jpg; sourceTree = "<group>"; };
 		CE7C6D641E39B41F00874B14 /* PatrickGrace.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PatrickGrace.jpg; sourceTree = "<group>"; };
 		CE7C6D651E39B41F00874B14 /* ZacPerkins.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ZacPerkins.jpg; sourceTree = "<group>"; };
+		CE8BBB891EDE3B3400CF5448 /* RollCallListDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RollCallListDelegate.m; sourceTree = "<group>"; };
+		CE8BBB8A1EDE3B3400CF5448 /* RollCallListDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RollCallListDelegate.h; sourceTree = "<group>"; };
 		CE9CAE861EB80D0000C20CAF /* VoteTallIcon-09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VoteTallIcon-09.png"; sourceTree = "<group>"; };
 		CE9CAE881EB8AB9100C20CAF /* VotingListCell-iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "VotingListCell-iPhone.xib"; sourceTree = "<group>"; };
 		CE9CAE8A1EBAD31000C20CAF /* VoteCheckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VoteCheckViewController.h; path = "../View Controllers/VoteCheckViewController.h"; sourceTree = "<group>"; };
@@ -953,6 +963,7 @@
 		AF24819415BB6A250070924E = {
 			isa = PBXGroup;
 			children = (
+				CE64C2BE1EDFBB1900FEF384 /* VoteListView-iPhone.xib */,
 				CE16008E1ED2556A00058C4D /* VoteTallyHeaderView-iPhone.xib */,
 				CE4ACD331E215057003A6655 /* ok56leg.entitlements */,
 				AF255CC4184CBAF60053CC73 /* AppIcon-60@2x.png */,
@@ -1152,6 +1163,8 @@
 		AF2481DB15BB6C5E0070924E /* NIBs */ = {
 			isa = PBXGroup;
 			children = (
+				CE7014831EDFB81200BE7B25 /* VoteListView-iPhone.xib */,
+				AFEF4BB615C530F800896FA9 /* PeopleListView-iPhone.xib */,
 				CE1600941ED299FF00058C4D /* CustomTableViewHeaderCell-iPhone.xib */,
 				CE1600871ED1FB4A00058C4D /* VoteTallyHeaderView-iPhone.xib */,
 				AF6987F818E17E7100144B92 /* CommitteeHeaderView-iPhone.xib */,
@@ -1160,7 +1173,6 @@
 				AF2481DD15BB6C5E0070924E /* MainStoryboard_iPhone.storyboard */,
 				AFEF4BAC15C50ECB00896FA9 /* PeopleListCell-iPhone.xib */,
 				CE9CAE881EB8AB9100C20CAF /* VotingListCell-iPhone.xib */,
-				AFEF4BB615C530F800896FA9 /* PeopleListView-iPhone.xib */,
 				AFF2BB1A15C8610100F1B379 /* CommitteeListView-iPhone.xib */,
 				AF0D4B0915CB0E940046F663 /* PersonView-iPhone.xib */,
 				AF71B99115CB3A8900D0D43B /* PersonViewAddressCell-iPhone.xib */,
@@ -1533,6 +1545,8 @@
 		AFDB1E6315C1D18600862F0F /* Miscellaneous */ = {
 			isa = PBXGroup;
 			children = (
+				CE8BBB891EDE3B3400CF5448 /* RollCallListDelegate.m */,
+				CE8BBB8A1EDE3B3400CF5448 /* RollCallListDelegate.h */,
 				CE16008F1ED2606000058C4D /* CustomTableViewHeaderCell.h */,
 				CE1600901ED2606000058C4D /* CustomTableViewHeaderCell.m */,
 				AF2B152516B08C1100A3A7F4 /* OutlinkCell.h */,
@@ -1678,6 +1692,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE64C2C31EDFBDC300FEF384 /* RollCallListDelegate.m in Resources */,
+				CE64C2C41EDFBDC300FEF384 /* RollCallListDelegate.h in Resources */,
+				CE64C2C11EDFBDA900FEF384 /* VotingListViewController.h in Resources */,
+				CE64C2C21EDFBDA900FEF384 /* VotingListViewController.m in Resources */,
 				CE1600881ED1FB4A00058C4D /* VoteTallyHeaderView-iPhone.xib in Resources */,
 				AF2481AE15BB6A260070924E /* InfoPlist.strings in Resources */,
 				CE18B5551E4F72930067DCC1 /* Icon-Small-50x50@2x.png in Resources */,
@@ -1899,6 +1917,7 @@
 				CE18B5511E4F72930067DCC1 /* Icon-App-76x76@2x.png in Resources */,
 				AFBC6EBC16B0BF740052E385 /* McBrideMark.jpg in Resources */,
 				AFBC6EBD16B0BF740052E385 /* McCallCharles.jpg in Resources */,
+				CE64C2C01EDFBC9E00FEF384 /* VoteListView-iPhone.xib in Resources */,
 				AFBC6EC116B0BF740052E385 /* McDanielRandy.jpg in Resources */,
 				CE7C6D1B1E385F4C00874B14 /* HilbertKyle.jpg in Resources */,
 				AFBC6EC416B0BF740052E385 /* MooreLewis.jpg in Resources */,
@@ -2061,6 +2080,7 @@
 				AF2481F515BB72FA0070924E /* AboutViewController.m in Sources */,
 				AF2481F815BB730A0070924E /* StateTabViewController.m in Sources */,
 				AF2481FB15BB73190070924E /* FederalTabViewController.m in Sources */,
+				CE8BBB8B1EDE3B3400CF5448 /* RollCallListDelegate.m in Sources */,
 				AF2481FE15BB732D0070924E /* MapsViewController.m in Sources */,
 				AFDB1E5615C0C5D200862F0F /* CSVParser.m in Sources */,
 				AFDB1E5F15C16A7600862F0F /* DataLoader.m in Sources */,

@@ -10,9 +10,9 @@
 
 @class Committee;
 
-@interface VotingListViewController : UIViewController <UISearchBarDelegate>
+@interface VotingListViewController : UIViewController <UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, retain) NSArray *sections;
-@property (nonatomic, retain) Committee *committee;
+@property (nonatomic, retain) NSArray *rc_sections;
+@property (nonatomic, retain) Committee *rc_committee;
 
 @end
