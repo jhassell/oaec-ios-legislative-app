@@ -293,7 +293,6 @@
 		AFEF4BD715C7971D00896FA9 /* NSString+Stuff.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEF4BD615C7971D00896FA9 /* NSString+Stuff.m */; };
 		AFF2BB1815C860BB00F1B379 /* CommitteeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF2BB1715C860BB00F1B379 /* CommitteeListViewController.m */; };
 		AFF2BB1B15C8610100F1B379 /* CommitteeListView-iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFF2BB1A15C8610100F1B379 /* CommitteeListView-iPhone.xib */; };
-		CE1600881ED1FB4A00058C4D /* VoteTallyHeaderView-iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE1600871ED1FB4A00058C4D /* VoteTallyHeaderView-iPhone.xib */; };
 		CE1600911ED2606000058C4D /* CustomTableViewHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1600901ED2606000058C4D /* CustomTableViewHeaderCell.m */; };
 		CE1600951ED299FF00058C4D /* CustomTableViewHeaderCell-iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE1600941ED299FF00058C4D /* CustomTableViewHeaderCell-iPhone.xib */; };
 		CE18B5411E4F72930067DCC1 /* Icon-App-20x20@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE18B52B1E4F72930067DCC1 /* Icon-App-20x20@1x.png */; };
@@ -327,10 +326,6 @@
 		CE2DAF921E4EC6D1002BCD60 /* GriffinAJ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE2DAF911E4EC6D1002BCD60 /* GriffinAJ.jpg */; };
 		CE2DAF961E4EC8A4002BCD60 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2DAF951E4EC8A4002BCD60 /* StoreKit.framework */; };
 		CE64C2C01EDFBC9E00FEF384 /* VoteListView-iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE7014831EDFB81200BE7B25 /* VoteListView-iPhone.xib */; };
-		CE64C2C11EDFBDA900FEF384 /* VotingListViewController.h in Resources */ = {isa = PBXBuildFile; fileRef = CEA9B5581ECD4AF300035FF6 /* VotingListViewController.h */; };
-		CE64C2C21EDFBDA900FEF384 /* VotingListViewController.m in Resources */ = {isa = PBXBuildFile; fileRef = CEA9B5591ECD4AF300035FF6 /* VotingListViewController.m */; };
-		CE64C2C31EDFBDC300FEF384 /* RollCallListDelegate.m in Resources */ = {isa = PBXBuildFile; fileRef = CE8BBB891EDE3B3400CF5448 /* RollCallListDelegate.m */; };
-		CE64C2C41EDFBDC300FEF384 /* RollCallListDelegate.h in Resources */ = {isa = PBXBuildFile; fileRef = CE8BBB8A1EDE3B3400CF5448 /* RollCallListDelegate.h */; };
 		CE64C2C71EE113C000FEF384 /* CommitteeVoteListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64C2C61EE113C000FEF384 /* CommitteeVoteListViewController.m */; };
 		CE7C6D0C1E385F4C00874B14 /* BabinecGreg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6CE61E385F4C00874B14 /* BabinecGreg.jpg */; };
 		CE7C6D0D1E385F4C00874B14 /* BakerRhonda.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6CE71E385F4C00874B14 /* BakerRhonda.jpg */; };
@@ -1697,11 +1692,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE64C2C31EDFBDC300FEF384 /* RollCallListDelegate.m in Resources */,
-				CE64C2C41EDFBDC300FEF384 /* RollCallListDelegate.h in Resources */,
-				CE64C2C11EDFBDA900FEF384 /* VotingListViewController.h in Resources */,
-				CE64C2C21EDFBDA900FEF384 /* VotingListViewController.m in Resources */,
-				CE1600881ED1FB4A00058C4D /* VoteTallyHeaderView-iPhone.xib in Resources */,
 				AF2481AE15BB6A260070924E /* InfoPlist.strings in Resources */,
 				CE18B5551E4F72930067DCC1 /* Icon-Small-50x50@2x.png in Resources */,
 				AF2481E615BB6C5E0070924E /* MainStoryboard_iPhone.storyboard in Resources */,
