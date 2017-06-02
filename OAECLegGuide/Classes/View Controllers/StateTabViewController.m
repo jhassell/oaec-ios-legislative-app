@@ -38,6 +38,11 @@
 }
 
 
+- (IBAction)backButtonPressed:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+
 - (IBAction)statewideButtonPressed:(id)sender {
     AppDelegate *ad = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     

@@ -288,10 +288,6 @@
     
 }
 
-
-
-
-
 - (IBAction)facebookButtonPressed:(id)sender {
     NSURL *url = [NSURL URLWithString:[self.person.facebook trim]];
     if (![[UIApplication sharedApplication] openURL:url])
@@ -546,7 +542,6 @@
 #pragma mark - Table view delegate
 
 -(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"Row index %i",(int)indexPath.row);
     NSLog(@"Height for %li->%i",(long)indexPath.section,(int)indexPath.row);
     ListSection *listSection = [self.sections objectAtIndex:indexPath.section];
     

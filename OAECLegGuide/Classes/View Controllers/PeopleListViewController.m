@@ -11,10 +11,6 @@
 #import "AppDelegate.h"
 #import "Committee.h"
 
-#import <Realm/Realm.h>
-
-
-
 @interface PeopleListViewController ()
 
 @property (nonatomic, retain) PeopleListDelegate *peopleListDelegate;
@@ -84,9 +80,6 @@
         self.peopleTable.dataSource=self.peopleListDelegate;
         self.peopleTable.contentOffset = CGPointMake(0, SEARCH_VIEW_HEIGHT);
         self.peopleListDelegate.peopleTable=self.peopleTable;
-        
-        
-        
     }
 }
 
