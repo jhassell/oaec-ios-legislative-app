@@ -13,6 +13,7 @@
 #import "AppDelegate.h"
 #import "ListSection.h"
 #import "CommitteeListViewController.h"
+#import "CommitteeVoteListViewController.h"
 #import "ListSection.h"
 
 @interface StateTabViewController ()
@@ -22,9 +23,12 @@
 - (IBAction)senateLeadershipButtonPressed:(id)sender;
 - (IBAction)senateCommitteesButtonPressed:(id)sender;
 - (IBAction)houseButtonPressed:(id)sender;
+- (IBAction)houseVoteButtonPressed:(id)sender;
 - (IBAction)houseLeadershipButtonPressed:(id)sender;
 - (IBAction)houseCommitteesButtonpressed:(id)sender;
+- (IBAction)houseVoteCommitteesButtonPressed:(id)sender;
 - (IBAction)allButtonPressed:(id)sender;
+- (IBAction)allVoteButtonPressed:(id)sender;
 - (IBAction)judicialButtonPressed:(id)sender;
 - (IBAction)voteTallyButtonPressed:(id)sender;
 
@@ -73,6 +77,16 @@
     
 }
 
+- (IBAction)houseVoteButtonPressed:(id)sender {
+    AppDelegate *ad = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    VotingListViewController *vlvc = [[[VotingListViewController alloc] initWithNibName:@"VoteListView-iPhone" bundle:nil] autorelease];
+    vlvc.rc_sections = [ListSection buildSectionsFrom:ad.stateHouse dividedBy:@"Type" catchAllKey:nil includeKeys:[NSArray arrayWithObjects:STATE_HOUSE, nil]];
+    
+    [self.navigationController pushViewController:vlvc animated:YES];
+    
+}
+
 - (IBAction)senateLeadershipButtonPressed:(id)sender {
     AppDelegate *ad = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
@@ -103,6 +117,31 @@
 
 }
 
+
+- (IBAction)senateVoteCommitteesButtonPressed:(id)sender {
+    
+    AppDelegate *ad = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    CommitteeVoteListViewController *clvc = [[[CommitteeVoteListViewController alloc] initWithNibName:@"CommitteeListView-iPhone" bundle:nil] autorelease];
+    
+    ListSection *ls1 = [[[ListSection alloc] init] autorelease];
+    ls1.title=STANDING;
+    ls1.children=[[NSArray arrayWithArray:ad.stateSenateStandingCommittees] mutableCopy];
+    
+    ListSection *ls2 = [[[ListSection alloc] init] autorelease];
+    ls2.title=APPROPRIATIONS;
+    ls2.children=[[NSArray arrayWithArray:ad.stateSenateAppropriationsSubcommittees] mutableCopy];
+    
+    clvc.sections = [NSArray arrayWithObjects:ls1,ls2,nil];
+    
+    [self.navigationController pushViewController:clvc animated:YES];
+    
+}
+
+
+
+
+
 - (IBAction)houseButtonPressed:(id)sender {
     AppDelegate *ad = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
@@ -112,6 +151,15 @@
     [self.navigationController pushViewController:plvc animated:YES];
 
 }
+
+
+
+
+
+
+
+
+
 
 - (IBAction)houseLeadershipButtonPressed:(id)sender {
     AppDelegate *ad = (AppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -142,6 +190,28 @@
     [self.navigationController pushViewController:clvc animated:YES];
 
 }
+
+- (IBAction)houseVoteCommitteesButtonPressed:(id)sender {
+    
+    AppDelegate *ad = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    CommitteeVoteListViewController *clvc = [[[CommitteeVoteListViewController alloc] initWithNibName:@"CommitteeListView-iPhone" bundle:nil] autorelease];
+    
+    ListSection *ls1 = [[[ListSection alloc] init] autorelease];
+    ls1.title=STANDING;
+    ls1.children=[[NSArray arrayWithArray:ad.stateHouseStandingCommittees] mutableCopy];
+    
+    ListSection *ls2 = [[[ListSection alloc] init] autorelease];
+    ls2.title=APPROPRIATIONS;
+    ls2.children=[[NSArray arrayWithArray:ad.stateHouseAppropriationsSubcommittees] mutableCopy];
+    
+    clvc.sections = [NSArray arrayWithObjects:ls1,ls2,nil];
+    
+    [self.navigationController pushViewController:clvc animated:YES];
+    
+}
+
+
 
 - (IBAction)allButtonPressed:(id)sender {
     
@@ -177,6 +247,39 @@
 
 }
 
+- (IBAction)allVoteButtonPressed:(id)sender {
+    
+    AppDelegate *ad = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    VotingListViewController *vlvc = [[VotingListViewController alloc] initWithNibName:@"VoteListView-iPhone" bundle:nil];
+    
+    ListSection *ls1 = [[[ListSection alloc] init] autorelease];
+    ls1.title=@"All Oklahoma";
+    
+    NSMutableArray *all = [NSMutableArray arrayWithArray:ad.stateHouse];
+    [all addObjectsFromArray:ad.stateSenate];
+    [all addObjectsFromArray:ad.statewide];
+    
+    NSSortDescriptor *lastSort = [NSSortDescriptor sortDescriptorWithKey:@"Last Name" ascending:YES];
+    NSSortDescriptor *firstSort = [NSSortDescriptor sortDescriptorWithKey:@"First Name" ascending:YES];
+    
+    [all sortUsingDescriptors:[NSArray arrayWithObjects:lastSort,firstSort,nil]];
+    
+    ls1.children=[[NSArray arrayWithArray:all] mutableCopy];
+    
+    vlvc.rc_sections = [NSArray arrayWithObject:ls1];
+    
+    //NSLog(@"%i sections",[plvc.sections count]);
+    
+    // for (ListSection *section in plvc.sections) {
+    
+    //NSLog(@"Section %@ has %i children",section.title,[section.children count]);
+    
+    // }
+    
+    [self.navigationController pushViewController:vlvc animated:YES];
+    
+}
 
 
 

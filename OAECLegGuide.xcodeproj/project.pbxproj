@@ -331,6 +331,7 @@
 		CE64C2C21EDFBDA900FEF384 /* VotingListViewController.m in Resources */ = {isa = PBXBuildFile; fileRef = CEA9B5591ECD4AF300035FF6 /* VotingListViewController.m */; };
 		CE64C2C31EDFBDC300FEF384 /* RollCallListDelegate.m in Resources */ = {isa = PBXBuildFile; fileRef = CE8BBB891EDE3B3400CF5448 /* RollCallListDelegate.m */; };
 		CE64C2C41EDFBDC300FEF384 /* RollCallListDelegate.h in Resources */ = {isa = PBXBuildFile; fileRef = CE8BBB8A1EDE3B3400CF5448 /* RollCallListDelegate.h */; };
+		CE64C2C71EE113C000FEF384 /* CommitteeVoteListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64C2C61EE113C000FEF384 /* CommitteeVoteListViewController.m */; };
 		CE7C6D0C1E385F4C00874B14 /* BabinecGreg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6CE61E385F4C00874B14 /* BabinecGreg.jpg */; };
 		CE7C6D0D1E385F4C00874B14 /* BakerRhonda.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6CE71E385F4C00874B14 /* BakerRhonda.jpg */; };
 		CE7C6D0E1E385F4C00874B14 /* BennettForrest.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6CE81E385F4C00874B14 /* BennettForrest.jpg */; };
@@ -812,6 +813,8 @@
 		CE2DAF951E4EC8A4002BCD60 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		CE4ACD331E215057003A6655 /* ok56leg.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ok56leg.entitlements; sourceTree = "<group>"; };
 		CE64C2BE1EDFBB1900FEF384 /* VoteListView-iPhone.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "VoteListView-iPhone.xib"; path = "OAECLegGuide/NIBs/VoteListView-iPhone.xib"; sourceTree = "<group>"; };
+		CE64C2C51EE113C000FEF384 /* CommitteeVoteListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommitteeVoteListViewController.h; sourceTree = "<group>"; };
+		CE64C2C61EE113C000FEF384 /* CommitteeVoteListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommitteeVoteListViewController.m; sourceTree = "<group>"; };
 		CE7014831EDFB81200BE7B25 /* VoteListView-iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "VoteListView-iPhone.xib"; sourceTree = "<group>"; };
 		CE7C6CE61E385F4C00874B14 /* BabinecGreg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BabinecGreg.jpg; sourceTree = "<group>"; };
 		CE7C6CE71E385F4C00874B14 /* BakerRhonda.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BakerRhonda.jpg; sourceTree = "<group>"; };
@@ -1076,6 +1079,8 @@
 			children = (
 				CEA9B5581ECD4AF300035FF6 /* VotingListViewController.h */,
 				CEA9B5591ECD4AF300035FF6 /* VotingListViewController.m */,
+				CE64C2C51EE113C000FEF384 /* CommitteeVoteListViewController.h */,
+				CE64C2C61EE113C000FEF384 /* CommitteeVoteListViewController.m */,
 				AFDAD5A8186006AB00366D99 /* CustomTabBarController.m */,
 				AFDAD5AB186006AB00366D99 /* CustomTabBarController.h */,
 				AFDAD5A9186006AB00366D99 /* IOS7AdjustmentViewController.m */,
@@ -2079,6 +2084,7 @@
 				AF2481DE15BB6C5E0070924E /* AppDelegate.m in Sources */,
 				AF2481F515BB72FA0070924E /* AboutViewController.m in Sources */,
 				AF2481F815BB730A0070924E /* StateTabViewController.m in Sources */,
+				CE64C2C71EE113C000FEF384 /* CommitteeVoteListViewController.m in Sources */,
 				AF2481FB15BB73190070924E /* FederalTabViewController.m in Sources */,
 				CE8BBB8B1EDE3B3400CF5448 /* RollCallListDelegate.m in Sources */,
 				AF2481FE15BB732D0070924E /* MapsViewController.m in Sources */,

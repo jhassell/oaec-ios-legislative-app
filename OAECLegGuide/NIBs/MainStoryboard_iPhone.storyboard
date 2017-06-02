@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES" initialViewController="R1Q-40-YML">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES" initialViewController="R1Q-40-YML">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -1082,7 +1082,7 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="senateCommitteesButtonPressed:" destination="ZZz-nX-fYD" eventType="touchUpInside" id="gpc-Mc-zeU"/>
+                                            <action selector="senateVoteCommitteesButtonPressed:" destination="ZZz-nX-fYD" eventType="touchUpInside" id="Dhj-dp-HA4"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="GPn-gD-ejc">
@@ -1096,7 +1096,7 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="houseButtonPressed:" destination="ZZz-nX-fYD" eventType="touchUpInside" id="Dtd-s3-MsO"/>
+                                            <action selector="houseVoteButtonPressed:" destination="ZZz-nX-fYD" eventType="touchUpInside" id="Fqf-9L-SJm"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Uvo-TP-KQZ">
@@ -1110,8 +1110,7 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="allButtonPressed:" destination="3" eventType="touchUpInside" id="AA3-98-0vM"/>
-                                            <action selector="allButtonPressed:" destination="ZZz-nX-fYD" eventType="touchUpInside" id="Vgz-Mg-sVh"/>
+                                            <action selector="allVoteButtonPressed:" destination="ZZz-nX-fYD" eventType="touchUpInside" id="LMo-E6-zSt"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="aJd-b6-GoY">
@@ -1125,7 +1124,7 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="houseCommitteesButtonpressed:" destination="ZZz-nX-fYD" eventType="touchUpInside" id="ROH-Rn-pJY"/>
+                                            <action selector="houseVoteCommitteesButtonPressed:" destination="ZZz-nX-fYD" eventType="touchUpInside" id="KeF-2E-ZdW"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zym-35-Zck">
@@ -1145,7 +1144,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="senateCommitteesButtonPressed:" destination="ZZz-nX-fYD" eventType="touchUpInside" id="IZA-Wj-kfs"/>
+                                            <action selector="senateVoteCommitteesButtonPressed:" destination="ZZz-nX-fYD" eventType="touchUpInside" id="Svp-gm-T0W"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vzM-nx-J8S">
@@ -1155,7 +1154,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="houseButtonPressed:" destination="ZZz-nX-fYD" eventType="touchUpInside" id="JwZ-g5-gfa"/>
+                                            <action selector="houseVoteButtonPressed:" destination="ZZz-nX-fYD" eventType="touchUpInside" id="bRw-TT-yuT"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" id="0cW-HM-8N3">
@@ -1165,7 +1164,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="houseCommitteesButtonpressed:" destination="ZZz-nX-fYD" eventType="touchUpInside" id="V2g-jg-Opv"/>
+                                            <action selector="houseVoteCommitteesButtonPressed:" destination="ZZz-nX-fYD" eventType="touchUpInside" id="H4Z-sD-kvx"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aYh-XQ-ZbE">
@@ -1175,7 +1174,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="allButtonPressed:" destination="ZZz-nX-fYD" eventType="touchUpInside" id="JoU-a9-Zv3"/>
+                                            <action selector="allVoteButtonPressed:" destination="ZZz-nX-fYD" eventType="touchUpInside" id="YcF-Gh-nBR"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Select to Record Your Vote Tally" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XEc-dX-2Gd">

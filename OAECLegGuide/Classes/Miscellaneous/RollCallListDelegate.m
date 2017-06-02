@@ -262,15 +262,15 @@ RLM_ARRAY_TYPE(rc_Realm_tally)
 
 #pragma mark - Property Overides
 
--(void) setCommittee:(Committee *)committee {
-    if (committee==nil) {
+-(void) setRc_committee:(Committee *)rc_committee {
+    if (rc_committee==nil) {
         self.committeeHeaderView=nil;
         _rc_committee=nil;
     } else {
         
-        _rc_committee=committee;
+        _rc_committee=rc_committee;
         
-        NSLog(@"SETTING COMMITTEE: %@ %@ %@",committee.room,committee.time,committee.dow);
+        NSLog(@"SETTING COMMITTEE: %@ %@ %@",rc_committee.room,rc_committee.time,rc_committee.dow);
         
         CommitteeHeaderView *chv = [[[NSBundle mainBundle] loadNibNamed:@"CommitteeHeaderView-iPhone" owner:self options:nil] lastObject];
         
