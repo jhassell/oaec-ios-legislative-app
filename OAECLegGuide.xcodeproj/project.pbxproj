@@ -425,6 +425,7 @@
 		CEDEF0E11C0034BF0024A43F /* ReifJohn.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEDEF0D81C0034BF0024A43F /* ReifJohn.jpg */; };
 		CEDEF0E31C0034BF0024A43F /* WattJoseph.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEDEF0DA1C0034BF0024A43F /* WattJoseph.jpg */; };
 		CEDEF0E41C0034BF0024A43F /* WinchesterJames.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEDEF0DB1C0034BF0024A43F /* WinchesterJames.jpg */; };
+		CEE7CE421EE1317A00199948 /* VoteTallyHeaderView-iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE1600871ED1FB4A00058C4D /* VoteTallyHeaderView-iPhone.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -1692,6 +1693,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEE7CE421EE1317A00199948 /* VoteTallyHeaderView-iPhone.xib in Resources */,
 				AF2481AE15BB6A260070924E /* InfoPlist.strings in Resources */,
 				CE18B5551E4F72930067DCC1 /* Icon-Small-50x50@2x.png in Resources */,
 				AF2481E615BB6C5E0070924E /* MainStoryboard_iPhone.storyboard in Resources */,
