@@ -29,37 +29,33 @@
 #define CELL_YEA_VOTE       ((UIButton *)[cell viewWithTag:106])
 #define CELL_NAY_VOTE       ((UIButton *)[cell viewWithTag:107])
 
-RLM_ARRAY_TYPE(rc_Realm_vote)
-RLM_ARRAY_TYPE(rc_Realm_tally)
+RLM_ARRAY_TYPE(Realm_vote)
+RLM_ARRAY_TYPE(Realm_tally)
 
-@interface rc_Realm_vote : RLMObject
+@interface Realm_vote : RLMObject
 @property (nonatomic, strong) NSString *status;
 @end
 
-@interface rc_Realm_tally : RLMObject
+@interface Realm_tally : RLMObject
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *body;
 @property (nonatomic) NSInteger voteCount;
-@property (nonatomic, strong) RLMArray<rc_Realm_vote *><rc_Realm_vote> *votes;
+@property (nonatomic, strong) RLMArray<Realm_vote *><Realm_vote> *votes;
 @end
 
-@interface rc_Realm_tally_parent : RLMObject
-@property (nonatomic, strong) RLMArray<rc_Realm_tally *><rc_Realm_tally> *tallies;
+@interface Realm_tally_parent : RLMObject
+@property (nonatomic, strong) RLMArray<Realm_tally *><Realm_tally> *tallies;
 @end
 
-@implementation rc_Realm_vote
+@implementation Realm_vote
 // Nothing needed
 @end
-@implementation rc_Realm_tally
+@implementation Realm_tally
 // Nothing needed
 @end
-@implementation rc_Realm_tally_parent
+@implementation Realm_tally_parent
 // Nothing needed
 @end
-
-
-
-
 
 
 @interface RollCallListDelegate ()
@@ -70,9 +66,7 @@ RLM_ARRAY_TYPE(rc_Realm_tally)
 @property (nonatomic, strong) NSMutableArray *yeaVotes;
 @property (nonatomic, strong) NSMutableArray *nayVotes;
 @property (nonatomic, strong) Tally *sectionTally;
-@property (nonatomic, strong) rc_Realm_tally_parent *parent;
-
-
+@property (nonatomic, strong) Realm_tally_parent *parent;
 
 -(void) buildDisplaySections;
 
@@ -180,18 +174,13 @@ RLM_ARRAY_TYPE(rc_Realm_tally)
 }
 
 -(void) buildDisplaySectionsWithFilterType:(NSInteger)filterType filterText:(NSString *) filterText {
-
-    // Store the data
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
     if (self.filteredSections==nil) {
         self.filteredSections = [NSMutableArray arrayWithCapacity:[self.rc_sections count]];
-        [defaults setObject:false forKey:@"yeaStatus"];
     }
     [self.filteredSections removeAllObjects];
     
     if ([self.rc_sections count]==0) return;
-    
     
     for(ListSection *section in self.rc_sections) {
         
@@ -352,11 +341,11 @@ RLM_ARRAY_TYPE(rc_Realm_tally)
     [self.sectionTally initWithParams:rowCount];
 
     NSString *listSectionTitle = listSection.title;
-    rc_Realm_tally *realmTally = [[rc_Realm_tally objectsWhere:@"name == %@ AND body == %@", listSectionTitle, self.rc_committee.body] firstObject];
+    Realm_tally *realmTally = [[Realm_tally objectsWhere:@"name == %@ AND body == %@", listSectionTitle, self.rc_committee.body] firstObject];
 
     
     if (!realmTally) {
-        rc_Realm_tally *firstTally = [[rc_Realm_tally alloc] init];
+        Realm_tally *firstTally = [[Realm_tally alloc] init];
         firstTally.name = listSectionTitle;
         firstTally.body = self.rc_committee.body;
         if (self.committeeHeaderView != nil) {
@@ -367,13 +356,13 @@ RLM_ARRAY_TYPE(rc_Realm_tally)
         
         int i;
         for (i=0; i<rowCount; i++) {
-            rc_Realm_vote *blankVote = [[rc_Realm_vote alloc] init];
+            Realm_vote *blankVote = [[Realm_vote alloc] init];
             blankVote.status = @"Unknown";
             [firstTally.votes addObject:blankVote];
             self.sectionTally.votes[i] = blankVote.status;
         }
         
-        self.parent = [rc_Realm_tally_parent new];
+        self.parent = [Realm_tally_parent new];
         [self.parent.tallies addObject:firstTally];
         RLMRealm *realm = RLMRealm.defaultRealm;
         [realm transactionWithBlock:^{
@@ -381,6 +370,20 @@ RLM_ARRAY_TYPE(rc_Realm_tally)
         }];
     }
     
+    [self sumVoltTotalsForHeader];
+    
+    [self.rc_peopleTable
+     
+     registerNib:[UINib nibWithNibName:@"VoteTallyHeaderView-iPhone" bundle:nil] forCellReuseIdentifier:@"TableHeader"];
+
+    
+    
+    
+    
+    return rowCount;
+}
+
+- (void)sumVoltTotalsForHeader {
     
     self.rc_headerYesVotes = 0;
     self.rc_headerNoVotes = 0;
@@ -397,32 +400,11 @@ RLM_ARRAY_TYPE(rc_Realm_tally)
             self.rc_headerUnknownVotes++;
         }
     }
-    
-    
-    
-    //[tableView registerNib:[UINib nibWithNibName:@"CustomTableViewHeader" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"CustomIdentifier"];
-    
-    //int i;
-    
-    //for (i=0; i<rowCount; i++)
-    //{
-    //    self.parent.tallies[0].votes[i] = [Realm_vote new];
-    //    self.parent.tallies[0].votes[i].status = @"Unknown";
-    //}
-
-    [self.rc_peopleTable
-     
-     registerNib:[UINib nibWithNibName:@"VoteTallyHeaderView-iPhone" bundle:nil] forCellReuseIdentifier:@"TableHeader"];
-
-    
-    
-    
-    
-    return rowCount;
 }
 
 
--(void) sumVotes:(rc_Realm_tally *)realmTally {
+
+-(void) sumVotes:(Realm_tally *)realmTally {
     self.rc_headerYesVotes = 0;
     self.rc_headerNoVotes = 0;
     self.rc_headerUnknownVotes = 0;
@@ -450,7 +432,7 @@ RLM_ARRAY_TYPE(rc_Realm_tally)
 }
 
 
--(void) populateHeaderVotes:(rc_Realm_tally *)activeTally{
+-(void) populateHeaderVotes:(Realm_tally *)activeTally{
     [self sumVotes:activeTally];
     
     UILabel *yeaHeaderLabel = (UILabel *)[self.rc_customHeaderCell.contentView viewWithTag:11];
@@ -464,10 +446,10 @@ RLM_ARRAY_TYPE(rc_Realm_tally)
 }
 
 
--(rc_Realm_tally *) getActiveTally {
+-(Realm_tally *) getActiveTally {
     ListSection *listSection = [self.rc_sections objectAtIndex:0];
     NSString *sectionTitle = listSection.title;
-    rc_Realm_tally *activeTally = [[rc_Realm_tally objectsWhere:@"name == %@ AND body == %@", sectionTitle, self.rc_committee.body] firstObject];
+    Realm_tally *activeTally = [[Realm_tally objectsWhere:@"name == %@ AND body == %@", sectionTitle, self.rc_committee.body] firstObject];
     return activeTally;
 }
 
@@ -479,7 +461,7 @@ RLM_ARRAY_TYPE(rc_Realm_tally)
     
     ListSection *listSection = [self.rc_sections objectAtIndex:0];
     NSString *sectionTitle = listSection.title;
-    rc_Realm_tally *realmTally = [[rc_Realm_tally objectsWhere:@"name == %@ AND body == %@", sectionTitle, self.rc_committee.body] firstObject];
+    Realm_tally *realmTally = [[Realm_tally objectsWhere:@"name == %@ AND body == %@", sectionTitle, self.rc_committee.body] firstObject];
 
     
     
@@ -543,7 +525,7 @@ RLM_ARRAY_TYPE(rc_Realm_tally)
     NSInteger rowTapped = [sender.titleLabel.text integerValue];
     ListSection *listSection = [self.rc_sections objectAtIndex:0];
     NSString *sectionTitle = listSection.title;
-    rc_Realm_tally *realmTally = [[rc_Realm_tally objectsWhere:@"name == %@ AND body == %@", sectionTitle, self.rc_committee.body] firstObject];
+    Realm_tally *realmTally = [[Realm_tally objectsWhere:@"name == %@ AND body == %@", sectionTitle, self.rc_committee.body] firstObject];
     
     NSString *nayBoxStatus = [[NSString alloc] init];
     if ([realmTally.votes[rowTapped].status isEqual:@"Nay"]) {
@@ -620,7 +602,7 @@ RLM_ARRAY_TYPE(rc_Realm_tally)
     
     ListSection *listSection = [self.rc_sections objectAtIndex:0];
     NSString *sectionTitle = listSection.title;
-    rc_Realm_tally *activeTally = [[rc_Realm_tally objectsWhere:@"name == %@ AND body == %@", sectionTitle, self.rc_committee.body] firstObject];
+    Realm_tally *activeTally = [[Realm_tally objectsWhere:@"name == %@ AND body == %@", sectionTitle, self.rc_committee.body] firstObject];
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateStyle:NSDateFormatterMediumStyle];
@@ -769,7 +751,7 @@ RLM_ARRAY_TYPE(rc_Realm_tally)
 - (void) clearCurrentTally {
 
     RLMRealm *realm = RLMRealm.defaultRealm;
-    rc_Realm_tally *activeTally = [[rc_Realm_tally alloc] init];
+    Realm_tally *activeTally = [[Realm_tally alloc] init];
     activeTally = [self getActiveTally];
     
     [realm beginWriteTransaction];
@@ -934,7 +916,7 @@ RLM_ARRAY_TYPE(rc_Realm_tally)
 
     NSString *governmentBody = self.rc_committee.body;
     self.rc_tallyGroupTitle = section.title;
-    rc_Realm_tally *realmTally = [[rc_Realm_tally objectsWhere:@"name == %@ AND body == %@", self.rc_tallyGroupTitle, governmentBody] firstObject];
+    Realm_tally *realmTally = [[Realm_tally objectsWhere:@"name == %@ AND body == %@", self.rc_tallyGroupTitle, governmentBody] firstObject];
     
     UIImage *yeaImage = [[UIImage alloc] init];
     if ([realmTally.votes[row].status isEqual:@"Yea"]) {
@@ -1082,7 +1064,7 @@ RLM_ARRAY_TYPE(rc_Realm_tally)
     
     ListSection *listSection = [self.rc_sections objectAtIndex:0];
     NSString *sectionTitle = listSection.title;
-    rc_Realm_tally *realmTally = [[rc_Realm_tally objectsWhere:@"name == %@ AND body == %@", sectionTitle, self.rc_committee.body] firstObject];
+    Realm_tally *realmTally = [[Realm_tally objectsWhere:@"name == %@ AND body == %@", sectionTitle, self.rc_committee.body] firstObject];
     
     
     NSString *voteStatus = [[NSString alloc] init];
