@@ -426,6 +426,7 @@
 		CEDEF0E11C0034BF0024A43F /* ReifJohn.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEDEF0D81C0034BF0024A43F /* ReifJohn.jpg */; };
 		CEDEF0E31C0034BF0024A43F /* WattJoseph.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEDEF0DA1C0034BF0024A43F /* WattJoseph.jpg */; };
 		CEDEF0E41C0034BF0024A43F /* WinchesterJames.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEDEF0DB1C0034BF0024A43F /* WinchesterJames.jpg */; };
+		CEE7CE421EE1317A00199948 /* VoteTallyHeaderView-iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE1600871ED1FB4A00058C4D /* VoteTallyHeaderView-iPhone.xib */; };
 		CEE7CE451EE25AC900199948 /* SetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE7CE441EE25AC900199948 /* SetupViewController.m */; };
 		CEE7CE481EE25CE200199948 /* GetLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE7CE471EE25CE200199948 /* GetLocationViewController.m */; };
 		CEE7CE4B1EE25DD600199948 /* LocationDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE7CE4A1EE25DD600199948 /* LocationDetailViewController.m */; };
@@ -1713,7 +1714,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< HEAD
+				CEE7CE421EE1317A00199948 /* VoteTallyHeaderView-iPhone.xib in Resources */,
+=======
 				533C9FB11EE1A68A00B165FD /* VoteTallyHeaderView-iPhone.xib in Resources */,
+>>>>>>> 92311f49f4dcf37d78670808f7f0a19b6238874c
 				AF2481AE15BB6A260070924E /* InfoPlist.strings in Resources */,
 				CE18B5551E4F72930067DCC1 /* Icon-Small-50x50@2x.png in Resources */,
 				AF2481E615BB6C5E0070924E /* MainStoryboard_iPhone.storyboard in Resources */,

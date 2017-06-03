@@ -20,9 +20,9 @@
 
 
 @interface VotingListViewController ()
-@property (unsafe_unretained, nonatomic) IBOutlet UITableView *rc_peopleTable;
 
 @property (nonatomic, retain) RollCallListDelegate *rollCallListDelegate;
+@property (retain, nonatomic) IBOutlet UITableView *rc_peopleTable;
 
 - (IBAction)backButtonPushed:(id)sender;
 
@@ -48,6 +48,7 @@
 }
 
 
+
 #pragma mark - Lifecycle Stuff
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -62,8 +63,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.rc_peopleTable.dataSource = self;
-    self.rc_peopleTable.delegate = self;
     
     // Do any additional setup after loading the view.
 }

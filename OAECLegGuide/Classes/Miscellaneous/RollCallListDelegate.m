@@ -444,11 +444,6 @@ RLM_ARRAY_TYPE(rc_Realm_tally)
 -(void) emailTallyButtonTapped:(UIButton *)sender forEvent:(UIEvent *)event {
     NSLog(@"Email Tally Button Tapped");
     
-    ListSection *listSection = [self.rc_sections objectAtIndex:0];
-    NSString *sectionTitle = listSection.title;
-    
-    NSString *sectionTitleEncoded = [sectionTitle stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    
     NSMutableArray *sharingArray = [[NSMutableArray alloc] init];
     [sharingArray addObject:@"Hey"];
     [self shareItemToOtherApp:sharingArray];
@@ -661,11 +656,6 @@ RLM_ARRAY_TYPE(rc_Realm_tally)
     //} else {
     //    person = [section.children objectAtIndex:0];
     //}
-
-    NSString *voteStatus = [[NSString alloc] init];
-
-
-    
     
     return tallyReport;
 }
@@ -755,11 +745,11 @@ RLM_ARRAY_TYPE(rc_Realm_tally)
 
 
 - (void) sharingCompleted {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"OAEC Roll Call Tally"
-                                                    message:@"Sharing complete"
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Clear Tally?"
+                                                    message:@""
                                                    delegate:self
-                                          cancelButtonTitle:@"Clear"
-                                          otherButtonTitles:@"Retain", nil];
+                                          cancelButtonTitle:@"Retain"
+                                          otherButtonTitles:@"Clear", nil];
     [alert show];
     [alert release];
 }
@@ -1007,8 +997,9 @@ RLM_ARRAY_TYPE(rc_Realm_tally)
         
         
         UILabel *headerTitle = (UILabel *)[self.rc_customHeaderCell.contentView viewWithTag:10];
-        headerTitle.text = [NSString stringWithFormat:@"Your %@ Roll Call Tally", self.rc_tallyGroupTitle];
         
+        headerTitle.text = [NSString stringWithFormat:@"Your %@ Tally", self.rc_tallyGroupTitle];
+        headerTitle.text = [headerTitle.text stringByReplacingOccurrencesOfString:@"Oklahoma " withString:@""];
 
         
         UILabel *yeaHeaderLabel = (UILabel *)[self.rc_customHeaderCell.contentView viewWithTag:11];
