@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		533C9FB11EE1A68A00B165FD /* VoteTallyHeaderView-iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE16008E1ED2556A00058C4D /* VoteTallyHeaderView-iPhone.xib */; };
 		AF092D3915DA0DC700AA4B6B /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = AF092D3115DA0DC700AA4B6B /* logo.png */; };
 		AF092D3A15DA0DC700AA4B6B /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF092D3215DA0DC700AA4B6B /* logo@2x.png */; };
 		AF092D3D15DA0DC700AA4B6B /* SplashScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = AF092D3515DA0DC700AA4B6B /* SplashScreen.png */; };
@@ -1713,7 +1714,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEE7CE421EE1317A00199948 /* VoteTallyHeaderView-iPhone.xib in Resources */,
+				533C9FB11EE1A68A00B165FD /* VoteTallyHeaderView-iPhone.xib in Resources */,
 				AF2481AE15BB6A260070924E /* InfoPlist.strings in Resources */,
 				CE18B5551E4F72930067DCC1 /* Icon-Small-50x50@2x.png in Resources */,
 				AF2481E615BB6C5E0070924E /* MainStoryboard_iPhone.storyboard in Resources */,

@@ -649,6 +649,9 @@ RLM_ARRAY_TYPE(rc_Realm_tally)
 
     }
 
+    tallyReport = [NSString stringWithFormat:@"%@\n%@\n", tallyReport, @"Shared tally courtesy of OAEC."];
+    
+
     NSLog(@"Tally Report %@", tallyReport);
 
     //if ( [[section.children objectAtIndex:row] isKindOfClass:[CommitteeMember class]]) {

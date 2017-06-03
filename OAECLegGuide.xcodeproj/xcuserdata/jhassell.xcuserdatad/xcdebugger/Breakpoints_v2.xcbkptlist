@@ -14,9 +14,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "877"
-            endingLineNumber = "877"
-            landmarkName = "-tableView:didSelectRowAtIndexPath:"
-            landmarkType = "7">
+            endingLineNumber = "877">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -30,9 +28,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "812"
-            endingLineNumber = "812"
-            landmarkName = "-tableView:willSelectRowAtIndexPath:"
-            landmarkType = "7">
+            endingLineNumber = "812">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -46,9 +42,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "813"
-            endingLineNumber = "813"
-            landmarkName = "-tableView:willSelectRowAtIndexPath:"
-            landmarkType = "7">
+            endingLineNumber = "813">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -62,9 +56,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "819"
-            endingLineNumber = "819"
-            landmarkName = "-tableView:willSelectRowAtIndexPath:"
-            landmarkType = "7">
+            endingLineNumber = "819">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -79,7 +71,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "404"
             endingLineNumber = "404"
-            landmarkName = "-emailTallyButtonTapped:forEvent:"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
