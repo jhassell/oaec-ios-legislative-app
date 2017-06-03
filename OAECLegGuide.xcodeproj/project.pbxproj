@@ -426,6 +426,10 @@
 		CEDEF0E31C0034BF0024A43F /* WattJoseph.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEDEF0DA1C0034BF0024A43F /* WattJoseph.jpg */; };
 		CEDEF0E41C0034BF0024A43F /* WinchesterJames.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEDEF0DB1C0034BF0024A43F /* WinchesterJames.jpg */; };
 		CEE7CE421EE1317A00199948 /* VoteTallyHeaderView-iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE1600871ED1FB4A00058C4D /* VoteTallyHeaderView-iPhone.xib */; };
+		CEE7CE451EE25AC900199948 /* SetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE7CE441EE25AC900199948 /* SetupViewController.m */; };
+		CEE7CE481EE25CE200199948 /* GetLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE7CE471EE25CE200199948 /* GetLocationViewController.m */; };
+		CEE7CE4B1EE25DD600199948 /* LocationDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE7CE4A1EE25DD600199948 /* LocationDetailViewController.m */; };
+		CEE7CE4E1EE25DF100199948 /* CLLocation+Strings.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE7CE4D1EE25DF100199948 /* CLLocation+Strings.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -915,6 +919,14 @@
 		CEDEF0D81C0034BF0024A43F /* ReifJohn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = ReifJohn.jpg; path = "State Judges/ReifJohn.jpg"; sourceTree = "<group>"; };
 		CEDEF0DA1C0034BF0024A43F /* WattJoseph.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = WattJoseph.jpg; path = "State Judges/WattJoseph.jpg"; sourceTree = "<group>"; };
 		CEDEF0DB1C0034BF0024A43F /* WinchesterJames.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = WinchesterJames.jpg; path = "State Judges/WinchesterJames.jpg"; sourceTree = "<group>"; };
+		CEE7CE431EE25AC900199948 /* SetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetupViewController.h; sourceTree = "<group>"; };
+		CEE7CE441EE25AC900199948 /* SetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupViewController.m; sourceTree = "<group>"; };
+		CEE7CE461EE25CE200199948 /* GetLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetLocationViewController.h; sourceTree = "<group>"; };
+		CEE7CE471EE25CE200199948 /* GetLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetLocationViewController.m; sourceTree = "<group>"; };
+		CEE7CE491EE25DD600199948 /* LocationDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationDetailViewController.h; sourceTree = "<group>"; };
+		CEE7CE4A1EE25DD600199948 /* LocationDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationDetailViewController.m; sourceTree = "<group>"; };
+		CEE7CE4C1EE25DF100199948 /* CLLocation+Strings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocation+Strings.h"; sourceTree = "<group>"; };
+		CEE7CE4D1EE25DF100199948 /* CLLocation+Strings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocation+Strings.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1073,6 +1085,14 @@
 		AF2481D115BB6C5E0070924E /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				CEE7CE431EE25AC900199948 /* SetupViewController.h */,
+				CEE7CE441EE25AC900199948 /* SetupViewController.m */,
+				CEE7CE461EE25CE200199948 /* GetLocationViewController.h */,
+				CEE7CE471EE25CE200199948 /* GetLocationViewController.m */,
+				CEE7CE491EE25DD600199948 /* LocationDetailViewController.h */,
+				CEE7CE4A1EE25DD600199948 /* LocationDetailViewController.m */,
+				CEE7CE4C1EE25DF100199948 /* CLLocation+Strings.h */,
+				CEE7CE4D1EE25DF100199948 /* CLLocation+Strings.m */,
 				CEA9B5581ECD4AF300035FF6 /* VotingListViewController.h */,
 				CEA9B5591ECD4AF300035FF6 /* VotingListViewController.m */,
 				CE64C2C51EE113C000FEF384 /* CommitteeVoteListViewController.h */,
@@ -2072,12 +2092,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEE7CE4E1EE25DF100199948 /* CLLocation+Strings.m in Sources */,
 				AF2481B015BB6A260070924E /* main.m in Sources */,
 				AF2481DE15BB6C5E0070924E /* AppDelegate.m in Sources */,
 				AF2481F515BB72FA0070924E /* AboutViewController.m in Sources */,
 				AF2481F815BB730A0070924E /* StateTabViewController.m in Sources */,
 				CE64C2C71EE113C000FEF384 /* CommitteeVoteListViewController.m in Sources */,
 				AF2481FB15BB73190070924E /* FederalTabViewController.m in Sources */,
+				CEE7CE481EE25CE200199948 /* GetLocationViewController.m in Sources */,
 				CE8BBB8B1EDE3B3400CF5448 /* RollCallListDelegate.m in Sources */,
 				AF2481FE15BB732D0070924E /* MapsViewController.m in Sources */,
 				AFDB1E5615C0C5D200862F0F /* CSVParser.m in Sources */,
@@ -2092,6 +2114,7 @@
 				AFDAD5AD186006AB00366D99 /* CalendarTabViewController.m in Sources */,
 				AFBEF63E15C47A7100D785CD /* PeopleListDelegate.m in Sources */,
 				AFEF4BBA15C531F900896FA9 /* PeopleListViewController.m in Sources */,
+				CEE7CE4B1EE25DD600199948 /* LocationDetailViewController.m in Sources */,
 				AFEF4BD015C7904D00896FA9 /* Committee.m in Sources */,
 				AFDAD5B6186008D800366D99 /* NSDictionary+Calendar.m in Sources */,
 				AFEF4BD415C7915F00896FA9 /* CommitteeMember.m in Sources */,
@@ -2102,6 +2125,7 @@
 				AF71B99715CB3B0C00D0D43B /* PersonViewController.m in Sources */,
 				AF71B99A15CC4B0400D0D43B /* Address.m in Sources */,
 				AF71B99D15CC4E4A00D0D43B /* AddressViewCell.m in Sources */,
+				CEE7CE451EE25AC900199948 /* SetupViewController.m in Sources */,
 				AF71B9A015CC62EE00D0D43B /* CommitteeViewCell.m in Sources */,
 				CE1600911ED2606000058C4D /* CustomTableViewHeaderCell.m in Sources */,
 				AF092D4615DAC83F00AA4B6B /* SearchViewCell.m in Sources */,
