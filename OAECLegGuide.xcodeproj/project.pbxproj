@@ -326,6 +326,7 @@
 		CE2DAF901E4EB2A1002BCD60 /* BergstromMicheal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE2DAF8F1E4EB2A1002BCD60 /* BergstromMicheal.jpg */; };
 		CE2DAF921E4EC6D1002BCD60 /* GriffinAJ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE2DAF911E4EC6D1002BCD60 /* GriffinAJ.jpg */; };
 		CE2DAF961E4EC8A4002BCD60 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2DAF951E4EC8A4002BCD60 /* StoreKit.framework */; };
+		CE2E210E1EE65E2E00646C92 /* LocationDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E210D1EE65E2E00646C92 /* LocationDetailViewController.m */; };
 		CE64C2C01EDFBC9E00FEF384 /* VoteListView-iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE7014831EDFB81200BE7B25 /* VoteListView-iPhone.xib */; };
 		CE64C2C71EE113C000FEF384 /* CommitteeVoteListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64C2C61EE113C000FEF384 /* CommitteeVoteListViewController.m */; };
 		CE7C6D0C1E385F4C00874B14 /* BabinecGreg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6CE61E385F4C00874B14 /* BabinecGreg.jpg */; };
@@ -428,7 +429,6 @@
 		CEDEF0E41C0034BF0024A43F /* WinchesterJames.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEDEF0DB1C0034BF0024A43F /* WinchesterJames.jpg */; };
 		CEE7CE451EE25AC900199948 /* SetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE7CE441EE25AC900199948 /* SetupViewController.m */; };
 		CEE7CE481EE25CE200199948 /* GetLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE7CE471EE25CE200199948 /* GetLocationViewController.m */; };
-		CEE7CE4B1EE25DD600199948 /* LocationDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE7CE4A1EE25DD600199948 /* LocationDetailViewController.m */; };
 		CEE7CE4E1EE25DF100199948 /* CLLocation+Strings.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE7CE4D1EE25DF100199948 /* CLLocation+Strings.m */; };
 /* End PBXBuildFile section */
 
@@ -811,6 +811,7 @@
 		CE2DAF8F1E4EB2A1002BCD60 /* BergstromMicheal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BergstromMicheal.jpg; sourceTree = "<group>"; };
 		CE2DAF911E4EC6D1002BCD60 /* GriffinAJ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GriffinAJ.jpg; sourceTree = "<group>"; };
 		CE2DAF951E4EC8A4002BCD60 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		CE2E210D1EE65E2E00646C92 /* LocationDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationDetailViewController.m; sourceTree = "<group>"; };
 		CE4ACD331E215057003A6655 /* ok56leg.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ok56leg.entitlements; sourceTree = "<group>"; };
 		CE64C2BE1EDFBB1900FEF384 /* VoteListView-iPhone.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "VoteListView-iPhone.xib"; path = "OAECLegGuide/NIBs/VoteListView-iPhone.xib"; sourceTree = "<group>"; };
 		CE64C2C51EE113C000FEF384 /* CommitteeVoteListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommitteeVoteListViewController.h; sourceTree = "<group>"; };
@@ -924,7 +925,6 @@
 		CEE7CE461EE25CE200199948 /* GetLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetLocationViewController.h; sourceTree = "<group>"; };
 		CEE7CE471EE25CE200199948 /* GetLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetLocationViewController.m; sourceTree = "<group>"; };
 		CEE7CE491EE25DD600199948 /* LocationDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationDetailViewController.h; sourceTree = "<group>"; };
-		CEE7CE4A1EE25DD600199948 /* LocationDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationDetailViewController.m; sourceTree = "<group>"; };
 		CEE7CE4C1EE25DF100199948 /* CLLocation+Strings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocation+Strings.h"; sourceTree = "<group>"; };
 		CEE7CE4D1EE25DF100199948 /* CLLocation+Strings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocation+Strings.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1085,12 +1085,12 @@
 		AF2481D115BB6C5E0070924E /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				CE2E210D1EE65E2E00646C92 /* LocationDetailViewController.m */,
 				CEE7CE431EE25AC900199948 /* SetupViewController.h */,
 				CEE7CE441EE25AC900199948 /* SetupViewController.m */,
 				CEE7CE461EE25CE200199948 /* GetLocationViewController.h */,
 				CEE7CE471EE25CE200199948 /* GetLocationViewController.m */,
 				CEE7CE491EE25DD600199948 /* LocationDetailViewController.h */,
-				CEE7CE4A1EE25DD600199948 /* LocationDetailViewController.m */,
 				CEE7CE4C1EE25DF100199948 /* CLLocation+Strings.h */,
 				CEE7CE4D1EE25DF100199948 /* CLLocation+Strings.m */,
 				CEA9B5581ECD4AF300035FF6 /* VotingListViewController.h */,
@@ -2114,7 +2114,6 @@
 				AFDAD5AD186006AB00366D99 /* CalendarTabViewController.m in Sources */,
 				AFBEF63E15C47A7100D785CD /* PeopleListDelegate.m in Sources */,
 				AFEF4BBA15C531F900896FA9 /* PeopleListViewController.m in Sources */,
-				CEE7CE4B1EE25DD600199948 /* LocationDetailViewController.m in Sources */,
 				AFEF4BD015C7904D00896FA9 /* Committee.m in Sources */,
 				AFDAD5B6186008D800366D99 /* NSDictionary+Calendar.m in Sources */,
 				AFEF4BD415C7915F00896FA9 /* CommitteeMember.m in Sources */,
@@ -2133,6 +2132,7 @@
 				AF3DEE4F15DD3A6D00151661 /* UIColor-Expanded.m in Sources */,
 				AF3DEE5F15DD432100151661 /* ModalAlert.m in Sources */,
 				AF6987FC18E17EF200144B92 /* CommitteeHeaderView.m in Sources */,
+				CE2E210E1EE65E2E00646C92 /* LocationDetailViewController.m in Sources */,
 				AF3DEE6B15DD6B2400151661 /* BoundaryPolygon.m in Sources */,
 				AF15543715EB5FE400AA7794 /* AddressLAViewCell.m in Sources */,
 				AF14BD55160E4091003D2052 /* CommitteeListViewCell.m in Sources */,
