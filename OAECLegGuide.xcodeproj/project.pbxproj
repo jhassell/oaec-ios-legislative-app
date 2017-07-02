@@ -327,6 +327,7 @@
 		CE2DAF921E4EC6D1002BCD60 /* GriffinAJ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE2DAF911E4EC6D1002BCD60 /* GriffinAJ.jpg */; };
 		CE2DAF961E4EC8A4002BCD60 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2DAF951E4EC8A4002BCD60 /* StoreKit.framework */; };
 		CE2E210E1EE65E2E00646C92 /* LocationDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E210D1EE65E2E00646C92 /* LocationDetailViewController.m */; };
+		CE5986021EE8DB8D007C5C3B /* Buttons in Resources */ = {isa = PBXBuildFile; fileRef = CE5986011EE8DB8D007C5C3B /* Buttons */; };
 		CE64C2C01EDFBC9E00FEF384 /* VoteListView-iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE7014831EDFB81200BE7B25 /* VoteListView-iPhone.xib */; };
 		CE64C2C71EE113C000FEF384 /* CommitteeVoteListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64C2C61EE113C000FEF384 /* CommitteeVoteListViewController.m */; };
 		CE7C6D0C1E385F4C00874B14 /* BabinecGreg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6CE61E385F4C00874B14 /* BabinecGreg.jpg */; };
@@ -813,6 +814,7 @@
 		CE2DAF951E4EC8A4002BCD60 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		CE2E210D1EE65E2E00646C92 /* LocationDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationDetailViewController.m; sourceTree = "<group>"; };
 		CE4ACD331E215057003A6655 /* ok56leg.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ok56leg.entitlements; sourceTree = "<group>"; };
+		CE5986011EE8DB8D007C5C3B /* Buttons */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Buttons; path = OAECLegGuide/Images/Buttons; sourceTree = "<group>"; };
 		CE64C2BE1EDFBB1900FEF384 /* VoteListView-iPhone.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "VoteListView-iPhone.xib"; path = "OAECLegGuide/NIBs/VoteListView-iPhone.xib"; sourceTree = "<group>"; };
 		CE64C2C51EE113C000FEF384 /* CommitteeVoteListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommitteeVoteListViewController.h; sourceTree = "<group>"; };
 		CE64C2C61EE113C000FEF384 /* CommitteeVoteListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommitteeVoteListViewController.m; sourceTree = "<group>"; };
@@ -974,6 +976,7 @@
 		AF24819415BB6A250070924E = {
 			isa = PBXGroup;
 			children = (
+				CE5986011EE8DB8D007C5C3B /* Buttons */,
 				CE64C2BE1EDFBB1900FEF384 /* VoteListView-iPhone.xib */,
 				CE16008E1ED2556A00058C4D /* VoteTallyHeaderView-iPhone.xib */,
 				CE4ACD331E215057003A6655 /* ok56leg.entitlements */,
@@ -2031,6 +2034,7 @@
 				AFBC6F1A16B0BF740052E385 /* SimpsonFrank.jpg in Resources */,
 				AFBC6F1B16B0BF740052E385 /* SparksJohn.jpg in Resources */,
 				AFBC6F1C16B0BF740052E385 /* StandridgeRob.jpg in Resources */,
+				CE5986021EE8DB8D007C5C3B /* Buttons in Resources */,
 				AFBC6F1D16B0BF740052E385 /* StanislawskiGary.jpg in Resources */,
 				AFBC6F1E16B0BF740052E385 /* SykesAnthony.jpg in Resources */,
 				CEDEF0DE1C0034BF0024A43F /* EdmondsonJames.jpg in Resources */,
