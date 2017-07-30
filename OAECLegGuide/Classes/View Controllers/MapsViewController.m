@@ -604,6 +604,36 @@
             [self.mapView addGestureRecognizer:tgr];
             [tgr release];
             
+
+            if (self.bestEffortAtLocation == nil) {
+                // Create the core location manager object
+                _locationManager = [[CLLocationManager alloc] init];
+                self.locationManager.delegate = self;
+                
+                // This is the most important property to set for the manager. It ultimately determines how the manager will
+                // attempt to acquire location and thus, the amount of power that will be consumed.
+                self.locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
+                
+                // Once configured, the location manager must be "started"
+                //
+                // for iOS 8, specific user level permission is required,
+                // "when-in-use" authorization grants access to the user's location
+                //
+                // important: be sure to include NSLocationWhenInUseUsageDescription along with its
+                // explanation string in your Info.plist or startUpdatingLocation will not work.
+                //
+                if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+                    [self.locationManager requestWhenInUseAuthorization];
+                }
+                [self.locationManager startUpdatingLocation];
+                
+                [self performSelector:@selector(stopUpdatingLocationWithMessage:)
+                           withObject:@"Timed Out"
+                           afterDelay:30];
+                
+                self.stateString = NSLocalizedString(@"Updating", @"Updating");
+            }
+            
             [self reframeButtonPressed];
             
         } else {
@@ -616,34 +646,6 @@
     
     [super viewWillAppear:animated];
 
-    if (self.bestEffortAtLocation == nil) {
-        // Create the core location manager object
-        _locationManager = [[CLLocationManager alloc] init];
-        self.locationManager.delegate = self;
-        
-        // This is the most important property to set for the manager. It ultimately determines how the manager will
-        // attempt to acquire location and thus, the amount of power that will be consumed.
-        self.locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
-        
-        // Once configured, the location manager must be "started"
-        //
-        // for iOS 8, specific user level permission is required,
-        // "when-in-use" authorization grants access to the user's location
-        //
-        // important: be sure to include NSLocationWhenInUseUsageDescription along with its
-        // explanation string in your Info.plist or startUpdatingLocation will not work.
-        //
-        if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
-            [self.locationManager requestWhenInUseAuthorization];
-        }
-        [self.locationManager startUpdatingLocation];
-        
-        [self performSelector:@selector(stopUpdatingLocationWithMessage:)
-                   withObject:@"Timed Out"
-                   afterDelay:30];
-         
-        self.stateString = NSLocalizedString(@"Updating", @"Updating");
-    }
 }
 
 - (void)stopUpdatingLocationWithMessage:(NSString *)state {
