@@ -385,6 +385,9 @@
 		CE7C6D6A1E39B41F00874B14 /* PatrickGrace.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6D641E39B41F00874B14 /* PatrickGrace.jpg */; };
 		CE7C6D6B1E39B41F00874B14 /* ZacPerkins.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6D651E39B41F00874B14 /* ZacPerkins.jpg */; };
 		CE8BBB8B1EDE3B3400CF5448 /* RollCallListDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8BBB891EDE3B3400CF5448 /* RollCallListDelegate.m */; };
+		CE927F4C1F87346600015327 /* GaddisKaren.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE927F4B1F87346500015327 /* GaddisKaren.jpg */; };
+		CE927F4E1F8738CE00015327 /* RosecrantsJacob.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE927F4D1F8738CE00015327 /* RosecrantsJacob.jpg */; };
+		CE927F501F87402E00015327 /* BrooksMichael.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE927F4F1F87402E00015327 /* BrooksMichael.jpg */; };
 		CE9CAE871EB80D0000C20CAF /* VoteTallIcon-09.png in Resources */ = {isa = PBXBuildFile; fileRef = CE9CAE861EB80D0000C20CAF /* VoteTallIcon-09.png */; };
 		CE9CAE891EB8AB9100C20CAF /* VotingListCell-iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE9CAE881EB8AB9100C20CAF /* VotingListCell-iPhone.xib */; };
 		CE9CAE8C1EBAD31000C20CAF /* VoteCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9CAE8B1EBAD31000C20CAF /* VoteCheckViewController.m */; };
@@ -875,6 +878,9 @@
 		CE7C6D651E39B41F00874B14 /* ZacPerkins.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ZacPerkins.jpg; sourceTree = "<group>"; };
 		CE8BBB891EDE3B3400CF5448 /* RollCallListDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RollCallListDelegate.m; sourceTree = "<group>"; };
 		CE8BBB8A1EDE3B3400CF5448 /* RollCallListDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RollCallListDelegate.h; sourceTree = "<group>"; };
+		CE927F4B1F87346500015327 /* GaddisKaren.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GaddisKaren.jpg; sourceTree = "<group>"; };
+		CE927F4D1F8738CE00015327 /* RosecrantsJacob.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RosecrantsJacob.jpg; sourceTree = "<group>"; };
+		CE927F4F1F87402E00015327 /* BrooksMichael.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BrooksMichael.jpg; sourceTree = "<group>"; };
 		CE9CAE861EB80D0000C20CAF /* VoteTallIcon-09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VoteTallIcon-09.png"; sourceTree = "<group>"; };
 		CE9CAE881EB8AB9100C20CAF /* VotingListCell-iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "VotingListCell-iPhone.xib"; sourceTree = "<group>"; };
 		CE9CAE8A1EBAD31000C20CAF /* VoteCheckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VoteCheckViewController.h; path = "../View Controllers/VoteCheckViewController.h"; sourceTree = "<group>"; };
@@ -1342,6 +1348,8 @@
 		AFBC6DBE16B0BF740052E385 /* State Representatives */ = {
 			isa = PBXGroup;
 			children = (
+				CE927F4D1F8738CE00015327 /* RosecrantsJacob.jpg */,
+				CE927F4B1F87346500015327 /* GaddisKaren.jpg */,
 				CE2DAF891E4EACFD002BCD60 /* BlancettMeloyde.jpg */,
 				CE2DAF8A1E4EACFD002BCD60 /* ConditDonnie.jpg */,
 				CE2DAF8B1E4EACFD002BCD60 /* DunningtonJason.jpg */,
@@ -1449,6 +1457,7 @@
 		AFBC6E2416B0BF740052E385 /* State Senators */ = {
 			isa = PBXGroup;
 			children = (
+				CE927F4F1F87402E00015327 /* BrooksMichael.jpg */,
 				CE2DAF911E4EC6D1002BCD60 /* GriffinAJ.jpg */,
 				CE2DAF8F1E4EB2A1002BCD60 /* BergstromMicheal.jpg */,
 				CE7C6D5A1E3872CD00874B14 /* FloydKay.jpg */,
@@ -1859,6 +1868,7 @@
 				AFBC6E7816B0BF740052E385 /* JackClinkscale.jpg in Resources */,
 				AFBC6E7916B0BF740052E385 /* JackPerkins.jpg in Resources */,
 				CEC865461EBE149100363665 /* CheckNay.png in Resources */,
+				CE927F501F87402E00015327 /* BrooksMichael.jpg in Resources */,
 				AFBC6E7A16B0BF740052E385 /* JamesHanna.jpg in Resources */,
 				AF577E581A0BED8D00994EA1 /* All.png in Resources */,
 				AFBC6E7B16B0BF740052E385 /* JimJackson.jpg in Resources */,
@@ -1873,6 +1883,7 @@
 				AFBC6E8416B0BF740052E385 /* ScottCopeland.jpg in Resources */,
 				CE18B54F1E4F72930067DCC1 /* Icon-App-72x72@2x.png in Resources */,
 				AFBC6E8516B0BF740052E385 /* TerryMatlock.jpg in Resources */,
+				CE927F4C1F87346600015327 /* GaddisKaren.jpg in Resources */,
 				AFBC6E8616B0BF740052E385 /* TimSmith.jpg in Resources */,
 				CEA9B5331ECA9E7300035FF6 /* Senate_VoteTallyIcon.png in Resources */,
 				CE7C6D4B1E385F7600874B14 /* LeewrightJames.jpg in Resources */,
@@ -1888,6 +1899,7 @@
 				AFBC6E8F16B0BF740052E385 /* BiggsScott.jpg in Resources */,
 				CE7C6D501E385F7600874B14 /* PedersonRoland.jpg in Resources */,
 				CE7C6D521E385F7600874B14 /* PughAdam.jpg in Resources */,
+				CE927F4E1F8738CE00015327 /* RosecrantsJacob.jpg in Resources */,
 				AF577E661A0BED8D00994EA1 /* Statewide.png in Resources */,
 				AFBC6E9316B0BF740052E385 /* BrumbaughDavid.jpg in Resources */,
 				CE7C6D6A1E39B41F00874B14 /* PatrickGrace.jpg in Resources */,
