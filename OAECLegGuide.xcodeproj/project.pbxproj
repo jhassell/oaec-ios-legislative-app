@@ -330,6 +330,10 @@
 		CE5986021EE8DB8D007C5C3B /* Buttons in Resources */ = {isa = PBXBuildFile; fileRef = CE5986011EE8DB8D007C5C3B /* Buttons */; };
 		CE64C2C01EDFBC9E00FEF384 /* VoteListView-iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE7014831EDFB81200BE7B25 /* VoteListView-iPhone.xib */; };
 		CE64C2C71EE113C000FEF384 /* CommitteeVoteListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64C2C61EE113C000FEF384 /* CommitteeVoteListViewController.m */; };
+		CE70CCC41FE0F39C001801AC /* TaylorZack.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE70CCC31FE0F39C001801AC /* TaylorZack.jpg */; };
+		CE70CCC61FE0F3B5001801AC /* GoetzGreg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE70CCC51FE0F3B5001801AC /* GoetzGreg.jpg */; };
+		CE70CCC81FE0F641001801AC /* DuncanKooney.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE70CCC71FE0F641001801AC /* DuncanKooney.jpg */; };
+		CE70CCCA1FE0F9F6001801AC /* SimmonsKen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE70CCC91FE0F9F6001801AC /* SimmonsKen.jpg */; };
 		CE7C6D0C1E385F4C00874B14 /* BabinecGreg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6CE61E385F4C00874B14 /* BabinecGreg.jpg */; };
 		CE7C6D0D1E385F4C00874B14 /* BakerRhonda.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6CE71E385F4C00874B14 /* BakerRhonda.jpg */; };
 		CE7C6D0E1E385F4C00874B14 /* BennettForrest.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6CE81E385F4C00874B14 /* BennettForrest.jpg */; };
@@ -822,6 +826,10 @@
 		CE64C2C51EE113C000FEF384 /* CommitteeVoteListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommitteeVoteListViewController.h; sourceTree = "<group>"; };
 		CE64C2C61EE113C000FEF384 /* CommitteeVoteListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommitteeVoteListViewController.m; sourceTree = "<group>"; };
 		CE7014831EDFB81200BE7B25 /* VoteListView-iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "VoteListView-iPhone.xib"; sourceTree = "<group>"; };
+		CE70CCC31FE0F39C001801AC /* TaylorZack.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = TaylorZack.jpg; sourceTree = "<group>"; };
+		CE70CCC51FE0F3B5001801AC /* GoetzGreg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GoetzGreg.jpg; sourceTree = "<group>"; };
+		CE70CCC71FE0F641001801AC /* DuncanKooney.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DuncanKooney.jpg; sourceTree = "<group>"; };
+		CE70CCC91FE0F9F6001801AC /* SimmonsKen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SimmonsKen.jpg; sourceTree = "<group>"; };
 		CE7C6CE61E385F4C00874B14 /* BabinecGreg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BabinecGreg.jpg; sourceTree = "<group>"; };
 		CE7C6CE71E385F4C00874B14 /* BakerRhonda.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BakerRhonda.jpg; sourceTree = "<group>"; };
 		CE7C6CE81E385F4C00874B14 /* BennettForrest.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BennettForrest.jpg; sourceTree = "<group>"; };
@@ -1301,6 +1309,9 @@
 		AFBC6D9C16B0BF740052E385 /* OAEC Member Photos */ = {
 			isa = PBXGroup;
 			children = (
+				CE70CCC91FE0F9F6001801AC /* SimmonsKen.jpg */,
+				CE70CCC71FE0F641001801AC /* DuncanKooney.jpg */,
+				CE70CCC51FE0F3B5001801AC /* GoetzGreg.jpg */,
 				CEA7EC531E61CD58008031BF /* MarkWSchwirtz.jpg */,
 				CE7C6D601E39B41F00874B14 /* BrettOrme.jpg */,
 				CE7C6D611E39B41F00874B14 /* JenniferMeason.jpg */,
@@ -1348,6 +1359,7 @@
 		AFBC6DBE16B0BF740052E385 /* State Representatives */ = {
 			isa = PBXGroup;
 			children = (
+				CE70CCC31FE0F39C001801AC /* TaylorZack.jpg */,
 				CE927F4D1F8738CE00015327 /* RosecrantsJacob.jpg */,
 				CE927F4B1F87346500015327 /* GaddisKaren.jpg */,
 				CE2DAF891E4EACFD002BCD60 /* BlancettMeloyde.jpg */,
@@ -1909,6 +1921,7 @@
 				AFBC6E9516B0BF740052E385 /* CaseyDennis.jpg in Resources */,
 				AF82A2531A7789B600A91552 /* CaldwellChad.jpg in Resources */,
 				CE7C6D231E385F4C00874B14 /* McDugleKevin.jpg in Resources */,
+				CE70CCC61FE0F3B5001801AC /* GoetzGreg.jpg in Resources */,
 				CE18B5431E4F72930067DCC1 /* Icon-App-20x20@3x.png in Resources */,
 				CE7C6D5B1E3872CD00874B14 /* FloydKay.jpg in Resources */,
 				AFBC6E9716B0BF740052E385 /* ClevelandBobby.jpg in Resources */,
@@ -1921,7 +1934,9 @@
 				CEDEF0E11C0034BF0024A43F /* ReifJohn.jpg in Resources */,
 				AF577E651A0BED8D00994EA1 /* senateLeadership@2x.png in Resources */,
 				CE7C6D1D1E385F4C00874B14 /* JordanJP.jpg in Resources */,
+				CE70CCC81FE0F641001801AC /* DuncanKooney.jpg in Resources */,
 				AF6987F718E17E5500144B92 /* committees.csv in Resources */,
+				CE70CCC41FE0F39C001801AC /* TaylorZack.jpg in Resources */,
 				AFBC6EA216B0BF740052E385 /* EcholsJon.jpg in Resources */,
 				AFBC6EA316B0BF740052E385 /* EnnsJohn.jpg in Resources */,
 				AFBC6EA616B0BF740052E385 /* FourkillerWilliam.jpg in Resources */,
@@ -2073,6 +2088,7 @@
 				AFBC6F2A16B0BF740052E385 /* MurphyDana.jpg in Resources */,
 				CEA9B5351ECA9E7300035FF6 /* House__VoteTallyIcon.png in Resources */,
 				CE18B54B1E4F72930067DCC1 /* Icon-App-57x57@2x.png in Resources */,
+				CE70CCCA1FE0F9F6001801AC /* SimmonsKen.jpg in Resources */,
 				AFBC6F2B16B0BF740052E385 /* PruittScott.jpg in Resources */,
 				AF866C9616B8F9C700E9DF01 /* OutlinkCell-iPhone.xib in Resources */,
 				CEA9B5361ECA9E7300035FF6 /* All_VoteTallyIcon.png in Resources */,
@@ -2190,9 +2206,9 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Apple Development IOS Push Services: coop.oaec.ok55leg";
-				"CODE_SIGN_IDENTITY[sdk=*]" = "Apple Development IOS Push Services: coop.oaec.ok55leg";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development IOS Push Services: coop.oaec.ok55leg";
+				CODE_SIGN_IDENTITY = "Developer ID Application: Oklahoma Association of Electric Cooperative Inc. (EH6BL4VM24)";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "Developer ID Application: Oklahoma Association of Electric Cooperative Inc. (EH6BL4VM24)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Developer ID Application: Oklahoma Association of Electric Cooperative Inc. (EH6BL4VM24)";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -2235,8 +2251,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Apple Development IOS Push Services: coop.oaec.ok55leg";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: John Hassell (H4QR9NTX3Q)";
+				CODE_SIGN_IDENTITY = "Developer ID Application: Oklahoma Association of Electric Cooperative Inc. (EH6BL4VM24)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Developer ID Application: Oklahoma Association of Electric Cooperative Inc. (EH6BL4VM24)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;

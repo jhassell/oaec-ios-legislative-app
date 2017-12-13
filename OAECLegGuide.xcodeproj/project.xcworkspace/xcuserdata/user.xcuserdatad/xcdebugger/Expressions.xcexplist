@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[PeopleListDelegate buildDisplaySections]:PeopleListDelegate.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[PeopleListDelegate nayCheckButtonTapped:forEvent:]:PeopleListDelegate.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "yeaBoxStatus">
+            </PersistentString>
+            <PersistentString
+               value = "activeTally.votes[0].status">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[PeopleListDelegate yeaButtonTapped:row:]:PeopleListDelegate.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[PeopleListDelegate yeaButtonTapped:forEvent:]:PeopleListDelegate.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "event.touches[0].tapcount">
+            </PersistentString>
+            <PersistentString
+               value = "realmTally.voteCount">
+            </PersistentString>
+            <PersistentString
+               value = "realmTally.votes">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[CalendarTabViewController tableView:cellForRowAtIndexPath:]:CalendarTabViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.dateFormatter">
+            </PersistentString>
+            <PersistentString
+               value = "cell.dateLabel.text">
+            </PersistentString>
+            <PersistentString
+               value = "[self.dateFormatter stringFromDate:event.date]]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[PeopleListViewController viewDidAppear:]:PeopleListViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[PeopleListDelegate emailTallyButtonTapped:forEvent:]:PeopleListDelegate.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[PeopleListDelegate tableView:cellForRowAtIndexPath:]:PeopleListDelegate.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "indexPath.section">
+            </PersistentString>
+            <PersistentString
+               value = "indexPath.row">
+            </PersistentString>
+            <PersistentString
+               value = "self.yeaVotes">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[PeopleListDelegate checkButtonTapped:event:button:]:PeopleListDelegate.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[PeopleListDelegate buildDisplaySectionsWithFilterType:filterText:]:PeopleListDelegate.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.sections[0].children">
+            </PersistentString>
+            <PersistentString
+               value = "self.filteredSections[0]">
+            </PersistentString>
+            <PersistentString
+               value = "_sections[0]._children">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "+[ListSection buildSectionsFrom:dividedBy:catchAllKey:includeKeys:withTitlesOnly:]:ListSection.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[PeopleListDelegate checkButtonTapped:]:PeopleListDelegate.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[PeopleListDelegate setSections:]:PeopleListDelegate.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.sections.title">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[StateTabViewController senateButtonPressed:]:StateTabViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[PeopleListDelegate getTallyReport]:PeopleListDelegate.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "member.party">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[PeopleListDelegate checkButtonTapped:event:]:PeopleListDelegate.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[PeopleListDelegate checkButtonTapped]:PeopleListDelegate.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[PeopleListViewController viewWillAppear:]:PeopleListViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_sections[0]">
+            </PersistentString>
+            <PersistentString
+               value = "self.peopleTable">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[CSVParser parseFile]:CSVParser.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[PersonViewController tableView:cellForRowAtIndexPath:]:PersonViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.person.milesOfLines">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[PeopleListDelegate setCommittee:]:PeopleListDelegate.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.committee.dow">
+            </PersistentString>
+            <PersistentString
+               value = "chv.meetsLabel.text">
+            </PersistentString>
+            <PersistentString
+               value = "[chv.meetsLabel.text trim].length">
+            </PersistentString>
+            <PersistentString
+               value = "chv.roomLabel.text">
+            </PersistentString>
+            <PersistentString
+               value = "self.committee.time">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[PeopleListDelegate yeaButtonTapped:]:PeopleListDelegate.m">
+      </ContextState>
+      <ContextState
+         contextName = "+[DataLoader loadCSVFile:]:DataLoader.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[PeopleListDelegate yeaCheckButtonTapped:row:]:PeopleListDelegate.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[VotingListViewController viewWillAppear:]:VotingListViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "main:main.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[PeopleListDelegate tableView:numberOfRowsInSection:]:PeopleListDelegate.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.parent.tallies[0].votes[rowCount - 1].status">
+            </PersistentString>
+            <PersistentString
+               value = "self.parent.tallies[0].votes[0].status">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[PersonViewController tableView:heightForRowAtIndexPath:]:PersonViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.indexPath.row">
+            </PersistentString>
+            <PersistentString
+               value = "self.sections">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[PeopleListDelegate yeaCheckButtonTapped:]:PeopleListDelegate.m">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
