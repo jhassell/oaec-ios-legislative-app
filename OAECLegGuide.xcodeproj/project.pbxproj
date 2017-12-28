@@ -425,6 +425,9 @@
 		CEC865471EBE149100363665 /* BlankNay.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC865451EBE149100363665 /* BlankNay.png */; };
 		CEC865691EC5387400363665 /* Tally.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC865681EC5387400363665 /* Tally.m */; };
 		CEC8656C1EC571E700363665 /* voteButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC8656B1EC571E700363665 /* voteButton.m */; };
+		CEDABEEE1FF495B8000C7408 /* HunterMike.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEDABEED1FF495B7000C7408 /* HunterMike.jpg */; };
+		CEDABEF01FF495C1000C7408 /* FordRoss.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEDABEEF1FF495C0000C7408 /* FordRoss.jpg */; };
+		CEDABEF61FF4A6AB000C7408 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEDABEF51FF4A6AB000C7408 /* Images.xcassets */; };
 		CEDEF0D01C002ACF0024A43F /* judicialIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDEF0CF1C002ACF0024A43F /* judicialIcon@2x.png */; };
 		CEDEF0D21C0031230024A43F /* McLawhornHoustonMelissa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEDEF0D11C0031230024A43F /* McLawhornHoustonMelissa.jpg */; };
 		CEDEF0DC1C0034BF0024A43F /* ColbertTom.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEDEF0D31C0034BF0024A43F /* ColbertTom.jpg */; };
@@ -926,6 +929,9 @@
 		CEC865681EC5387400363665 /* Tally.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tally.m; sourceTree = "<group>"; };
 		CEC8656A1EC571E700363665 /* voteButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = voteButton.h; sourceTree = "<group>"; };
 		CEC8656B1EC571E700363665 /* voteButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = voteButton.m; sourceTree = "<group>"; };
+		CEDABEED1FF495B7000C7408 /* HunterMike.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HunterMike.jpg; sourceTree = "<group>"; };
+		CEDABEEF1FF495C0000C7408 /* FordRoss.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FordRoss.jpg; sourceTree = "<group>"; };
+		CEDABEF51FF4A6AB000C7408 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ok56leg/Images.xcassets; sourceTree = "<group>"; };
 		CEDEF0CF1C002ACF0024A43F /* judicialIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "judicialIcon@2x.png"; sourceTree = "<group>"; };
 		CEDEF0D11C0031230024A43F /* McLawhornHoustonMelissa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = McLawhornHoustonMelissa.jpg; sourceTree = "<group>"; };
 		CEDEF0D31C0034BF0024A43F /* ColbertTom.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = ColbertTom.jpg; path = "State Judges/ColbertTom.jpg"; sourceTree = "<group>"; };
@@ -990,6 +996,7 @@
 		AF24819415BB6A250070924E = {
 			isa = PBXGroup;
 			children = (
+				CEDABEF51FF4A6AB000C7408 /* Images.xcassets */,
 				CE5986011EE8DB8D007C5C3B /* Buttons */,
 				CE64C2BE1EDFBB1900FEF384 /* VoteListView-iPhone.xib */,
 				CE16008E1ED2556A00058C4D /* VoteTallyHeaderView-iPhone.xib */,
@@ -1359,6 +1366,7 @@
 		AFBC6DBE16B0BF740052E385 /* State Representatives */ = {
 			isa = PBXGroup;
 			children = (
+				CEDABEEF1FF495C0000C7408 /* FordRoss.jpg */,
 				CE70CCC31FE0F39C001801AC /* TaylorZack.jpg */,
 				CE927F4D1F8738CE00015327 /* RosecrantsJacob.jpg */,
 				CE927F4B1F87346500015327 /* GaddisKaren.jpg */,
@@ -1525,6 +1533,7 @@
 		AFBC6E5516B0BF740052E385 /* Statewide Officials */ = {
 			isa = PBXGroup;
 			children = (
+				CEDABEED1FF495B7000C7408 /* HunterMike.jpg */,
 				CEDEF0D11C0031230024A43F /* McLawhornHoustonMelissa.jpg */,
 				AF82A27E1A7789D100A91552 /* HiettTodd.jpg */,
 				AF82A27F1A7789D100A91552 /* HofmeisterJoy.jpg */,
@@ -1816,6 +1825,7 @@
 				AF14BD7B160E73A5003D2052 /* Federal.png in Resources */,
 				AF14BD7C160E73A5003D2052 /* Federal@2x.png in Resources */,
 				CE2DAF901E4EB2A1002BCD60 /* BergstromMicheal.jpg in Resources */,
+				CEDABEEE1FF495B8000C7408 /* HunterMike.jpg in Resources */,
 				AF14BD7D160E73A5003D2052 /* FederalChoice2.png in Resources */,
 				AF14BD7E160E73A5003D2052 /* FederalChoice2@2x.png in Resources */,
 				AF14BD89160E73A5003D2052 /* State.png in Resources */,
@@ -2025,6 +2035,7 @@
 				CEDEF0DF1C0034BF0024A43F /* GurichNoma.jpg in Resources */,
 				CE7C6D491E385F7600874B14 /* KiddChris.jpg in Resources */,
 				AFBC6EEE16B0BF740052E385 /* WilliamsCory.jpg in Resources */,
+				CEDABEF61FF4A6AB000C7408 /* Images.xcassets in Resources */,
 				AFBC6EF016B0BF740052E385 /* WrightHarold.jpg in Resources */,
 				AFBC6EF216B0BF740052E385 /* AllenMark.jpg in Resources */,
 				AFBC6EF616B0BF740052E385 /* BassRandy.jpg in Resources */,
@@ -2066,6 +2077,7 @@
 				AFBC6F1E16B0BF740052E385 /* SykesAnthony.jpg in Resources */,
 				CEDEF0DE1C0034BF0024A43F /* EdmondsonJames.jpg in Resources */,
 				AFBC6F1F16B0BF740052E385 /* TreatGreg.jpg in Resources */,
+				CEDABEF01FF495C1000C7408 /* FordRoss.jpg in Resources */,
 				AFDAD5BF18602FCB00366D99 /* MarkFuller.jpg in Resources */,
 				CE7C6D2A1E385F4C00874B14 /* OsburnMike.jpg in Resources */,
 				CE7C6D301E385F4C00874B14 /* WestTammy.jpg in Resources */,
@@ -2279,6 +2291,8 @@
 		AF2481CC15BB6A260070924E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CODE_SIGN_ENTITLEMENTS = ok56leg.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
@@ -2307,6 +2321,8 @@
 		AF2481CD15BB6A260070924E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CODE_SIGN_ENTITLEMENTS = ok56leg.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
