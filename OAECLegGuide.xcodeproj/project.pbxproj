@@ -294,6 +294,7 @@
 		AFEF4BD715C7971D00896FA9 /* NSString+Stuff.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEF4BD615C7971D00896FA9 /* NSString+Stuff.m */; };
 		AFF2BB1815C860BB00F1B379 /* CommitteeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF2BB1715C860BB00F1B379 /* CommitteeListViewController.m */; };
 		AFF2BB1B15C8610100F1B379 /* CommitteeListView-iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFF2BB1A15C8610100F1B379 /* CommitteeListView-iPhone.xib */; };
+		CE00DF4E200DBE1800C246B8 /* RosinoPaul.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE00DF4D200DBE1800C246B8 /* RosinoPaul.jpg */; };
 		CE1600911ED2606000058C4D /* CustomTableViewHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1600901ED2606000058C4D /* CustomTableViewHeaderCell.m */; };
 		CE1600951ED299FF00058C4D /* CustomTableViewHeaderCell-iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE1600941ED299FF00058C4D /* CustomTableViewHeaderCell-iPhone.xib */; };
 		CE18B5411E4F72930067DCC1 /* Icon-App-20x20@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE18B52B1E4F72930067DCC1 /* Icon-App-20x20@1x.png */; };
@@ -787,6 +788,7 @@
 		AFF2BB1615C860BB00F1B379 /* CommitteeListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommitteeListViewController.h; sourceTree = "<group>"; };
 		AFF2BB1715C860BB00F1B379 /* CommitteeListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommitteeListViewController.m; sourceTree = "<group>"; };
 		AFF2BB1A15C8610100F1B379 /* CommitteeListView-iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "CommitteeListView-iPhone.xib"; sourceTree = "<group>"; };
+		CE00DF4D200DBE1800C246B8 /* RosinoPaul.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RosinoPaul.jpg; sourceTree = "<group>"; };
 		CE1600871ED1FB4A00058C4D /* VoteTallyHeaderView-iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "VoteTallyHeaderView-iPhone.xib"; sourceTree = "<group>"; };
 		CE16008E1ED2556A00058C4D /* VoteTallyHeaderView-iPhone.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "VoteTallyHeaderView-iPhone.xib"; path = "OAECLegGuide/NIBs/VoteTallyHeaderView-iPhone.xib"; sourceTree = "<group>"; };
 		CE16008F1ED2606000058C4D /* CustomTableViewHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewHeaderCell.h; sourceTree = "<group>"; };
@@ -1477,6 +1479,7 @@
 		AFBC6E2416B0BF740052E385 /* State Senators */ = {
 			isa = PBXGroup;
 			children = (
+				CE00DF4D200DBE1800C246B8 /* RosinoPaul.jpg */,
 				CE927F4F1F87402E00015327 /* BrooksMichael.jpg */,
 				CE2DAF911E4EC6D1002BCD60 /* GriffinAJ.jpg */,
 				CE2DAF8F1E4EB2A1002BCD60 /* BergstromMicheal.jpg */,
@@ -1986,6 +1989,7 @@
 				AFBC6ECB16B0BF740052E385 /* O'DonnellTerry.jpg in Resources */,
 				CE18B55A1E4F78020067DCC1 /* Icon-App-167x167@1x.png in Resources */,
 				CEA749651C572771007271E5 /* DossettJJ.jpg in Resources */,
+				CE00DF4E200DBE1800C246B8 /* RosinoPaul.jpg in Resources */,
 				CE7C6D2D1E385F4C00874B14 /* WestJosh.jpg in Resources */,
 				AFBC6ECC16B0BF740052E385 /* OrtegaCharles.jpg in Resources */,
 				AFBC6ECD16B0BF740052E385 /* OsbornLeslie.jpg in Resources */,
