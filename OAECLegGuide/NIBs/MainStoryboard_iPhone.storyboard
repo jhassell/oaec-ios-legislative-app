@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES" initialViewController="R1Q-40-YML">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES" initialViewController="R1Q-40-YML">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -35,7 +35,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="center" id="pB7-Xf-FR2">
-                                <rect key="frame" x="2" y="561.5" width="371" height="101"/>
+                                <rect key="frame" x="2" y="561" width="371" height="101"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <string key="text">The purpose of the OAEC Legislative and Regulatory Affairs Department is to represent the member cooperatives in the most professional fashion at both our state and federal capitols.</string>
@@ -64,7 +64,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Learn more about OAEC and the Regulatory Affairs Department below." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" id="NPH-IQ-BU3">
-                                <rect key="frame" x="59.5" y="383" width="256" height="35"/>
+                                <rect key="frame" x="60" y="383" width="256" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="13"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -108,7 +108,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1561" y="-144"/>
+            <point key="canvasLocation" x="2497.5999999999999" y="-129.53523238380811"/>
         </scene>
         <!--About-->
         <scene sceneID="Bzx-We-HFe">
@@ -119,22 +119,11 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="AboutBackground.png" id="Wte-gY-Ubc">
-                                <rect key="frame" x="27.5" y="0.0" width="320" height="600"/>
+                                <rect key="frame" x="28" y="0.0" width="320" height="600"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="SFh-tF-btl" customClass="GreenButton">
-                                <rect key="frame" x="17" y="159" width="186" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
-                                <state key="normal" title="56th Legislature">
-                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="legislatureButtonPressed:" destination="C73-Ox-BrY" eventType="touchUpInside" id="XxF-4f-IKM"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mLc-KO-8rW" customClass="GreenButton">
-                                <rect key="frame" x="17" y="209" width="186" height="37"/>
+                                <rect key="frame" x="16" y="335" width="186" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
                                 <state key="normal" title="About OAEC">
@@ -142,6 +131,17 @@
                                 </state>
                                 <connections>
                                     <segue destination="2" kind="push" id="H7I-Dd-7na"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="SFh-tF-btl" customClass="GreenButton">
+                                <rect key="frame" x="16" y="243" width="186" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <state key="normal" title="57th Legislature">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="legislatureButtonPressed:" destination="C73-Ox-BrY" eventType="touchUpInside" id="XxF-4f-IKM"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -156,7 +156,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mbS-0K-L7K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1088" y="-144"/>
+            <point key="canvasLocation" x="1740.8" y="-129.53523238380811"/>
         </scene>
         <!--About-->
         <scene sceneID="rP9-e7-Ies">
@@ -164,7 +164,6 @@
                 <navigationController storyboardIdentifier="About" definesPresentationContext="YES" navigationBarHidden="YES" id="w78-Lv-si3" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="About" image="About.png" id="jRW-ad-rNe"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="nQQ-WZ-7HC">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
@@ -174,7 +173,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sBF-6z-jNu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="659" y="-144"/>
+            <point key="canvasLocation" x="1054.4000000000001" y="-129.53523238380811"/>
         </scene>
         <!--Second-->
         <scene sceneID="13">
@@ -208,38 +207,38 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" id="0Ex-Od-Msq">
-                                <rect key="frame" x="27.5" y="76" width="320" height="591"/>
+                                <rect key="frame" x="28" y="76" width="320" height="591"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="House" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Zl9-Th-dMA">
-                                        <rect key="frame" x="107" y="401.5" width="97" height="39"/>
+                                        <rect key="frame" x="107" y="401" width="97" height="39"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="House Leadership" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" id="KeI-hI-DMG">
-                                        <rect key="frame" x="3" y="401.5" width="97" height="39"/>
+                                        <rect key="frame" x="3" y="401" width="97" height="39"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="House Committees" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" id="FPT-vM-8yf">
-                                        <rect key="frame" x="212" y="401.5" width="97" height="39"/>
+                                        <rect key="frame" x="212" y="401" width="97" height="39"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="Your Vote Tally" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" id="dBQ-bq-fgs">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Your Vote Tally" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" id="dBQ-bq-fgs">
                                         <rect key="frame" x="174" y="530" width="57" height="39"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="XwR-22-kla">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="XwR-22-kla">
                                         <rect key="frame" x="19" y="317" width="72" height="72"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -255,7 +254,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Statewide Elected Officials" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" id="1Ny-ja-C2Y">
-                                        <rect key="frame" x="53" y="108.5" width="109" height="39"/>
+                                        <rect key="frame" x="53" y="109" width="109" height="39"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -313,7 +312,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="BK5-Uf-Gdx">
-                                        <rect key="frame" x="72" y="8.5" width="72" height="72"/>
+                                        <rect key="frame" x="72" y="9" width="72" height="72"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" image="Statewide.png">
@@ -343,7 +342,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="yjo-DM-com">
-                                        <rect key="frame" x="120" y="317.5" width="72" height="72"/>
+                                        <rect key="frame" x="120" y="317" width="72" height="72"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" image="houseIcon.png">
@@ -358,7 +357,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="0oY-Md-rv9">
-                                        <rect key="frame" x="224" y="317.5" width="72" height="72"/>
+                                        <rect key="frame" x="224" y="317" width="72" height="72"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" image="houseCommittee.png">
@@ -372,7 +371,7 @@
                                             <action selector="houseCommitteesButtonpressed:" destination="3" eventType="touchUpInside" id="Qll-ZU-Liv"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mcf-Ae-dgK">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mcf-Ae-dgK">
                                         <rect key="frame" x="72" y="463" width="72" height="72"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -387,7 +386,7 @@
                                             <action selector="allButtonPressed:" destination="3" eventType="touchUpInside" id="RuR-LL-GH6"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="f9i-lc-zRe">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="f9i-lc-zRe">
                                         <rect key="frame" x="167" y="463" width="72" height="72"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -420,7 +419,7 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="All" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Ydm-Ol-vwe">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="All" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Ydm-Ol-vwe">
                                         <rect key="frame" x="94" y="540" width="28" height="19"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -438,7 +437,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1126" y="621"/>
+            <point key="canvasLocation" x="1801.5999999999999" y="558.62068965517244"/>
         </scene>
         <!--  State-->
         <scene sceneID="aH5-He-Cj9">
@@ -447,7 +446,6 @@
                     <tabBarItem key="tabBarItem" title="  State" image="State.png" id="xUS-M6-Mjm"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="dsG-5k-TPq">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -456,7 +454,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sjj-Yx-Bwk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="598" y="516"/>
+            <point key="canvasLocation" x="956.79999999999995" y="464.16791604197903"/>
         </scene>
         <!--Federal-->
         <scene sceneID="er5-4l-7t6">
@@ -505,7 +503,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gPm-MP-qWc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1865" y="1288"/>
+            <point key="canvasLocation" x="2984" y="1158.6206896551726"/>
         </scene>
         <!--Map-->
         <scene sceneID="LgI-CX-a1w">
@@ -513,7 +511,6 @@
                 <navigationController storyboardIdentifier="Map" definesPresentationContext="YES" navigationBarHidden="YES" id="VIV-G0-KR5" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Map" image="MapPin.png" id="4aO-zl-xV0"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="tdV-6X-tNl">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
@@ -523,7 +520,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P6w-XZ-Tvv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="668" y="1629"/>
+            <point key="canvasLocation" x="1068.8" y="1465.3673163418291"/>
         </scene>
         <!--Federal-->
         <scene sceneID="epk-h7-fKP">
@@ -532,7 +529,6 @@
                     <tabBarItem key="tabBarItem" title="Federal" image="Federal.png" id="cgZ-jk-9dO"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="TBR-nz-EJn">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -541,7 +537,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Pt-xB-KmK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="696" y="1173"/>
+            <point key="canvasLocation" x="1113.5999999999999" y="1055.1724137931035"/>
         </scene>
         <!--Maps-->
         <scene sceneID="sHS-lv-aFl">
@@ -681,7 +677,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zgg-v0-KbI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1231" y="1658"/>
+            <point key="canvasLocation" x="1969.5999999999999" y="1491.4542728635683"/>
         </scene>
         <!--Notes View Controller-->
         <scene sceneID="n5e-C5-hhZ">
@@ -769,7 +765,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FPl-FO-BfR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1978" y="-136"/>
+            <point key="canvasLocation" x="3164.8000000000002" y="-122.33883058470765"/>
         </scene>
         <!--About-->
         <scene sceneID="xob-1n-8D5">
@@ -794,7 +790,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5B5-GB-dEM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="84" y="-130"/>
+            <point key="canvasLocation" x="134.40000000000001" y="-116.94152923538232"/>
         </scene>
         <!--Custom Tab Bar Controller-->
         <scene sceneID="Bcn-XV-5Za">
@@ -816,7 +812,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZGA-zI-pEF" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1044" y="140"/>
+            <point key="canvasLocation" x="-1670.4000000000001" y="125.93703148425789"/>
         </scene>
         <!--State-->
         <scene sceneID="atT-Qv-rzg">
@@ -841,7 +837,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m9j-QX-chV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="148" y="494"/>
+            <point key="canvasLocation" x="236.80000000000001" y="444.3778110944528"/>
         </scene>
         <!--Federal-->
         <scene sceneID="rae-YK-AJG">
@@ -866,7 +862,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bWs-Ql-3hG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="192" y="1069"/>
+            <point key="canvasLocation" x="307.19999999999999" y="961.61919040479768"/>
         </scene>
         <!--Map-->
         <scene sceneID="2qb-ss-nni">
@@ -891,7 +887,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eYI-8l-oQU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="248" y="1658"/>
+            <point key="canvasLocation" x="396.80000000000001" y="1491.4542728635683"/>
         </scene>
         <!--Calendar-->
         <scene sceneID="eWO-YO-G8z">
@@ -916,7 +912,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uBu-oX-pKh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="260" y="2306"/>
+            <point key="canvasLocation" x="416" y="2074.3628185907046"/>
         </scene>
         <!--Calendar-->
         <scene sceneID="VG5-e7-3Xl">
@@ -924,7 +920,6 @@
                 <navigationController storyboardIdentifier="Calendar" definesPresentationContext="YES" navigationBarHidden="YES" id="5bO-4E-Edz" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Calendar" image="Calendar.png" id="g4b-uS-0HB"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jbG-1i-swE">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -933,7 +928,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WQ5-DG-GVf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="668" y="2306"/>
+            <point key="canvasLocation" x="1068.8" y="2074.3628185907046"/>
         </scene>
         <!--Calendar-->
         <scene sceneID="4ci-g3-rRq">
@@ -1020,7 +1015,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z11-CI-jf7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1727" y="2269"/>
+            <point key="canvasLocation" x="2763.1999999999998" y="2041.0794602698652"/>
         </scene>
         <!--Voting Groups-->
         <scene sceneID="Fe6-cL-Z3g">
@@ -1054,10 +1049,10 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" id="bgh-dj-UqG">
-                                <rect key="frame" x="27.5" y="76" width="320" height="591"/>
+                                <rect key="frame" x="28" y="76" width="320" height="591"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="szL-vu-hpc">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="szL-vu-hpc">
                                         <rect key="frame" x="35" y="82" width="72" height="72"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" image="Senate_VoteTallyIcon.png">
@@ -1071,7 +1066,7 @@
                                             <action selector="senateVoteButtonPressed:" destination="ZZz-nX-fYD" eventType="touchUpInside" id="oFf-jx-RwN"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="brw-HE-PRA">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="brw-HE-PRA">
                                         <rect key="frame" x="35" y="174" width="72" height="72"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" image="SenateCommittees__VoteTallyIcon.png">
@@ -1085,7 +1080,7 @@
                                             <action selector="senateVoteCommitteesButtonPressed:" destination="ZZz-nX-fYD" eventType="touchUpInside" id="Dhj-dp-HA4"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="GPn-gD-ejc">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="GPn-gD-ejc">
                                         <rect key="frame" x="32" y="280" width="72" height="72"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" image="House__VoteTallyIcon.png">
@@ -1099,7 +1094,7 @@
                                             <action selector="houseVoteButtonPressed:" destination="ZZz-nX-fYD" eventType="touchUpInside" id="Fqf-9L-SJm"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Uvo-TP-KQZ">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Uvo-TP-KQZ">
                                         <rect key="frame" x="35" y="495" width="72" height="72"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" image="All_VoteTallyIcon.png">
@@ -1113,7 +1108,7 @@
                                             <action selector="allVoteButtonPressed:" destination="ZZz-nX-fYD" eventType="touchUpInside" id="LMo-E6-zSt"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="aJd-b6-GoY">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="aJd-b6-GoY">
                                         <rect key="frame" x="35" y="382" width="72" height="72"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" image="HouseCommittees_VoteTallyIcon.png">
@@ -1127,7 +1122,7 @@
                                             <action selector="houseVoteCommitteesButtonPressed:" destination="ZZz-nX-fYD" eventType="touchUpInside" id="KeF-2E-ZdW"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zym-35-Zck">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zym-35-Zck">
                                         <rect key="frame" x="115" y="96" width="175" height="43"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <state key="normal" title="Senate">
@@ -1137,7 +1132,7 @@
                                             <action selector="senateVoteButtonPressed:" destination="ZZz-nX-fYD" eventType="touchUpInside" id="43Q-ex-TU2"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" id="Us6-a3-RK6">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" id="Us6-a3-RK6">
                                         <rect key="frame" x="115" y="174" width="152" height="72"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <state key="normal" title="Senate Committees">
@@ -1147,7 +1142,7 @@
                                             <action selector="senateVoteCommitteesButtonPressed:" destination="ZZz-nX-fYD" eventType="touchUpInside" id="Svp-gm-T0W"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vzM-nx-J8S">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vzM-nx-J8S">
                                         <rect key="frame" x="115" y="291" width="152" height="51"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <state key="normal" title="House">
@@ -1157,7 +1152,7 @@
                                             <action selector="houseVoteButtonPressed:" destination="ZZz-nX-fYD" eventType="touchUpInside" id="bRw-TT-yuT"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" id="0cW-HM-8N3">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" id="0cW-HM-8N3">
                                         <rect key="frame" x="115" y="403" width="175" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <state key="normal" title="House Committees">
@@ -1167,7 +1162,7 @@
                                             <action selector="houseVoteCommitteesButtonPressed:" destination="ZZz-nX-fYD" eventType="touchUpInside" id="H4Z-sD-kvx"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aYh-XQ-ZbE">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aYh-XQ-ZbE">
                                         <rect key="frame" x="115" y="516" width="152" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <state key="normal" title="All">
@@ -1177,7 +1172,7 @@
                                             <action selector="allVoteButtonPressed:" destination="ZZz-nX-fYD" eventType="touchUpInside" id="YcF-Gh-nBR"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Your Tallies" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XEc-dX-2Gd">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Tallies" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XEc-dX-2Gd">
                                         <rect key="frame" x="21" y="0.0" width="212" height="61"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="42"/>
@@ -1187,7 +1182,7 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="cr3-tz-diq">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="cr3-tz-diq">
                                 <rect key="frame" x="5" y="5" width="86" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -1209,7 +1204,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="brv-7I-dF4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3077.5" y="906.5"/>
+            <point key="canvasLocation" x="4924" y="815.44227886056979"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="DGl-1c-m70">
@@ -1217,13 +1212,13 @@
                 <navigationController id="eZZ-gd-mpJ" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="rjl-Ei-7gk"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0ah-nz-0m2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rN8-HT-kUU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2552" y="2159"/>
+            <point key="canvasLocation" x="4083.1999999999998" y="1942.128935532234"/>
         </scene>
         <!--State-->
         <scene sceneID="SNi-zm-IMZ">
@@ -1233,14 +1228,14 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="D05-yj-vGQ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1as-56-IBZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Mt-U9-Stm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2490.5" y="906.5"/>
+            <point key="canvasLocation" x="3984.8000000000002" y="815.44227886056979"/>
         </scene>
     </scenes>
     <resources>
@@ -1272,9 +1267,4 @@
         <image name="senateLeadership.png" width="65" height="61"/>
         <image name="share.png" width="94" height="137"/>
     </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
-    </simulatedMetricsContainer>
 </document>

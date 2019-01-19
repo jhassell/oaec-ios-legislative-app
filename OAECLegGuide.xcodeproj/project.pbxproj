@@ -98,31 +98,17 @@
 		AF71B99D15CC4E4A00D0D43B /* AddressViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF71B99C15CC4E4A00D0D43B /* AddressViewCell.m */; };
 		AF71B9A015CC62EE00D0D43B /* CommitteeViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF71B99F15CC62EE00D0D43B /* CommitteeViewCell.m */; };
 		AF82A2531A7789B600A91552 /* CaldwellChad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF82A23C1A7789B600A91552 /* CaldwellChad.jpg */; };
-		AF82A2541A7789B600A91552 /* CalveyKevin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF82A23D1A7789B600A91552 /* CalveyKevin.jpg */; };
-		AF82A2551A7789B600A91552 /* CoodyJeff.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF82A23E1A7789B600A91552 /* CoodyJeff.jpg */; };
-		AF82A2561A7789B600A91552 /* DunlapTravis.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF82A23F1A7789B600A91552 /* DunlapTravis.jpg */; };
-		AF82A2581A7789B600A91552 /* FaughtGeorge.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF82A2411A7789B600A91552 /* FaughtGeorge.jpg */; };
-		AF82A25A1A7789B600A91552 /* GriffithClaudia.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF82A2431A7789B600A91552 /* GriffithClaudia.jpg */; };
 		AF82A25C1A7789B600A91552 /* KannadyChris.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF82A2451A7789B600A91552 /* KannadyChris.jpg */; };
 		AF82A25E1A7789B600A91552 /* LepakMark.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF82A2471A7789B600A91552 /* LepakMark.jpg */; };
 		AF82A25F1A7789B600A91552 /* LoringBen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF82A2481A7789B600A91552 /* LoringBen.jpg */; };
-		AF82A2611A7789B600A91552 /* MurdockCasey.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF82A24A1A7789B600A91552 /* MurdockCasey.jpg */; };
-		AF82A2621A7789B600A91552 /* ParkScooter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF82A24B1A7789B600A91552 /* ParkScooter.jpg */; };
-		AF82A2631A7789B600A91552 /* PfeifferJohn.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF82A24C1A7789B600A91552 /* PfeifferJohn.jpg */; };
-		AF82A2641A7789B600A91552 /* RogersMichael.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF82A24D1A7789B600A91552 /* RogersMichael.jpg */; };
 		AF82A2651A7789B600A91552 /* StoneShane.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF82A24E1A7789B600A91552 /* StoneShane.jpg */; };
-		AF82A2661A7789B600A91552 /* StrohmChuck.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF82A24F1A7789B600A91552 /* StrohmChuck.jpg */; };
 		AF82A2671A7789B600A91552 /* TadlockJohnny.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF82A2501A7789B600A91552 /* TadlockJohnny.jpg */; };
 		AF82A2681A7789B600A91552 /* WallaceKevin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF82A2511A7789B600A91552 /* WallaceKevin.jpg */; };
-		AF82A2691A7789B600A91552 /* YoungGeorge.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF82A2521A7789B600A91552 /* YoungGeorge.jpg */; };
 		AF82A2741A7789C500A91552 /* BiceStephanie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF82A26A1A7789C500A91552 /* BiceStephanie.jpg */; };
-		AF82A2761A7789C500A91552 /* FryJack.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF82A26C1A7789C500A91552 /* FryJack.jpg */; };
 		AF82A2771A7789C500A91552 /* JechDarcy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF82A26D1A7789C500A91552 /* JechDarcy.jpg */; };
-		AF82A2781A7789C500A91552 /* PittmanAnastasia.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF82A26E1A7789C500A91552 /* PittmanAnastasia.jpg */; };
 		AF82A27A1A7789C500A91552 /* SilkJoseph.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF82A2701A7789C500A91552 /* SilkJoseph.jpg */; };
 		AF82A27B1A7789C500A91552 /* SmalleyJason.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF82A2711A7789C500A91552 /* SmalleyJason.jpg */; };
 		AF82A27C1A7789C500A91552 /* ThompsonRoger.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF82A2721A7789C500A91552 /* ThompsonRoger.jpg */; };
-		AF82A27D1A7789C500A91552 /* YenErvin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF82A2731A7789C500A91552 /* YenErvin.jpg */; };
 		AF82A2811A7789D100A91552 /* HiettTodd.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF82A27E1A7789D100A91552 /* HiettTodd.jpg */; };
 		AF82A2821A7789D100A91552 /* HofmeisterJoy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF82A27F1A7789D100A91552 /* HofmeisterJoy.jpg */; };
 		AF82A2831A7789D100A91552 /* RussellSteve.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF82A2801A7789D100A91552 /* RussellSteve.jpg */; };
@@ -135,112 +121,52 @@
 		AF9B4A9015DEA8E60071CB88 /* Arrow_Right.png in Resources */ = {isa = PBXBuildFile; fileRef = AF9B4A8C15DEA8E60071CB88 /* Arrow_Right.png */; };
 		AF9B4A9115DEA8E60071CB88 /* Arrow_Right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF9B4A8D15DEA8E60071CB88 /* Arrow_Right@2x.png */; };
 		AFB87A6115C3360700DA8067 /* NSDictionary+People.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB87A6015C3360700DA8067 /* NSDictionary+People.m */; };
-		AFBC6E6116B0BF740052E385 /* BridenstineJim.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6D9016B0BF740052E385 /* BridenstineJim.jpg */; };
 		AFBC6E6216B0BF740052E385 /* Frank_Lucas.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6D9116B0BF740052E385 /* Frank_Lucas.jpg */; };
 		AFBC6E6316B0BF740052E385 /* James_Lankford.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6D9216B0BF740052E385 /* James_Lankford.jpg */; };
 		AFBC6E6416B0BF740052E385 /* MullinMarkwayne.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6D9316B0BF740052E385 /* MullinMarkwayne.jpg */; };
 		AFBC6E6516B0BF740052E385 /* Tom_Cole.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6D9416B0BF740052E385 /* Tom_Cole.jpg */; };
 		AFBC6E6616B0BF740052E385 /* Jim_Inhofe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6D9616B0BF740052E385 /* Jim_Inhofe.jpg */; };
-		AFBC6E6716B0BF740052E385 /* Tom_Coburn.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6D9716B0BF740052E385 /* Tom_Coburn.jpg */; };
 		AFBC6E6816B0BF740052E385 /* HowethStacy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6D9916B0BF740052E385 /* HowethStacy.jpg */; };
 		AFBC6E6916B0BF740052E385 /* MeyersChris.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6D9A16B0BF740052E385 /* MeyersChris.jpg */; };
-		AFBC6E6A16B0BF740052E385 /* SparksKenny.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6D9B16B0BF740052E385 /* SparksKenny.jpg */; };
 		AFBC6E6B16B0BF740052E385 /* AliceHouston.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6D9D16B0BF740052E385 /* AliceHouston.jpg */; };
-		AFBC6E6C16B0BF740052E385 /* AnthonyDue.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6D9E16B0BF740052E385 /* AnthonyDue.jpg */; };
 		AFBC6E6E16B0BF740052E385 /* BrentHartin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DA016B0BF740052E385 /* BrentHartin.jpg */; };
-		AFBC6E6F16B0BF740052E385 /* CharlesPaxton.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DA116B0BF740052E385 /* CharlesPaxton.jpg */; };
 		AFBC6E7016B0BF740052E385 /* ChrisCariker.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DA216B0BF740052E385 /* ChrisCariker.jpg */; };
 		AFBC6E7116B0BF740052E385 /* ColinWhitley.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DA316B0BF740052E385 /* ColinWhitley.jpg */; };
 		AFBC6E7216B0BF740052E385 /* DaleNye.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DA416B0BF740052E385 /* DaleNye.jpg */; };
-		AFBC6E7316B0BF740052E385 /* DavidSwank.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DA516B0BF740052E385 /* DavidSwank.jpg */; };
-		AFBC6E7416B0BF740052E385 /* DennisKrueger.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DA616B0BF740052E385 /* DennisKrueger.jpg */; };
 		AFBC6E7516B0BF740052E385 /* GaryRoulet.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DA716B0BF740052E385 /* GaryRoulet.jpg */; };
-		AFBC6E7616B0BF740052E385 /* GeorgeHand.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DA816B0BF740052E385 /* GeorgeHand.jpg */; };
 		AFBC6E7716B0BF740052E385 /* HamidVahdatipour.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DA916B0BF740052E385 /* HamidVahdatipour.jpg */; };
-		AFBC6E7816B0BF740052E385 /* JackClinkscale.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DAA16B0BF740052E385 /* JackClinkscale.jpg */; };
-		AFBC6E7916B0BF740052E385 /* JackPerkins.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DAB16B0BF740052E385 /* JackPerkins.jpg */; };
-		AFBC6E7A16B0BF740052E385 /* JamesHanna.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DAC16B0BF740052E385 /* JamesHanna.jpg */; };
-		AFBC6E7B16B0BF740052E385 /* JimJackson.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DAD16B0BF740052E385 /* JimJackson.jpg */; };
 		AFBC6E7D16B0BF740052E385 /* KendallBeck.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DAF16B0BF740052E385 /* KendallBeck.jpg */; };
 		AFBC6E7E16B0BF740052E385 /* KrisWilliams.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DB016B0BF740052E385 /* KrisWilliams.jpg */; };
 		AFBC6E7F16B0BF740052E385 /* MarkSnowden.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DB116B0BF740052E385 /* MarkSnowden.jpg */; };
-		AFBC6E8016B0BF740052E385 /* MaxMeek.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DB216B0BF740052E385 /* MaxMeek.jpg */; };
-		AFBC6E8116B0BF740052E385 /* MikeHagy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DB316B0BF740052E385 /* MikeHagy.jpg */; };
 		AFBC6E8216B0BF740052E385 /* MitchellJohnson.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DB416B0BF740052E385 /* MitchellJohnson.jpg */; };
-		AFBC6E8316B0BF740052E385 /* RandyEthridge.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DB516B0BF740052E385 /* RandyEthridge.jpg */; };
 		AFBC6E8416B0BF740052E385 /* ScottCopeland.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DB616B0BF740052E385 /* ScottCopeland.jpg */; };
-		AFBC6E8516B0BF740052E385 /* TerryMatlock.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DB716B0BF740052E385 /* TerryMatlock.jpg */; };
 		AFBC6E8616B0BF740052E385 /* TimSmith.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DB816B0BF740052E385 /* TimSmith.jpg */; };
 		AFBC6E8716B0BF740052E385 /* TysonLittau.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DB916B0BF740052E385 /* TysonLittau.jpg */; };
-		AFBC6E8816B0BF740052E385 /* WarrenLangford.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DBA16B0BF740052E385 /* WarrenLangford.jpg */; };
 		AFBC6E8916B0BF740052E385 /* WilliamPeters.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DBB16B0BF740052E385 /* WilliamPeters.jpg */; };
 		AFBC6E8A16B0BF740052E385 /* silhouette_head_small.png in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DBC16B0BF740052E385 /* silhouette_head_small.png */; };
 		AFBC6E8B16B0BF740052E385 /* silhouette_head.png in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DBD16B0BF740052E385 /* silhouette_head.png */; };
-		AFBC6E8E16B0BF740052E385 /* BennettJohn.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DC116B0BF740052E385 /* BennettJohn.jpg */; };
-		AFBC6E8F16B0BF740052E385 /* BiggsScott.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DC216B0BF740052E385 /* BiggsScott.jpg */; };
-		AFBC6E9316B0BF740052E385 /* BrumbaughDavid.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DC616B0BF740052E385 /* BrumbaughDavid.jpg */; };
-		AFBC6E9416B0BF740052E385 /* CannadayEd.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DC716B0BF740052E385 /* CannadayEd.jpg */; };
-		AFBC6E9516B0BF740052E385 /* CaseyDennis.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DC816B0BF740052E385 /* CaseyDennis.jpg */; };
-		AFBC6E9716B0BF740052E385 /* ClevelandBobby.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DCA16B0BF740052E385 /* ClevelandBobby.jpg */; };
-		AFBC6E9816B0BF740052E385 /* CockroftJosh.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DCB16B0BF740052E385 /* CockroftJosh.jpg */; };
 		AFBC6EA216B0BF740052E385 /* EcholsJon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DD516B0BF740052E385 /* EcholsJon.jpg */; };
-		AFBC6EA316B0BF740052E385 /* EnnsJohn.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DD616B0BF740052E385 /* EnnsJohn.jpg */; };
-		AFBC6EA616B0BF740052E385 /* FourkillerWilliam.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DD916B0BF740052E385 /* FourkillerWilliam.jpg */; };
-		AFBC6EA916B0BF740052E385 /* HallElise.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DDC16B0BF740052E385 /* HallElise.jpg */; };
-		AFBC6EAB16B0BF740052E385 /* HardinTommy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DDE16B0BF740052E385 /* HardinTommy.jpg */; };
-		AFBC6EAC16B0BF740052E385 /* HenkeKatie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DDF16B0BF740052E385 /* HenkeKatie.jpg */; };
-		AFBC6EAE16B0BF740052E385 /* HoskinChuck.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DE116B0BF740052E385 /* HoskinChuck.jpg */; };
-		AFBC6EB016B0BF740052E385 /* InmanScott.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DE316B0BF740052E385 /* InmanScott.jpg */; };
-		AFBC6EB616B0BF740052E385 /* KirbyDan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DE916B0BF740052E385 /* KirbyDan.jpg */; };
-		AFBC6EB716B0BF740052E385 /* KouplenSteve.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DEA16B0BF740052E385 /* KouplenSteve.jpg */; };
-		AFBC6EB916B0BF740052E385 /* MartinScott.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DEC16B0BF740052E385 /* MartinScott.jpg */; };
 		AFBC6EBC16B0BF740052E385 /* McBrideMark.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DEF16B0BF740052E385 /* McBrideMark.jpg */; };
 		AFBC6EBD16B0BF740052E385 /* McCallCharles.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DF016B0BF740052E385 /* McCallCharles.jpg */; };
-		AFBC6EC116B0BF740052E385 /* McDanielRandy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DF416B0BF740052E385 /* McDanielRandy.jpg */; };
 		AFBC6EC416B0BF740052E385 /* MooreLewis.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DF716B0BF740052E385 /* MooreLewis.jpg */; };
-		AFBC6EC616B0BF740052E385 /* MulreadyGlen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DF916B0BF740052E385 /* MulreadyGlen.jpg */; };
-		AFBC6EC716B0BF740052E385 /* MurpheyJason.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DFA16B0BF740052E385 /* MurpheyJason.jpg */; };
 		AFBC6ECA16B0BF740052E385 /* NollanJadine.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DFD16B0BF740052E385 /* NollanJadine.jpg */; };
-		AFBC6ECB16B0BF740052E385 /* O'DonnellTerry.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DFE16B0BF740052E385 /* O'DonnellTerry.jpg */; };
 		AFBC6ECC16B0BF740052E385 /* OrtegaCharles.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DFF16B0BF740052E385 /* OrtegaCharles.jpg */; };
-		AFBC6ECD16B0BF740052E385 /* OsbornLeslie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6E0016B0BF740052E385 /* OsbornLeslie.jpg */; };
-		AFBC6ECE16B0BF740052E385 /* OwnbeyPat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6E0116B0BF740052E385 /* OwnbeyPat.jpg */; };
 		AFBC6ECF16B0BF740052E385 /* PerrymanDavid.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6E0216B0BF740052E385 /* PerrymanDavid.jpg */; };
-		AFBC6ED216B0BF740052E385 /* ProctorEric.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6E0516B0BF740052E385 /* ProctorEric.jpg */; };
-		AFBC6ED516B0BF740052E385 /* RenegarBrian.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6E0816B0BF740052E385 /* RenegarBrian.jpg */; };
-		AFBC6ED716B0BF740052E385 /* RitzeMike.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6E0A16B0BF740052E385 /* RitzeMike.jpg */; };
 		AFBC6ED816B0BF740052E385 /* RobertsDustin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6E0B16B0BF740052E385 /* RobertsDustin.jpg */; };
 		AFBC6ED916B0BF740052E385 /* RobertsSean.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6E0C16B0BF740052E385 /* RobertsSean.jpg */; };
 		AFBC6EDB16B0BF740052E385 /* RussTodd.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6E0E16B0BF740052E385 /* RussTodd.jpg */; };
 		AFBC6EDC16B0BF740052E385 /* SandersMike.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6E0F16B0BF740052E385 /* SandersMike.jpg */; };
-		AFBC6EDF16B0BF740052E385 /* SearsEarl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6E1216B0BF740052E385 /* SearsEarl.jpg */; };
-		AFBC6EE616B0BF740052E385 /* ThomsenTodd.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6E1916B0BF740052E385 /* ThomsenTodd.jpg */; };
-		AFBC6EE916B0BF740052E385 /* VaughanSteve.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6E1C16B0BF740052E385 /* VaughanSteve.jpg */; };
 		AFBC6EEA16B0BF740052E385 /* VirginEmily.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6E1D16B0BF740052E385 /* VirginEmily.jpg */; };
-		AFBC6EEC16B0BF740052E385 /* WatsonWeldon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6E1F16B0BF740052E385 /* WatsonWeldon.jpg */; };
-		AFBC6EEE16B0BF740052E385 /* WilliamsCory.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6E2116B0BF740052E385 /* WilliamsCory.jpg */; };
 		AFBC6EF016B0BF740052E385 /* WrightHarold.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6E2316B0BF740052E385 /* WrightHarold.jpg */; };
 		AFBC6EF216B0BF740052E385 /* AllenMark.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6E2616B0BF740052E385 /* AllenMark.jpg */; };
-		AFBC6EF616B0BF740052E385 /* BassRandy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6E2A16B0BF740052E385 /* BassRandy.jpg */; };
 		AFBC6EF816B0BF740052E385 /* BoggsLarry.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6E2C16B0BF740052E385 /* BoggsLarry.jpg */; };
-		AFBC6EFA16B0BF740052E385 /* BrecheenJosh.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6E2E16B0BF740052E385 /* BrecheenJosh.jpg */; };
-		AFBC6EFD16B0BF740052E385 /* BrownBill.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6E3116B0BF740052E385 /* BrownBill.jpg */; };
 		AFBC6F0116B0BF740052E385 /* DahmNathan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6E3516B0BF740052E385 /* DahmNathan.jpg */; };
 		AFBC6F0216B0BF740052E385 /* DavidKim.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6E3616B0BF740052E385 /* DavidKim.jpg */; };
-		AFBC6F0416B0BF740052E385 /* FieldsEddie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6E3816B0BF740052E385 /* FieldsEddie.jpg */; };
-		AFBC6F0916B0BF740052E385 /* HoltDavid.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6E3D16B0BF740052E385 /* HoltDavid.jpg */; };
-		AFBC6F0F16B0BF740052E385 /* LovelessKyle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6E4316B0BF740052E385 /* LovelessKyle.jpg */; };
-		AFBC6F1016B0BF740052E385 /* MarlattBryce.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6E4416B0BF740052E385 /* MarlattBryce.jpg */; };
-		AFBC6F1316B0BF740052E385 /* NewberryDan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6E4716B0BF740052E385 /* NewberryDan.jpg */; };
-		AFBC6F1516B0BF740052E385 /* SchulzMike.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6E4916B0BF740052E385 /* SchulzMike.jpg */; };
 		AFBC6F1616B0BF740052E385 /* SharpRon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6E4A16B0BF740052E385 /* SharpRon.jpg */; };
 		AFBC6F1716B0BF740052E385 /* ShawWayne.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6E4B16B0BF740052E385 /* ShawWayne.jpg */; };
-		AFBC6F1816B0BF740052E385 /* ShorteyRalph.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6E4C16B0BF740052E385 /* ShorteyRalph.jpg */; };
 		AFBC6F1A16B0BF740052E385 /* SimpsonFrank.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6E4E16B0BF740052E385 /* SimpsonFrank.jpg */; };
-		AFBC6F1B16B0BF740052E385 /* SparksJohn.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6E4F16B0BF740052E385 /* SparksJohn.jpg */; };
 		AFBC6F1C16B0BF740052E385 /* StandridgeRob.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6E5016B0BF740052E385 /* StandridgeRob.jpg */; };
 		AFBC6F1D16B0BF740052E385 /* StanislawskiGary.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6E5116B0BF740052E385 /* StanislawskiGary.jpg */; };
-		AFBC6F1E16B0BF740052E385 /* SykesAnthony.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6E5216B0BF740052E385 /* SykesAnthony.jpg */; };
 		AFBC6F1F16B0BF740052E385 /* TreatGreg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6E5316B0BF740052E385 /* TreatGreg.jpg */; };
 		AFBC6F2116B0BF740052E385 /* AnthonyBob.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6E5616B0BF740052E385 /* AnthonyBob.jpg */; };
 		AFBC6F2216B0BF740052E385 /* BarresiJanet.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6E5716B0BF740052E385 /* BarresiJanet.jpg */; };
@@ -264,7 +190,6 @@
 		AFC4D5D81630BC8F0023EB2E /* AboutBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC4D5D01630BC8F0023EB2E /* AboutBackground@2x.png */; };
 		AFC4D5D91630BC8F0023EB2E /* AboutBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC4D5D11630BC8F0023EB2E /* AboutBackground.png */; };
 		AFC4D5DC16318B440023EB2E /* AboutBackground-iPhone5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC4D5DA16318B440023EB2E /* AboutBackground-iPhone5@2x.png */; };
-		AFC926A61614408D009538FD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC926A51614408D009538FD /* Default-568h@2x.png */; };
 		AFC926AB161441E3009538FD /* AppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC926A7161441E3009538FD /* AppIcon.png */; };
 		AFC926AC161441E3009538FD /* AppIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC926A8161441E3009538FD /* AppIcon@2x.png */; };
 		AFC926AD161441E3009538FD /* AppIconiPad.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC926A9161441E3009538FD /* AppIconiPad.png */; };
@@ -322,49 +247,120 @@
 		CE18B5591E4F78020067DCC1 /* Icon-App-152x152@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE18B5571E4F78020067DCC1 /* Icon-App-152x152@1x.png */; };
 		CE18B55A1E4F78020067DCC1 /* Icon-App-167x167@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE18B5581E4F78020067DCC1 /* Icon-App-167x167@1x.png */; };
 		CE2DAF8C1E4EACFD002BCD60 /* BlancettMeloyde.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE2DAF891E4EACFD002BCD60 /* BlancettMeloyde.jpg */; };
-		CE2DAF8D1E4EACFD002BCD60 /* ConditDonnie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE2DAF8A1E4EACFD002BCD60 /* ConditDonnie.jpg */; };
 		CE2DAF8E1E4EACFD002BCD60 /* DunningtonJason.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE2DAF8B1E4EACFD002BCD60 /* DunningtonJason.jpg */; };
 		CE2DAF901E4EB2A1002BCD60 /* BergstromMicheal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE2DAF8F1E4EB2A1002BCD60 /* BergstromMicheal.jpg */; };
-		CE2DAF921E4EC6D1002BCD60 /* GriffinAJ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE2DAF911E4EC6D1002BCD60 /* GriffinAJ.jpg */; };
 		CE2DAF961E4EC8A4002BCD60 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2DAF951E4EC8A4002BCD60 /* StoreKit.framework */; };
 		CE2E210E1EE65E2E00646C92 /* LocationDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E210D1EE65E2E00646C92 /* LocationDetailViewController.m */; };
 		CE5986021EE8DB8D007C5C3B /* Buttons in Resources */ = {isa = PBXBuildFile; fileRef = CE5986011EE8DB8D007C5C3B /* Buttons */; };
 		CE64C2C01EDFBC9E00FEF384 /* VoteListView-iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE7014831EDFB81200BE7B25 /* VoteListView-iPhone.xib */; };
 		CE64C2C71EE113C000FEF384 /* CommitteeVoteListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64C2C61EE113C000FEF384 /* CommitteeVoteListViewController.m */; };
 		CE6520B3207910210077A6C4 /* IkleyFreemanAllison.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6520B2207910200077A6C4 /* IkleyFreemanAllison.jpg */; };
+		CE6C63EA21EEE7C300A8044E /* SmithDavid.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C63B821EEE7BE00A8044E /* SmithDavid.jpg */; };
+		CE6C63EB21EEE7C300A8044E /* HasenbeckToni.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C63B921EEE7BE00A8044E /* HasenbeckToni.jpg */; };
+		CE6C63EC21EEE7C300A8044E /* LuttrellKen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C63BA21EEE7BF00A8044E /* LuttrellKen.jpg */; };
+		CE6C63ED21EEE7C300A8044E /* CaldwellTrey.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C63BB21EEE7BF00A8044E /* CaldwellTrey.jpg */; };
+		CE6C63EE21EEE7C300A8044E /* BoatmanJeff.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C63BC21EEE7BF00A8044E /* BoatmanJeff.jpg */; };
+		CE6C63EF21EEE7C300A8044E /* SimsLonnie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C63BD21EEE7BF00A8044E /* SimsLonnie.jpg */; };
+		CE6C63F021EEE7C300A8044E /* HardinDavid.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C63BE21EEE7BF00A8044E /* HardinDavid.jpg */; };
+		CE6C63F121EEE7C300A8044E /* MangerRobert.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C63BF21EEE7BF00A8044E /* MangerRobert.jpg */; };
+		CE6C63F221EEE7C300A8044E /* CrosswhiteHaderDenise.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C63C021EEE7BF00A8044E /* CrosswhiteHaderDenise.jpg */; };
+		CE6C63F321EEE7C300A8044E /* OlsenJim.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C63C121EEE7BF00A8044E /* OlsenJim.jpg */; };
+		CE6C63F421EEE7C300A8044E /* AlbrightKelly.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C63C221EEE7BF00A8044E /* AlbrightKelly.jpg */; };
+		CE6C63F521EEE7C300A8044E /* PaeDaniel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C63C321EEE7BF00A8044E /* PaeDaniel.jpg */; };
+		CE6C63F621EEE7C300A8044E /* ConleySherri.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C63C421EEE7C000A8044E /* ConleySherri.jpg */; };
+		CE6C63F721EEE7C300A8044E /* JohnsRonny.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C63C521EEE7C000A8044E /* JohnsRonny.jpg */; };
+		CE6C63F821EEE7C300A8044E /* MartiTJ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C63C621EEE7C000A8044E /* MartiTJ.jpg */; };
+		CE6C63F921EEE7C300A8044E /* ODonnellTerry.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C63C721EEE7C000A8044E /* ODonnellTerry.jpg */; };
+		CE6C63FA21EEE7C300A8044E /* CornwellRusty.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C63C821EEE7C000A8044E /* CornwellRusty.jpg */; };
+		CE6C63FB21EEE7C300A8044E /* RandlemanRandy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C63C921EEE7C000A8044E /* RandlemanRandy.jpg */; };
+		CE6C63FC21EEE7C300A8044E /* FrixAvery.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C63CA21EEE7C000A8044E /* FrixAvery.jpg */; };
+		CE6C63FD21EEE7C300A8044E /* FincherDerrel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C63CB21EEE7C000A8044E /* FincherDerrel.jpg */; };
+		CE6C63FE21EEE7C300A8044E /* RoeCindy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C63CC21EEE7C000A8044E /* RoeCindy.jpg */; };
+		CE6C63FF21EEE7C300A8044E /* PhillipsLogan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C63CD21EEE7C000A8044E /* PhillipsLogan.jpg */; };
+		CE6C640021EEE7C300A8044E /* PatzkowskyKenton.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C63CE21EEE7C100A8044E /* PatzkowskyKenton.jpg */; };
+		CE6C640121EEE7C300A8044E /* ProvenzanoMelissa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C63CF21EEE7C100A8044E /* ProvenzanoMelissa.jpg */; };
+		CE6C640221EEE7C300A8044E /* MizeGarry.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C63D021EEE7C100A8044E /* MizeGarry.jpg */; };
+		CE6C640321EEE7C300A8044E /* GregoJim.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C63D121EEE7C100A8044E /* GregoJim.jpg */; };
+		CE6C640421EEE7C300A8044E /* HumphreyJJ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C63D221EEE7C100A8044E /* HumphreyJJ.jpg */; };
+		CE6C640521EEE7C300A8044E /* HillBrian.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C63D321EEE7C100A8044E /* HillBrian.jpg */; };
+		CE6C640621EEE7C300A8044E /* StarkMarilyn.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C63D421EEE7C100A8044E /* StarkMarilyn.jpg */; };
+		CE6C640721EEE7C300A8044E /* TownleyTammy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C63D521EEE7C100A8044E /* TownleyTammy.jpg */; };
+		CE6C640821EEE7C300A8044E /* HardinTommy_2018.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C63D621EEE7C100A8044E /* HardinTommy_2018.jpg */; };
+		CE6C640921EEE7C300A8044E /* MayStan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C63D721EEE7C100A8044E /* MayStan.jpg */; };
+		CE6C640A21EEE7C300A8044E /* TalleyJohn.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C63D821EEE7C200A8044E /* TalleyJohn.jpg */; };
+		CE6C640B21EEE7C300A8044E /* BellMerleyn.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C63D921EEE7C200A8044E /* BellMerleyn.jpg */; };
+		CE6C640C21EEE7C300A8044E /* SteagallJay.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C63DA21EEE7C200A8044E /* SteagallJay.jpg */; };
+		CE6C640D21EEE7C300A8044E /* MillerNicole.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C63DB21EEE7C200A8044E /* MillerNicole.jpg */; };
+		CE6C640E21EEE7C300A8044E /* VancurenMark.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C63DC21EEE7C200A8044E /* VancurenMark.jpg */; };
+		CE6C640F21EEE7C300A8044E /* SterlingDanny.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C63DD21EEE7C200A8044E /* SterlingDanny.jpg */; };
+		CE6C641021EEE7C300A8044E /* FugateAndy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C63DE21EEE7C200A8044E /* FugateAndy.jpg */; };
+		CE6C641121EEE7C300A8044E /* DavisDean.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C63DF21EEE7C200A8044E /* DavisDean.jpg */; };
+		CE6C641221EEE7C300A8044E /* KigerLundy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C63E021EEE7C200A8044E /* KigerLundy.jpg */; };
+		CE6C641321EEE7C300A8044E /* DillsSheila.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C63E121EEE7C200A8044E /* DillsSheila.jpg */; };
+		CE6C641421EEE7C300A8044E /* BranhamChelsey.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C63E221EEE7C300A8044E /* BranhamChelsey.jpg */; };
+		CE6C641521EEE7C300A8044E /* PittmanAjay.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C63E321EEE7C300A8044E /* PittmanAjay.jpg */; };
+		CE6C641621EEE7C300A8044E /* StromJudd.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C63E421EEE7C300A8044E /* StromJudd.jpg */; };
+		CE6C641721EEE7C300A8044E /* SneedChris.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C63E521EEE7C300A8044E /* SneedChris.jpg */; };
+		CE6C641821EEE7C300A8044E /* RansonTrish.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C63E621EEE7C300A8044E /* RansonTrish.jpg */; };
+		CE6C641921EEE7C300A8044E /* BurnsTy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C63E721EEE7C300A8044E /* BurnsTy.jpg */; };
+		CE6C641A21EEE7C300A8044E /* BrewerDenise.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C63E821EEE7C300A8044E /* BrewerDenise.jpg */; };
+		CE6C641B21EEE7C300A8044E /* WaldronJohn.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C63E921EEE7C300A8044E /* WaldronJohn.jpg */; };
+		CE6C643421F025E800A8044E /* OsbornLeslie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C642C21F025E700A8044E /* OsbornLeslie.jpg */; };
+		CE6C643521F025E800A8044E /* PinnellMatt.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C642D21F025E800A8044E /* PinnellMatt.jpg */; };
+		CE6C643621F025E800A8044E /* ByrdCindy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C642E21F025E800A8044E /* ByrdCindy.jpg */; };
+		CE6C643721F025E800A8044E /* McDanielRandy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C642F21F025E800A8044E /* McDanielRandy.jpg */; };
+		CE6C643821F025E800A8044E /* HernKevin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C643021F025E800A8044E /* HernKevin.jpg */; };
+		CE6C643921F025E800A8044E /* HornKendra.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C643121F025E800A8044E /* HornKendra.jpg */; };
+		CE6C643A21F025E800A8044E /* StittKevin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C643221F025E800A8044E /* StittKevin.jpg */; };
+		CE6C643B21F025E800A8044E /* MulreadyGlen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C643321F025E800A8044E /* MulreadyGlen.jpg */; };
+		CE6C643D21F0261F00A8044E /* DarbyRichard.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C643C21F0261F00A8044E /* DarbyRichard.jpg */; };
+		CE6C644E21F0383500A8044E /* MurdockCasey.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C643E21F0383300A8044E /* MurdockCasey.jpg */; };
+		CE6C644F21F0383500A8044E /* BullardDavid.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C643F21F0383300A8044E /* BullardDavid.jpg */; };
+		CE6C645021F0383500A8044E /* BorenMary.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C644021F0383400A8044E /* BorenMary.jpg */; };
+		CE6C645121F0383500A8044E /* WeaverDarrell.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C644121F0383400A8044E /* WeaverDarrell.jpg */; };
+		CE6C645221F0383500A8044E /* DossettJJ_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C644221F0383400A8044E /* DossettJJ_2.jpg */; };
+		CE6C645321F0383500A8044E /* HowardBrent.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C644321F0383400A8044E /* HowardBrent.jpg */; };
+		CE6C645421F0383500A8044E /* ColemanBill.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C644421F0383400A8044E /* ColemanBill.jpg */; };
+		CE6C645521F0383500A8044E /* StanleyBrenda.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C644521F0383400A8044E /* StanleyBrenda.jpg */; };
+		CE6C645621F0383500A8044E /* HasteJohn.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C644621F0383400A8044E /* HasteJohn.jpg */; };
+		CE6C645721F0383500A8044E /* HicksCarri.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C644721F0383400A8044E /* HicksCarri.jpg */; };
+		CE6C645821F0383500A8044E /* YoungGeorge.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C644821F0383400A8044E /* YoungGeorge.jpg */; };
+		CE6C645921F0383500A8044E /* MontgomeryJohn.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C644921F0383400A8044E /* MontgomeryJohn.jpg */; };
+		CE6C645B21F0383500A8044E /* HallChuck.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C644B21F0383500A8044E /* HallChuck.jpg */; };
+		CE6C645C21F0383500A8044E /* KirtJulia.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C644C21F0383500A8044E /* KirtJulia.jpg */; };
+		CE6C646421F0399700A8044E /* AaronPaxton.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C645E21F0399600A8044E /* AaronPaxton.jpg */; };
+		CE6C646521F0399700A8044E /* JamesFox.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C645F21F0399600A8044E /* JamesFox.jpg */; };
+		CE6C646621F0399700A8044E /* JimReese.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C646021F0399600A8044E /* JimReese.jpg */; };
+		CE6C646721F0399700A8044E /* RickDavis.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C646121F0399600A8044E /* RickDavis.jpg */; };
+		CE6C646821F0399700A8044E /* DanielWebster.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C646221F0399600A8044E /* DanielWebster.jpg */; };
+		CE6C646921F0399700A8044E /* HunterRobinson.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C646321F0399700A8044E /* HunterRobinson.jpg */; };
+		CE6C646F21F172B200A8044E /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE6C646E21F172B200A8044E /* Media.xcassets */; };
+		CE6C647121F17D6300A8044E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE6C647021F17D6300A8044E /* Default-568h@2x.png */; };
+		CE6C654421F1911700A8044E /* PfeifferJohn.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C654321F1911700A8044E /* PfeifferJohn.jpg */; };
 		CE70CCC41FE0F39C001801AC /* TaylorZack.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE70CCC31FE0F39C001801AC /* TaylorZack.jpg */; };
 		CE70CCC61FE0F3B5001801AC /* GoetzGreg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE70CCC51FE0F3B5001801AC /* GoetzGreg.jpg */; };
 		CE70CCC81FE0F641001801AC /* DuncanKooney.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE70CCC71FE0F641001801AC /* DuncanKooney.jpg */; };
 		CE70CCCA1FE0F9F6001801AC /* SimmonsKen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE70CCC91FE0F9F6001801AC /* SimmonsKen.jpg */; };
-		CE7C6D0C1E385F4C00874B14 /* BabinecGreg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6CE61E385F4C00874B14 /* BabinecGreg.jpg */; };
 		CE7C6D0D1E385F4C00874B14 /* BakerRhonda.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6CE71E385F4C00874B14 /* BakerRhonda.jpg */; };
 		CE7C6D0E1E385F4C00874B14 /* BennettForrest.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6CE81E385F4C00874B14 /* BennettForrest.jpg */; };
 		CE7C6D111E385F4C00874B14 /* BushCarol.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6CEB1E385F4C00874B14 /* BushCarol.jpg */; };
-		CE7C6D131E385F4C00874B14 /* DerbyDale.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6CED1E385F4C00874B14 /* DerbyDale.jpg */; };
 		CE7C6D141E385F4C00874B14 /* DollensMickey.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6CEE1E385F4C00874B14 /* DollensMickey.jpg */; };
-		CE7C6D151E385F4C00874B14 /* DowningTim.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6CEF1E385F4C00874B14 /* DowningTim.jpg */; };
 		CE7C6D171E385F4C00874B14 /* FetgatterScott.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6CF11E385F4C00874B14 /* FetgatterScott.jpg */; };
-		CE7C6D181E385F4C00874B14 /* FordRoger.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6CF21E385F4C00874B14 /* FordRoger.jpg */; };
 		CE7C6D1A1E385F4C00874B14 /* GannTom.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6CF41E385F4C00874B14 /* GannTom.jpg */; };
 		CE7C6D1B1E385F4C00874B14 /* HilbertKyle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6CF51E385F4C00874B14 /* HilbertKyle.jpg */; };
-		CE7C6D1D1E385F4C00874B14 /* JordanJP.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6CF71E385F4C00874B14 /* JordanJP.jpg */; };
 		CE7C6D1E1E385F4C00874B14 /* KerbsDell.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6CF81E385F4C00874B14 /* KerbsDell.jpg */; };
 		CE7C6D1F1E385F4C00874B14 /* LawsonMark.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6CF91E385F4C00874B14 /* LawsonMark.jpg */; };
 		CE7C6D211E385F4C00874B14 /* LoweJason.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6CFB1E385F4C00874B14 /* LoweJason.jpg */; };
 		CE7C6D221E385F4C00874B14 /* MartinezRyan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6CFC1E385F4C00874B14 /* MartinezRyan.jpg */; };
 		CE7C6D231E385F4C00874B14 /* McDugleKevin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6CFD1E385F4C00874B14 /* McDugleKevin.jpg */; };
-		CE7C6D241E385F4C00874B14 /* McEachinScott.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6CFE1E385F4C00874B14 /* McEachinScott.jpg */; };
 		CE7C6D251E385F4C00874B14 /* McEntireMarcus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6CFF1E385F4C00874B14 /* McEntireMarcus.jpg */; };
 		CE7C6D261E385F4C00874B14 /* MeredithMatt.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6D001E385F4C00874B14 /* MeredithMatt.jpg */; };
-		CE7C6D271E385F4C00874B14 /* MontgomeryJohn.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6D011E385F4C00874B14 /* MontgomeryJohn.jpg */; };
 		CE7C6D281E385F4C00874B14 /* NewtonCarl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6D021E385F4C00874B14 /* NewtonCarl.jpg */; };
 		CE7C6D291E385F4C00874B14 /* NicholsMonroe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6D031E385F4C00874B14 /* NicholsMonroe.jpg */; };
 		CE7C6D2A1E385F4C00874B14 /* OsburnMike.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6D041E385F4C00874B14 /* OsburnMike.jpg */; };
-		CE7C6D2B1E385F4C00874B14 /* TeagueTess.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6D051E385F4C00874B14 /* TeagueTess.jpg */; };
 		CE7C6D2C1E385F4C00874B14 /* WalkeCollin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6D061E385F4C00874B14 /* WalkeCollin.jpg */; };
 		CE7C6D2D1E385F4C00874B14 /* WestJosh.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6D071E385F4C00874B14 /* WestJosh.jpg */; };
 		CE7C6D2E1E385F4C00874B14 /* WestKevin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6D081E385F4C00874B14 /* WestKevin.jpg */; };
-		CE7C6D2F1E385F4C00874B14 /* WestRick.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6D091E385F4C00874B14 /* WestRick.jpg */; };
 		CE7C6D301E385F4C00874B14 /* WestTammy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6D0A1E385F4C00874B14 /* WestTammy.jpg */; };
 		CE7C6D311E385F4C00874B14 /* WorthenRande.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6D0B1E385F4C00874B14 /* WorthenRande.jpg */; };
 		CE7C6D451E385F7600874B14 /* DanielsJulie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6D331E385F7600874B14 /* DanielsJulie.jpg */; };
@@ -382,23 +378,18 @@
 		CE7C6D541E385F7600874B14 /* RaderDave.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6D421E385F7600874B14 /* RaderDave.jpg */; };
 		CE7C6D551E385F7600874B14 /* ScottPaul.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6D431E385F7600874B14 /* ScottPaul.jpg */; };
 		CE7C6D5B1E3872CD00874B14 /* FloydKay.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6D5A1E3872CD00874B14 /* FloydKay.jpg */; };
-		CE7C6D5D1E38734100874B14 /* FrixAveryCarl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6D5C1E38734100874B14 /* FrixAveryCarl.jpg */; };
-		CE7C6D5F1E3873E600874B14 /* HumphreyJustin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6D5E1E3873E600874B14 /* HumphreyJustin.jpg */; };
 		CE7C6D661E39B41F00874B14 /* BrettOrme.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6D601E39B41F00874B14 /* BrettOrme.jpg */; };
 		CE7C6D671E39B41F00874B14 /* JenniferMeason.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6D611E39B41F00874B14 /* JenniferMeason.jpg */; };
-		CE7C6D681E39B41F00874B14 /* KenGates.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6D621E39B41F00874B14 /* KenGates.jpg */; };
 		CE7C6D691E39B41F00874B14 /* KevinWood.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6D631E39B41F00874B14 /* KevinWood.jpg */; };
 		CE7C6D6A1E39B41F00874B14 /* PatrickGrace.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6D641E39B41F00874B14 /* PatrickGrace.jpg */; };
 		CE7C6D6B1E39B41F00874B14 /* ZacPerkins.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6D651E39B41F00874B14 /* ZacPerkins.jpg */; };
 		CE8BBB8B1EDE3B3400CF5448 /* RollCallListDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8BBB891EDE3B3400CF5448 /* RollCallListDelegate.m */; };
-		CE927F4C1F87346600015327 /* GaddisKaren.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE927F4B1F87346500015327 /* GaddisKaren.jpg */; };
 		CE927F4E1F8738CE00015327 /* RosecrantsJacob.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE927F4D1F8738CE00015327 /* RosecrantsJacob.jpg */; };
 		CE927F501F87402E00015327 /* BrooksMichael.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE927F4F1F87402E00015327 /* BrooksMichael.jpg */; };
 		CE9CAE871EB80D0000C20CAF /* VoteTallIcon-09.png in Resources */ = {isa = PBXBuildFile; fileRef = CE9CAE861EB80D0000C20CAF /* VoteTallIcon-09.png */; };
 		CE9CAE891EB8AB9100C20CAF /* VotingListCell-iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE9CAE881EB8AB9100C20CAF /* VotingListCell-iPhone.xib */; };
 		CE9CAE8C1EBAD31000C20CAF /* VoteCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9CAE8B1EBAD31000C20CAF /* VoteCheckViewController.m */; };
 		CE9CAE8F1EBC08FD00C20CAF /* MyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9CAE8E1EBC08FD00C20CAF /* MyButton.m */; };
-		CEA749651C572771007271E5 /* DossettJJ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEA749641C572771007271E5 /* DossettJJ.jpg */; };
 		CEA7EC541E61CD58008031BF /* MarkWSchwirtz.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEA7EC531E61CD58008031BF /* MarkWSchwirtz.jpg */; };
 		CEA7EC561E61CD6E008031BF /* WyrickPatrick.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEA7EC551E61CD6E008031BF /* WyrickPatrick.jpg */; };
 		CEA9B5321ECA9E7300035FF6 /* SenateCommittees__VoteTallyIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA9B52D1ECA9E7300035FF6 /* SenateCommittees__VoteTallyIcon.png */; };
@@ -418,7 +409,6 @@
 		CEB3DA6C1C2F9AE90003A4B9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB3DA681C2F9AE90003A4B9 /* SystemConfiguration.framework */; };
 		CEB7D56C1BC9A54100AD5CD2 /* MunsonCyndi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEB7D56B1BC9A54100AD5CD2 /* MunsonCyndi.jpg */; };
 		CEB7D56E1BC9A55000AD5CD2 /* GoodwinRegina.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEB7D56D1BC9A55000AD5CD2 /* GoodwinRegina.jpg */; };
-		CEB7D5701BC9A57200AD5CD2 /* JonMiles.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEB7D56F1BC9A57200AD5CD2 /* JonMiles.jpg */; };
 		CEC68CA31EDD29AF00193036 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC68CA21EDD29AF00193036 /* Realm.framework */; };
 		CEC68CA41EDD2B8000193036 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEC68CA21EDD29AF00193036 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CEC865411EBDF7BC00363665 /* BlankYeaSlice.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC865401EBDF7BC00363665 /* BlankYeaSlice.png */; };
@@ -429,7 +419,6 @@
 		CEC8656C1EC571E700363665 /* voteButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC8656B1EC571E700363665 /* voteButton.m */; };
 		CEDABEEE1FF495B8000C7408 /* HunterMike.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEDABEED1FF495B7000C7408 /* HunterMike.jpg */; };
 		CEDABEF01FF495C1000C7408 /* FordRoss.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEDABEEF1FF495C0000C7408 /* FordRoss.jpg */; };
-		CEDABEF61FF4A6AB000C7408 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEDABEF51FF4A6AB000C7408 /* Images.xcassets */; };
 		CEDEF0D01C002ACF0024A43F /* judicialIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDEF0CF1C002ACF0024A43F /* judicialIcon@2x.png */; };
 		CEDEF0D21C0031230024A43F /* McLawhornHoustonMelissa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEDEF0D11C0031230024A43F /* McLawhornHoustonMelissa.jpg */; };
 		CEDEF0DC1C0034BF0024A43F /* ColbertTom.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEDEF0D31C0034BF0024A43F /* ColbertTom.jpg */; };
@@ -438,7 +427,6 @@
 		CEDEF0DF1C0034BF0024A43F /* GurichNoma.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEDEF0D61C0034BF0024A43F /* GurichNoma.jpg */; };
 		CEDEF0E01C0034BF0024A43F /* KaugerYvonne.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEDEF0D71C0034BF0024A43F /* KaugerYvonne.jpg */; };
 		CEDEF0E11C0034BF0024A43F /* ReifJohn.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEDEF0D81C0034BF0024A43F /* ReifJohn.jpg */; };
-		CEDEF0E31C0034BF0024A43F /* WattJoseph.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEDEF0DA1C0034BF0024A43F /* WattJoseph.jpg */; };
 		CEDEF0E41C0034BF0024A43F /* WinchesterJames.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEDEF0DB1C0034BF0024A43F /* WinchesterJames.jpg */; };
 		CEE7CE451EE25AC900199948 /* SetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE7CE441EE25AC900199948 /* SetupViewController.m */; };
 		CEE7CE481EE25CE200199948 /* GetLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE7CE471EE25CE200199948 /* GetLocationViewController.m */; };
@@ -494,7 +482,7 @@
 		AF15543215EB5E6700AA7794 /* PersonViewAddressLACell-iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "PersonViewAddressLACell-iPhone.xib"; sourceTree = "<group>"; };
 		AF15543515EB5FE400AA7794 /* AddressLAViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressLAViewCell.h; sourceTree = "<group>"; };
 		AF15543615EB5FE400AA7794 /* AddressLAViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressLAViewCell.m; sourceTree = "<group>"; };
-		AF24819F15BB6A250070924E /* ok56leg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ok56leg.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF24819F15BB6A250070924E /* ok57leg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ok57leg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF2481A315BB6A260070924E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AF2481A515BB6A260070924E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AF2481A715BB6A260070924E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -573,31 +561,18 @@
 		AF71B99E15CC62ED00D0D43B /* CommitteeViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommitteeViewCell.h; sourceTree = "<group>"; };
 		AF71B99F15CC62EE00D0D43B /* CommitteeViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommitteeViewCell.m; sourceTree = "<group>"; };
 		AF82A23C1A7789B600A91552 /* CaldwellChad.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CaldwellChad.jpg; sourceTree = "<group>"; };
-		AF82A23D1A7789B600A91552 /* CalveyKevin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CalveyKevin.jpg; sourceTree = "<group>"; };
-		AF82A23E1A7789B600A91552 /* CoodyJeff.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CoodyJeff.jpg; sourceTree = "<group>"; };
-		AF82A23F1A7789B600A91552 /* DunlapTravis.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DunlapTravis.jpg; sourceTree = "<group>"; };
-		AF82A2411A7789B600A91552 /* FaughtGeorge.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FaughtGeorge.jpg; sourceTree = "<group>"; };
-		AF82A2431A7789B600A91552 /* GriffithClaudia.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GriffithClaudia.jpg; sourceTree = "<group>"; };
 		AF82A2451A7789B600A91552 /* KannadyChris.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = KannadyChris.jpg; sourceTree = "<group>"; };
 		AF82A2471A7789B600A91552 /* LepakMark.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LepakMark.jpg; sourceTree = "<group>"; };
 		AF82A2481A7789B600A91552 /* LoringBen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LoringBen.jpg; sourceTree = "<group>"; };
 		AF82A24A1A7789B600A91552 /* MurdockCasey.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MurdockCasey.jpg; sourceTree = "<group>"; };
-		AF82A24B1A7789B600A91552 /* ParkScooter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ParkScooter.jpg; sourceTree = "<group>"; };
-		AF82A24C1A7789B600A91552 /* PfeifferJohn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PfeifferJohn.jpg; sourceTree = "<group>"; };
-		AF82A24D1A7789B600A91552 /* RogersMichael.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RogersMichael.jpg; sourceTree = "<group>"; };
 		AF82A24E1A7789B600A91552 /* StoneShane.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = StoneShane.jpg; sourceTree = "<group>"; };
-		AF82A24F1A7789B600A91552 /* StrohmChuck.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = StrohmChuck.jpg; sourceTree = "<group>"; };
 		AF82A2501A7789B600A91552 /* TadlockJohnny.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = TadlockJohnny.jpg; sourceTree = "<group>"; };
 		AF82A2511A7789B600A91552 /* WallaceKevin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WallaceKevin.jpg; sourceTree = "<group>"; };
-		AF82A2521A7789B600A91552 /* YoungGeorge.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = YoungGeorge.jpg; sourceTree = "<group>"; };
 		AF82A26A1A7789C500A91552 /* BiceStephanie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BiceStephanie.jpg; sourceTree = "<group>"; };
-		AF82A26C1A7789C500A91552 /* FryJack.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FryJack.jpg; sourceTree = "<group>"; };
 		AF82A26D1A7789C500A91552 /* JechDarcy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = JechDarcy.jpg; sourceTree = "<group>"; };
-		AF82A26E1A7789C500A91552 /* PittmanAnastasia.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PittmanAnastasia.jpg; sourceTree = "<group>"; };
 		AF82A2701A7789C500A91552 /* SilkJoseph.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SilkJoseph.jpg; sourceTree = "<group>"; };
 		AF82A2711A7789C500A91552 /* SmalleyJason.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SmalleyJason.jpg; sourceTree = "<group>"; };
 		AF82A2721A7789C500A91552 /* ThompsonRoger.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ThompsonRoger.jpg; sourceTree = "<group>"; };
-		AF82A2731A7789C500A91552 /* YenErvin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = YenErvin.jpg; sourceTree = "<group>"; };
 		AF82A27E1A7789D100A91552 /* HiettTodd.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HiettTodd.jpg; sourceTree = "<group>"; };
 		AF82A27F1A7789D100A91552 /* HofmeisterJoy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HofmeisterJoy.jpg; sourceTree = "<group>"; };
 		AF82A2801A7789D100A91552 /* RussellSteve.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RussellSteve.jpg; sourceTree = "<group>"; };
@@ -614,112 +589,52 @@
 		AF9B4A8D15DEA8E60071CB88 /* Arrow_Right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Arrow_Right@2x.png"; sourceTree = "<group>"; };
 		AFB87A5F15C3360700DA8067 /* NSDictionary+People.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+People.h"; sourceTree = "<group>"; };
 		AFB87A6015C3360700DA8067 /* NSDictionary+People.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+People.m"; sourceTree = "<group>"; };
-		AFBC6D9016B0BF740052E385 /* BridenstineJim.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BridenstineJim.jpg; sourceTree = "<group>"; };
 		AFBC6D9116B0BF740052E385 /* Frank_Lucas.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Frank_Lucas.jpg; sourceTree = "<group>"; };
 		AFBC6D9216B0BF740052E385 /* James_Lankford.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = James_Lankford.jpg; sourceTree = "<group>"; };
 		AFBC6D9316B0BF740052E385 /* MullinMarkwayne.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MullinMarkwayne.jpg; sourceTree = "<group>"; };
 		AFBC6D9416B0BF740052E385 /* Tom_Cole.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Tom_Cole.jpg; sourceTree = "<group>"; };
 		AFBC6D9616B0BF740052E385 /* Jim_Inhofe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Jim_Inhofe.jpg; sourceTree = "<group>"; };
-		AFBC6D9716B0BF740052E385 /* Tom_Coburn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Tom_Coburn.jpg; sourceTree = "<group>"; };
 		AFBC6D9916B0BF740052E385 /* HowethStacy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HowethStacy.jpg; sourceTree = "<group>"; };
 		AFBC6D9A16B0BF740052E385 /* MeyersChris.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MeyersChris.jpg; sourceTree = "<group>"; };
-		AFBC6D9B16B0BF740052E385 /* SparksKenny.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SparksKenny.jpg; sourceTree = "<group>"; };
 		AFBC6D9D16B0BF740052E385 /* AliceHouston.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AliceHouston.jpg; sourceTree = "<group>"; };
-		AFBC6D9E16B0BF740052E385 /* AnthonyDue.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AnthonyDue.jpg; sourceTree = "<group>"; };
 		AFBC6DA016B0BF740052E385 /* BrentHartin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BrentHartin.jpg; sourceTree = "<group>"; };
-		AFBC6DA116B0BF740052E385 /* CharlesPaxton.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CharlesPaxton.jpg; sourceTree = "<group>"; };
 		AFBC6DA216B0BF740052E385 /* ChrisCariker.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ChrisCariker.jpg; sourceTree = "<group>"; };
 		AFBC6DA316B0BF740052E385 /* ColinWhitley.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ColinWhitley.jpg; sourceTree = "<group>"; };
 		AFBC6DA416B0BF740052E385 /* DaleNye.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DaleNye.jpg; sourceTree = "<group>"; };
-		AFBC6DA516B0BF740052E385 /* DavidSwank.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DavidSwank.jpg; sourceTree = "<group>"; };
-		AFBC6DA616B0BF740052E385 /* DennisKrueger.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DennisKrueger.jpg; sourceTree = "<group>"; };
 		AFBC6DA716B0BF740052E385 /* GaryRoulet.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GaryRoulet.jpg; sourceTree = "<group>"; };
-		AFBC6DA816B0BF740052E385 /* GeorgeHand.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GeorgeHand.jpg; sourceTree = "<group>"; };
 		AFBC6DA916B0BF740052E385 /* HamidVahdatipour.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HamidVahdatipour.jpg; sourceTree = "<group>"; };
-		AFBC6DAA16B0BF740052E385 /* JackClinkscale.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = JackClinkscale.jpg; sourceTree = "<group>"; };
-		AFBC6DAB16B0BF740052E385 /* JackPerkins.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = JackPerkins.jpg; sourceTree = "<group>"; };
-		AFBC6DAC16B0BF740052E385 /* JamesHanna.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = JamesHanna.jpg; sourceTree = "<group>"; };
-		AFBC6DAD16B0BF740052E385 /* JimJackson.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = JimJackson.jpg; sourceTree = "<group>"; };
 		AFBC6DAF16B0BF740052E385 /* KendallBeck.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = KendallBeck.jpg; sourceTree = "<group>"; };
 		AFBC6DB016B0BF740052E385 /* KrisWilliams.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = KrisWilliams.jpg; sourceTree = "<group>"; };
 		AFBC6DB116B0BF740052E385 /* MarkSnowden.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MarkSnowden.jpg; sourceTree = "<group>"; };
-		AFBC6DB216B0BF740052E385 /* MaxMeek.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MaxMeek.jpg; sourceTree = "<group>"; };
-		AFBC6DB316B0BF740052E385 /* MikeHagy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MikeHagy.jpg; sourceTree = "<group>"; };
 		AFBC6DB416B0BF740052E385 /* MitchellJohnson.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MitchellJohnson.jpg; sourceTree = "<group>"; };
-		AFBC6DB516B0BF740052E385 /* RandyEthridge.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RandyEthridge.jpg; sourceTree = "<group>"; };
 		AFBC6DB616B0BF740052E385 /* ScottCopeland.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ScottCopeland.jpg; sourceTree = "<group>"; };
-		AFBC6DB716B0BF740052E385 /* TerryMatlock.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = TerryMatlock.jpg; sourceTree = "<group>"; };
 		AFBC6DB816B0BF740052E385 /* TimSmith.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = TimSmith.jpg; sourceTree = "<group>"; };
 		AFBC6DB916B0BF740052E385 /* TysonLittau.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = TysonLittau.jpg; sourceTree = "<group>"; };
-		AFBC6DBA16B0BF740052E385 /* WarrenLangford.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WarrenLangford.jpg; sourceTree = "<group>"; };
 		AFBC6DBB16B0BF740052E385 /* WilliamPeters.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WilliamPeters.jpg; sourceTree = "<group>"; };
 		AFBC6DBC16B0BF740052E385 /* silhouette_head_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = silhouette_head_small.png; sourceTree = "<group>"; };
 		AFBC6DBD16B0BF740052E385 /* silhouette_head.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = silhouette_head.png; sourceTree = "<group>"; };
-		AFBC6DC116B0BF740052E385 /* BennettJohn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BennettJohn.jpg; sourceTree = "<group>"; };
-		AFBC6DC216B0BF740052E385 /* BiggsScott.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BiggsScott.jpg; sourceTree = "<group>"; };
-		AFBC6DC616B0BF740052E385 /* BrumbaughDavid.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BrumbaughDavid.jpg; sourceTree = "<group>"; };
-		AFBC6DC716B0BF740052E385 /* CannadayEd.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CannadayEd.jpg; sourceTree = "<group>"; };
-		AFBC6DC816B0BF740052E385 /* CaseyDennis.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CaseyDennis.jpg; sourceTree = "<group>"; };
-		AFBC6DCA16B0BF740052E385 /* ClevelandBobby.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ClevelandBobby.jpg; sourceTree = "<group>"; };
-		AFBC6DCB16B0BF740052E385 /* CockroftJosh.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CockroftJosh.jpg; sourceTree = "<group>"; };
 		AFBC6DD516B0BF740052E385 /* EcholsJon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = EcholsJon.jpg; sourceTree = "<group>"; };
-		AFBC6DD616B0BF740052E385 /* EnnsJohn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = EnnsJohn.jpg; sourceTree = "<group>"; };
-		AFBC6DD916B0BF740052E385 /* FourkillerWilliam.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FourkillerWilliam.jpg; sourceTree = "<group>"; };
-		AFBC6DDC16B0BF740052E385 /* HallElise.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HallElise.jpg; sourceTree = "<group>"; };
-		AFBC6DDE16B0BF740052E385 /* HardinTommy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HardinTommy.jpg; sourceTree = "<group>"; };
-		AFBC6DDF16B0BF740052E385 /* HenkeKatie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HenkeKatie.jpg; sourceTree = "<group>"; };
-		AFBC6DE116B0BF740052E385 /* HoskinChuck.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HoskinChuck.jpg; sourceTree = "<group>"; };
-		AFBC6DE316B0BF740052E385 /* InmanScott.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = InmanScott.jpg; sourceTree = "<group>"; };
-		AFBC6DE916B0BF740052E385 /* KirbyDan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = KirbyDan.jpg; sourceTree = "<group>"; };
-		AFBC6DEA16B0BF740052E385 /* KouplenSteve.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = KouplenSteve.jpg; sourceTree = "<group>"; };
-		AFBC6DEC16B0BF740052E385 /* MartinScott.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MartinScott.jpg; sourceTree = "<group>"; };
 		AFBC6DEF16B0BF740052E385 /* McBrideMark.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = McBrideMark.jpg; sourceTree = "<group>"; };
 		AFBC6DF016B0BF740052E385 /* McCallCharles.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = McCallCharles.jpg; sourceTree = "<group>"; };
-		AFBC6DF416B0BF740052E385 /* McDanielRandy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = McDanielRandy.jpg; sourceTree = "<group>"; };
 		AFBC6DF716B0BF740052E385 /* MooreLewis.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MooreLewis.jpg; sourceTree = "<group>"; };
-		AFBC6DF916B0BF740052E385 /* MulreadyGlen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MulreadyGlen.jpg; sourceTree = "<group>"; };
-		AFBC6DFA16B0BF740052E385 /* MurpheyJason.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MurpheyJason.jpg; sourceTree = "<group>"; };
 		AFBC6DFD16B0BF740052E385 /* NollanJadine.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = NollanJadine.jpg; sourceTree = "<group>"; };
-		AFBC6DFE16B0BF740052E385 /* O'DonnellTerry.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "O'DonnellTerry.jpg"; sourceTree = "<group>"; };
 		AFBC6DFF16B0BF740052E385 /* OrtegaCharles.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = OrtegaCharles.jpg; sourceTree = "<group>"; };
-		AFBC6E0016B0BF740052E385 /* OsbornLeslie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = OsbornLeslie.jpg; sourceTree = "<group>"; };
-		AFBC6E0116B0BF740052E385 /* OwnbeyPat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = OwnbeyPat.jpg; sourceTree = "<group>"; };
 		AFBC6E0216B0BF740052E385 /* PerrymanDavid.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PerrymanDavid.jpg; sourceTree = "<group>"; };
-		AFBC6E0516B0BF740052E385 /* ProctorEric.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ProctorEric.jpg; sourceTree = "<group>"; };
-		AFBC6E0816B0BF740052E385 /* RenegarBrian.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RenegarBrian.jpg; sourceTree = "<group>"; };
-		AFBC6E0A16B0BF740052E385 /* RitzeMike.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RitzeMike.jpg; sourceTree = "<group>"; };
 		AFBC6E0B16B0BF740052E385 /* RobertsDustin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RobertsDustin.jpg; sourceTree = "<group>"; };
 		AFBC6E0C16B0BF740052E385 /* RobertsSean.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RobertsSean.jpg; sourceTree = "<group>"; };
 		AFBC6E0E16B0BF740052E385 /* RussTodd.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RussTodd.jpg; sourceTree = "<group>"; };
 		AFBC6E0F16B0BF740052E385 /* SandersMike.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SandersMike.jpg; sourceTree = "<group>"; };
-		AFBC6E1216B0BF740052E385 /* SearsEarl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SearsEarl.jpg; sourceTree = "<group>"; };
-		AFBC6E1916B0BF740052E385 /* ThomsenTodd.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ThomsenTodd.jpg; sourceTree = "<group>"; };
-		AFBC6E1C16B0BF740052E385 /* VaughanSteve.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = VaughanSteve.jpg; sourceTree = "<group>"; };
 		AFBC6E1D16B0BF740052E385 /* VirginEmily.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = VirginEmily.jpg; sourceTree = "<group>"; };
-		AFBC6E1F16B0BF740052E385 /* WatsonWeldon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WatsonWeldon.jpg; sourceTree = "<group>"; };
-		AFBC6E2116B0BF740052E385 /* WilliamsCory.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WilliamsCory.jpg; sourceTree = "<group>"; };
 		AFBC6E2316B0BF740052E385 /* WrightHarold.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WrightHarold.jpg; sourceTree = "<group>"; };
 		AFBC6E2616B0BF740052E385 /* AllenMark.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AllenMark.jpg; sourceTree = "<group>"; };
-		AFBC6E2A16B0BF740052E385 /* BassRandy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BassRandy.jpg; sourceTree = "<group>"; };
 		AFBC6E2C16B0BF740052E385 /* BoggsLarry.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BoggsLarry.jpg; sourceTree = "<group>"; };
-		AFBC6E2E16B0BF740052E385 /* BrecheenJosh.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BrecheenJosh.jpg; sourceTree = "<group>"; };
-		AFBC6E3116B0BF740052E385 /* BrownBill.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BrownBill.jpg; sourceTree = "<group>"; };
 		AFBC6E3516B0BF740052E385 /* DahmNathan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DahmNathan.jpg; sourceTree = "<group>"; };
 		AFBC6E3616B0BF740052E385 /* DavidKim.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DavidKim.jpg; sourceTree = "<group>"; };
-		AFBC6E3816B0BF740052E385 /* FieldsEddie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FieldsEddie.jpg; sourceTree = "<group>"; };
-		AFBC6E3D16B0BF740052E385 /* HoltDavid.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HoltDavid.jpg; sourceTree = "<group>"; };
-		AFBC6E4316B0BF740052E385 /* LovelessKyle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LovelessKyle.jpg; sourceTree = "<group>"; };
-		AFBC6E4416B0BF740052E385 /* MarlattBryce.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MarlattBryce.jpg; sourceTree = "<group>"; };
-		AFBC6E4716B0BF740052E385 /* NewberryDan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = NewberryDan.jpg; sourceTree = "<group>"; };
-		AFBC6E4916B0BF740052E385 /* SchulzMike.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SchulzMike.jpg; sourceTree = "<group>"; };
 		AFBC6E4A16B0BF740052E385 /* SharpRon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SharpRon.jpg; sourceTree = "<group>"; };
 		AFBC6E4B16B0BF740052E385 /* ShawWayne.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ShawWayne.jpg; sourceTree = "<group>"; };
-		AFBC6E4C16B0BF740052E385 /* ShorteyRalph.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ShorteyRalph.jpg; sourceTree = "<group>"; };
 		AFBC6E4E16B0BF740052E385 /* SimpsonFrank.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SimpsonFrank.jpg; sourceTree = "<group>"; };
-		AFBC6E4F16B0BF740052E385 /* SparksJohn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SparksJohn.jpg; sourceTree = "<group>"; };
 		AFBC6E5016B0BF740052E385 /* StandridgeRob.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = StandridgeRob.jpg; sourceTree = "<group>"; };
 		AFBC6E5116B0BF740052E385 /* StanislawskiGary.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = StanislawskiGary.jpg; sourceTree = "<group>"; };
-		AFBC6E5216B0BF740052E385 /* SykesAnthony.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SykesAnthony.jpg; sourceTree = "<group>"; };
 		AFBC6E5316B0BF740052E385 /* TreatGreg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = TreatGreg.jpg; sourceTree = "<group>"; };
 		AFBC6E5616B0BF740052E385 /* AnthonyBob.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AnthonyBob.jpg; sourceTree = "<group>"; };
 		AFBC6E5716B0BF740052E385 /* BarresiJanet.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BarresiJanet.jpg; sourceTree = "<group>"; };
@@ -744,7 +659,6 @@
 		AFC4D5D01630BC8F0023EB2E /* AboutBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AboutBackground@2x.png"; sourceTree = "<group>"; };
 		AFC4D5D11630BC8F0023EB2E /* AboutBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AboutBackground.png; sourceTree = "<group>"; };
 		AFC4D5DA16318B440023EB2E /* AboutBackground-iPhone5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AboutBackground-iPhone5@2x.png"; sourceTree = "<group>"; };
-		AFC926A51614408D009538FD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		AFC926A7161441E3009538FD /* AppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon.png; sourceTree = SOURCE_ROOT; };
 		AFC926A8161441E3009538FD /* AppIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon@2x.png"; sourceTree = SOURCE_ROOT; };
 		AFC926A9161441E3009538FD /* AppIconiPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIconiPad.png; sourceTree = SOURCE_ROOT; };
@@ -821,10 +735,8 @@
 		CE18B5571E4F78020067DCC1 /* Icon-App-152x152@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-152x152@1x.png"; sourceTree = "<group>"; };
 		CE18B5581E4F78020067DCC1 /* Icon-App-167x167@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-167x167@1x.png"; sourceTree = "<group>"; };
 		CE2DAF891E4EACFD002BCD60 /* BlancettMeloyde.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BlancettMeloyde.jpg; sourceTree = "<group>"; };
-		CE2DAF8A1E4EACFD002BCD60 /* ConditDonnie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ConditDonnie.jpg; sourceTree = "<group>"; };
 		CE2DAF8B1E4EACFD002BCD60 /* DunningtonJason.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DunningtonJason.jpg; sourceTree = "<group>"; };
 		CE2DAF8F1E4EB2A1002BCD60 /* BergstromMicheal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BergstromMicheal.jpg; sourceTree = "<group>"; };
-		CE2DAF911E4EC6D1002BCD60 /* GriffinAJ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GriffinAJ.jpg; sourceTree = "<group>"; };
 		CE2DAF951E4EC8A4002BCD60 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		CE2E210D1EE65E2E00646C92 /* LocationDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationDetailViewController.m; sourceTree = "<group>"; };
 		CE4ACD331E215057003A6655 /* ok56leg.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ok56leg.entitlements; sourceTree = "<group>"; };
@@ -833,40 +745,114 @@
 		CE64C2C51EE113C000FEF384 /* CommitteeVoteListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommitteeVoteListViewController.h; sourceTree = "<group>"; };
 		CE64C2C61EE113C000FEF384 /* CommitteeVoteListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommitteeVoteListViewController.m; sourceTree = "<group>"; };
 		CE6520B2207910200077A6C4 /* IkleyFreemanAllison.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IkleyFreemanAllison.jpg; sourceTree = "<group>"; };
+		CE6C63B821EEE7BE00A8044E /* SmithDavid.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SmithDavid.jpg; sourceTree = "<group>"; };
+		CE6C63B921EEE7BE00A8044E /* HasenbeckToni.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HasenbeckToni.jpg; sourceTree = "<group>"; };
+		CE6C63BA21EEE7BF00A8044E /* LuttrellKen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LuttrellKen.jpg; sourceTree = "<group>"; };
+		CE6C63BB21EEE7BF00A8044E /* CaldwellTrey.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CaldwellTrey.jpg; sourceTree = "<group>"; };
+		CE6C63BC21EEE7BF00A8044E /* BoatmanJeff.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BoatmanJeff.jpg; sourceTree = "<group>"; };
+		CE6C63BD21EEE7BF00A8044E /* SimsLonnie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SimsLonnie.jpg; sourceTree = "<group>"; };
+		CE6C63BE21EEE7BF00A8044E /* HardinDavid.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HardinDavid.jpg; sourceTree = "<group>"; };
+		CE6C63BF21EEE7BF00A8044E /* MangerRobert.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MangerRobert.jpg; sourceTree = "<group>"; };
+		CE6C63C021EEE7BF00A8044E /* CrosswhiteHaderDenise.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CrosswhiteHaderDenise.jpg; sourceTree = "<group>"; };
+		CE6C63C121EEE7BF00A8044E /* OlsenJim.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = OlsenJim.jpg; sourceTree = "<group>"; };
+		CE6C63C221EEE7BF00A8044E /* AlbrightKelly.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AlbrightKelly.jpg; sourceTree = "<group>"; };
+		CE6C63C321EEE7BF00A8044E /* PaeDaniel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PaeDaniel.jpg; sourceTree = "<group>"; };
+		CE6C63C421EEE7C000A8044E /* ConleySherri.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ConleySherri.jpg; sourceTree = "<group>"; };
+		CE6C63C521EEE7C000A8044E /* JohnsRonny.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = JohnsRonny.jpg; sourceTree = "<group>"; };
+		CE6C63C621EEE7C000A8044E /* MartiTJ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MartiTJ.jpg; sourceTree = "<group>"; };
+		CE6C63C721EEE7C000A8044E /* ODonnellTerry.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ODonnellTerry.jpg; sourceTree = "<group>"; };
+		CE6C63C821EEE7C000A8044E /* CornwellRusty.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CornwellRusty.jpg; sourceTree = "<group>"; };
+		CE6C63C921EEE7C000A8044E /* RandlemanRandy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RandlemanRandy.jpg; sourceTree = "<group>"; };
+		CE6C63CA21EEE7C000A8044E /* FrixAvery.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FrixAvery.jpg; sourceTree = "<group>"; };
+		CE6C63CB21EEE7C000A8044E /* FincherDerrel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FincherDerrel.jpg; sourceTree = "<group>"; };
+		CE6C63CC21EEE7C000A8044E /* RoeCindy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RoeCindy.jpg; sourceTree = "<group>"; };
+		CE6C63CD21EEE7C000A8044E /* PhillipsLogan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PhillipsLogan.jpg; sourceTree = "<group>"; };
+		CE6C63CE21EEE7C100A8044E /* PatzkowskyKenton.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PatzkowskyKenton.jpg; sourceTree = "<group>"; };
+		CE6C63CF21EEE7C100A8044E /* ProvenzanoMelissa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ProvenzanoMelissa.jpg; sourceTree = "<group>"; };
+		CE6C63D021EEE7C100A8044E /* MizeGarry.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MizeGarry.jpg; sourceTree = "<group>"; };
+		CE6C63D121EEE7C100A8044E /* GregoJim.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GregoJim.jpg; sourceTree = "<group>"; };
+		CE6C63D221EEE7C100A8044E /* HumphreyJJ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HumphreyJJ.jpg; sourceTree = "<group>"; };
+		CE6C63D321EEE7C100A8044E /* HillBrian.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HillBrian.jpg; sourceTree = "<group>"; };
+		CE6C63D421EEE7C100A8044E /* StarkMarilyn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = StarkMarilyn.jpg; sourceTree = "<group>"; };
+		CE6C63D521EEE7C100A8044E /* TownleyTammy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = TownleyTammy.jpg; sourceTree = "<group>"; };
+		CE6C63D621EEE7C100A8044E /* HardinTommy_2018.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HardinTommy_2018.jpg; sourceTree = "<group>"; };
+		CE6C63D721EEE7C100A8044E /* MayStan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MayStan.jpg; sourceTree = "<group>"; };
+		CE6C63D821EEE7C200A8044E /* TalleyJohn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = TalleyJohn.jpg; sourceTree = "<group>"; };
+		CE6C63D921EEE7C200A8044E /* BellMerleyn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BellMerleyn.jpg; sourceTree = "<group>"; };
+		CE6C63DA21EEE7C200A8044E /* SteagallJay.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SteagallJay.jpg; sourceTree = "<group>"; };
+		CE6C63DB21EEE7C200A8044E /* MillerNicole.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MillerNicole.jpg; sourceTree = "<group>"; };
+		CE6C63DC21EEE7C200A8044E /* VancurenMark.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = VancurenMark.jpg; sourceTree = "<group>"; };
+		CE6C63DD21EEE7C200A8044E /* SterlingDanny.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SterlingDanny.jpg; sourceTree = "<group>"; };
+		CE6C63DE21EEE7C200A8044E /* FugateAndy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FugateAndy.jpg; sourceTree = "<group>"; };
+		CE6C63DF21EEE7C200A8044E /* DavisDean.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DavisDean.jpg; sourceTree = "<group>"; };
+		CE6C63E021EEE7C200A8044E /* KigerLundy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = KigerLundy.jpg; sourceTree = "<group>"; };
+		CE6C63E121EEE7C200A8044E /* DillsSheila.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DillsSheila.jpg; sourceTree = "<group>"; };
+		CE6C63E221EEE7C300A8044E /* BranhamChelsey.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BranhamChelsey.jpg; sourceTree = "<group>"; };
+		CE6C63E321EEE7C300A8044E /* PittmanAjay.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PittmanAjay.jpg; sourceTree = "<group>"; };
+		CE6C63E421EEE7C300A8044E /* StromJudd.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = StromJudd.jpg; sourceTree = "<group>"; };
+		CE6C63E521EEE7C300A8044E /* SneedChris.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SneedChris.jpg; sourceTree = "<group>"; };
+		CE6C63E621EEE7C300A8044E /* RansonTrish.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RansonTrish.jpg; sourceTree = "<group>"; };
+		CE6C63E721EEE7C300A8044E /* BurnsTy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BurnsTy.jpg; sourceTree = "<group>"; };
+		CE6C63E821EEE7C300A8044E /* BrewerDenise.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BrewerDenise.jpg; sourceTree = "<group>"; };
+		CE6C63E921EEE7C300A8044E /* WaldronJohn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WaldronJohn.jpg; sourceTree = "<group>"; };
+		CE6C642C21F025E700A8044E /* OsbornLeslie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = OsbornLeslie.jpg; sourceTree = "<group>"; };
+		CE6C642D21F025E800A8044E /* PinnellMatt.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PinnellMatt.jpg; sourceTree = "<group>"; };
+		CE6C642E21F025E800A8044E /* ByrdCindy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ByrdCindy.jpg; sourceTree = "<group>"; };
+		CE6C642F21F025E800A8044E /* McDanielRandy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = McDanielRandy.jpg; sourceTree = "<group>"; };
+		CE6C643021F025E800A8044E /* HernKevin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HernKevin.jpg; sourceTree = "<group>"; };
+		CE6C643121F025E800A8044E /* HornKendra.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HornKendra.jpg; sourceTree = "<group>"; };
+		CE6C643221F025E800A8044E /* StittKevin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = StittKevin.jpg; sourceTree = "<group>"; };
+		CE6C643321F025E800A8044E /* MulreadyGlen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MulreadyGlen.jpg; sourceTree = "<group>"; };
+		CE6C643C21F0261F00A8044E /* DarbyRichard.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = DarbyRichard.jpg; path = "State Judges/DarbyRichard.jpg"; sourceTree = "<group>"; };
+		CE6C643E21F0383300A8044E /* MurdockCasey.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MurdockCasey.jpg; sourceTree = "<group>"; };
+		CE6C643F21F0383300A8044E /* BullardDavid.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BullardDavid.jpg; sourceTree = "<group>"; };
+		CE6C644021F0383400A8044E /* BorenMary.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BorenMary.jpg; sourceTree = "<group>"; };
+		CE6C644121F0383400A8044E /* WeaverDarrell.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WeaverDarrell.jpg; sourceTree = "<group>"; };
+		CE6C644221F0383400A8044E /* DossettJJ_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DossettJJ_2.jpg; sourceTree = "<group>"; };
+		CE6C644321F0383400A8044E /* HowardBrent.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HowardBrent.jpg; sourceTree = "<group>"; };
+		CE6C644421F0383400A8044E /* ColemanBill.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ColemanBill.jpg; sourceTree = "<group>"; };
+		CE6C644521F0383400A8044E /* StanleyBrenda.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = StanleyBrenda.jpg; sourceTree = "<group>"; };
+		CE6C644621F0383400A8044E /* HasteJohn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HasteJohn.jpg; sourceTree = "<group>"; };
+		CE6C644721F0383400A8044E /* HicksCarri.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HicksCarri.jpg; sourceTree = "<group>"; };
+		CE6C644821F0383400A8044E /* YoungGeorge.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = YoungGeorge.jpg; sourceTree = "<group>"; };
+		CE6C644921F0383400A8044E /* MontgomeryJohn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MontgomeryJohn.jpg; sourceTree = "<group>"; };
+		CE6C644B21F0383500A8044E /* HallChuck.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HallChuck.jpg; sourceTree = "<group>"; };
+		CE6C644C21F0383500A8044E /* KirtJulia.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = KirtJulia.jpg; sourceTree = "<group>"; };
+		CE6C645E21F0399600A8044E /* AaronPaxton.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AaronPaxton.jpg; sourceTree = "<group>"; };
+		CE6C645F21F0399600A8044E /* JamesFox.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = JamesFox.jpg; sourceTree = "<group>"; };
+		CE6C646021F0399600A8044E /* JimReese.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = JimReese.jpg; sourceTree = "<group>"; };
+		CE6C646121F0399600A8044E /* RickDavis.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RickDavis.jpg; sourceTree = "<group>"; };
+		CE6C646221F0399600A8044E /* DanielWebster.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DanielWebster.jpg; sourceTree = "<group>"; };
+		CE6C646321F0399700A8044E /* HunterRobinson.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HunterRobinson.jpg; sourceTree = "<group>"; };
+		CE6C646E21F172B200A8044E /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		CE6C647021F17D6300A8044E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		CE6C654321F1911700A8044E /* PfeifferJohn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PfeifferJohn.jpg; sourceTree = "<group>"; };
 		CE7014831EDFB81200BE7B25 /* VoteListView-iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "VoteListView-iPhone.xib"; sourceTree = "<group>"; };
 		CE70CCC31FE0F39C001801AC /* TaylorZack.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = TaylorZack.jpg; sourceTree = "<group>"; };
 		CE70CCC51FE0F3B5001801AC /* GoetzGreg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GoetzGreg.jpg; sourceTree = "<group>"; };
 		CE70CCC71FE0F641001801AC /* DuncanKooney.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DuncanKooney.jpg; sourceTree = "<group>"; };
 		CE70CCC91FE0F9F6001801AC /* SimmonsKen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SimmonsKen.jpg; sourceTree = "<group>"; };
-		CE7C6CE61E385F4C00874B14 /* BabinecGreg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BabinecGreg.jpg; sourceTree = "<group>"; };
 		CE7C6CE71E385F4C00874B14 /* BakerRhonda.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BakerRhonda.jpg; sourceTree = "<group>"; };
 		CE7C6CE81E385F4C00874B14 /* BennettForrest.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BennettForrest.jpg; sourceTree = "<group>"; };
 		CE7C6CEB1E385F4C00874B14 /* BushCarol.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BushCarol.jpg; sourceTree = "<group>"; };
-		CE7C6CED1E385F4C00874B14 /* DerbyDale.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DerbyDale.jpg; sourceTree = "<group>"; };
 		CE7C6CEE1E385F4C00874B14 /* DollensMickey.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DollensMickey.jpg; sourceTree = "<group>"; };
-		CE7C6CEF1E385F4C00874B14 /* DowningTim.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DowningTim.jpg; sourceTree = "<group>"; };
 		CE7C6CF11E385F4C00874B14 /* FetgatterScott.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FetgatterScott.jpg; sourceTree = "<group>"; };
-		CE7C6CF21E385F4C00874B14 /* FordRoger.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FordRoger.jpg; sourceTree = "<group>"; };
 		CE7C6CF41E385F4C00874B14 /* GannTom.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GannTom.jpg; sourceTree = "<group>"; };
 		CE7C6CF51E385F4C00874B14 /* HilbertKyle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HilbertKyle.jpg; sourceTree = "<group>"; };
-		CE7C6CF71E385F4C00874B14 /* JordanJP.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = JordanJP.jpg; sourceTree = "<group>"; };
 		CE7C6CF81E385F4C00874B14 /* KerbsDell.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = KerbsDell.jpg; sourceTree = "<group>"; };
 		CE7C6CF91E385F4C00874B14 /* LawsonMark.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LawsonMark.jpg; sourceTree = "<group>"; };
 		CE7C6CFB1E385F4C00874B14 /* LoweJason.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LoweJason.jpg; sourceTree = "<group>"; };
 		CE7C6CFC1E385F4C00874B14 /* MartinezRyan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MartinezRyan.jpg; sourceTree = "<group>"; };
 		CE7C6CFD1E385F4C00874B14 /* McDugleKevin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = McDugleKevin.jpg; sourceTree = "<group>"; };
-		CE7C6CFE1E385F4C00874B14 /* McEachinScott.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = McEachinScott.jpg; sourceTree = "<group>"; };
 		CE7C6CFF1E385F4C00874B14 /* McEntireMarcus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = McEntireMarcus.jpg; sourceTree = "<group>"; };
 		CE7C6D001E385F4C00874B14 /* MeredithMatt.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MeredithMatt.jpg; sourceTree = "<group>"; };
 		CE7C6D011E385F4C00874B14 /* MontgomeryJohn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MontgomeryJohn.jpg; sourceTree = "<group>"; };
 		CE7C6D021E385F4C00874B14 /* NewtonCarl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = NewtonCarl.jpg; sourceTree = "<group>"; };
 		CE7C6D031E385F4C00874B14 /* NicholsMonroe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = NicholsMonroe.jpg; sourceTree = "<group>"; };
 		CE7C6D041E385F4C00874B14 /* OsburnMike.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = OsburnMike.jpg; sourceTree = "<group>"; };
-		CE7C6D051E385F4C00874B14 /* TeagueTess.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = TeagueTess.jpg; sourceTree = "<group>"; };
 		CE7C6D061E385F4C00874B14 /* WalkeCollin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WalkeCollin.jpg; sourceTree = "<group>"; };
 		CE7C6D071E385F4C00874B14 /* WestJosh.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WestJosh.jpg; sourceTree = "<group>"; };
 		CE7C6D081E385F4C00874B14 /* WestKevin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WestKevin.jpg; sourceTree = "<group>"; };
-		CE7C6D091E385F4C00874B14 /* WestRick.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WestRick.jpg; sourceTree = "<group>"; };
 		CE7C6D0A1E385F4C00874B14 /* WestTammy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WestTammy.jpg; sourceTree = "<group>"; };
 		CE7C6D0B1E385F4C00874B14 /* WorthenRande.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WorthenRande.jpg; sourceTree = "<group>"; };
 		CE7C6D331E385F7600874B14 /* DanielsJulie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DanielsJulie.jpg; sourceTree = "<group>"; };
@@ -884,17 +870,13 @@
 		CE7C6D421E385F7600874B14 /* RaderDave.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RaderDave.jpg; sourceTree = "<group>"; };
 		CE7C6D431E385F7600874B14 /* ScottPaul.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ScottPaul.jpg; sourceTree = "<group>"; };
 		CE7C6D5A1E3872CD00874B14 /* FloydKay.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FloydKay.jpg; sourceTree = "<group>"; };
-		CE7C6D5C1E38734100874B14 /* FrixAveryCarl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FrixAveryCarl.jpg; sourceTree = "<group>"; };
-		CE7C6D5E1E3873E600874B14 /* HumphreyJustin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HumphreyJustin.jpg; sourceTree = "<group>"; };
 		CE7C6D601E39B41F00874B14 /* BrettOrme.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BrettOrme.jpg; sourceTree = "<group>"; };
 		CE7C6D611E39B41F00874B14 /* JenniferMeason.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = JenniferMeason.jpg; sourceTree = "<group>"; };
-		CE7C6D621E39B41F00874B14 /* KenGates.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = KenGates.jpg; sourceTree = "<group>"; };
 		CE7C6D631E39B41F00874B14 /* KevinWood.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = KevinWood.jpg; sourceTree = "<group>"; };
 		CE7C6D641E39B41F00874B14 /* PatrickGrace.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PatrickGrace.jpg; sourceTree = "<group>"; };
 		CE7C6D651E39B41F00874B14 /* ZacPerkins.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ZacPerkins.jpg; sourceTree = "<group>"; };
 		CE8BBB891EDE3B3400CF5448 /* RollCallListDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RollCallListDelegate.m; sourceTree = "<group>"; };
 		CE8BBB8A1EDE3B3400CF5448 /* RollCallListDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RollCallListDelegate.h; sourceTree = "<group>"; };
-		CE927F4B1F87346500015327 /* GaddisKaren.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GaddisKaren.jpg; sourceTree = "<group>"; };
 		CE927F4D1F8738CE00015327 /* RosecrantsJacob.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RosecrantsJacob.jpg; sourceTree = "<group>"; };
 		CE927F4F1F87402E00015327 /* BrooksMichael.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BrooksMichael.jpg; sourceTree = "<group>"; };
 		CE9CAE861EB80D0000C20CAF /* VoteTallIcon-09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VoteTallIcon-09.png"; sourceTree = "<group>"; };
@@ -903,7 +885,6 @@
 		CE9CAE8B1EBAD31000C20CAF /* VoteCheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VoteCheckViewController.m; path = "../View Controllers/VoteCheckViewController.m"; sourceTree = "<group>"; };
 		CE9CAE8D1EBC08FD00C20CAF /* MyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyButton.h; sourceTree = "<group>"; };
 		CE9CAE8E1EBC08FD00C20CAF /* MyButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyButton.m; sourceTree = "<group>"; };
-		CEA749641C572771007271E5 /* DossettJJ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DossettJJ.jpg; sourceTree = "<group>"; };
 		CEA7EC531E61CD58008031BF /* MarkWSchwirtz.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MarkWSchwirtz.jpg; sourceTree = "<group>"; };
 		CEA7EC551E61CD6E008031BF /* WyrickPatrick.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = WyrickPatrick.jpg; path = "State Judges/WyrickPatrick.jpg"; sourceTree = "<group>"; };
 		CEA9B52D1ECA9E7300035FF6 /* SenateCommittees__VoteTallyIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SenateCommittees__VoteTallyIcon.png; sourceTree = "<group>"; };
@@ -924,7 +905,6 @@
 		CEB3DA681C2F9AE90003A4B9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		CEB7D56B1BC9A54100AD5CD2 /* MunsonCyndi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MunsonCyndi.jpg; sourceTree = "<group>"; };
 		CEB7D56D1BC9A55000AD5CD2 /* GoodwinRegina.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GoodwinRegina.jpg; sourceTree = "<group>"; };
-		CEB7D56F1BC9A57200AD5CD2 /* JonMiles.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = JonMiles.jpg; sourceTree = "<group>"; };
 		CEC68CA21EDD29AF00193036 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		CEC865401EBDF7BC00363665 /* BlankYeaSlice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlankYeaSlice.png; sourceTree = "<group>"; };
 		CEC865421EBE0F9300363665 /* CheckYea.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CheckYea.png; sourceTree = "<group>"; };
@@ -936,7 +916,6 @@
 		CEC8656B1EC571E700363665 /* voteButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = voteButton.m; sourceTree = "<group>"; };
 		CEDABEED1FF495B7000C7408 /* HunterMike.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HunterMike.jpg; sourceTree = "<group>"; };
 		CEDABEEF1FF495C0000C7408 /* FordRoss.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FordRoss.jpg; sourceTree = "<group>"; };
-		CEDABEF51FF4A6AB000C7408 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ok56leg/Images.xcassets; sourceTree = "<group>"; };
 		CEDEF0CF1C002ACF0024A43F /* judicialIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "judicialIcon@2x.png"; sourceTree = "<group>"; };
 		CEDEF0D11C0031230024A43F /* McLawhornHoustonMelissa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = McLawhornHoustonMelissa.jpg; sourceTree = "<group>"; };
 		CEDEF0D31C0034BF0024A43F /* ColbertTom.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = ColbertTom.jpg; path = "State Judges/ColbertTom.jpg"; sourceTree = "<group>"; };
@@ -945,7 +924,6 @@
 		CEDEF0D61C0034BF0024A43F /* GurichNoma.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = GurichNoma.jpg; path = "State Judges/GurichNoma.jpg"; sourceTree = "<group>"; };
 		CEDEF0D71C0034BF0024A43F /* KaugerYvonne.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = KaugerYvonne.jpg; path = "State Judges/KaugerYvonne.jpg"; sourceTree = "<group>"; };
 		CEDEF0D81C0034BF0024A43F /* ReifJohn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = ReifJohn.jpg; path = "State Judges/ReifJohn.jpg"; sourceTree = "<group>"; };
-		CEDEF0DA1C0034BF0024A43F /* WattJoseph.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = WattJoseph.jpg; path = "State Judges/WattJoseph.jpg"; sourceTree = "<group>"; };
 		CEDEF0DB1C0034BF0024A43F /* WinchesterJames.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = WinchesterJames.jpg; path = "State Judges/WinchesterJames.jpg"; sourceTree = "<group>"; };
 		CEE7CE431EE25AC900199948 /* SetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetupViewController.h; sourceTree = "<group>"; };
 		CEE7CE441EE25AC900199948 /* SetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupViewController.m; sourceTree = "<group>"; };
@@ -1002,13 +980,13 @@
 		AF24819415BB6A250070924E = {
 			isa = PBXGroup;
 			children = (
-				CEDABEF51FF4A6AB000C7408 /* Images.xcassets */,
+				CE6C647021F17D6300A8044E /* Default-568h@2x.png */,
+				CE6C646E21F172B200A8044E /* Media.xcassets */,
 				CE5986011EE8DB8D007C5C3B /* Buttons */,
 				CE64C2BE1EDFBB1900FEF384 /* VoteListView-iPhone.xib */,
 				CE16008E1ED2556A00058C4D /* VoteTallyHeaderView-iPhone.xib */,
 				CE4ACD331E215057003A6655 /* ok56leg.entitlements */,
 				AF255CC4184CBAF60053CC73 /* AppIcon-60@2x.png */,
-				AFC926A51614408D009538FD /* Default-568h@2x.png */,
 				AF255CC3184CBAF60053CC73 /* AppIcon-60.png */,
 				CEC68CA21EDD29AF00193036 /* Realm.framework */,
 				AF092D4215DA0FDC00AA4B6B /* Default@2x.png */,
@@ -1022,7 +1000,7 @@
 		AF2481A015BB6A250070924E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AF24819F15BB6A250070924E /* ok56leg.app */,
+				AF24819F15BB6A250070924E /* ok57leg.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1291,9 +1269,7 @@
 		AFBC6D8F16B0BF740052E385 /* Federal Representatives */ = {
 			isa = PBXGroup;
 			children = (
-				AFBC6D9016B0BF740052E385 /* BridenstineJim.jpg */,
 				AFBC6D9116B0BF740052E385 /* Frank_Lucas.jpg */,
-				AFBC6D9216B0BF740052E385 /* James_Lankford.jpg */,
 				AFBC6D9316B0BF740052E385 /* MullinMarkwayne.jpg */,
 				AFBC6D9416B0BF740052E385 /* Tom_Cole.jpg */,
 			);
@@ -1303,8 +1279,8 @@
 		AFBC6D9516B0BF740052E385 /* Federal Senators */ = {
 			isa = PBXGroup;
 			children = (
+				AFBC6D9216B0BF740052E385 /* James_Lankford.jpg */,
 				AFBC6D9616B0BF740052E385 /* Jim_Inhofe.jpg */,
-				AFBC6D9716B0BF740052E385 /* Tom_Coburn.jpg */,
 			);
 			path = "Federal Senators";
 			sourceTree = "<group>";
@@ -1314,7 +1290,6 @@
 			children = (
 				AFBC6D9916B0BF740052E385 /* HowethStacy.jpg */,
 				AFBC6D9A16B0BF740052E385 /* MeyersChris.jpg */,
-				AFBC6D9B16B0BF740052E385 /* SparksKenny.jpg */,
 			);
 			path = "Legislative Contacts";
 			sourceTree = "<group>";
@@ -1322,48 +1297,38 @@
 		AFBC6D9C16B0BF740052E385 /* OAEC Member Photos */ = {
 			isa = PBXGroup;
 			children = (
+				CE6C645E21F0399600A8044E /* AaronPaxton.jpg */,
+				CE6C646221F0399600A8044E /* DanielWebster.jpg */,
+				CE6C646321F0399700A8044E /* HunterRobinson.jpg */,
+				CE6C645F21F0399600A8044E /* JamesFox.jpg */,
+				CE6C646021F0399600A8044E /* JimReese.jpg */,
+				CE6C646121F0399600A8044E /* RickDavis.jpg */,
 				CE70CCC91FE0F9F6001801AC /* SimmonsKen.jpg */,
 				CE70CCC71FE0F641001801AC /* DuncanKooney.jpg */,
 				CE70CCC51FE0F3B5001801AC /* GoetzGreg.jpg */,
 				CEA7EC531E61CD58008031BF /* MarkWSchwirtz.jpg */,
 				CE7C6D601E39B41F00874B14 /* BrettOrme.jpg */,
 				CE7C6D611E39B41F00874B14 /* JenniferMeason.jpg */,
-				CE7C6D621E39B41F00874B14 /* KenGates.jpg */,
 				CE7C6D631E39B41F00874B14 /* KevinWood.jpg */,
 				CE7C6D641E39B41F00874B14 /* PatrickGrace.jpg */,
 				CE7C6D651E39B41F00874B14 /* ZacPerkins.jpg */,
-				CEB7D56F1BC9A57200AD5CD2 /* JonMiles.jpg */,
 				AF577E681A0BF5E500994EA1 /* ClintPack.jpg */,
 				AF577E691A0BF5E500994EA1 /* TimRodriguez.jpg */,
 				AFDAD5BE18602FCB00366D99 /* MarkFuller.jpg */,
 				AFBC6D9D16B0BF740052E385 /* AliceHouston.jpg */,
-				AFBC6D9E16B0BF740052E385 /* AnthonyDue.jpg */,
 				AFBC6DA016B0BF740052E385 /* BrentHartin.jpg */,
-				AFBC6DA116B0BF740052E385 /* CharlesPaxton.jpg */,
 				AFBC6DA216B0BF740052E385 /* ChrisCariker.jpg */,
 				AFBC6DA316B0BF740052E385 /* ColinWhitley.jpg */,
 				AFBC6DA416B0BF740052E385 /* DaleNye.jpg */,
-				AFBC6DA516B0BF740052E385 /* DavidSwank.jpg */,
-				AFBC6DA616B0BF740052E385 /* DennisKrueger.jpg */,
 				AFBC6DA716B0BF740052E385 /* GaryRoulet.jpg */,
-				AFBC6DA816B0BF740052E385 /* GeorgeHand.jpg */,
 				AFBC6DA916B0BF740052E385 /* HamidVahdatipour.jpg */,
-				AFBC6DAA16B0BF740052E385 /* JackClinkscale.jpg */,
-				AFBC6DAB16B0BF740052E385 /* JackPerkins.jpg */,
-				AFBC6DAC16B0BF740052E385 /* JamesHanna.jpg */,
-				AFBC6DAD16B0BF740052E385 /* JimJackson.jpg */,
 				AFBC6DAF16B0BF740052E385 /* KendallBeck.jpg */,
 				AFBC6DB016B0BF740052E385 /* KrisWilliams.jpg */,
 				AFBC6DB116B0BF740052E385 /* MarkSnowden.jpg */,
-				AFBC6DB216B0BF740052E385 /* MaxMeek.jpg */,
-				AFBC6DB316B0BF740052E385 /* MikeHagy.jpg */,
 				AFBC6DB416B0BF740052E385 /* MitchellJohnson.jpg */,
-				AFBC6DB516B0BF740052E385 /* RandyEthridge.jpg */,
 				AFBC6DB616B0BF740052E385 /* ScottCopeland.jpg */,
-				AFBC6DB716B0BF740052E385 /* TerryMatlock.jpg */,
 				AFBC6DB816B0BF740052E385 /* TimSmith.jpg */,
 				AFBC6DB916B0BF740052E385 /* TysonLittau.jpg */,
-				AFBC6DBA16B0BF740052E385 /* WarrenLangford.jpg */,
 				AFBC6DBB16B0BF740052E385 /* WilliamPeters.jpg */,
 			);
 			path = "OAEC Member Photos";
@@ -1372,110 +1337,108 @@
 		AFBC6DBE16B0BF740052E385 /* State Representatives */ = {
 			isa = PBXGroup;
 			children = (
-				CEF324AF207915F000B05192 /* BolesBrad.jpg */,
-				CEDABEEF1FF495C0000C7408 /* FordRoss.jpg */,
-				CE70CCC31FE0F39C001801AC /* TaylorZack.jpg */,
-				CE927F4D1F8738CE00015327 /* RosecrantsJacob.jpg */,
-				CE927F4B1F87346500015327 /* GaddisKaren.jpg */,
-				CE2DAF891E4EACFD002BCD60 /* BlancettMeloyde.jpg */,
-				CE2DAF8A1E4EACFD002BCD60 /* ConditDonnie.jpg */,
-				CE2DAF8B1E4EACFD002BCD60 /* DunningtonJason.jpg */,
-				CE7C6D5E1E3873E600874B14 /* HumphreyJustin.jpg */,
-				CE7C6D5C1E38734100874B14 /* FrixAveryCarl.jpg */,
-				CE7C6CE61E385F4C00874B14 /* BabinecGreg.jpg */,
+				CE6C654321F1911700A8044E /* PfeifferJohn.jpg */,
+				CE6C63C221EEE7BF00A8044E /* AlbrightKelly.jpg */,
 				CE7C6CE71E385F4C00874B14 /* BakerRhonda.jpg */,
+				CE6C63D921EEE7C200A8044E /* BellMerleyn.jpg */,
 				CE7C6CE81E385F4C00874B14 /* BennettForrest.jpg */,
+				CE2DAF891E4EACFD002BCD60 /* BlancettMeloyde.jpg */,
+				CE6C63BC21EEE7BF00A8044E /* BoatmanJeff.jpg */,
+				CEF324AF207915F000B05192 /* BolesBrad.jpg */,
+				CE6C63E221EEE7C300A8044E /* BranhamChelsey.jpg */,
+				CE6C63E821EEE7C300A8044E /* BrewerDenise.jpg */,
+				CE6C63E721EEE7C300A8044E /* BurnsTy.jpg */,
 				CE7C6CEB1E385F4C00874B14 /* BushCarol.jpg */,
-				CE7C6CED1E385F4C00874B14 /* DerbyDale.jpg */,
-				CE7C6CEE1E385F4C00874B14 /* DollensMickey.jpg */,
-				CE7C6CEF1E385F4C00874B14 /* DowningTim.jpg */,
-				CE7C6CF11E385F4C00874B14 /* FetgatterScott.jpg */,
-				CE7C6CF21E385F4C00874B14 /* FordRoger.jpg */,
-				CE7C6CF41E385F4C00874B14 /* GannTom.jpg */,
-				CE7C6CF51E385F4C00874B14 /* HilbertKyle.jpg */,
-				CE7C6CF71E385F4C00874B14 /* JordanJP.jpg */,
-				CE7C6CF81E385F4C00874B14 /* KerbsDell.jpg */,
-				CE7C6CF91E385F4C00874B14 /* LawsonMark.jpg */,
-				CE7C6CFB1E385F4C00874B14 /* LoweJason.jpg */,
-				CE7C6CFC1E385F4C00874B14 /* MartinezRyan.jpg */,
-				CE7C6CFD1E385F4C00874B14 /* McDugleKevin.jpg */,
-				CE7C6CFE1E385F4C00874B14 /* McEachinScott.jpg */,
-				CE7C6CFF1E385F4C00874B14 /* McEntireMarcus.jpg */,
-				CE7C6D001E385F4C00874B14 /* MeredithMatt.jpg */,
-				CE7C6D011E385F4C00874B14 /* MontgomeryJohn.jpg */,
-				CE7C6D021E385F4C00874B14 /* NewtonCarl.jpg */,
-				CE7C6D031E385F4C00874B14 /* NicholsMonroe.jpg */,
-				CE7C6D041E385F4C00874B14 /* OsburnMike.jpg */,
-				CE7C6D051E385F4C00874B14 /* TeagueTess.jpg */,
-				CE7C6D061E385F4C00874B14 /* WalkeCollin.jpg */,
-				CE7C6D071E385F4C00874B14 /* WestJosh.jpg */,
-				CE7C6D081E385F4C00874B14 /* WestKevin.jpg */,
-				CE7C6D091E385F4C00874B14 /* WestRick.jpg */,
-				CE7C6D0A1E385F4C00874B14 /* WestTammy.jpg */,
-				CE7C6D0B1E385F4C00874B14 /* WorthenRande.jpg */,
-				CEB7D56D1BC9A55000AD5CD2 /* GoodwinRegina.jpg */,
-				CEB7D56B1BC9A54100AD5CD2 /* MunsonCyndi.jpg */,
 				AF82A23C1A7789B600A91552 /* CaldwellChad.jpg */,
-				AF82A23D1A7789B600A91552 /* CalveyKevin.jpg */,
-				AF82A23E1A7789B600A91552 /* CoodyJeff.jpg */,
-				AF82A23F1A7789B600A91552 /* DunlapTravis.jpg */,
-				AF82A2411A7789B600A91552 /* FaughtGeorge.jpg */,
-				AF82A2431A7789B600A91552 /* GriffithClaudia.jpg */,
+				CE6C63BB21EEE7BF00A8044E /* CaldwellTrey.jpg */,
+				CE6C63C421EEE7C000A8044E /* ConleySherri.jpg */,
+				CE6C63C821EEE7C000A8044E /* CornwellRusty.jpg */,
+				CE6C63C021EEE7BF00A8044E /* CrosswhiteHaderDenise.jpg */,
+				CE6C63DF21EEE7C200A8044E /* DavisDean.jpg */,
+				CE6C63E121EEE7C200A8044E /* DillsSheila.jpg */,
+				CE7C6CEE1E385F4C00874B14 /* DollensMickey.jpg */,
+				CE2DAF8B1E4EACFD002BCD60 /* DunningtonJason.jpg */,
+				AFBC6DD516B0BF740052E385 /* EcholsJon.jpg */,
+				CE7C6CF11E385F4C00874B14 /* FetgatterScott.jpg */,
+				CE6C63CB21EEE7C000A8044E /* FincherDerrel.jpg */,
+				CEDABEEF1FF495C0000C7408 /* FordRoss.jpg */,
+				CE6C63CA21EEE7C000A8044E /* FrixAvery.jpg */,
+				CE6C63DE21EEE7C200A8044E /* FugateAndy.jpg */,
+				CE7C6CF41E385F4C00874B14 /* GannTom.jpg */,
+				CEB7D56D1BC9A55000AD5CD2 /* GoodwinRegina.jpg */,
+				CE6C63D121EEE7C100A8044E /* GregoJim.jpg */,
+				CE6C63BE21EEE7BF00A8044E /* HardinDavid.jpg */,
+				CE6C63D621EEE7C100A8044E /* HardinTommy_2018.jpg */,
+				CE6C63B921EEE7BE00A8044E /* HasenbeckToni.jpg */,
+				CE7C6CF51E385F4C00874B14 /* HilbertKyle.jpg */,
+				CE6C63D321EEE7C100A8044E /* HillBrian.jpg */,
+				CE6C63D221EEE7C100A8044E /* HumphreyJJ.jpg */,
+				CE6C63C521EEE7C000A8044E /* JohnsRonny.jpg */,
 				AF82A2451A7789B600A91552 /* KannadyChris.jpg */,
+				CE7C6CF81E385F4C00874B14 /* KerbsDell.jpg */,
+				CE6C63E021EEE7C200A8044E /* KigerLundy.jpg */,
+				CE7C6CF91E385F4C00874B14 /* LawsonMark.jpg */,
 				AF82A2471A7789B600A91552 /* LepakMark.jpg */,
 				AF82A2481A7789B600A91552 /* LoringBen.jpg */,
-				AF82A24A1A7789B600A91552 /* MurdockCasey.jpg */,
-				AF82A24B1A7789B600A91552 /* ParkScooter.jpg */,
-				AF82A24C1A7789B600A91552 /* PfeifferJohn.jpg */,
-				AF82A24D1A7789B600A91552 /* RogersMichael.jpg */,
-				AF82A24E1A7789B600A91552 /* StoneShane.jpg */,
-				AF82A24F1A7789B600A91552 /* StrohmChuck.jpg */,
-				AF82A2501A7789B600A91552 /* TadlockJohnny.jpg */,
-				AF82A2511A7789B600A91552 /* WallaceKevin.jpg */,
-				AF82A2521A7789B600A91552 /* YoungGeorge.jpg */,
-				AFBC6DC116B0BF740052E385 /* BennettJohn.jpg */,
-				AFBC6DC216B0BF740052E385 /* BiggsScott.jpg */,
-				AFBC6DC616B0BF740052E385 /* BrumbaughDavid.jpg */,
-				AFBC6DC716B0BF740052E385 /* CannadayEd.jpg */,
-				AFBC6DC816B0BF740052E385 /* CaseyDennis.jpg */,
-				AFBC6DCA16B0BF740052E385 /* ClevelandBobby.jpg */,
-				AFBC6DCB16B0BF740052E385 /* CockroftJosh.jpg */,
-				AFBC6DD516B0BF740052E385 /* EcholsJon.jpg */,
-				AFBC6DD616B0BF740052E385 /* EnnsJohn.jpg */,
-				AFBC6DD916B0BF740052E385 /* FourkillerWilliam.jpg */,
-				AFBC6DDC16B0BF740052E385 /* HallElise.jpg */,
-				AFBC6DDE16B0BF740052E385 /* HardinTommy.jpg */,
-				AFBC6DDF16B0BF740052E385 /* HenkeKatie.jpg */,
-				AFBC6DE116B0BF740052E385 /* HoskinChuck.jpg */,
-				AFBC6DE316B0BF740052E385 /* InmanScott.jpg */,
-				AFBC6DE916B0BF740052E385 /* KirbyDan.jpg */,
-				AFBC6DEA16B0BF740052E385 /* KouplenSteve.jpg */,
-				AFBC6DEC16B0BF740052E385 /* MartinScott.jpg */,
+				CE7C6CFB1E385F4C00874B14 /* LoweJason.jpg */,
+				CE6C63BA21EEE7BF00A8044E /* LuttrellKen.jpg */,
+				CE6C63BF21EEE7BF00A8044E /* MangerRobert.jpg */,
+				CE7C6CFC1E385F4C00874B14 /* MartinezRyan.jpg */,
+				CE6C63C621EEE7C000A8044E /* MartiTJ.jpg */,
+				CE6C63D721EEE7C100A8044E /* MayStan.jpg */,
 				AFBC6DEF16B0BF740052E385 /* McBrideMark.jpg */,
 				AFBC6DF016B0BF740052E385 /* McCallCharles.jpg */,
-				AFBC6DF416B0BF740052E385 /* McDanielRandy.jpg */,
+				CE7C6CFD1E385F4C00874B14 /* McDugleKevin.jpg */,
+				CE7C6CFF1E385F4C00874B14 /* McEntireMarcus.jpg */,
+				CE7C6D001E385F4C00874B14 /* MeredithMatt.jpg */,
+				CE6C63DB21EEE7C200A8044E /* MillerNicole.jpg */,
+				CE6C63D021EEE7C100A8044E /* MizeGarry.jpg */,
+				CE7C6D011E385F4C00874B14 /* MontgomeryJohn.jpg */,
 				AFBC6DF716B0BF740052E385 /* MooreLewis.jpg */,
-				AFBC6DF916B0BF740052E385 /* MulreadyGlen.jpg */,
-				AFBC6DFA16B0BF740052E385 /* MurpheyJason.jpg */,
+				CEB7D56B1BC9A54100AD5CD2 /* MunsonCyndi.jpg */,
+				AF82A24A1A7789B600A91552 /* MurdockCasey.jpg */,
+				CE7C6D021E385F4C00874B14 /* NewtonCarl.jpg */,
+				CE7C6D031E385F4C00874B14 /* NicholsMonroe.jpg */,
 				AFBC6DFD16B0BF740052E385 /* NollanJadine.jpg */,
-				AFBC6DFE16B0BF740052E385 /* O'DonnellTerry.jpg */,
+				CE6C63C721EEE7C000A8044E /* ODonnellTerry.jpg */,
+				CE6C63C121EEE7BF00A8044E /* OlsenJim.jpg */,
 				AFBC6DFF16B0BF740052E385 /* OrtegaCharles.jpg */,
-				AFBC6E0016B0BF740052E385 /* OsbornLeslie.jpg */,
-				AFBC6E0116B0BF740052E385 /* OwnbeyPat.jpg */,
+				CE7C6D041E385F4C00874B14 /* OsburnMike.jpg */,
+				CE6C63C321EEE7BF00A8044E /* PaeDaniel.jpg */,
+				CE6C63CE21EEE7C100A8044E /* PatzkowskyKenton.jpg */,
 				AFBC6E0216B0BF740052E385 /* PerrymanDavid.jpg */,
-				AFBC6E0516B0BF740052E385 /* ProctorEric.jpg */,
-				AFBC6E0816B0BF740052E385 /* RenegarBrian.jpg */,
-				AFBC6E0A16B0BF740052E385 /* RitzeMike.jpg */,
+				CE6C63CD21EEE7C000A8044E /* PhillipsLogan.jpg */,
+				CE6C63E321EEE7C300A8044E /* PittmanAjay.jpg */,
+				CE6C63CF21EEE7C100A8044E /* ProvenzanoMelissa.jpg */,
+				CE6C63C921EEE7C000A8044E /* RandlemanRandy.jpg */,
+				CE6C63E621EEE7C300A8044E /* RansonTrish.jpg */,
 				AFBC6E0B16B0BF740052E385 /* RobertsDustin.jpg */,
 				AFBC6E0C16B0BF740052E385 /* RobertsSean.jpg */,
+				CE6C63CC21EEE7C000A8044E /* RoeCindy.jpg */,
+				CE927F4D1F8738CE00015327 /* RosecrantsJacob.jpg */,
 				AFBC6E0E16B0BF740052E385 /* RussTodd.jpg */,
 				AFBC6E0F16B0BF740052E385 /* SandersMike.jpg */,
-				AFBC6E1216B0BF740052E385 /* SearsEarl.jpg */,
-				AFBC6E1916B0BF740052E385 /* ThomsenTodd.jpg */,
-				AFBC6E1C16B0BF740052E385 /* VaughanSteve.jpg */,
+				CE6C63BD21EEE7BF00A8044E /* SimsLonnie.jpg */,
+				CE6C63B821EEE7BE00A8044E /* SmithDavid.jpg */,
+				CE6C63E521EEE7C300A8044E /* SneedChris.jpg */,
+				CE6C63D421EEE7C100A8044E /* StarkMarilyn.jpg */,
+				CE6C63DA21EEE7C200A8044E /* SteagallJay.jpg */,
+				CE6C63DD21EEE7C200A8044E /* SterlingDanny.jpg */,
+				AF82A24E1A7789B600A91552 /* StoneShane.jpg */,
+				CE6C63E421EEE7C300A8044E /* StromJudd.jpg */,
+				AF82A2501A7789B600A91552 /* TadlockJohnny.jpg */,
+				CE6C63D821EEE7C200A8044E /* TalleyJohn.jpg */,
+				CE70CCC31FE0F39C001801AC /* TaylorZack.jpg */,
+				CE6C63D521EEE7C100A8044E /* TownleyTammy.jpg */,
+				CE6C63DC21EEE7C200A8044E /* VancurenMark.jpg */,
 				AFBC6E1D16B0BF740052E385 /* VirginEmily.jpg */,
-				AFBC6E1F16B0BF740052E385 /* WatsonWeldon.jpg */,
-				AFBC6E2116B0BF740052E385 /* WilliamsCory.jpg */,
+				CE6C63E921EEE7C300A8044E /* WaldronJohn.jpg */,
+				CE7C6D061E385F4C00874B14 /* WalkeCollin.jpg */,
+				AF82A2511A7789B600A91552 /* WallaceKevin.jpg */,
+				CE7C6D071E385F4C00874B14 /* WestJosh.jpg */,
+				CE7C6D081E385F4C00874B14 /* WestKevin.jpg */,
+				CE7C6D0A1E385F4C00874B14 /* WestTammy.jpg */,
+				CE7C6D0B1E385F4C00874B14 /* WorthenRande.jpg */,
 				AFBC6E2316B0BF740052E385 /* WrightHarold.jpg */,
 			);
 			path = "State Representatives";
@@ -1484,10 +1447,23 @@
 		AFBC6E2416B0BF740052E385 /* State Senators */ = {
 			isa = PBXGroup;
 			children = (
+				CE6C644021F0383400A8044E /* BorenMary.jpg */,
+				CE6C643F21F0383300A8044E /* BullardDavid.jpg */,
+				CE6C644421F0383400A8044E /* ColemanBill.jpg */,
+				CE6C644221F0383400A8044E /* DossettJJ_2.jpg */,
+				CE6C644B21F0383500A8044E /* HallChuck.jpg */,
+				CE6C644621F0383400A8044E /* HasteJohn.jpg */,
+				CE6C644721F0383400A8044E /* HicksCarri.jpg */,
+				CE6C644321F0383400A8044E /* HowardBrent.jpg */,
+				CE6C644C21F0383500A8044E /* KirtJulia.jpg */,
+				CE6C644921F0383400A8044E /* MontgomeryJohn.jpg */,
+				CE6C643E21F0383300A8044E /* MurdockCasey.jpg */,
+				CE6C644521F0383400A8044E /* StanleyBrenda.jpg */,
+				CE6C644121F0383400A8044E /* WeaverDarrell.jpg */,
+				CE6C644821F0383400A8044E /* YoungGeorge.jpg */,
 				CE6520B2207910200077A6C4 /* IkleyFreemanAllison.jpg */,
 				CE00DF4D200DBE1800C246B8 /* RosinoPaul.jpg */,
 				CE927F4F1F87402E00015327 /* BrooksMichael.jpg */,
-				CE2DAF911E4EC6D1002BCD60 /* GriffinAJ.jpg */,
 				CE2DAF8F1E4EB2A1002BCD60 /* BergstromMicheal.jpg */,
 				CE7C6D5A1E3872CD00874B14 /* FloydKay.jpg */,
 				CE7C6D331E385F7600874B14 /* DanielsJulie.jpg */,
@@ -1504,36 +1480,20 @@
 				CE7C6D411E385F7600874B14 /* QuinnMarty.jpg */,
 				CE7C6D421E385F7600874B14 /* RaderDave.jpg */,
 				CE7C6D431E385F7600874B14 /* ScottPaul.jpg */,
-				CEA749641C572771007271E5 /* DossettJJ.jpg */,
 				AF82A26A1A7789C500A91552 /* BiceStephanie.jpg */,
-				AF82A26C1A7789C500A91552 /* FryJack.jpg */,
 				AF82A26D1A7789C500A91552 /* JechDarcy.jpg */,
-				AF82A26E1A7789C500A91552 /* PittmanAnastasia.jpg */,
 				AF82A2701A7789C500A91552 /* SilkJoseph.jpg */,
 				AF82A2711A7789C500A91552 /* SmalleyJason.jpg */,
 				AF82A2721A7789C500A91552 /* ThompsonRoger.jpg */,
-				AF82A2731A7789C500A91552 /* YenErvin.jpg */,
 				AFBC6E2616B0BF740052E385 /* AllenMark.jpg */,
-				AFBC6E2A16B0BF740052E385 /* BassRandy.jpg */,
 				AFBC6E2C16B0BF740052E385 /* BoggsLarry.jpg */,
-				AFBC6E2E16B0BF740052E385 /* BrecheenJosh.jpg */,
-				AFBC6E3116B0BF740052E385 /* BrownBill.jpg */,
 				AFBC6E3516B0BF740052E385 /* DahmNathan.jpg */,
 				AFBC6E3616B0BF740052E385 /* DavidKim.jpg */,
-				AFBC6E3816B0BF740052E385 /* FieldsEddie.jpg */,
-				AFBC6E3D16B0BF740052E385 /* HoltDavid.jpg */,
-				AFBC6E4316B0BF740052E385 /* LovelessKyle.jpg */,
-				AFBC6E4416B0BF740052E385 /* MarlattBryce.jpg */,
-				AFBC6E4716B0BF740052E385 /* NewberryDan.jpg */,
-				AFBC6E4916B0BF740052E385 /* SchulzMike.jpg */,
 				AFBC6E4A16B0BF740052E385 /* SharpRon.jpg */,
 				AFBC6E4B16B0BF740052E385 /* ShawWayne.jpg */,
-				AFBC6E4C16B0BF740052E385 /* ShorteyRalph.jpg */,
 				AFBC6E4E16B0BF740052E385 /* SimpsonFrank.jpg */,
-				AFBC6E4F16B0BF740052E385 /* SparksJohn.jpg */,
 				AFBC6E5016B0BF740052E385 /* StandridgeRob.jpg */,
 				AFBC6E5116B0BF740052E385 /* StanislawskiGary.jpg */,
-				AFBC6E5216B0BF740052E385 /* SykesAnthony.jpg */,
 				AFBC6E5316B0BF740052E385 /* TreatGreg.jpg */,
 			);
 			path = "State Senators";
@@ -1542,6 +1502,14 @@
 		AFBC6E5516B0BF740052E385 /* Statewide Officials */ = {
 			isa = PBXGroup;
 			children = (
+				CE6C642E21F025E800A8044E /* ByrdCindy.jpg */,
+				CE6C643021F025E800A8044E /* HernKevin.jpg */,
+				CE6C643121F025E800A8044E /* HornKendra.jpg */,
+				CE6C642F21F025E800A8044E /* McDanielRandy.jpg */,
+				CE6C643321F025E800A8044E /* MulreadyGlen.jpg */,
+				CE6C642C21F025E700A8044E /* OsbornLeslie.jpg */,
+				CE6C642D21F025E800A8044E /* PinnellMatt.jpg */,
+				CE6C643221F025E800A8044E /* StittKevin.jpg */,
 				CEDABEED1FF495B7000C7408 /* HunterMike.jpg */,
 				CEDEF0D11C0031230024A43F /* McLawhornHoustonMelissa.jpg */,
 				AF82A27E1A7789D100A91552 /* HiettTodd.jpg */,
@@ -1672,6 +1640,7 @@
 		CEC2E9C31BE2FB4300E78D67 /* State Judges */ = {
 			isa = PBXGroup;
 			children = (
+				CE6C643C21F0261F00A8044E /* DarbyRichard.jpg */,
 				CEA7EC551E61CD6E008031BF /* WyrickPatrick.jpg */,
 				CEDEF0D31C0034BF0024A43F /* ColbertTom.jpg */,
 				CEDEF0D41C0034BF0024A43F /* CombsDouglas.jpg */,
@@ -1679,7 +1648,6 @@
 				CEDEF0D61C0034BF0024A43F /* GurichNoma.jpg */,
 				CEDEF0D71C0034BF0024A43F /* KaugerYvonne.jpg */,
 				CEDEF0D81C0034BF0024A43F /* ReifJohn.jpg */,
-				CEDEF0DA1C0034BF0024A43F /* WattJoseph.jpg */,
 				CEDEF0DB1C0034BF0024A43F /* WinchesterJames.jpg */,
 			);
 			name = "State Judges";
@@ -1688,9 +1656,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AF24819E15BB6A250070924E /* ok56leg */ = {
+		AF24819E15BB6A250070924E /* ok57leg */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AF2481CB15BB6A260070924E /* Build configuration list for PBXNativeTarget "ok56leg" */;
+			buildConfigurationList = AF2481CB15BB6A260070924E /* Build configuration list for PBXNativeTarget "ok57leg" */;
 			buildPhases = (
 				AF24819B15BB6A250070924E /* Sources */,
 				AF24819C15BB6A250070924E /* Frameworks */,
@@ -1702,9 +1670,9 @@
 			);
 			dependencies = (
 			);
-			name = ok56leg;
+			name = ok57leg;
 			productName = OAECLegGuide;
-			productReference = AF24819F15BB6A250070924E /* ok56leg.app */;
+			productReference = AF24819F15BB6A250070924E /* ok57leg.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1745,7 +1713,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AF24819E15BB6A250070924E /* ok56leg */,
+				AF24819E15BB6A250070924E /* ok57leg */,
 			);
 		};
 /* End PBXProject section */
@@ -1761,6 +1729,7 @@
 				AF2481E615BB6C5E0070924E /* MainStoryboard_iPhone.storyboard in Resources */,
 				CE18B5421E4F72930067DCC1 /* Icon-App-20x20@2x.png in Resources */,
 				AF2482D615BDDA2A0070924E /* iconplaceholder.png in Resources */,
+				CE6C643421F025E800A8044E /* OsbornLeslie.jpg in Resources */,
 				AF2482D715BDDA2A0070924E /* iconplaceholder@2x.png in Resources */,
 				CE18B5461E4F72930067DCC1 /* Icon-App-29x29@3x.png in Resources */,
 				AFDB1E5B15C0C62300862F0F /* data.csv in Resources */,
@@ -1773,6 +1742,7 @@
 				CE7C6D531E385F7600874B14 /* QuinnMarty.jpg in Resources */,
 				AF0D4B1215CB15570046F663 /* browser.png in Resources */,
 				AF0D4B1315CB15570046F663 /* email.png in Resources */,
+				CE6C645221F0383500A8044E /* DossettJJ_2.jpg in Resources */,
 				AF0D4B1415CB15570046F663 /* facebook.png in Resources */,
 				CE18B5501E4F72930067DCC1 /* Icon-App-76x76@1x.png in Resources */,
 				AF0D4B1515CB15570046F663 /* linkedin.png in Resources */,
@@ -1785,18 +1755,22 @@
 				CE7C6D171E385F4C00874B14 /* FetgatterScott.jpg in Resources */,
 				AF71B99215CB3A8900D0D43B /* PersonViewAddressCell-iPhone.xib in Resources */,
 				AF71B99415CB3AD100D0D43B /* PersonViewCommitteeCell-iPhone.xib in Resources */,
+				CE6C645721F0383500A8044E /* HicksCarri.jpg in Resources */,
+				CE6C641321EEE7C300A8044E /* DillsSheila.jpg in Resources */,
 				AFBEF66A15D2B2D600D785CD /* PeopleListSearchCell-iPhone.xib in Resources */,
 				AF092D3915DA0DC700AA4B6B /* logo.png in Resources */,
 				AF82A27A1A7789C500A91552 /* SilkJoseph.jpg in Resources */,
 				AF82A2681A7789B600A91552 /* WallaceKevin.jpg in Resources */,
 				AF092D3A15DA0DC700AA4B6B /* logo@2x.png in Resources */,
+				CE6C640121EEE7C300A8044E /* ProvenzanoMelissa.jpg in Resources */,
 				AF092D3D15DA0DC700AA4B6B /* SplashScreen.png in Resources */,
 				AF092D3E15DA0DC700AA4B6B /* SplashScreen@2x.png in Resources */,
 				AF092D4115DA0FD200AA4B6B /* Default.png in Resources */,
 				AF092D4315DA0FDC00AA4B6B /* Default@2x.png in Resources */,
 				AF0A15D515DAD75C0063B0E7 /* Background.png in Resources */,
 				CEA7EC561E61CD6E008031BF /* WyrickPatrick.jpg in Resources */,
-				CEB7D5701BC9A57200AD5CD2 /* JonMiles.jpg in Resources */,
+				CE6C63EA21EEE7C300A8044E /* SmithDavid.jpg in Resources */,
+				CE6C641521EEE7C300A8044E /* PittmanAjay.jpg in Resources */,
 				AF0A15D615DAD75C0063B0E7 /* Background@2x.png in Resources */,
 				AF3DEE5815DD3D5800151661 /* CongressionalDistricts.json in Resources */,
 				AF3DEE5915DD3D5800151661 /* Counties.json in Resources */,
@@ -1812,195 +1786,178 @@
 				AF82A2671A7789B600A91552 /* TadlockJohnny.jpg in Resources */,
 				AF9B4A9015DEA8E60071CB88 /* Arrow_Right.png in Resources */,
 				CE18B5591E4F78020067DCC1 /* Icon-App-152x152@1x.png in Resources */,
-				AF82A2631A7789B600A91552 /* PfeifferJohn.jpg in Resources */,
+				CE6C63EE21EEE7C300A8044E /* BoatmanJeff.jpg in Resources */,
+				CE6C641921EEE7C300A8044E /* BurnsTy.jpg in Resources */,
 				CE18B54D1E4F72930067DCC1 /* Icon-App-60x60@2x.png in Resources */,
 				AF9B4A9115DEA8E60071CB88 /* Arrow_Right@2x.png in Resources */,
+				CE6C63F021EEE7C300A8044E /* HardinDavid.jpg in Resources */,
 				AF577E5D1A0BED8D00994EA1 /* houseIcon@2x.png in Resources */,
+				CE6C640421EEE7C300A8044E /* HumphreyJJ.jpg in Resources */,
 				CE7C6D4E1E385F7600874B14 /* NewhouseJoe.jpg in Resources */,
-				CE2DAF921E4EC6D1002BCD60 /* GriffinAJ.jpg in Resources */,
 				AFE5630215E6977B0047FE0A /* backButton.png in Resources */,
-				AF82A25A1A7789B600A91552 /* GriffithClaudia.jpg in Resources */,
+				CE6C643721F025E800A8044E /* McDanielRandy.jpg in Resources */,
+				CE6C640C21EEE7C300A8044E /* SteagallJay.jpg in Resources */,
 				CE2DAF8E1E4EACFD002BCD60 /* DunningtonJason.jpg in Resources */,
 				AF15543315EB5E6700AA7794 /* PersonViewAddressLACell-iPhone.xib in Resources */,
 				AF82A25E1A7789B600A91552 /* LepakMark.jpg in Resources */,
+				CE6C645C21F0383500A8044E /* KirtJulia.jpg in Resources */,
 				AF14BD52160E3FB1003D2052 /* CommitteeListCell-iPhone.xib in Resources */,
 				CE7C6D211E385F4C00874B14 /* LoweJason.jpg in Resources */,
 				AF14BD75160E73A5003D2052 /* About.png in Resources */,
 				AF14BD76160E73A5003D2052 /* About@2x.png in Resources */,
 				CE7C6D4C1E385F7600874B14 /* MatthewsKevin.jpg in Resources */,
 				CE18B54A1E4F72930067DCC1 /* Icon-App-57x57@1x.png in Resources */,
-				CEDEF0E31C0034BF0024A43F /* WattJoseph.jpg in Resources */,
+				CE6C640E21EEE7C300A8044E /* VancurenMark.jpg in Resources */,
+				CE6C640021EEE7C300A8044E /* PatzkowskyKenton.jpg in Resources */,
+				CE6C643921F025E800A8044E /* HornKendra.jpg in Resources */,
 				CE18B5441E4F72930067DCC1 /* Icon-App-29x29@1x.png in Resources */,
 				AF14BD7B160E73A5003D2052 /* Federal.png in Resources */,
 				AF14BD7C160E73A5003D2052 /* Federal@2x.png in Resources */,
 				CE2DAF901E4EB2A1002BCD60 /* BergstromMicheal.jpg in Resources */,
 				CEDABEEE1FF495B8000C7408 /* HunterMike.jpg in Resources */,
+				CE6C645421F0383500A8044E /* ColemanBill.jpg in Resources */,
 				AF14BD7D160E73A5003D2052 /* FederalChoice2.png in Resources */,
 				AF14BD7E160E73A5003D2052 /* FederalChoice2@2x.png in Resources */,
 				AF14BD89160E73A5003D2052 /* State.png in Resources */,
 				AF577E591A0BED8D00994EA1 /* All@2x.png in Resources */,
-				CE7C6D5F1E3873E600874B14 /* HumphreyJustin.jpg in Resources */,
 				AF14BD8A160E73A5003D2052 /* State@2x.png in Resources */,
 				AF14BD91160E7F8C003D2052 /* MapPin.png in Resources */,
 				AF14BD92160E7F8C003D2052 /* MapPin@2x.png in Resources */,
-				AFC926A61614408D009538FD /* Default-568h@2x.png in Resources */,
 				CE7C6D6B1E39B41F00874B14 /* ZacPerkins.jpg in Resources */,
 				AFC926AB161441E3009538FD /* AppIcon.png in Resources */,
 				AFC926AC161441E3009538FD /* AppIcon@2x.png in Resources */,
+				CE6C63FB21EEE7C300A8044E /* RandlemanRandy.jpg in Resources */,
 				AFC926AD161441E3009538FD /* AppIconiPad.png in Resources */,
+				CE6C646721F0399700A8044E /* RickDavis.jpg in Resources */,
 				AFC926AE161441E3009538FD /* AppIconiPad@2x.png in Resources */,
 				AFC4D5D21630BC8F0023EB2E /* ButtonLegislativeContacts@2x.png in Resources */,
+				CE6C640F21EEE7C300A8044E /* SterlingDanny.jpg in Resources */,
 				AF577E5A1A0BED8D00994EA1 /* houseCommittee.png in Resources */,
 				AFC4D5D31630BC8F0023EB2E /* ButtonLegislativeContacts.png in Resources */,
-				CE7C6D131E385F4C00874B14 /* DerbyDale.jpg in Resources */,
 				AFC4D5D41630BC8F0023EB2E /* ButtonAboutOAEC@2x.png in Resources */,
 				AFC4D5D51630BC8F0023EB2E /* ButtonAboutOAEC.png in Resources */,
 				AFC4D5D61630BC8F0023EB2E /* Button53rdSession@2x.png in Resources */,
 				CE7C6D221E385F4C00874B14 /* MartinezRyan.jpg in Resources */,
+				CE6C63FC21EEE7C300A8044E /* FrixAvery.jpg in Resources */,
 				AF82A25F1A7789B600A91552 /* LoringBen.jpg in Resources */,
 				AFC4D5D71630BC8F0023EB2E /* Button53rdSession.png in Resources */,
+				CE6C645321F0383500A8044E /* HowardBrent.jpg in Resources */,
 				AFC4D5D81630BC8F0023EB2E /* AboutBackground@2x.png in Resources */,
 				AFC4D5D91630BC8F0023EB2E /* AboutBackground.png in Resources */,
 				AFC4D5DC16318B440023EB2E /* AboutBackground-iPhone5@2x.png in Resources */,
 				AF374E7B16A5D4F000926C51 /* OAECRegions.json in Resources */,
-				AFBC6E6116B0BF740052E385 /* BridenstineJim.jpg in Resources */,
 				AFBC6E6216B0BF740052E385 /* Frank_Lucas.jpg in Resources */,
 				AFBC6E6316B0BF740052E385 /* James_Lankford.jpg in Resources */,
+				CE6C640A21EEE7C300A8044E /* TalleyJohn.jpg in Resources */,
 				AF577E631A0BED8D00994EA1 /* senateIcon@2x.png in Resources */,
 				AFBC6E6416B0BF740052E385 /* MullinMarkwayne.jpg in Resources */,
-				CE7C6D2B1E385F4C00874B14 /* TeagueTess.jpg in Resources */,
-				AF82A2621A7789B600A91552 /* ParkScooter.jpg in Resources */,
-				AF82A2661A7789B600A91552 /* StrohmChuck.jpg in Resources */,
+				CE6C63F921EEE7C300A8044E /* ODonnellTerry.jpg in Resources */,
+				CE6C644E21F0383500A8044E /* MurdockCasey.jpg in Resources */,
 				AFBC6E6516B0BF740052E385 /* Tom_Cole.jpg in Resources */,
 				AF82A25C1A7789B600A91552 /* KannadyChris.jpg in Resources */,
+				CE6C63F321EEE7C300A8044E /* OlsenJim.jpg in Resources */,
 				AFBC6E6616B0BF740052E385 /* Jim_Inhofe.jpg in Resources */,
 				CE7C6D291E385F4C00874B14 /* NicholsMonroe.jpg in Resources */,
-				AFBC6E6716B0BF740052E385 /* Tom_Coburn.jpg in Resources */,
 				AFBC6E6816B0BF740052E385 /* HowethStacy.jpg in Resources */,
 				AFBC6E6916B0BF740052E385 /* MeyersChris.jpg in Resources */,
-				CE7C6D271E385F4C00874B14 /* MontgomeryJohn.jpg in Resources */,
-				AFBC6E6A16B0BF740052E385 /* SparksKenny.jpg in Resources */,
 				AF6987F918E17E7100144B92 /* CommitteeHeaderView-iPhone.xib in Resources */,
 				AFBC6E6B16B0BF740052E385 /* AliceHouston.jpg in Resources */,
-				AFBC6E6C16B0BF740052E385 /* AnthonyDue.jpg in Resources */,
+				CE6C645021F0383500A8044E /* BorenMary.jpg in Resources */,
 				CE18B5561E4F72930067DCC1 /* Icon-App-60x60@3x.png in Resources */,
 				AFBC6E6E16B0BF740052E385 /* BrentHartin.jpg in Resources */,
-				AFBC6E6F16B0BF740052E385 /* CharlesPaxton.jpg in Resources */,
+				CE6C640821EEE7C300A8044E /* HardinTommy_2018.jpg in Resources */,
 				AFBC6E7016B0BF740052E385 /* ChrisCariker.jpg in Resources */,
 				AFBC6E7116B0BF740052E385 /* ColinWhitley.jpg in Resources */,
 				AF82A2741A7789C500A91552 /* BiceStephanie.jpg in Resources */,
 				AFBC6E7216B0BF740052E385 /* DaleNye.jpg in Resources */,
-				AF82A2761A7789C500A91552 /* FryJack.jpg in Resources */,
-				AFBC6E7316B0BF740052E385 /* DavidSwank.jpg in Resources */,
-				AFBC6E7416B0BF740052E385 /* DennisKrueger.jpg in Resources */,
 				AFBC6E7516B0BF740052E385 /* GaryRoulet.jpg in Resources */,
-				AFBC6E7616B0BF740052E385 /* GeorgeHand.jpg in Resources */,
 				AFBC6E7716B0BF740052E385 /* HamidVahdatipour.jpg in Resources */,
-				AFBC6E7816B0BF740052E385 /* JackClinkscale.jpg in Resources */,
-				AFBC6E7916B0BF740052E385 /* JackPerkins.jpg in Resources */,
+				CE6C641821EEE7C300A8044E /* RansonTrish.jpg in Resources */,
 				CEC865461EBE149100363665 /* CheckNay.png in Resources */,
 				CE927F501F87402E00015327 /* BrooksMichael.jpg in Resources */,
-				AFBC6E7A16B0BF740052E385 /* JamesHanna.jpg in Resources */,
 				AF577E581A0BED8D00994EA1 /* All.png in Resources */,
-				AFBC6E7B16B0BF740052E385 /* JimJackson.jpg in Resources */,
 				AFBC6E7D16B0BF740052E385 /* KendallBeck.jpg in Resources */,
 				AFBC6E7E16B0BF740052E385 /* KrisWilliams.jpg in Resources */,
 				AFBC6E7F16B0BF740052E385 /* MarkSnowden.jpg in Resources */,
-				AFBC6E8016B0BF740052E385 /* MaxMeek.jpg in Resources */,
-				AFBC6E8116B0BF740052E385 /* MikeHagy.jpg in Resources */,
 				AFBC6E8216B0BF740052E385 /* MitchellJohnson.jpg in Resources */,
 				CE7C6D251E385F4C00874B14 /* McEntireMarcus.jpg in Resources */,
-				AFBC6E8316B0BF740052E385 /* RandyEthridge.jpg in Resources */,
+				CE6C645921F0383500A8044E /* MontgomeryJohn.jpg in Resources */,
 				AFBC6E8416B0BF740052E385 /* ScottCopeland.jpg in Resources */,
+				CE6C640721EEE7C300A8044E /* TownleyTammy.jpg in Resources */,
 				CE18B54F1E4F72930067DCC1 /* Icon-App-72x72@2x.png in Resources */,
-				AFBC6E8516B0BF740052E385 /* TerryMatlock.jpg in Resources */,
-				CE927F4C1F87346600015327 /* GaddisKaren.jpg in Resources */,
 				AFBC6E8616B0BF740052E385 /* TimSmith.jpg in Resources */,
 				CEA9B5331ECA9E7300035FF6 /* Senate_VoteTallyIcon.png in Resources */,
 				CE7C6D4B1E385F7600874B14 /* LeewrightJames.jpg in Resources */,
 				AFBC6E8716B0BF740052E385 /* TysonLittau.jpg in Resources */,
-				AFBC6E8816B0BF740052E385 /* WarrenLangford.jpg in Resources */,
+				CE6C643D21F0261F00A8044E /* DarbyRichard.jpg in Resources */,
 				CE7C6D2C1E385F4C00874B14 /* WalkeCollin.jpg in Resources */,
 				CE7C6D691E39B41F00874B14 /* KevinWood.jpg in Resources */,
 				AFBC6E8916B0BF740052E385 /* WilliamPeters.jpg in Resources */,
 				CEB7D56E1BC9A55000AD5CD2 /* GoodwinRegina.jpg in Resources */,
 				AFBC6E8A16B0BF740052E385 /* silhouette_head_small.png in Resources */,
 				AFBC6E8B16B0BF740052E385 /* silhouette_head.png in Resources */,
-				AFBC6E8E16B0BF740052E385 /* BennettJohn.jpg in Resources */,
-				AFBC6E8F16B0BF740052E385 /* BiggsScott.jpg in Resources */,
 				CE7C6D501E385F7600874B14 /* PedersonRoland.jpg in Resources */,
 				CE7C6D521E385F7600874B14 /* PughAdam.jpg in Resources */,
 				CE927F4E1F8738CE00015327 /* RosecrantsJacob.jpg in Resources */,
 				AF577E661A0BED8D00994EA1 /* Statewide.png in Resources */,
-				AFBC6E9316B0BF740052E385 /* BrumbaughDavid.jpg in Resources */,
+				CE6C63F821EEE7C300A8044E /* MartiTJ.jpg in Resources */,
 				CE7C6D6A1E39B41F00874B14 /* PatrickGrace.jpg in Resources */,
-				CE7C6D2F1E385F4C00874B14 /* WestRick.jpg in Resources */,
-				AFBC6E9416B0BF740052E385 /* CannadayEd.jpg in Resources */,
+				CE6C640D21EEE7C300A8044E /* MillerNicole.jpg in Resources */,
+				CE6C63EB21EEE7C300A8044E /* HasenbeckToni.jpg in Resources */,
+				CE6C645621F0383500A8044E /* HasteJohn.jpg in Resources */,
 				CE18B5481E4F72930067DCC1 /* Icon-App-40x40@2x.png in Resources */,
-				AFBC6E9516B0BF740052E385 /* CaseyDennis.jpg in Resources */,
+				CE6C646921F0399700A8044E /* HunterRobinson.jpg in Resources */,
 				AF82A2531A7789B600A91552 /* CaldwellChad.jpg in Resources */,
 				CE7C6D231E385F4C00874B14 /* McDugleKevin.jpg in Resources */,
 				CE70CCC61FE0F3B5001801AC /* GoetzGreg.jpg in Resources */,
 				CE18B5431E4F72930067DCC1 /* Icon-App-20x20@3x.png in Resources */,
 				CE7C6D5B1E3872CD00874B14 /* FloydKay.jpg in Resources */,
-				AFBC6E9716B0BF740052E385 /* ClevelandBobby.jpg in Resources */,
+				CE6C645521F0383500A8044E /* StanleyBrenda.jpg in Resources */,
 				AF577E5B1A0BED8D00994EA1 /* houseCommittee@2x.png in Resources */,
 				CE7C6D551E385F7600874B14 /* ScottPaul.jpg in Resources */,
-				AFBC6E9816B0BF740052E385 /* CockroftJosh.jpg in Resources */,
-				CE7C6D241E385F4C00874B14 /* McEachinScott.jpg in Resources */,
-				CE2DAF8D1E4EACFD002BCD60 /* ConditDonnie.jpg in Resources */,
+				CE6C643821F025E800A8044E /* HernKevin.jpg in Resources */,
+				CE6C63F421EEE7C300A8044E /* AlbrightKelly.jpg in Resources */,
+				CE6C641221EEE7C300A8044E /* KigerLundy.jpg in Resources */,
+				CE6C646621F0399700A8044E /* JimReese.jpg in Resources */,
 				CE7C6D4D1E385F7600874B14 /* McCortneyGreg.jpg in Resources */,
 				CEDEF0E11C0034BF0024A43F /* ReifJohn.jpg in Resources */,
 				AF577E651A0BED8D00994EA1 /* senateLeadership@2x.png in Resources */,
-				CE7C6D1D1E385F4C00874B14 /* JordanJP.jpg in Resources */,
 				CE70CCC81FE0F641001801AC /* DuncanKooney.jpg in Resources */,
 				AF6987F718E17E5500144B92 /* committees.csv in Resources */,
 				CE70CCC41FE0F39C001801AC /* TaylorZack.jpg in Resources */,
 				AFBC6EA216B0BF740052E385 /* EcholsJon.jpg in Resources */,
-				AFBC6EA316B0BF740052E385 /* EnnsJohn.jpg in Resources */,
-				AFBC6EA616B0BF740052E385 /* FourkillerWilliam.jpg in Resources */,
+				CE6C646521F0399700A8044E /* JamesFox.jpg in Resources */,
 				CE18B5541E4F72930067DCC1 /* Icon-Small-50x50@1x.png in Resources */,
-				AFBC6EA916B0BF740052E385 /* HallElise.jpg in Resources */,
 				CE9CAE871EB80D0000C20CAF /* VoteTallIcon-09.png in Resources */,
-				AFBC6EAB16B0BF740052E385 /* HardinTommy.jpg in Resources */,
-				AFBC6EAC16B0BF740052E385 /* HenkeKatie.jpg in Resources */,
+				CE6C641021EEE7C300A8044E /* FugateAndy.jpg in Resources */,
 				AF82A2821A7789D100A91552 /* HofmeisterJoy.jpg in Resources */,
-				AF82A2781A7789C500A91552 /* PittmanAnastasia.jpg in Resources */,
-				AFBC6EAE16B0BF740052E385 /* HoskinChuck.jpg in Resources */,
 				CE7C6D311E385F4C00874B14 /* WorthenRande.jpg in Resources */,
 				CE7C6D461E385F7600874B14 /* DuggerTom.jpg in Resources */,
-				AFBC6EB016B0BF740052E385 /* InmanScott.jpg in Resources */,
+				CE6C63EC21EEE7C300A8044E /* LuttrellKen.jpg in Resources */,
+				CE6C647121F17D6300A8044E /* Default-568h@2x.png in Resources */,
 				AFDAD5B21860070400366D99 /* Calendar.png in Resources */,
 				AF577E5C1A0BED8D00994EA1 /* houseIcon.png in Resources */,
 				AF82A27C1A7789C500A91552 /* ThompsonRoger.jpg in Resources */,
-				AFBC6EB616B0BF740052E385 /* KirbyDan.jpg in Resources */,
 				CEC865411EBDF7BC00363665 /* BlankYeaSlice.png in Resources */,
-				CE7C6D681E39B41F00874B14 /* KenGates.jpg in Resources */,
-				AFBC6EB716B0BF740052E385 /* KouplenSteve.jpg in Resources */,
 				CE7C6D4F1E385F7600874B14 /* PaxtonLonnie.jpg in Resources */,
-				AFBC6EB916B0BF740052E385 /* MartinScott.jpg in Resources */,
 				CE7C6D671E39B41F00874B14 /* JenniferMeason.jpg in Resources */,
+				CE6C654421F1911700A8044E /* PfeifferJohn.jpg in Resources */,
+				CE6C63FF21EEE7C300A8044E /* PhillipsLogan.jpg in Resources */,
 				CE18B5511E4F72930067DCC1 /* Icon-App-76x76@2x.png in Resources */,
 				AFBC6EBC16B0BF740052E385 /* McBrideMark.jpg in Resources */,
 				AFBC6EBD16B0BF740052E385 /* McCallCharles.jpg in Resources */,
 				CE64C2C01EDFBC9E00FEF384 /* VoteListView-iPhone.xib in Resources */,
-				AFBC6EC116B0BF740052E385 /* McDanielRandy.jpg in Resources */,
 				CE7C6D1B1E385F4C00874B14 /* HilbertKyle.jpg in Resources */,
 				AFBC6EC416B0BF740052E385 /* MooreLewis.jpg in Resources */,
-				CE7C6D181E385F4C00874B14 /* FordRoger.jpg in Resources */,
 				CE18B5411E4F72930067DCC1 /* Icon-App-20x20@1x.png in Resources */,
-				AFBC6EC616B0BF740052E385 /* MulreadyGlen.jpg in Resources */,
-				AFBC6EC716B0BF740052E385 /* MurpheyJason.jpg in Resources */,
 				AFBC6ECA16B0BF740052E385 /* NollanJadine.jpg in Resources */,
-				AFBC6ECB16B0BF740052E385 /* O'DonnellTerry.jpg in Resources */,
 				CE18B55A1E4F78020067DCC1 /* Icon-App-167x167@1x.png in Resources */,
-				CEA749651C572771007271E5 /* DossettJJ.jpg in Resources */,
 				CE00DF4E200DBE1800C246B8 /* RosinoPaul.jpg in Resources */,
 				CE7C6D2D1E385F4C00874B14 /* WestJosh.jpg in Resources */,
+				CE6C63FD21EEE7C300A8044E /* FincherDerrel.jpg in Resources */,
 				AFBC6ECC16B0BF740052E385 /* OrtegaCharles.jpg in Resources */,
-				AFBC6ECD16B0BF740052E385 /* OsbornLeslie.jpg in Resources */,
-				AFBC6ECE16B0BF740052E385 /* OwnbeyPat.jpg in Resources */,
 				CE1600951ED299FF00058C4D /* CustomTableViewHeaderCell-iPhone.xib in Resources */,
+				CE6C641B21EEE7C300A8044E /* WaldronJohn.jpg in Resources */,
 				AF577E611A0BED8D00994EA1 /* senateCommittee@2x.png in Resources */,
 				CEDEF0D21C0031230024A43F /* McLawhornHoustonMelissa.jpg in Resources */,
 				AFBC6ECF16B0BF740052E385 /* PerrymanDavid.jpg in Resources */,
@@ -2008,84 +1965,80 @@
 				CEDEF0DD1C0034BF0024A43F /* CombsDouglas.jpg in Resources */,
 				CEA9B5321ECA9E7300035FF6 /* SenateCommittees__VoteTallyIcon.png in Resources */,
 				AF82A27B1A7789C500A91552 /* SmalleyJason.jpg in Resources */,
-				AFBC6ED216B0BF740052E385 /* ProctorEric.jpg in Resources */,
+				CE6C645121F0383500A8044E /* WeaverDarrell.jpg in Resources */,
 				CE7C6D0E1E385F4C00874B14 /* BennettForrest.jpg in Resources */,
-				CE7C6D0C1E385F4C00874B14 /* BabinecGreg.jpg in Resources */,
 				CE7C6D2E1E385F4C00874B14 /* WestKevin.jpg in Resources */,
-				AFBC6ED516B0BF740052E385 /* RenegarBrian.jpg in Resources */,
 				AF577E6A1A0BF5E500994EA1 /* ClintPack.jpg in Resources */,
 				CE7C6D141E385F4C00874B14 /* DollensMickey.jpg in Resources */,
-				AFBC6ED716B0BF740052E385 /* RitzeMike.jpg in Resources */,
 				CEA9B5341ECA9E7300035FF6 /* HouseCommittees_VoteTallyIcon.png in Resources */,
 				CE7C6D0D1E385F4C00874B14 /* BakerRhonda.jpg in Resources */,
 				AFBC6ED816B0BF740052E385 /* RobertsDustin.jpg in Resources */,
 				CE7C6D661E39B41F00874B14 /* BrettOrme.jpg in Resources */,
 				CE7C6D111E385F4C00874B14 /* BushCarol.jpg in Resources */,
-				CE7C6D5D1E38734100874B14 /* FrixAveryCarl.jpg in Resources */,
+				CE6C63F221EEE7C300A8044E /* CrosswhiteHaderDenise.jpg in Resources */,
 				AFDAD5D41861D22C00366D99 /* share.png in Resources */,
+				CE6C63F121EEE7C300A8044E /* MangerRobert.jpg in Resources */,
 				AFBC6ED916B0BF740052E385 /* RobertsSean.jpg in Resources */,
 				AFBC6EDB16B0BF740052E385 /* RussTodd.jpg in Resources */,
+				CE6C63FE21EEE7C300A8044E /* RoeCindy.jpg in Resources */,
 				AFBC6EDC16B0BF740052E385 /* SandersMike.jpg in Resources */,
+				CE6C645B21F0383500A8044E /* HallChuck.jpg in Resources */,
 				AF577E5E1A0BED8D00994EA1 /* houseLeadership.png in Resources */,
 				AF577E6B1A0BF5E500994EA1 /* TimRodriguez.jpg in Resources */,
-				AFBC6EDF16B0BF740052E385 /* SearsEarl.jpg in Resources */,
+				CE6C640621EEE7C300A8044E /* StarkMarilyn.jpg in Resources */,
+				CE6C641721EEE7C300A8044E /* SneedChris.jpg in Resources */,
 				AFDAD5BD18601CCA00366D99 /* calendar.csv in Resources */,
 				CEDEF0E01C0034BF0024A43F /* KaugerYvonne.jpg in Resources */,
+				CE6C63F721EEE7C300A8044E /* JohnsRonny.jpg in Resources */,
+				CE6C646821F0399700A8044E /* DanielWebster.jpg in Resources */,
+				CE6C63EF21EEE7C300A8044E /* SimsLonnie.jpg in Resources */,
 				CE7C6D261E385F4C00874B14 /* MeredithMatt.jpg in Resources */,
 				AF577E641A0BED8D00994EA1 /* senateLeadership.png in Resources */,
-				AFBC6EE616B0BF740052E385 /* ThomsenTodd.jpg in Resources */,
-				AF82A2611A7789B600A91552 /* MurdockCasey.jpg in Resources */,
-				AF82A2691A7789B600A91552 /* YoungGeorge.jpg in Resources */,
+				CE6C643521F025E800A8044E /* PinnellMatt.jpg in Resources */,
 				CE7C6D511E385F7600874B14 /* PembertonDewayne.jpg in Resources */,
+				CE6C641A21EEE7C300A8044E /* BrewerDenise.jpg in Resources */,
 				AF82A2831A7789D100A91552 /* RussellSteve.jpg in Resources */,
 				CE18B54E1E4F72930067DCC1 /* Icon-App-72x72@1x.png in Resources */,
 				CE6520B3207910210077A6C4 /* IkleyFreemanAllison.jpg in Resources */,
-				AFBC6EE916B0BF740052E385 /* VaughanSteve.jpg in Resources */,
 				AFBC6EEA16B0BF740052E385 /* VirginEmily.jpg in Resources */,
-				AFBC6EEC16B0BF740052E385 /* WatsonWeldon.jpg in Resources */,
+				CE6C643621F025E800A8044E /* ByrdCindy.jpg in Resources */,
+				CE6C640321EEE7C300A8044E /* GregoJim.jpg in Resources */,
 				CEDEF0DF1C0034BF0024A43F /* GurichNoma.jpg in Resources */,
+				CE6C641121EEE7C300A8044E /* DavisDean.jpg in Resources */,
 				CE7C6D491E385F7600874B14 /* KiddChris.jpg in Resources */,
-				AFBC6EEE16B0BF740052E385 /* WilliamsCory.jpg in Resources */,
-				CEDABEF61FF4A6AB000C7408 /* Images.xcassets in Resources */,
 				AFBC6EF016B0BF740052E385 /* WrightHarold.jpg in Resources */,
 				AFBC6EF216B0BF740052E385 /* AllenMark.jpg in Resources */,
-				AFBC6EF616B0BF740052E385 /* BassRandy.jpg in Resources */,
 				AFBC6EF816B0BF740052E385 /* BoggsLarry.jpg in Resources */,
-				AFBC6EFA16B0BF740052E385 /* BrecheenJosh.jpg in Resources */,
+				CE6C640921EEE7C300A8044E /* MayStan.jpg in Resources */,
 				CE18B5531E4F72930067DCC1 /* Icon-App-83.5x83.5@2x.png in Resources */,
 				AF577E5F1A0BED8D00994EA1 /* houseLeadership@2x.png in Resources */,
-				AFBC6EFD16B0BF740052E385 /* BrownBill.jpg in Resources */,
-				AF82A2561A7789B600A91552 /* DunlapTravis.jpg in Resources */,
+				CE6C63F521EEE7C300A8044E /* PaeDaniel.jpg in Resources */,
 				CEDEF0DC1C0034BF0024A43F /* ColbertTom.jpg in Resources */,
-				AF82A2541A7789B600A91552 /* CalveyKevin.jpg in Resources */,
 				AFBC6F0116B0BF740052E385 /* DahmNathan.jpg in Resources */,
 				AFBC6F0216B0BF740052E385 /* DavidKim.jpg in Resources */,
-				AFBC6F0416B0BF740052E385 /* FieldsEddie.jpg in Resources */,
 				CE7C6D451E385F7600874B14 /* DanielsJulie.jpg in Resources */,
-				AFBC6F0916B0BF740052E385 /* HoltDavid.jpg in Resources */,
 				CEB7D56C1BC9A54100AD5CD2 /* MunsonCyndi.jpg in Resources */,
+				CE6C640B21EEE7C300A8044E /* BellMerleyn.jpg in Resources */,
 				AF577E621A0BED8D00994EA1 /* senateIcon.png in Resources */,
 				AF82A2651A7789B600A91552 /* StoneShane.jpg in Resources */,
-				AFBC6F0F16B0BF740052E385 /* LovelessKyle.jpg in Resources */,
 				CE7C6D1F1E385F4C00874B14 /* LawsonMark.jpg in Resources */,
-				AF82A27D1A7789C500A91552 /* YenErvin.jpg in Resources */,
-				AFBC6F1016B0BF740052E385 /* MarlattBryce.jpg in Resources */,
-				AF82A2581A7789B600A91552 /* FaughtGeorge.jpg in Resources */,
 				CE18B5451E4F72930067DCC1 /* Icon-App-29x29@2x.png in Resources */,
-				AFBC6F1316B0BF740052E385 /* NewberryDan.jpg in Resources */,
-				CE7C6D151E385F4C00874B14 /* DowningTim.jpg in Resources */,
-				AFBC6F1516B0BF740052E385 /* SchulzMike.jpg in Resources */,
+				CE6C63ED21EEE7C300A8044E /* CaldwellTrey.jpg in Resources */,
+				CE6C646F21F172B200A8044E /* Media.xcassets in Resources */,
 				CEC865431EBE0F9300363665 /* CheckYea.png in Resources */,
 				AFBC6F1616B0BF740052E385 /* SharpRon.jpg in Resources */,
 				AFBC6F1716B0BF740052E385 /* ShawWayne.jpg in Resources */,
+				CE6C641421EEE7C300A8044E /* BranhamChelsey.jpg in Resources */,
 				CE2DAF8C1E4EACFD002BCD60 /* BlancettMeloyde.jpg in Resources */,
-				AFBC6F1816B0BF740052E385 /* ShorteyRalph.jpg in Resources */,
+				CE6C640521EEE7C300A8044E /* HillBrian.jpg in Resources */,
 				AFBC6F1A16B0BF740052E385 /* SimpsonFrank.jpg in Resources */,
-				AFBC6F1B16B0BF740052E385 /* SparksJohn.jpg in Resources */,
+				CE6C645821F0383500A8044E /* YoungGeorge.jpg in Resources */,
+				CE6C641621EEE7C300A8044E /* StromJudd.jpg in Resources */,
 				AFBC6F1C16B0BF740052E385 /* StandridgeRob.jpg in Resources */,
+				CE6C640221EEE7C300A8044E /* MizeGarry.jpg in Resources */,
+				CE6C643B21F025E800A8044E /* MulreadyGlen.jpg in Resources */,
 				CE5986021EE8DB8D007C5C3B /* Buttons in Resources */,
 				AFBC6F1D16B0BF740052E385 /* StanislawskiGary.jpg in Resources */,
-				AFBC6F1E16B0BF740052E385 /* SykesAnthony.jpg in Resources */,
 				CEDEF0DE1C0034BF0024A43F /* EdmondsonJames.jpg in Resources */,
 				AFBC6F1F16B0BF740052E385 /* TreatGreg.jpg in Resources */,
 				CEDABEF01FF495C1000C7408 /* FordRoss.jpg in Resources */,
@@ -2095,16 +2048,18 @@
 				AFBC6F2116B0BF740052E385 /* AnthonyBob.jpg in Resources */,
 				AFBC6F2216B0BF740052E385 /* BarresiJanet.jpg in Resources */,
 				AFBC6F2316B0BF740052E385 /* CostelloMark.jpg in Resources */,
+				CE6C643A21F025E800A8044E /* StittKevin.jpg in Resources */,
 				AFBC6F2416B0BF740052E385 /* DoakJohn.jpg in Resources */,
 				CE18B5471E4F72930067DCC1 /* Icon-App-40x40@1x.png in Resources */,
 				AFBC6F2516B0BF740052E385 /* DouglasPatrice.jpg in Resources */,
 				CE7C6D541E385F7600874B14 /* RaderDave.jpg in Resources */,
-				AF82A2551A7789B600A91552 /* CoodyJeff.jpg in Resources */,
 				AFBC6F2616B0BF740052E385 /* FallinMary.jpg in Resources */,
 				AF82A2811A7789D100A91552 /* HiettTodd.jpg in Resources */,
 				AFBC6F2716B0BF740052E385 /* JonesGary.jpg in Resources */,
+				CE6C646421F0399700A8044E /* AaronPaxton.jpg in Resources */,
 				AFBC6F2816B0BF740052E385 /* LambTodd.jpg in Resources */,
 				CEF324B0207915F000B05192 /* BolesBrad.jpg in Resources */,
+				CE6C63FA21EEE7C300A8044E /* CornwellRusty.jpg in Resources */,
 				CEC865471EBE149100363665 /* BlankNay.png in Resources */,
 				CE7C6D1A1E385F4C00874B14 /* GannTom.jpg in Resources */,
 				AFBC6F2916B0BF740052E385 /* MillerKen.jpg in Resources */,
@@ -2113,12 +2068,13 @@
 				CEA9B5351ECA9E7300035FF6 /* House__VoteTallyIcon.png in Resources */,
 				CE18B54B1E4F72930067DCC1 /* Icon-App-57x57@2x.png in Resources */,
 				CE70CCCA1FE0F9F6001801AC /* SimmonsKen.jpg in Resources */,
+				CE6C644F21F0383500A8044E /* BullardDavid.jpg in Resources */,
+				CE6C63F621EEE7C300A8044E /* ConleySherri.jpg in Resources */,
 				AFBC6F2B16B0BF740052E385 /* PruittScott.jpg in Resources */,
 				AF866C9616B8F9C700E9DF01 /* OutlinkCell-iPhone.xib in Resources */,
 				CEA9B5361ECA9E7300035FF6 /* All_VoteTallyIcon.png in Resources */,
 				CE7C6D1E1E385F4C00874B14 /* KerbsDell.jpg in Resources */,
 				CE18B5491E4F72930067DCC1 /* Icon-App-40x40@3x.png in Resources */,
-				AF82A2641A7789B600A91552 /* RogersMichael.jpg in Resources */,
 				CE18B54C1E4F72930067DCC1 /* Icon-App-60x60@1x.png in Resources */,
 				AF255CC5184CBAF60053CC73 /* AppIcon-60.png in Resources */,
 				AF255CC6184CBAF60053CC73 /* AppIcon-60@2x.png in Resources */,
@@ -2304,7 +2260,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CODE_SIGN_ENTITLEMENTS = ok56leg.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
@@ -2334,7 +2290,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CODE_SIGN_ENTITLEMENTS = ok56leg.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -2370,7 +2326,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AF2481CB15BB6A260070924E /* Build configuration list for PBXNativeTarget "ok56leg" */ = {
+		AF2481CB15BB6A260070924E /* Build configuration list for PBXNativeTarget "ok57leg" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AF2481CC15BB6A260070924E /* Debug */,
