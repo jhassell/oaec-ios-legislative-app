@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 47;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -251,6 +251,10 @@
 		CE2DAF901E4EB2A1002BCD60 /* BergstromMicheal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE2DAF8F1E4EB2A1002BCD60 /* BergstromMicheal.jpg */; };
 		CE2DAF961E4EC8A4002BCD60 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2DAF951E4EC8A4002BCD60 /* StoreKit.framework */; };
 		CE2E210E1EE65E2E00646C92 /* LocationDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E210D1EE65E2E00646C92 /* LocationDetailViewController.m */; };
+		CE38F84421F83948002D7D6A /* SenateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE38F84321F83948002D7D6A /* SenateViewController.m */; };
+		CE38F84721F8A4AD002D7D6A /* HouseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE38F84621F8A4AD002D7D6A /* HouseViewController.m */; };
+		CE38F84A21F8B3A8002D7D6A /* StatewideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE38F84921F8B3A8002D7D6A /* StatewideViewController.m */; };
+		CE38F84D21F8B890002D7D6A /* RollCallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE38F84C21F8B890002D7D6A /* RollCallViewController.m */; };
 		CE5986021EE8DB8D007C5C3B /* Buttons in Resources */ = {isa = PBXBuildFile; fileRef = CE5986011EE8DB8D007C5C3B /* Buttons */; };
 		CE64C2C01EDFBC9E00FEF384 /* VoteListView-iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE7014831EDFB81200BE7B25 /* VoteListView-iPhone.xib */; };
 		CE64C2C71EE113C000FEF384 /* CommitteeVoteListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64C2C61EE113C000FEF384 /* CommitteeVoteListViewController.m */; };
@@ -390,6 +394,8 @@
 		CE9CAE891EB8AB9100C20CAF /* VotingListCell-iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE9CAE881EB8AB9100C20CAF /* VotingListCell-iPhone.xib */; };
 		CE9CAE8C1EBAD31000C20CAF /* VoteCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9CAE8B1EBAD31000C20CAF /* VoteCheckViewController.m */; };
 		CE9CAE8F1EBC08FD00C20CAF /* MyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9CAE8E1EBC08FD00C20CAF /* MyButton.m */; };
+		CEA6036421F532C90033AC7D /* AboutOAECScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA6036321F532C60033AC7D /* AboutOAECScreen.png */; };
+		CEA6036621F546A00033AC7D /* about_oaec.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA6036521F546A00033AC7D /* about_oaec.png */; };
 		CEA7EC541E61CD58008031BF /* MarkWSchwirtz.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEA7EC531E61CD58008031BF /* MarkWSchwirtz.jpg */; };
 		CEA7EC561E61CD6E008031BF /* WyrickPatrick.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEA7EC551E61CD6E008031BF /* WyrickPatrick.jpg */; };
 		CEA9B5321ECA9E7300035FF6 /* SenateCommittees__VoteTallyIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA9B52D1ECA9E7300035FF6 /* SenateCommittees__VoteTallyIcon.png */; };
@@ -739,6 +745,14 @@
 		CE2DAF8F1E4EB2A1002BCD60 /* BergstromMicheal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BergstromMicheal.jpg; sourceTree = "<group>"; };
 		CE2DAF951E4EC8A4002BCD60 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		CE2E210D1EE65E2E00646C92 /* LocationDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationDetailViewController.m; sourceTree = "<group>"; };
+		CE38F84221F83948002D7D6A /* SenateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SenateViewController.h; sourceTree = "<group>"; };
+		CE38F84321F83948002D7D6A /* SenateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SenateViewController.m; sourceTree = "<group>"; };
+		CE38F84521F8A4AD002D7D6A /* HouseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HouseViewController.h; sourceTree = "<group>"; };
+		CE38F84621F8A4AD002D7D6A /* HouseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HouseViewController.m; sourceTree = "<group>"; };
+		CE38F84821F8B3A8002D7D6A /* StatewideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatewideViewController.h; sourceTree = "<group>"; };
+		CE38F84921F8B3A8002D7D6A /* StatewideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatewideViewController.m; sourceTree = "<group>"; };
+		CE38F84B21F8B890002D7D6A /* RollCallViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RollCallViewController.h; sourceTree = "<group>"; };
+		CE38F84C21F8B890002D7D6A /* RollCallViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RollCallViewController.m; sourceTree = "<group>"; };
 		CE4ACD331E215057003A6655 /* ok56leg.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ok56leg.entitlements; sourceTree = "<group>"; };
 		CE5986011EE8DB8D007C5C3B /* Buttons */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Buttons; path = OAECLegGuide/Images/Buttons; sourceTree = "<group>"; };
 		CE64C2BE1EDFBB1900FEF384 /* VoteListView-iPhone.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "VoteListView-iPhone.xib"; path = "OAECLegGuide/NIBs/VoteListView-iPhone.xib"; sourceTree = "<group>"; };
@@ -885,6 +899,8 @@
 		CE9CAE8B1EBAD31000C20CAF /* VoteCheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VoteCheckViewController.m; path = "../View Controllers/VoteCheckViewController.m"; sourceTree = "<group>"; };
 		CE9CAE8D1EBC08FD00C20CAF /* MyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyButton.h; sourceTree = "<group>"; };
 		CE9CAE8E1EBC08FD00C20CAF /* MyButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyButton.m; sourceTree = "<group>"; };
+		CEA6036321F532C60033AC7D /* AboutOAECScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AboutOAECScreen.png; sourceTree = "<group>"; };
+		CEA6036521F546A00033AC7D /* about_oaec.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = about_oaec.png; sourceTree = "<group>"; };
 		CEA7EC531E61CD58008031BF /* MarkWSchwirtz.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MarkWSchwirtz.jpg; sourceTree = "<group>"; };
 		CEA7EC551E61CD6E008031BF /* WyrickPatrick.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = WyrickPatrick.jpg; path = "State Judges/WyrickPatrick.jpg"; sourceTree = "<group>"; };
 		CEA9B52D1ECA9E7300035FF6 /* SenateCommittees__VoteTallyIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SenateCommittees__VoteTallyIcon.png; sourceTree = "<group>"; };
@@ -1093,40 +1109,48 @@
 		AF2481D115BB6C5E0070924E /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				CE2E210D1EE65E2E00646C92 /* LocationDetailViewController.m */,
-				CEE7CE431EE25AC900199948 /* SetupViewController.h */,
-				CEE7CE441EE25AC900199948 /* SetupViewController.m */,
-				CEE7CE461EE25CE200199948 /* GetLocationViewController.h */,
-				CEE7CE471EE25CE200199948 /* GetLocationViewController.m */,
-				CEE7CE491EE25DD600199948 /* LocationDetailViewController.h */,
-				CEE7CE4C1EE25DF100199948 /* CLLocation+Strings.h */,
-				CEE7CE4D1EE25DF100199948 /* CLLocation+Strings.m */,
-				CEA9B5581ECD4AF300035FF6 /* VotingListViewController.h */,
-				CEA9B5591ECD4AF300035FF6 /* VotingListViewController.m */,
-				CE64C2C51EE113C000FEF384 /* CommitteeVoteListViewController.h */,
-				CE64C2C61EE113C000FEF384 /* CommitteeVoteListViewController.m */,
-				AFDAD5A8186006AB00366D99 /* CustomTabBarController.m */,
-				AFDAD5AB186006AB00366D99 /* CustomTabBarController.h */,
-				AFDAD5A9186006AB00366D99 /* IOS7AdjustmentViewController.m */,
-				AFDAD5AA186006AB00366D99 /* IOS7AdjustmentViewController.h */,
-				AFDAD5A7186006AB00366D99 /* CalendarTabViewController.m */,
-				AFDAD5AC186006AB00366D99 /* CalendarTabViewController.h */,
 				AF2481F315BB72FA0070924E /* AboutViewController.h */,
 				AF2481F415BB72FA0070924E /* AboutViewController.m */,
-				AF2481F615BB730A0070924E /* StateTabViewController.h */,
-				AF2481F715BB730A0070924E /* StateTabViewController.m */,
-				AF2481F915BB73190070924E /* FederalTabViewController.h */,
-				AF2481FA15BB73190070924E /* FederalTabViewController.m */,
-				AF2481FC15BB732D0070924E /* MapsViewController.h */,
-				AF2481FD15BB732D0070924E /* MapsViewController.m */,
-				AFEF4BB815C531F900896FA9 /* PeopleListViewController.h */,
-				AFEF4BB915C531F900896FA9 /* PeopleListViewController.m */,
+				AFDAD5AC186006AB00366D99 /* CalendarTabViewController.h */,
+				AFDAD5A7186006AB00366D99 /* CalendarTabViewController.m */,
+				CEE7CE4C1EE25DF100199948 /* CLLocation+Strings.h */,
+				CEE7CE4D1EE25DF100199948 /* CLLocation+Strings.m */,
 				AFF2BB1615C860BB00F1B379 /* CommitteeListViewController.h */,
 				AFF2BB1715C860BB00F1B379 /* CommitteeListViewController.m */,
-				AF71B99515CB3B0C00D0D43B /* PersonViewController.h */,
-				AF71B99615CB3B0C00D0D43B /* PersonViewController.m */,
+				CE64C2C51EE113C000FEF384 /* CommitteeVoteListViewController.h */,
+				CE64C2C61EE113C000FEF384 /* CommitteeVoteListViewController.m */,
+				AFDAD5AB186006AB00366D99 /* CustomTabBarController.h */,
+				AFDAD5A8186006AB00366D99 /* CustomTabBarController.m */,
+				AF2481F915BB73190070924E /* FederalTabViewController.h */,
+				AF2481FA15BB73190070924E /* FederalTabViewController.m */,
+				CEE7CE461EE25CE200199948 /* GetLocationViewController.h */,
+				CEE7CE471EE25CE200199948 /* GetLocationViewController.m */,
+				AFDAD5AA186006AB00366D99 /* IOS7AdjustmentViewController.h */,
+				AFDAD5A9186006AB00366D99 /* IOS7AdjustmentViewController.m */,
+				CEE7CE491EE25DD600199948 /* LocationDetailViewController.h */,
+				CE2E210D1EE65E2E00646C92 /* LocationDetailViewController.m */,
+				AF2481FC15BB732D0070924E /* MapsViewController.h */,
+				AF2481FD15BB732D0070924E /* MapsViewController.m */,
 				AFDAD5D01861D21F00366D99 /* NotesViewController.h */,
 				AFDAD5D11861D21F00366D99 /* NotesViewController.m */,
+				AFEF4BB815C531F900896FA9 /* PeopleListViewController.h */,
+				AFEF4BB915C531F900896FA9 /* PeopleListViewController.m */,
+				AF71B99515CB3B0C00D0D43B /* PersonViewController.h */,
+				AF71B99615CB3B0C00D0D43B /* PersonViewController.m */,
+				CEE7CE431EE25AC900199948 /* SetupViewController.h */,
+				CEE7CE441EE25AC900199948 /* SetupViewController.m */,
+				AF2481F615BB730A0070924E /* StateTabViewController.h */,
+				AF2481F715BB730A0070924E /* StateTabViewController.m */,
+				CEA9B5581ECD4AF300035FF6 /* VotingListViewController.h */,
+				CEA9B5591ECD4AF300035FF6 /* VotingListViewController.m */,
+				CE38F84221F83948002D7D6A /* SenateViewController.h */,
+				CE38F84321F83948002D7D6A /* SenateViewController.m */,
+				CE38F84521F8A4AD002D7D6A /* HouseViewController.h */,
+				CE38F84621F8A4AD002D7D6A /* HouseViewController.m */,
+				CE38F84821F8B3A8002D7D6A /* StatewideViewController.h */,
+				CE38F84921F8B3A8002D7D6A /* StatewideViewController.m */,
+				CE38F84B21F8B890002D7D6A /* RollCallViewController.h */,
+				CE38F84C21F8B890002D7D6A /* RollCallViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -1134,6 +1158,8 @@
 		AF2481D615BB6C5E0070924E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				CEA6036521F546A00033AC7D /* about_oaec.png */,
+				CEA6036321F532C60033AC7D /* AboutOAECScreen.png */,
 				CEA9B52D1ECA9E7300035FF6 /* SenateCommittees__VoteTallyIcon.png */,
 				CEA9B52E1ECA9E7300035FF6 /* Senate_VoteTallyIcon.png */,
 				CEA9B52F1ECA9E7300035FF6 /* HouseCommittees_VoteTallyIcon.png */,
@@ -1702,7 +1728,7 @@
 				};
 			};
 			buildConfigurationList = AF24819915BB6A250070924E /* Build configuration list for PBXProject "OAECLegGuide" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -1768,6 +1794,7 @@
 				AF092D4115DA0FD200AA4B6B /* Default.png in Resources */,
 				AF092D4315DA0FDC00AA4B6B /* Default@2x.png in Resources */,
 				AF0A15D515DAD75C0063B0E7 /* Background.png in Resources */,
+				CEA6036421F532C90033AC7D /* AboutOAECScreen.png in Resources */,
 				CEA7EC561E61CD6E008031BF /* WyrickPatrick.jpg in Resources */,
 				CE6C63EA21EEE7C300A8044E /* SmithDavid.jpg in Resources */,
 				CE6C641521EEE7C300A8044E /* PittmanAjay.jpg in Resources */,
@@ -1840,6 +1867,7 @@
 				CE7C6D221E385F4C00874B14 /* MartinezRyan.jpg in Resources */,
 				CE6C63FC21EEE7C300A8044E /* FrixAvery.jpg in Resources */,
 				AF82A25F1A7789B600A91552 /* LoringBen.jpg in Resources */,
+				CEA6036621F546A00033AC7D /* about_oaec.png in Resources */,
 				AFC4D5D71630BC8F0023EB2E /* Button53rdSession.png in Resources */,
 				CE6C645321F0383500A8044E /* HowardBrent.jpg in Resources */,
 				AFC4D5D81630BC8F0023EB2E /* AboutBackground@2x.png in Resources */,
@@ -2119,6 +2147,7 @@
 				CEC865691EC5387400363665 /* Tally.m in Sources */,
 				AFDAD5D21861D21F00366D99 /* NotesViewController.m in Sources */,
 				CE9CAE8F1EBC08FD00C20CAF /* MyButton.m in Sources */,
+				CE38F84A21F8B3A8002D7D6A /* StatewideViewController.m in Sources */,
 				AFDAD5D71861DA1300366D99 /* Notes.m in Sources */,
 				AFDB1E6615C1D1B300862F0F /* ListSection.m in Sources */,
 				AFDAD5BA1860096900366D99 /* CalendarCell.m in Sources */,
@@ -2133,9 +2162,11 @@
 				AF47A83D18620A8E0041C5B3 /* EmailHelper.m in Sources */,
 				AFF2BB1815C860BB00F1B379 /* CommitteeListViewController.m in Sources */,
 				CEA9B55C1ECD4AF300035FF6 /* VotingListViewController.m in Sources */,
+				CE38F84421F83948002D7D6A /* SenateViewController.m in Sources */,
 				AF71B99715CB3B0C00D0D43B /* PersonViewController.m in Sources */,
 				AF71B99A15CC4B0400D0D43B /* Address.m in Sources */,
 				AF71B99D15CC4E4A00D0D43B /* AddressViewCell.m in Sources */,
+				CE38F84721F8A4AD002D7D6A /* HouseViewController.m in Sources */,
 				CEE7CE451EE25AC900199948 /* SetupViewController.m in Sources */,
 				AF71B9A015CC62EE00D0D43B /* CommitteeViewCell.m in Sources */,
 				CE1600911ED2606000058C4D /* CustomTableViewHeaderCell.m in Sources */,
@@ -2148,6 +2179,7 @@
 				AF3DEE6B15DD6B2400151661 /* BoundaryPolygon.m in Sources */,
 				AF15543715EB5FE400AA7794 /* AddressLAViewCell.m in Sources */,
 				AF14BD55160E4091003D2052 /* CommitteeListViewCell.m in Sources */,
+				CE38F84D21F8B890002D7D6A /* RollCallViewController.m in Sources */,
 				AF9385FE1610FF9A00B34E92 /* GradientButton.m in Sources */,
 				AFDAD5AF186006AB00366D99 /* IOS7AdjustmentViewController.m in Sources */,
 				AF6987FF18E183A700144B92 /* NSDictionary+Committee.m in Sources */,
@@ -2273,7 +2305,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OAECLegGuide/OAECLegGuide-Prefix.pch";
 				INFOPLIST_FILE = "OAECLegGuide/OAECLegGuide-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = coop.oaec.ok56leg;
@@ -2302,7 +2334,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OAECLegGuide/OAECLegGuide-Prefix.pch";
 				INFOPLIST_FILE = "OAECLegGuide/OAECLegGuide-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = coop.oaec.ok56leg;
 				PRODUCT_NAME = "$(TARGET_NAME)";

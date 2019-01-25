@@ -26,7 +26,26 @@
 
 @implementation AboutViewController
 
+
 - (IBAction)backButtonPressed:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+
+- (IBAction)bPressed:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+- (IBAction)jPressed:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)kButton:(UIButton *)sender {
+}
+
+- (IBAction)mButton:(UIButton *)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+- (IBAction)zButton:(UIButton *)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
 

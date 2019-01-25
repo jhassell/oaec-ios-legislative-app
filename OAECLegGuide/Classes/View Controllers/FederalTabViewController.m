@@ -27,6 +27,10 @@
     [(AppDelegate *)[[UIApplication sharedApplication] delegate] weblink];
 }
 
+- (IBAction)backButtonPressed:(UIButton *)sender {
+    self.tabBarController.selectedIndex = 0;
+}
+
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];

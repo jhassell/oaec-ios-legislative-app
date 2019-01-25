@@ -400,7 +400,7 @@ RLM_ARRAY_TYPE(Realm_tally)
 
 
 -(void) emailTallyButtonTapped:(UIButton *)sender forEvent:(UIEvent *)event {
-    NSLog(@"Email Tally Button Tapped");
+    NSLog(@"Email Roll Call Button Tapped");
     
     NSMutableArray *sharingArray = [[NSMutableArray alloc] init];
     [sharingArray addObject:@"Hey"];
@@ -520,7 +520,7 @@ RLM_ARRAY_TYPE(Realm_tally)
 
     }
 
-    tallyReport = [NSString stringWithFormat:@"%@\n%@\n", tallyReport, @"Shared tally courtesy of OAEC."];
+    tallyReport = [NSString stringWithFormat:@"%@\n%@\n", tallyReport, @"Shared roll call courtesy of OAEC."];
     return tallyReport;
 }
 
@@ -541,7 +541,7 @@ RLM_ARRAY_TYPE(Realm_tally)
     [formatter setDateStyle:NSDateFormatterMediumStyle];
     NSString *dateToday = [formatter stringFromDate:[NSDate date]];
     NSString *subject = [[NSString alloc] init];
-    subject = [NSString stringWithFormat:@"My %@ Vote Tally, %@", sectionTitle, dateToday];
+    subject = [NSString stringWithFormat:@"My %@ Roll Call, %@", sectionTitle, dateToday];
     
     if ([activityViewController respondsToSelector:@selector(completionWithItemsHandler)]) {
         activityViewController.completionWithItemsHandler = ^(NSString *activityType, BOOL completed, NSArray *returnedItems, NSError *activityError) {
@@ -559,7 +559,7 @@ RLM_ARRAY_TYPE(Realm_tally)
 
 
 - (void) sharingCompleted {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Clear Tally?"
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Clear Roll Call?"
                                                     message:@""
                                                    delegate:self
                                           cancelButtonTitle:@"Retain"
@@ -791,7 +791,7 @@ RLM_ARRAY_TYPE(Realm_tally)
         .backgroundColor = [UIColor colorWithWhite: 1.0 alpha:1.0];
         UILabel *headerTitle = (UILabel *)[self.rc_customHeaderCell.contentView viewWithTag:10];
         
-        headerTitle.text = [NSString stringWithFormat:@"Your %@ Tally", self.rc_tallyGroupTitle];
+        headerTitle.text = [NSString stringWithFormat:@"Your %@ Roll Call", self.rc_tallyGroupTitle];
         headerTitle.text = [headerTitle.text stringByReplacingOccurrencesOfString:@"Oklahoma " withString:@""];
 
         UILabel *yeaHeaderLabel = (UILabel *)[self.rc_customHeaderCell.contentView viewWithTag:11];

@@ -26,6 +26,10 @@
 
 #pragma mark - Table view data source
 
+- (IBAction)backButtonPressed:(id)sender {
+    self.tabBarController.selectedIndex = 0;
+}
+
 -(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     NSDictionary *event = self.calendar[indexPath.row];

@@ -42,8 +42,8 @@
 }
 
 
-- (IBAction)backButtonPressed:(id)sender {
-    [self.navigationController popViewControllerAnimated:YES];
+- (IBAction)backButtonPressed:(id)sender {    
+    self.tabBarController.selectedIndex = 0;
 }
 
 
