@@ -394,7 +394,6 @@
 		CE9CAE891EB8AB9100C20CAF /* VotingListCell-iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE9CAE881EB8AB9100C20CAF /* VotingListCell-iPhone.xib */; };
 		CE9CAE8C1EBAD31000C20CAF /* VoteCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9CAE8B1EBAD31000C20CAF /* VoteCheckViewController.m */; };
 		CE9CAE8F1EBC08FD00C20CAF /* MyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9CAE8E1EBC08FD00C20CAF /* MyButton.m */; };
-		CEA6036421F532C90033AC7D /* AboutOAECScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA6036321F532C60033AC7D /* AboutOAECScreen.png */; };
 		CEA6036621F546A00033AC7D /* about_oaec.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA6036521F546A00033AC7D /* about_oaec.png */; };
 		CEA7EC541E61CD58008031BF /* MarkWSchwirtz.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEA7EC531E61CD58008031BF /* MarkWSchwirtz.jpg */; };
 		CEA7EC561E61CD6E008031BF /* WyrickPatrick.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEA7EC551E61CD6E008031BF /* WyrickPatrick.jpg */; };
@@ -1794,7 +1793,6 @@
 				AF092D4115DA0FD200AA4B6B /* Default.png in Resources */,
 				AF092D4315DA0FDC00AA4B6B /* Default@2x.png in Resources */,
 				AF0A15D515DAD75C0063B0E7 /* Background.png in Resources */,
-				CEA6036421F532C90033AC7D /* AboutOAECScreen.png in Resources */,
 				CEA7EC561E61CD6E008031BF /* WyrickPatrick.jpg in Resources */,
 				CE6C63EA21EEE7C300A8044E /* SmithDavid.jpg in Resources */,
 				CE6C641521EEE7C300A8044E /* PittmanAjay.jpg in Resources */,
