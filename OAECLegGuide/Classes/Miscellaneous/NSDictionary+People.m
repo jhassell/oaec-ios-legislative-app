@@ -205,8 +205,8 @@
         partyAndDistrict = self.party;
         personTitle=partyAndDistrict;
     } else if ([self.type isEqualToString:STATE_JUDICIARY]) {
-        prefix = @"Sen. ";
-        office = @"US Senator";
+        prefix = @"Justice ";
+        office = @"OK Supreme Court Justice";
         title = self.titleLeadership;
         partyAndDistrict = self.party;
         personTitle=partyAndDistrict;
