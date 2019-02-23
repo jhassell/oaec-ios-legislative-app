@@ -487,7 +487,7 @@
 		AF15543215EB5E6700AA7794 /* PersonViewAddressLACell-iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "PersonViewAddressLACell-iPhone.xib"; sourceTree = "<group>"; };
 		AF15543515EB5FE400AA7794 /* AddressLAViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressLAViewCell.h; sourceTree = "<group>"; };
 		AF15543615EB5FE400AA7794 /* AddressLAViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressLAViewCell.m; sourceTree = "<group>"; };
-		AF24819F15BB6A250070924E /* ok57leg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ok57leg.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF24819F15BB6A250070924E /* ok55leg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ok55leg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF2481A315BB6A260070924E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AF2481A515BB6A260070924E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AF2481A715BB6A260070924E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -1015,7 +1015,7 @@
 		AF2481A015BB6A250070924E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AF24819F15BB6A250070924E /* ok57leg.app */,
+				AF24819F15BB6A250070924E /* ok55leg.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1681,9 +1681,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AF24819E15BB6A250070924E /* ok57leg */ = {
+		AF24819E15BB6A250070924E /* ok55leg */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AF2481CB15BB6A260070924E /* Build configuration list for PBXNativeTarget "ok57leg" */;
+			buildConfigurationList = AF2481CB15BB6A260070924E /* Build configuration list for PBXNativeTarget "ok55leg" */;
 			buildPhases = (
 				AF24819B15BB6A250070924E /* Sources */,
 				AF24819C15BB6A250070924E /* Frameworks */,
@@ -1695,9 +1695,9 @@
 			);
 			dependencies = (
 			);
-			name = ok57leg;
+			name = ok55leg;
 			productName = OAECLegGuide;
-			productReference = AF24819F15BB6A250070924E /* ok57leg.app */;
+			productReference = AF24819F15BB6A250070924E /* ok55leg.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1738,7 +1738,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AF24819E15BB6A250070924E /* ok57leg */,
+				AF24819E15BB6A250070924E /* ok55leg */,
 			);
 		};
 /* End PBXProject section */
@@ -2356,7 +2356,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AF2481CB15BB6A260070924E /* Build configuration list for PBXNativeTarget "ok57leg" */ = {
+		AF2481CB15BB6A260070924E /* Build configuration list for PBXNativeTarget "ok55leg" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AF2481CC15BB6A260070924E /* Debug */,
