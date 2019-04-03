@@ -12,7 +12,9 @@
 #import "CommitteeMember.h"
 #import "NSDictionary+People.h"
 #import "NSString+Stuff.h"
+#import "Definitions.h"
 #import "NSDictionary+Calendar.h"
+#import "SSZipArchive.h"
 
 @implementation DataLoader
 
@@ -20,6 +22,33 @@
     
     NSError *error;
 	NSString *csvString = [NSString stringWithContentsOfFile:csvPath encoding:NSUTF8StringEncoding error:&error];
+
+    NSArray *dirPaths;
+    NSString *docsDir;
+    
+    dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
+                                                   NSUserDomainMask, YES);
+    
+    docsDir = [dirPaths objectAtIndex:0];
+    
+    
+    NSArray * directoryContents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:docsDir error:&error];
+
+    NSFileHandle *file;
+    NSData *databuffer;
+    
+    file = [NSFileHandle fileHandleForReadingAtPath:csvPath];
+    
+    if (file == nil)
+        NSLog(@"Failed to open file");
+    
+    [file seekToFileOffset: 10];
+    
+    databuffer = [file readDataOfLength: 5];
+    
+    [file closeFile];
+    
+    
     
 	if (!csvString)
 	{
@@ -74,6 +103,24 @@
     
     return [rows sortedArrayUsingDescriptors:sortDescriptors];
 }
+
+
++(void) loadPhotosFile:(NSString *) zipPath {
+    NSError *error;
+    NSArray *dirPaths;
+    NSString *docsDir;
+    
+    dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
+                                                   NSUserDomainMask, YES);
+    docsDir = [dirPaths objectAtIndex:0];
+    
+    printf("Photo file path: %s\n", [zipPath UTF8String]);
+    
+    // Unzip
+    [SSZipArchive unzipFileAtPath:zipPath toDestination:docsDir];
+}
+
+
 
 +(NSArray *) loadCalendarCSVFile:(NSString *) csvPath {
     

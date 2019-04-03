@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		323845AD0DC3A613D456F7E5 /* Pods_ok55leg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B39BA411D17704817919388 /* Pods_ok55leg.framework */; };
 		533C9FB11EE1A68A00B165FD /* VoteTallyHeaderView-iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE16008E1ED2556A00058C4D /* VoteTallyHeaderView-iPhone.xib */; };
 		AF092D3915DA0DC700AA4B6B /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = AF092D3115DA0DC700AA4B6B /* logo.png */; };
 		AF092D3A15DA0DC700AA4B6B /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF092D3215DA0DC700AA4B6B /* logo@2x.png */; };
@@ -454,6 +455,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5B39BA411D17704817919388 /* Pods_ok55leg.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ok55leg.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF092D3115DA0DC700AA4B6B /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		AF092D3215DA0DC700AA4B6B /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
 		AF092D3515DA0DC700AA4B6B /* SplashScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SplashScreen.png; sourceTree = "<group>"; };
@@ -709,6 +711,7 @@
 		AFF2BB1615C860BB00F1B379 /* CommitteeListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommitteeListViewController.h; sourceTree = "<group>"; };
 		AFF2BB1715C860BB00F1B379 /* CommitteeListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommitteeListViewController.m; sourceTree = "<group>"; };
 		AFF2BB1A15C8610100F1B379 /* CommitteeListView-iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "CommitteeListView-iPhone.xib"; sourceTree = "<group>"; };
+		CDBB45FC63B731F2783F019E /* Pods-ok55leg.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ok55leg.debug.xcconfig"; path = "Target Support Files/Pods-ok55leg/Pods-ok55leg.debug.xcconfig"; sourceTree = "<group>"; };
 		CE00DF4D200DBE1800C246B8 /* RosinoPaul.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RosinoPaul.jpg; sourceTree = "<group>"; };
 		CE1600871ED1FB4A00058C4D /* VoteTallyHeaderView-iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "VoteTallyHeaderView-iPhone.xib"; sourceTree = "<group>"; };
 		CE16008E1ED2556A00058C4D /* VoteTallyHeaderView-iPhone.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "VoteTallyHeaderView-iPhone.xib"; path = "OAECLegGuide/NIBs/VoteTallyHeaderView-iPhone.xib"; sourceTree = "<group>"; };
@@ -744,6 +747,7 @@
 		CE2DAF8F1E4EB2A1002BCD60 /* BergstromMicheal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BergstromMicheal.jpg; sourceTree = "<group>"; };
 		CE2DAF951E4EC8A4002BCD60 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		CE2E210D1EE65E2E00646C92 /* LocationDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationDetailViewController.m; sourceTree = "<group>"; };
+		CE33BCE3224DB02900482FCA /* Definitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Definitions.h; sourceTree = "<group>"; };
 		CE38F84221F83948002D7D6A /* SenateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SenateViewController.h; sourceTree = "<group>"; };
 		CE38F84321F83948002D7D6A /* SenateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SenateViewController.m; sourceTree = "<group>"; };
 		CE38F84521F8A4AD002D7D6A /* HouseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HouseViewController.h; sourceTree = "<group>"; };
@@ -948,6 +952,7 @@
 		CEE7CE4C1EE25DF100199948 /* CLLocation+Strings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocation+Strings.h"; sourceTree = "<group>"; };
 		CEE7CE4D1EE25DF100199948 /* CLLocation+Strings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocation+Strings.m"; sourceTree = "<group>"; };
 		CEF324AF207915F000B05192 /* BolesBrad.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BolesBrad.jpg; sourceTree = "<group>"; };
+		FD82ABFE00ACBFCE0BE80C83 /* Pods-ok55leg.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ok55leg.release.xcconfig"; path = "Target Support Files/Pods-ok55leg/Pods-ok55leg.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -972,12 +977,22 @@
 				CEB3DA5C1C2F98D10003A4B9 /* Parse.framework in Frameworks */,
 				CEC68CA31EDD29AF00193036 /* Realm.framework in Frameworks */,
 				CEB3DA5B1C2F98D10003A4B9 /* Bolts.framework in Frameworks */,
+				323845AD0DC3A613D456F7E5 /* Pods_ok55leg.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3BB1E1AB1B493383164DFDA3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CDBB45FC63B731F2783F019E /* Pods-ok55leg.debug.xcconfig */,
+				FD82ABFE00ACBFCE0BE80C83 /* Pods-ok55leg.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		AF0D4B0C15CB15570046F663 /* Social Meida Icons */ = {
 			isa = PBXGroup;
 			children = (
@@ -1009,6 +1024,7 @@
 				AF2481A915BB6A260070924E /* OAECLegGuide */,
 				AF2481A215BB6A260070924E /* Frameworks */,
 				AF2481A015BB6A250070924E /* Products */,
+				3BB1E1AB1B493383164DFDA3 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1039,6 +1055,7 @@
 				AF2481A315BB6A260070924E /* UIKit.framework */,
 				AF2481A515BB6A260070924E /* Foundation.framework */,
 				AF2481A715BB6A260070924E /* CoreGraphics.framework */,
+				5B39BA411D17704817919388 /* Pods_ok55leg.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1093,6 +1110,7 @@
 		AF2481CE15BB6C5E0070924E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				CE33BCE3224DB02900482FCA /* Definitions.h */,
 				AFDAD5B71860096900366D99 /* Cell Views */,
 				AF2481CF15BB6C5E0070924E /* AppDelegate.h */,
 				AF2481D015BB6C5E0070924E /* AppDelegate.m */,
@@ -1685,11 +1703,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF2481CB15BB6A260070924E /* Build configuration list for PBXNativeTarget "ok55leg" */;
 			buildPhases = (
+				392B0484EFABFEB42B6427E4 /* [CP] Check Pods Manifest.lock */,
 				AF24819B15BB6A250070924E /* Sources */,
 				AF24819C15BB6A250070924E /* Frameworks */,
 				AF24819D15BB6A250070924E /* Resources */,
 				CEC68C9D1EDCFC8800193036 /* Embed Frameworks */,
 				CEAA26F71EB5A37B0012CEA5 /* ShellScript */,
+				E5A3B8EA23EC768FB894C708 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1731,6 +1751,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = AF24819415BB6A250070924E;
@@ -2110,6 +2131,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		392B0484EFABFEB42B6427E4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ok55leg-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		CEAA26F71EB5A37B0012CEA5 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 12;
@@ -2122,6 +2165,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework/strip-frameworks.sh\"";
+		};
+		E5A3B8EA23EC768FB894C708 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ok55leg/Pods-ok55leg-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SSZipArchive/SSZipArchive.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SSZipArchive.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ok55leg/Pods-ok55leg-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -2288,6 +2361,7 @@
 		};
 		AF2481CC15BB6A260070924E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDBB45FC63B731F2783F019E /* Pods-ok55leg.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
@@ -2299,6 +2373,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"\"${PODS_ROOT}/BuildHeaders\"/**",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OAECLegGuide/OAECLegGuide-Prefix.pch";
@@ -2311,6 +2386,7 @@
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = 1;
+				"USER_HEADER_SEARCH_PATHS[arch=*]" = "\"${PODS_ROOT}/\"/**";
 				VALID_ARCHS = "armv7s armv7 arm64";
 				WRAPPER_EXTENSION = app;
 			};
@@ -2318,6 +2394,7 @@
 		};
 		AF2481CD15BB6A260070924E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD82ABFE00ACBFCE0BE80C83 /* Pods-ok55leg.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
@@ -2339,6 +2416,7 @@
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = 1;
+				"USER_HEADER_SEARCH_PATHS[arch=*]" = "\"${PODS_ROOT}/\"/**";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};

@@ -15,7 +15,10 @@
 #import "NSString+Stuff.h"
 #import "Committee.h"
 #import "NSDictionary+Committee.h"
-
+#import "Definitions.h"
+#import <UserNotifications/UserNotifications.h>
+#import "AFURLSessionManager.h"
+#import "SSZipArchive.h"
 
 
 @implementation AppDelegate
@@ -207,6 +210,119 @@
     return YES;
 }
 
+
+- (void)downloadCalendar {
+
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSArray *dirPaths;
+    NSString *docsDir;
+    
+    dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
+                                                   NSUserDomainMask, YES);
+    docsDir = [dirPaths objectAtIndex:0];
+    
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+    
+    // Download calendar
+    NSURL *CALENDAR_URL = [NSURL URLWithString:@"https://www.dropbox.com/s/nkhuh9ohw1evmvm/calendar.csv?raw=1"];
+    NSURLRequest *calendar_request = [NSURLRequest requestWithURL:CALENDAR_URL];
+    
+    NSString *calendarFilename = [NSString stringWithFormat:@"%@/%@", docsDir, @"calendar.csv"];
+    if ([fileManager fileExistsAtPath:calendarFilename ] == YES)
+    {
+        NSError *error;
+        [fileManager removeItemAtPath:calendarFilename error:&error];
+        NSLog (@"File deleted");
+    }
+    else
+    {
+        NSLog (@"File not found");
+    }
+    
+    NSURLSessionDownloadTask *calendarDownloadTask = [manager downloadTaskWithRequest:calendar_request progress:nil destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
+        NSURL *documentsDirectoryURL = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:nil];
+        return [documentsDirectoryURL URLByAppendingPathComponent:[response suggestedFilename]];
+    } completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
+        NSString *hardcalendarFilename = [[NSBundle mainBundle] pathForResource:@"calendar" ofType:@"csv"];
+        NSString *previousCalendarFilename = [NSString stringWithFormat:@"%@/%@", docsDir, @"previouscalendar.csv"];
+        NSString *calendarFilename = [NSString stringWithFormat:@"%@/%@", docsDir, @"calendar.csv"];
+        if ([fileManager fileExistsAtPath:calendarFilename] == YES) {
+            // Load from recently downloaded csvFilename
+            self.calendar = [DataLoader loadCalendarCSVFile:calendarFilename];
+            // Remove previousDataFilename
+            [fileManager removeItemAtPath:previousCalendarFilename error:&error];
+            // Copy recently downloaded csvFilename to previousDataFilename
+            [fileManager copyItemAtPath:calendarFilename toPath:previousCalendarFilename error:&error];
+            // Remove csvFilename in preparation for next download
+            [fileManager removeItemAtPath:calendarFilename error:&error];
+        } else if ([fileManager fileExistsAtPath:previousCalendarFilename]) {
+            self.calendar = [DataLoader loadCalendarCSVFile:previousCalendarFilename];
+        } else {
+            self.calendar = [DataLoader loadCalendarCSVFile:hardcalendarFilename];
+        }
+        
+    }];
+    [calendarDownloadTask resume];
+
+}
+
+
+- (void)downloadPhotosZipFile {
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSArray *dirPaths;
+    NSString *docsDir;
+    
+    dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
+                                                   NSUserDomainMask, YES);
+    docsDir = [dirPaths objectAtIndex:0];
+    
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+    
+    // Download photos
+    NSURL *PHOTOS_URL = [NSURL URLWithString:@"https://www.dropbox.com/s/8yvdbsuy49uvlrk/photos.zip?raw=1"];
+    NSURLRequest *photo_file_request = [NSURLRequest requestWithURL:PHOTOS_URL];
+    
+    NSString *photosFilename = [NSString stringWithFormat:@"%@/%@", docsDir, @"photos.zip"];
+    if ([fileManager fileExistsAtPath:photosFilename ] == YES)
+    {
+        NSError *error;
+        [fileManager removeItemAtPath:photosFilename error:&error];
+        NSLog (@"File deleted");
+    }
+    else
+    {
+        NSLog (@"File not found");
+    }
+    
+    NSURLSessionDownloadTask *photosDownloadTask = [manager downloadTaskWithRequest:photo_file_request progress:nil destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
+        NSURL *documentsDirectoryURL = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:nil];
+        return [documentsDirectoryURL URLByAppendingPathComponent:[response suggestedFilename]];
+    } completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
+        NSString *hardphotosFilename = [[NSBundle mainBundle] pathForResource:@"photos" ofType:@"zip"];
+        NSString *previousPhotosFilename = [NSString stringWithFormat:@"%@/%@", docsDir, @"previousphotos.zip"];
+        NSString *photosFilename = [NSString stringWithFormat:@"%@/%@", docsDir, @"photos.zip"];
+        if ([fileManager fileExistsAtPath:photosFilename] == YES) {
+            // Load from recently downloaded csvFilename
+            [DataLoader loadPhotosFile:photosFilename];
+            // Remove previousDataFilename
+            [fileManager removeItemAtPath:previousPhotosFilename error:&error];
+            // Copy recently downloaded csvFilename to previousDataFilename
+            [fileManager copyItemAtPath:photosFilename toPath:previousPhotosFilename error:&error];
+            // Remove csvFilename in preparation for next download
+            [fileManager removeItemAtPath:photosFilename error:&error];
+        } else if ([fileManager fileExistsAtPath:previousPhotosFilename]) {
+            [DataLoader loadPhotosFile:previousPhotosFilename];
+        } else {
+            [DataLoader loadPhotosFile:hardphotosFilename];
+        }
+        
+    }];
+    [photosDownloadTask resume];
+    
+}
 -(void) realLoadBoundaries {
     NSLog(@"Load boundaries");
     
