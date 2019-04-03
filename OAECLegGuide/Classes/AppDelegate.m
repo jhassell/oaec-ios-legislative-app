@@ -203,11 +203,71 @@
         }
     }
 
-    
+    [self downloadSpreadsheet];
+    [self downloadCalendar];
+    [self downloadPhotosZipFile];
     
     NSLog(@"finish load");
 
     return YES;
+}
+
+
+- (void)downloadSpreadsheet {
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSArray *dirPaths;
+    NSString *docsDir;
+    
+    
+    NSURL *URL = [NSURL URLWithString:@"https://www.dropbox.com/s/bqj3clbeo4eu2j5/data.csv?raw=1"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+    
+    dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
+                                                   NSUserDomainMask, YES);
+    docsDir = [dirPaths objectAtIndex:0];
+    
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+    
+    NSString *csvFilename = [NSString stringWithFormat:@"%@/%@", docsDir, @"data.csv"];
+    if ([fileManager fileExistsAtPath:csvFilename ] == YES)
+    {
+        NSError *error;
+        [fileManager removeItemAtPath:csvFilename error:&error];
+        NSLog (@"File deleted");
+    }
+    else
+    {
+        NSLog (@"File not found");
+    }
+    
+    NSURLSessionDownloadTask *downloadTask = [manager downloadTaskWithRequest:request progress:nil destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
+        NSURL *documentsDirectoryURL = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:nil];
+        return [documentsDirectoryURL URLByAppendingPathComponent:[response suggestedFilename]];
+    } completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
+        mapDataLoaded = NO;
+        NSString *harddataFilename = [[NSBundle mainBundle] pathForResource:@"data" ofType:@"csv"];
+        NSString *previousDataFilename = [NSString stringWithFormat:@"%@/%@", docsDir, @"previousdata.csv"];
+        NSString *csvFilename = [NSString stringWithFormat:@"%@/%@", docsDir, @"data.csv"];
+        if ([fileManager fileExistsAtPath:csvFilename] == YES) {
+            // Load from recently downloaded csvFilename
+            self.all = [DataLoader loadCSVFile:csvFilename];
+            // Remove previousDataFilename
+            [fileManager removeItemAtPath:previousDataFilename error:&error];
+            // Copy recently downloaded csvFilename to previousDataFilename
+            [fileManager copyItemAtPath:csvFilename toPath:previousDataFilename error:&error];
+            // Remove csvFilename in preparation for next download
+            [fileManager removeItemAtPath:csvFilename error:&error];
+        } else if ([fileManager fileExistsAtPath:previousDataFilename]) {
+            self.all = [DataLoader loadCSVFile:previousDataFilename];
+        } else {
+            self.all = [DataLoader loadCSVFile:harddataFilename];
+        }
+        [self populateSpreadsheetData];
+    }];
+    [downloadTask resume];
+    
 }
 
 
