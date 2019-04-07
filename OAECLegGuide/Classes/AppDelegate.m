@@ -15,7 +15,6 @@
 #import "NSString+Stuff.h"
 #import "Committee.h"
 #import "NSDictionary+Committee.h"
-#import "Definitions.h"
 #import <UserNotifications/UserNotifications.h>
 #import "AFURLSessionManager.h"
 #import "SSZipArchive.h"
@@ -66,13 +65,11 @@
     }
     
 }
-
 - (void)weblink {
     NSURL *url = [NSURL URLWithString:@"http://www.oaec.coop"];
     if (![[UIApplication sharedApplication] openURL:url])
         NSLog(@"%@%@",@"Failed to open url:",[url description]);
 }
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [Parse setApplicationId:@"CAyQsLynTJcl5D93CGysLwghBdDnawaOnn51tdgy"
@@ -99,17 +96,24 @@
             [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
         }
     }
+
+    [self downloadSpreadsheet];
+    [self downloadCalendar];
+    [self downloadPhotosZipFile];
     
-    
-    
-    mapDataLoaded = NO;
-    NSString *dataFilename = [[NSBundle mainBundle] pathForResource:@"data" ofType:@"csv"];
+
+
+
+    NSLog(@"finish load");
+
+    return YES;
+}
+
+
+
+- (void)populateSpreadsheetData {
     
     NSLog(@"start load");
-    self.all = [DataLoader loadCSVFile:dataFilename];
-    
-    NSString *calendarDataFilename = [[NSBundle mainBundle] pathForResource:@"calendar" ofType:@"csv"];
-    self.calendar = [DataLoader loadCalendarCSVFile:calendarDataFilename];
     
     self.stateSenate   = [self.all filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"Type=%@",STATE_SENATE]];
     self.stateHouse    = [self.all filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"Type=%@",STATE_HOUSE]];
@@ -160,8 +164,6 @@
     sortDescriptors = [NSArray arrayWithObjects:sortOrderSort,companySort,lastNameSort,firstNameSort,nil];
     self.oaecMembers = [self.oaecMembers sortedArrayUsingDescriptors:sortDescriptors];
     
-
-    
     NSMutableArray *allCommittees = [NSMutableArray arrayWithCapacity:self.stateSenateStandingCommittees.count+
                                      self.stateHouseStandingCommittees.count+
                                      self.stateSenateAppropriationsSubcommittees.count+
@@ -180,7 +182,7 @@
         [committeeLookup setObject:committee forKey:committee.key];
     }
     
-    dataFilename = [[NSBundle mainBundle] pathForResource:@"committees" ofType:@"csv"];
+    NSString *dataFilename = [[NSBundle mainBundle] pathForResource:@"committees" ofType:@"csv"];
     
     NSArray *committeesMetaData = [DataLoader loadCSVFile:dataFilename];
     
@@ -203,14 +205,12 @@
         }
     }
 
-    [self downloadSpreadsheet];
-    [self downloadCalendar];
-    [self downloadPhotosZipFile];
+    
     
     NSLog(@"finish load");
 
-    return YES;
 }
+
 
 
 - (void)downloadSpreadsheet {
@@ -220,7 +220,7 @@
     NSString *docsDir;
     
     
-    NSURL *URL = [NSURL URLWithString:@"https://www.dropbox.com/s/bqj3clbeo4eu2j5/data.csv?raw=1"];
+    NSURL *URL = [NSURL URLWithString:@"https://www.dropbox.com/s/akt08qknc2cq7hp/data.csv?raw=1"];
     NSURLRequest *request = [NSURLRequest requestWithURL:URL];
     
     dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
@@ -285,7 +285,7 @@
     AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
     
     // Download calendar
-    NSURL *CALENDAR_URL = [NSURL URLWithString:@"https://www.dropbox.com/s/nkhuh9ohw1evmvm/calendar.csv?raw=1"];
+    NSURL *CALENDAR_URL = [NSURL URLWithString:@"https://www.dropbox.com/s/sbr186c6667u0oc/calendar.csv?raw=1"];
     NSURLRequest *calendar_request = [NSURLRequest requestWithURL:CALENDAR_URL];
     
     NSString *calendarFilename = [NSString stringWithFormat:@"%@/%@", docsDir, @"calendar.csv"];
@@ -342,7 +342,7 @@
     AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
     
     // Download photos
-    NSURL *PHOTOS_URL = [NSURL URLWithString:@"https://www.dropbox.com/s/8yvdbsuy49uvlrk/photos.zip?raw=1"];
+    NSURL *PHOTOS_URL = [NSURL URLWithString:@"https://www.dropbox.com/s/iaohcreq41kfpfh/photos.zip?raw=1"];
     NSURLRequest *photo_file_request = [NSURLRequest requestWithURL:PHOTOS_URL];
     
     NSString *photosFilename = [NSString stringWithFormat:@"%@/%@", docsDir, @"photos.zip"];
@@ -383,6 +383,7 @@
     [photosDownloadTask resume];
     
 }
+
 -(void) realLoadBoundaries {
     NSLog(@"Load boundaries");
     

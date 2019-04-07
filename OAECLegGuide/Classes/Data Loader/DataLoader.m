@@ -12,7 +12,6 @@
 #import "CommitteeMember.h"
 #import "NSDictionary+People.h"
 #import "NSString+Stuff.h"
-#import "Definitions.h"
 #import "NSDictionary+Calendar.h"
 #import "SSZipArchive.h"
 

@@ -747,7 +747,6 @@
 		CE2DAF8F1E4EB2A1002BCD60 /* BergstromMicheal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BergstromMicheal.jpg; sourceTree = "<group>"; };
 		CE2DAF951E4EC8A4002BCD60 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		CE2E210D1EE65E2E00646C92 /* LocationDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationDetailViewController.m; sourceTree = "<group>"; };
-		CE33BCE3224DB02900482FCA /* Definitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Definitions.h; sourceTree = "<group>"; };
 		CE38F84221F83948002D7D6A /* SenateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SenateViewController.h; sourceTree = "<group>"; };
 		CE38F84321F83948002D7D6A /* SenateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SenateViewController.m; sourceTree = "<group>"; };
 		CE38F84521F8A4AD002D7D6A /* HouseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HouseViewController.h; sourceTree = "<group>"; };
@@ -1110,7 +1109,6 @@
 		AF2481CE15BB6C5E0070924E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				CE33BCE3224DB02900482FCA /* Definitions.h */,
 				AFDAD5B71860096900366D99 /* Cell Views */,
 				AF2481CF15BB6C5E0070924E /* AppDelegate.h */,
 				AF2481D015BB6C5E0070924E /* AppDelegate.m */,
