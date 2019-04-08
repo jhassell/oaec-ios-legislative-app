@@ -96,20 +96,17 @@
             [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
         }
     }
-
-    [self downloadSpreadsheet];
-    [self downloadCalendar];
-    [self downloadPhotosZipFile];
     
-
-
-
     NSLog(@"finish load");
 
     return YES;
 }
 
-
+- (void)downloadImmediateData {
+    [self downloadSpreadsheet];
+    [self downloadCalendar];
+    [self downloadPhotosZipFile];
+}
 
 - (void)populateSpreadsheetData {
     
@@ -551,6 +548,7 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,
                                              (unsigned long)NULL), ^(void) {
         [self checkForUpdateMessage];
+        [self downloadImmediateData];
     });
 }
 
