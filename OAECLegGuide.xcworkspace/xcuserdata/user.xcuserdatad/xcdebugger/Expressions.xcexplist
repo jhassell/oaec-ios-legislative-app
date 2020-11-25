@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[PeopleListDelegate tableView:cellForRowAtIndexPath:]:PeopleListDelegate.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[UIImage imageNamed:docsPhotoFilename]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[AppDelegate populateSpreadsheetData]:AppDelegate.m">
+      </ContextState>
+      <ContextState
+         contextName = "+[DataLoader buildCommitteesFromPeople:committeeKey:]:DataLoader.m">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

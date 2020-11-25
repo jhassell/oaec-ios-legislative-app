@@ -81,10 +81,10 @@
 
 -(void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
-    if ([[UIScreen mainScreen]bounds].size.height - 480.0 > DBL_EPSILON) {
-        NSLog(@"Use bigger image");
-        self.backgroundImage.image=[UIImage imageNamed:@"AboutBackground-iPhone5@2x.png"];
-    }
+    //if ([[UIScreen mainScreen]bounds].size.height - 480.0 > DBL_EPSILON) {
+    //    NSLog(@"Use bigger image");
+    //    self.backgroundImage.image=[UIImage imageNamed:@"AboutBackground-iPhone5@2x.png"];
+    //}
 }
 
 -(void) viewDidAppear:(BOOL)animated {

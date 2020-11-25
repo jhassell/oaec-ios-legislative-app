@@ -217,7 +217,7 @@
     NSString *docsDir;
     
     
-    NSURL *URL = [NSURL URLWithString:@"https://www.dropbox.com/s/akt08qknc2cq7hp/data.csv?raw=1"];
+    NSURL *URL = [NSURL URLWithString:@"https://www.dropbox.com/s/1f6ymjx2mjq0wn6/data58.csv?raw=1"];
     NSURLRequest *request = [NSURLRequest requestWithURL:URL];
     
     dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
@@ -282,7 +282,7 @@
     AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
     
     // Download calendar
-    NSURL *CALENDAR_URL = [NSURL URLWithString:@"https://www.dropbox.com/s/sbr186c6667u0oc/calendar.csv?raw=1"];
+    NSURL *CALENDAR_URL = [NSURL URLWithString:@"https://www.dropbox.com/s/hp0z3dgq5ajjenw/calendar58.csv?raw=1"];
     NSURLRequest *calendar_request = [NSURLRequest requestWithURL:CALENDAR_URL];
     
     NSString *calendarFilename = [NSString stringWithFormat:@"%@/%@", docsDir, @"calendar.csv"];
@@ -339,7 +339,8 @@
     AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
     
     // Download photos
-    NSURL *PHOTOS_URL = [NSURL URLWithString:@"https://www.dropbox.com/s/iaohcreq41kfpfh/photos.zip?raw=1"];
+    NSURL *PHOTOS_URL = [NSURL URLWithString:@"https://www.dropbox.com/s/9cl4vth7q57qpt6/photos58.zip?raw=1"];
+    
     NSURLRequest *photo_file_request = [NSURLRequest requestWithURL:PHOTOS_URL];
     
     NSString *photosFilename = [NSString stringWithFormat:@"%@/%@", docsDir, @"photos.zip"];
