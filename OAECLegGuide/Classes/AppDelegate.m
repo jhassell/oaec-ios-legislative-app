@@ -227,7 +227,7 @@
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
     
-    NSString *csvFilename = [NSString stringWithFormat:@"%@/%@", docsDir, @"data.csv"];
+    NSString *csvFilename = [NSString stringWithFormat:@"%@/%@", docsDir, @"data58.csv"];
     if ([fileManager fileExistsAtPath:csvFilename ] == YES)
     {
         NSError *error;
@@ -246,7 +246,7 @@
         mapDataLoaded = NO;
         NSString *harddataFilename = [[NSBundle mainBundle] pathForResource:@"data" ofType:@"csv"];
         NSString *previousDataFilename = [NSString stringWithFormat:@"%@/%@", docsDir, @"previousdata.csv"];
-        NSString *csvFilename = [NSString stringWithFormat:@"%@/%@", docsDir, @"data.csv"];
+        NSString *csvFilename = [NSString stringWithFormat:@"%@/%@", docsDir, @"data58.csv"];
         if ([fileManager fileExistsAtPath:csvFilename] == YES) {
             // Load from recently downloaded csvFilename
             self.all = [DataLoader loadCSVFile:csvFilename];
@@ -285,7 +285,7 @@
     NSURL *CALENDAR_URL = [NSURL URLWithString:@"https://www.dropbox.com/s/hp0z3dgq5ajjenw/calendar58.csv?raw=1"];
     NSURLRequest *calendar_request = [NSURLRequest requestWithURL:CALENDAR_URL];
     
-    NSString *calendarFilename = [NSString stringWithFormat:@"%@/%@", docsDir, @"calendar.csv"];
+    NSString *calendarFilename = [NSString stringWithFormat:@"%@/%@", docsDir, @"calendar58.csv"];
     if ([fileManager fileExistsAtPath:calendarFilename ] == YES)
     {
         NSError *error;
@@ -303,7 +303,7 @@
     } completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
         NSString *hardcalendarFilename = [[NSBundle mainBundle] pathForResource:@"calendar" ofType:@"csv"];
         NSString *previousCalendarFilename = [NSString stringWithFormat:@"%@/%@", docsDir, @"previouscalendar.csv"];
-        NSString *calendarFilename = [NSString stringWithFormat:@"%@/%@", docsDir, @"calendar.csv"];
+        NSString *calendarFilename = [NSString stringWithFormat:@"%@/%@", docsDir, @"calendar58.csv"];
         if ([fileManager fileExistsAtPath:calendarFilename] == YES) {
             // Load from recently downloaded csvFilename
             self.calendar = [DataLoader loadCalendarCSVFile:calendarFilename];
@@ -343,7 +343,7 @@
     
     NSURLRequest *photo_file_request = [NSURLRequest requestWithURL:PHOTOS_URL];
     
-    NSString *photosFilename = [NSString stringWithFormat:@"%@/%@", docsDir, @"photos.zip"];
+    NSString *photosFilename = [NSString stringWithFormat:@"%@/%@", docsDir, @"photos58.zip"];
     if ([fileManager fileExistsAtPath:photosFilename ] == YES)
     {
         NSError *error;
@@ -361,7 +361,7 @@
     } completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
         NSString *hardphotosFilename = [[NSBundle mainBundle] pathForResource:@"photos" ofType:@"zip"];
         NSString *previousPhotosFilename = [NSString stringWithFormat:@"%@/%@", docsDir, @"previousphotos.zip"];
-        NSString *photosFilename = [NSString stringWithFormat:@"%@/%@", docsDir, @"photos.zip"];
+        NSString *photosFilename = [NSString stringWithFormat:@"%@/%@", docsDir, @"photos58.zip"];
         if ([fileManager fileExistsAtPath:photosFilename] == YES) {
             // Load from recently downloaded csvFilename
             [DataLoader loadPhotosFile:photosFilename];
