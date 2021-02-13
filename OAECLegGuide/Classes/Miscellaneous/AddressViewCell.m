@@ -25,7 +25,7 @@
 - (IBAction)dial:(id)sender {
     UIDevice *device = [UIDevice currentDevice];
     if ([[device model] isEqualToString:@"iPhone"] ) {
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"tel:%@",self.phoneNumber.text]]];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"sms:/open?addresses=%@",self.phoneNumber.text]]];
     } else {
         UIAlertView *Notpermitted=[[UIAlertView alloc] initWithTitle:@"Alert" message:@"Sorry, but I can't seem to figure out how to dial the phone on this device." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [Notpermitted show];
