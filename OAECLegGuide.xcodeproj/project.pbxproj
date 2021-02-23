@@ -371,6 +371,12 @@
 		CE8BBB8B1EDE3B3400CF5448 /* RollCallListDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8BBB891EDE3B3400CF5448 /* RollCallListDelegate.m */; };
 		CE927F4E1F8738CE00015327 /* RosecrantsJacob.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE927F4D1F8738CE00015327 /* RosecrantsJacob.jpg */; };
 		CE927F501F87402E00015327 /* BrooksMichael.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE927F4F1F87402E00015327 /* BrooksMichael.jpg */; };
+		CE9AD38125D84A8000D7CF60 /* 58thLegislatureSeatingChart.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE9AD38025D84A7F00D7CF60 /* 58thLegislatureSeatingChart.jpg */; };
+		CE9AD38A25D87E6900D7CF60 /* SeatingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9AD38925D87E6900D7CF60 /* SeatingViewController.m */; };
+		CE9AD38D25D9FA1B00D7CF60 /* senate_seating.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE9AD38B25D9FA1A00D7CF60 /* senate_seating.jpg */; };
+		CE9AD38E25D9FA1B00D7CF60 /* house_seating.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE9AD38C25D9FA1B00D7CF60 /* house_seating.jpg */; };
+		CE9AD39125DA203D00D7CF60 /* BackgroundNoBack.png in Resources */ = {isa = PBXBuildFile; fileRef = CE9AD38F25DA203D00D7CF60 /* BackgroundNoBack.png */; };
+		CE9AD39225DA203D00D7CF60 /* BackgroundNoBack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE9AD39025DA203D00D7CF60 /* BackgroundNoBack@2x.png */; };
 		CE9CAE871EB80D0000C20CAF /* VoteTallIcon-09.png in Resources */ = {isa = PBXBuildFile; fileRef = CE9CAE861EB80D0000C20CAF /* VoteTallIcon-09.png */; };
 		CE9CAE891EB8AB9100C20CAF /* VotingListCell-iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE9CAE881EB8AB9100C20CAF /* VotingListCell-iPhone.xib */; };
 		CE9CAE8C1EBAD31000C20CAF /* VoteCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9CAE8B1EBAD31000C20CAF /* VoteCheckViewController.m */; };
@@ -851,6 +857,13 @@
 		CE8BBB8A1EDE3B3400CF5448 /* RollCallListDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RollCallListDelegate.h; sourceTree = "<group>"; };
 		CE927F4D1F8738CE00015327 /* RosecrantsJacob.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RosecrantsJacob.jpg; sourceTree = "<group>"; };
 		CE927F4F1F87402E00015327 /* BrooksMichael.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BrooksMichael.jpg; sourceTree = "<group>"; };
+		CE9AD38025D84A7F00D7CF60 /* 58thLegislatureSeatingChart.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 58thLegislatureSeatingChart.jpg; sourceTree = "<group>"; };
+		CE9AD38825D87E6900D7CF60 /* SeatingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SeatingViewController.h; sourceTree = "<group>"; };
+		CE9AD38925D87E6900D7CF60 /* SeatingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SeatingViewController.m; sourceTree = "<group>"; };
+		CE9AD38B25D9FA1A00D7CF60 /* senate_seating.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = senate_seating.jpg; sourceTree = "<group>"; };
+		CE9AD38C25D9FA1B00D7CF60 /* house_seating.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = house_seating.jpg; sourceTree = "<group>"; };
+		CE9AD38F25DA203D00D7CF60 /* BackgroundNoBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BackgroundNoBack.png; sourceTree = "<group>"; };
+		CE9AD39025DA203D00D7CF60 /* BackgroundNoBack@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BackgroundNoBack@2x.png"; sourceTree = "<group>"; };
 		CE9CAE861EB80D0000C20CAF /* VoteTallIcon-09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VoteTallIcon-09.png"; sourceTree = "<group>"; };
 		CE9CAE881EB8AB9100C20CAF /* VotingListCell-iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "VotingListCell-iPhone.xib"; sourceTree = "<group>"; };
 		CE9CAE8A1EBAD31000C20CAF /* VoteCheckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VoteCheckViewController.h; path = "../View Controllers/VoteCheckViewController.h"; sourceTree = "<group>"; };
@@ -1117,6 +1130,8 @@
 				CE38F84921F8B3A8002D7D6A /* StatewideViewController.m */,
 				CE38F84B21F8B890002D7D6A /* RollCallViewController.h */,
 				CE38F84C21F8B890002D7D6A /* RollCallViewController.m */,
+				CE9AD38825D87E6900D7CF60 /* SeatingViewController.h */,
+				CE9AD38925D87E6900D7CF60 /* SeatingViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -1124,6 +1139,11 @@
 		AF2481D615BB6C5E0070924E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				CE9AD38F25DA203D00D7CF60 /* BackgroundNoBack.png */,
+				CE9AD39025DA203D00D7CF60 /* BackgroundNoBack@2x.png */,
+				CE9AD38C25D9FA1B00D7CF60 /* house_seating.jpg */,
+				CE9AD38B25D9FA1A00D7CF60 /* senate_seating.jpg */,
+				CE9AD38025D84A7F00D7CF60 /* 58thLegislatureSeatingChart.jpg */,
 				CE371C88256EED4200C9D4CE /* AboutBackground-iPhone5@2x-back.png */,
 				CEA6036521F546A00033AC7D /* about_oaec.png */,
 				CEA9B52D1ECA9E7300035FF6 /* SenateCommittees__VoteTallyIcon.png */,
@@ -1698,6 +1718,7 @@
 				CE18B5551E4F72930067DCC1 /* Icon-Small-50x50@2x.png in Resources */,
 				AF2481E615BB6C5E0070924E /* MainStoryboard_iPhone.storyboard in Resources */,
 				CE18B5421E4F72930067DCC1 /* Icon-App-20x20@2x.png in Resources */,
+				CE9AD38D25D9FA1B00D7CF60 /* senate_seating.jpg in Resources */,
 				AF2482D615BDDA2A0070924E /* iconplaceholder.png in Resources */,
 				CE6C643421F025E800A8044E /* OsbornLeslie.jpg in Resources */,
 				AF2482D715BDDA2A0070924E /* iconplaceholder@2x.png in Resources */,
@@ -1729,6 +1750,7 @@
 				CE6C641321EEE7C300A8044E /* DillsSheila.jpg in Resources */,
 				AFBEF66A15D2B2D600D785CD /* PeopleListSearchCell-iPhone.xib in Resources */,
 				AF092D3915DA0DC700AA4B6B /* logo.png in Resources */,
+				CE9AD39225DA203D00D7CF60 /* BackgroundNoBack@2x.png in Resources */,
 				AF82A27A1A7789C500A91552 /* SilkJoseph.jpg in Resources */,
 				AF82A2681A7789B600A91552 /* WallaceKevin.jpg in Resources */,
 				AF092D3A15DA0DC700AA4B6B /* logo@2x.png in Resources */,
@@ -1977,12 +1999,14 @@
 				AFBC6F0116B0BF740052E385 /* DahmNathan.jpg in Resources */,
 				AFBC6F0216B0BF740052E385 /* DavidKim.jpg in Resources */,
 				CE7C6D451E385F7600874B14 /* DanielsJulie.jpg in Resources */,
+				CE9AD38125D84A8000D7CF60 /* 58thLegislatureSeatingChart.jpg in Resources */,
 				CEB7D56C1BC9A54100AD5CD2 /* MunsonCyndi.jpg in Resources */,
 				CE6C640B21EEE7C300A8044E /* BellMerleyn.jpg in Resources */,
 				AF577E621A0BED8D00994EA1 /* senateIcon.png in Resources */,
 				CE7C6D1F1E385F4C00874B14 /* LawsonMark.jpg in Resources */,
 				CE18B5451E4F72930067DCC1 /* Icon-App-29x29@2x.png in Resources */,
 				CE6C63ED21EEE7C300A8044E /* CaldwellTrey.jpg in Resources */,
+				CE9AD38E25D9FA1B00D7CF60 /* house_seating.jpg in Resources */,
 				CE6C646F21F172B200A8044E /* Media.xcassets in Resources */,
 				CEC865431EBE0F9300363665 /* CheckYea.png in Resources */,
 				AFBC6F1616B0BF740052E385 /* SharpRon.jpg in Resources */,
@@ -1999,6 +2023,7 @@
 				CE5986021EE8DB8D007C5C3B /* Buttons in Resources */,
 				AFBC6F1D16B0BF740052E385 /* StanislawskiGary.jpg in Resources */,
 				CEDEF0DE1C0034BF0024A43F /* EdmondsonJames.jpg in Resources */,
+				CE9AD39125DA203D00D7CF60 /* BackgroundNoBack.png in Resources */,
 				AFBC6F1F16B0BF740052E385 /* TreatGreg.jpg in Resources */,
 				CEDABEF01FF495C1000C7408 /* FordRoss.jpg in Resources */,
 				AFDAD5BF18602FCB00366D99 /* MarkFuller.jpg in Resources */,
@@ -2126,6 +2151,7 @@
 				AFDAD5AD186006AB00366D99 /* CalendarTabViewController.m in Sources */,
 				AFBEF63E15C47A7100D785CD /* PeopleListDelegate.m in Sources */,
 				AFEF4BBA15C531F900896FA9 /* PeopleListViewController.m in Sources */,
+				CE9AD38A25D87E6900D7CF60 /* SeatingViewController.m in Sources */,
 				AFEF4BD015C7904D00896FA9 /* Committee.m in Sources */,
 				AFDAD5B6186008D800366D99 /* NSDictionary+Calendar.m in Sources */,
 				AFEF4BD415C7915F00896FA9 /* CommitteeMember.m in Sources */,
@@ -2270,7 +2296,7 @@
 				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 0;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = EH6BL4VM24;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2282,7 +2308,7 @@
 				INFOPLIST_FILE = "OAECLegGuide/OAECLegGuide-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 4.9;
+				MARKETING_VERSION = 5.0;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = coop.oaec.ok56leg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2306,7 +2332,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 0;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = EH6BL4VM24;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2317,7 +2343,7 @@
 				INFOPLIST_FILE = "OAECLegGuide/OAECLegGuide-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 4.9;
+				MARKETING_VERSION = 5.0;
 				PRODUCT_BUNDLE_IDENTIFIER = coop.oaec.ok56leg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

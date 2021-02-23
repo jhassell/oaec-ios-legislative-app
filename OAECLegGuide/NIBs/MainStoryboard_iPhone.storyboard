@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="R1Q-40-YML">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="fNi-UM-NQH">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="394" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqc-7U-R0k">
@@ -108,7 +108,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2496.8000000000002" y="-129.98500749625188"/>
+            <point key="canvasLocation" x="2495.6521739130435" y="-130.58035714285714"/>
         </scene>
         <!--About-->
         <scene sceneID="Bzx-We-HFe">
@@ -126,30 +126,6 @@
                                 <rect key="frame" x="20" y="0.0" width="375" height="600"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mLc-KO-8rW">
-                                <rect key="frame" x="28" y="315" width="186" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.53725490200000003" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="ABOUT OAEC">
-                                            <attributes>
-                                                <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="18" name="Gotham-Light"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="2" kind="push" id="H7I-Dd-7na"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SFh-tF-btl">
                                 <rect key="frame" x="28" y="241" width="186" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -172,6 +148,30 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="legislatureButtonPressed:" destination="C73-Ox-BrY" eventType="touchUpInside" id="XxF-4f-IKM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mLc-KO-8rW">
+                                <rect key="frame" x="28" y="329" width="186" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.53725490200000003" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="ABOUT OAEC">
+                                            <attributes>
+                                                <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="18" name="Gotham-Light"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="2" kind="push" id="H7I-Dd-7na"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -256,7 +256,7 @@
                                 <rect key="frame" x="20" y="153" width="374" height="723"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BK5-Uf-Gdx">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="133.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="133.33333333333334"/>
                                         <color key="backgroundColor" red="0.0" green="0.53725490200000003" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal">
                                             <attributedString key="attributedTitle">
@@ -279,7 +279,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nwg-sR-lvv">
-                                        <rect key="frame" x="0.0" y="147.5" width="374" height="133.5"/>
+                                        <rect key="frame" x="0.0" y="147.33333333333331" width="374" height="133.33333333333331"/>
                                         <color key="backgroundColor" red="0.0" green="0.53725490200000003" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="SENATE">
                                             <attributedString key="attributedTitle">
@@ -301,7 +301,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yjo-DM-com">
-                                        <rect key="frame" x="0.0" y="295" width="374" height="133"/>
+                                        <rect key="frame" x="0.0" y="294.66666666666669" width="374" height="133.66666666666669"/>
                                         <color key="backgroundColor" red="0.0" green="0.53725490200000003" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal">
                                             <attributedString key="attributedTitle">
@@ -324,7 +324,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mcf-Ae-dgK">
-                                        <rect key="frame" x="0.0" y="442" width="374" height="133.5"/>
+                                        <rect key="frame" x="0.0" y="442.33333333333337" width="374" height="133.33333333333337"/>
                                         <color key="backgroundColor" red="0.0" green="0.53725490200000003" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal">
                                             <attributedString key="attributedTitle">
@@ -347,7 +347,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pjj-vy-AaL">
-                                        <rect key="frame" x="0.0" y="589.5" width="374" height="133.5"/>
+                                        <rect key="frame" x="0.0" y="589.66666666666663" width="374" height="133.33333333333337"/>
                                         <color key="backgroundColor" red="0.0" green="0.53725490200000003" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal">
                                             <attributedString key="attributedTitle">
@@ -388,7 +388,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1800.8" y="558.17091454272872"/>
+            <point key="canvasLocation" x="1800.0000000000002" y="557.8125"/>
         </scene>
         <!--  State-->
         <scene sceneID="aH5-He-Cj9">
@@ -970,41 +970,45 @@
                         <viewControllerLayoutGuide type="bottom" id="5RB-yN-7Pu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Zab-YZ-M45">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="Yv7-Cn-vIZ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BackgroundNoBack.png" translatesAutoresizingMaskIntoConstraints="NO" id="Yv7-Cn-vIZ">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egH-Vr-M3I">
-                                <rect key="frame" x="0.0" y="0.0" width="117" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="backButtonPressed:" destination="crk-yT-Cia" eventType="touchUpInside" id="G6L-SQ-bll"/>
-                                    <action selector="backButtonPressed:" destination="7LX-Mg-FS1" eventType="touchUpInside" id="RAk-iI-mGw"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J2R-OJ-Y99">
+                                <rect key="frame" x="117.66666666666669" y="83" width="179" height="56"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="179" id="UTc-84-aRh"/>
+                                    <constraint firstAttribute="height" constant="56" id="imW-fZ-Evb"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="SENATE">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="36" name="Gotham-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="8JD-Wy-ncH">
-                                <rect key="frame" x="35" y="203" width="344" height="509"/>
+                                <rect key="frame" x="50" y="169" width="314" height="589"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CT2-xO-zBH">
-                                        <rect key="frame" x="0.0" y="0.0" width="344" height="159.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="136"/>
                                         <color key="backgroundColor" red="0.0" green="0.53725490200000003" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal">
                                             <attributedString key="attributedTitle">
                                                 <fragment content="LEADERSHIP">
                                                     <attributes>
                                                         <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="33" name="Gotham-Light"/>
+                                                        <font key="NSFont" size="24" name="Gotham-Light"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
@@ -1014,14 +1018,14 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Zt-k6-z6I">
-                                        <rect key="frame" x="0.0" y="174.5" width="344" height="160"/>
+                                        <rect key="frame" x="0.0" y="151" width="314" height="136"/>
                                         <color key="backgroundColor" red="0.0" green="0.53725490200000003" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal">
                                             <attributedString key="attributedTitle">
                                                 <fragment content="MEMBERS">
                                                     <attributes>
                                                         <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="33" name="Gotham-Light"/>
+                                                        <font key="NSFont" size="24" name="Gotham-Light"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
@@ -1030,55 +1034,60 @@
                                             <action selector="senateButtonPressed:" destination="7LX-Mg-FS1" eventType="touchUpInside" id="xMz-q9-B1C"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wga-gc-cwp">
-                                        <rect key="frame" x="0.0" y="349.5" width="344" height="159.5"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W5e-0f-CUG">
+                                        <rect key="frame" x="0.0" y="302" width="314" height="136"/>
                                         <color key="backgroundColor" red="0.0" green="0.53725490200000003" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal">
                                             <attributedString key="attributedTitle">
                                                 <fragment content="COMMITTEES">
                                                     <attributes>
                                                         <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="33" name="Gotham-Light"/>
+                                                        <font key="NSFont" size="24" name="Gotham-Light"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
                                         </state>
                                         <connections>
-                                            <action selector="senateCommitteeButtonPushed:" destination="7LX-Mg-FS1" eventType="touchUpInside" id="3Bg-Y1-m12"/>
+                                            <action selector="senateCommitteeButtonPushed:" destination="7LX-Mg-FS1" eventType="touchUpInside" id="dcx-L0-ov4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wga-gc-cwp">
+                                        <rect key="frame" x="0.0" y="453" width="314" height="136"/>
+                                        <color key="backgroundColor" red="0.0" green="0.53725490200000003" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="SEATING">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="24" name="Gotham-Light"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <connections>
+                                            <segue destination="erl-32-Uwx" kind="push" id="SSc-U6-exI"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J2R-OJ-Y99">
-                                <rect key="frame" x="64" y="127" width="285" height="43"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="SENATE">
-                                        <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system" size="36"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="J2R-OJ-Y99" secondAttribute="trailing" constant="65" id="2gz-kz-IPf"/>
-                            <constraint firstAttribute="trailing" secondItem="8JD-Wy-ncH" secondAttribute="trailing" constant="35" id="6Ng-Ux-WeV"/>
-                            <constraint firstItem="J2R-OJ-Y99" firstAttribute="top" secondItem="aUp-1U-st2" secondAttribute="bottom" constant="83" id="9Bb-N2-cpz"/>
-                            <constraint firstItem="8JD-Wy-ncH" firstAttribute="top" secondItem="J2R-OJ-Y99" secondAttribute="bottom" constant="33" id="JsW-VF-aof"/>
-                            <constraint firstItem="5RB-yN-7Pu" firstAttribute="top" secondItem="8JD-Wy-ncH" secondAttribute="bottom" constant="150" id="Q03-Xy-ewz"/>
-                            <constraint firstItem="8JD-Wy-ncH" firstAttribute="leading" secondItem="Zab-YZ-M45" secondAttribute="leading" constant="35" id="ZbQ-fn-OZs"/>
-                            <constraint firstItem="J2R-OJ-Y99" firstAttribute="leading" secondItem="Zab-YZ-M45" secondAttribute="leading" constant="64" id="kNn-6x-Wob"/>
+                            <constraint firstItem="8JD-Wy-ncH" firstAttribute="centerX" secondItem="Zab-YZ-M45" secondAttribute="centerX" id="0qQ-RQ-vDL"/>
+                            <constraint firstItem="5RB-yN-7Pu" firstAttribute="top" secondItem="8JD-Wy-ncH" secondAttribute="bottom" constant="50" id="O94-FC-8KX" userLabel="Bottom Layout Guide.top = Stack View.bottom + 10"/>
+                            <constraint firstItem="8JD-Wy-ncH" firstAttribute="leading" secondItem="Zab-YZ-M45" secondAttribute="leadingMargin" constant="30" id="c35-8f-F1e" userLabel="Stack View.leading = leadingMargin + 15"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8JD-Wy-ncH" secondAttribute="trailing" constant="30" id="jlx-fA-dvJ" userLabel="trailingMargin = Stack View.trailing + 15"/>
+                            <constraint firstItem="J2R-OJ-Y99" firstAttribute="centerX" secondItem="Zab-YZ-M45" secondAttribute="centerX" id="odZ-ME-jcR"/>
+                            <constraint firstItem="8JD-Wy-ncH" firstAttribute="top" secondItem="J2R-OJ-Y99" secondAttribute="bottom" constant="30" id="ooj-Xa-AQE" userLabel="Stack View.top = SENATE.bottom + 25"/>
+                            <constraint firstItem="J2R-OJ-Y99" firstAttribute="top" secondItem="aUp-1U-st2" secondAttribute="bottom" constant="83" id="vuZ-ox-8L0" userLabel="SENATE.top = Top Layout Guide.bottom + 20"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="PTS-98-eBo"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hC9-E5-hRL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5952.8000000000002" y="-34.632683658170919"/>
+            <point key="canvasLocation" x="5952.1739130434789" y="-34.821428571428569"/>
         </scene>
         <!--Voting Groups-->
         <scene sceneID="Fe6-cL-Z3g">
@@ -1108,7 +1117,7 @@
                                         </attributes>
                                     </fragment>
                                 </attributedString>
-                                <nil key="highlightedColor"/>
+                                <color key="highlightedColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cr3-tz-diq">
                                 <rect key="frame" x="0.0" y="0.0" width="113" height="42"/>
@@ -1249,10 +1258,10 @@
                         <viewControllerLayoutGuide type="bottom" id="mAK-Vj-i0X"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="LiB-i6-yTj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="AtA-ss-g2x">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BackgroundNoBack.png" translatesAutoresizingMaskIntoConstraints="NO" id="AtA-ss-g2x">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -1272,17 +1281,17 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="729" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="6q8-BY-ICT">
-                                <rect key="frame" x="41" y="220" width="333" height="492"/>
+                                <rect key="frame" x="35" y="155" width="344" height="613"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="246" verticalHuggingPriority="100" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FkN-Nr-ng0">
-                                        <rect key="frame" x="0.0" y="0.0" width="333" height="154"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="344" height="142"/>
                                         <color key="backgroundColor" red="0.0" green="0.53725490200000003" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal">
                                             <attributedString key="attributedTitle">
                                                 <fragment content="LEADERSHIP">
                                                     <attributes>
                                                         <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="33" name="Gotham-Light"/>
+                                                        <font key="NSFont" size="24" name="Gotham-Light"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
@@ -1299,14 +1308,14 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U0J-Pi-cQ1">
-                                        <rect key="frame" x="0.0" y="169" width="333" height="154"/>
+                                        <rect key="frame" x="0.0" y="157" width="344" height="142"/>
                                         <color key="backgroundColor" red="0.0" green="0.53725490200000003" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal">
                                             <attributedString key="attributedTitle">
                                                 <fragment content="MEMBERS">
                                                     <attributes>
                                                         <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="33" name="Gotham-Light"/>
+                                                        <font key="NSFont" size="24" name="Gotham-Light"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
@@ -1322,15 +1331,15 @@
                                             <action selector="statewideButtonPressed:" destination="3" eventType="touchUpInside" id="HrE-xt-5ic"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xpX-dC-8Dy">
-                                        <rect key="frame" x="0.0" y="338" width="333" height="154"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eOe-R7-FTl">
+                                        <rect key="frame" x="0.0" y="314" width="344" height="142"/>
                                         <color key="backgroundColor" red="0.0" green="0.53725490200000003" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal">
                                             <attributedString key="attributedTitle">
                                                 <fragment content="COMMITTEES">
                                                     <attributes>
                                                         <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="33" name="Gotham-Light"/>
+                                                        <font key="NSFont" size="24" name="Gotham-Light"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
@@ -1342,35 +1351,59 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="houseCommitteesButtonpressed:" destination="crk-yT-Cia" eventType="touchUpInside" id="f6f-tr-dSn"/>
+                                            <action selector="houseCommitteesButtonpressed:" destination="crk-yT-Cia" eventType="touchUpInside" id="9KL-Bn-Xdt"/>
+                                            <action selector="statewideButtonPressed:" destination="3" eventType="touchUpInside" id="HY9-Gz-1ZI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xpX-dC-8Dy">
+                                        <rect key="frame" x="0.0" y="471" width="344" height="142"/>
+                                        <color key="backgroundColor" red="0.0" green="0.53725490200000003" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="SEATING">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="24" name="Gotham-Light"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
                                             <action selector="statewideButtonPressed:" destination="3" eventType="touchUpInside" id="0wl-UN-d0H"/>
+                                            <segue destination="GZH-rg-frw" kind="push" id="ip3-nU-h2t"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lwh-Ak-K64">
-                                <rect key="frame" x="65" y="127" width="283" height="43"/>
+                                <rect key="frame" x="144.66666666666666" y="78" width="124.99999999999997" height="42"/>
                                 <attributedString key="attributedText">
                                     <fragment content="HOUSE">
                                         <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system" size="36"/>
+                                            <color key="NSBackgroundColor" red="0.99994784589999997" green="1" blue="0.99987405539999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="36" name="Gotham-Bold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
-                                <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="lwh-Ak-K64" secondAttribute="trailing" constant="66" id="Cr0-ZB-QJO"/>
-                            <constraint firstItem="lwh-Ak-K64" firstAttribute="leading" secondItem="LiB-i6-yTj" secondAttribute="leading" constant="65" id="IxK-L2-Zag"/>
-                            <constraint firstItem="6q8-BY-ICT" firstAttribute="leading" secondItem="LiB-i6-yTj" secondAttribute="leading" constant="41" id="MXJ-lW-OqN"/>
-                            <constraint firstAttribute="trailing" secondItem="6q8-BY-ICT" secondAttribute="trailing" constant="40" id="QoT-x7-V5l"/>
-                            <constraint firstItem="lwh-Ak-K64" firstAttribute="top" secondItem="Xlf-3M-2M2" secondAttribute="bottom" constant="83" id="f6i-7f-aS2"/>
-                            <constraint firstItem="mAK-Vj-i0X" firstAttribute="top" secondItem="6q8-BY-ICT" secondAttribute="bottom" constant="150" id="gd8-XO-edG"/>
-                            <constraint firstItem="6q8-BY-ICT" firstAttribute="top" secondItem="lwh-Ak-K64" secondAttribute="bottom" constant="50" id="mxC-ID-ham"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6q8-BY-ICT" secondAttribute="trailing" constant="15" id="0uA-K2-d67"/>
+                            <constraint firstItem="lwh-Ak-K64" firstAttribute="top" secondItem="Xlf-3M-2M2" secondAttribute="bottom" constant="78" id="Mfg-e8-c6Y"/>
+                            <constraint firstItem="lwh-Ak-K64" firstAttribute="centerX" secondItem="LiB-i6-yTj" secondAttribute="centerX" id="TCS-iP-ium"/>
+                            <constraint firstItem="6q8-BY-ICT" firstAttribute="centerX" secondItem="LiB-i6-yTj" secondAttribute="centerX" id="kAi-jY-kGQ"/>
+                            <constraint firstItem="6q8-BY-ICT" firstAttribute="leading" secondItem="LiB-i6-yTj" secondAttribute="leadingMargin" constant="15" id="odk-DF-DhQ"/>
+                            <constraint firstItem="mAK-Vj-i0X" firstAttribute="top" secondItem="6q8-BY-ICT" secondAttribute="bottom" constant="40" id="rfP-7U-ZzX"/>
+                            <constraint firstItem="6q8-BY-ICT" firstAttribute="top" secondItem="lwh-Ak-K64" secondAttribute="bottom" constant="35" id="zTw-lz-7gu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZDy-cQ-IV6"/>
@@ -1602,11 +1635,143 @@
             </objects>
             <point key="canvasLocation" x="7322.3999999999996" y="-823.53823088455783"/>
         </scene>
+        <!--Seating View Controller-->
+        <scene sceneID="N1G-k9-Edw">
+            <objects>
+                <viewController id="erl-32-Uwx" customClass="SeatingViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ozu-BR-XCg"/>
+                        <viewControllerLayoutGuide type="bottom" id="hJa-qQ-OOv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HFq-lA-AnX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="senate_seating.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Eyb-5X-gWy">
+                                <rect key="frame" x="0.0" y="60" width="414" height="748"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="1mX-O1-6N7" appends="YES" id="YB0-1t-h3s"/>
+                                    <outletCollection property="gestureRecognizers" destination="Tg2-pE-5Va" appends="YES" id="4Eg-Fe-itS"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGM-BR-jsf">
+                                <rect key="frame" x="5" y="7" width="72" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="72" id="113-EL-g2S"/>
+                                    <constraint firstAttribute="height" constant="37" id="sF6-h7-5Jr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="  Back" backgroundImage="backButton.png">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="Bew-G7-Ta1" eventType="touchUpInside" id="RhO-Xb-6yX"/>
+                                    <action selector="backButtonPressed:" destination="2" eventType="touchUpInside" id="rb1-eM-WGu"/>
+                                    <segue destination="7LX-Mg-FS1" kind="push" animates="NO" id="Wbi-Pl-a5M"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Eyb-5X-gWy" secondAttribute="trailing" id="0RW-MU-GAv"/>
+                            <constraint firstItem="YGM-BR-jsf" firstAttribute="leading" secondItem="HFq-lA-AnX" secondAttribute="leadingMargin" constant="-15" id="5SC-nC-Dpj"/>
+                            <constraint firstItem="YGM-BR-jsf" firstAttribute="top" secondItem="Ozu-BR-XCg" secondAttribute="bottom" constant="7" id="DcP-KH-0uX"/>
+                            <constraint firstItem="Eyb-5X-gWy" firstAttribute="top" secondItem="YGM-BR-jsf" secondAttribute="bottom" constant="16" id="Dze-UB-DsM"/>
+                            <constraint firstItem="Eyb-5X-gWy" firstAttribute="leading" secondItem="HFq-lA-AnX" secondAttribute="leading" id="Hhl-Ik-cRg"/>
+                            <constraint firstItem="Eyb-5X-gWy" firstAttribute="bottom" secondItem="hJa-qQ-OOv" secondAttribute="top" id="LFp-es-CVi"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Lif-FZ-9p9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kpx-Hj-g0b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="1mX-O1-6N7">
+                    <connections>
+                        <action selector="PanHandler:" destination="erl-32-Uwx" id="RSn-lN-gRa"/>
+                    </connections>
+                </panGestureRecognizer>
+                <pinchGestureRecognizer id="Tg2-pE-5Va">
+                    <connections>
+                        <action selector="PinchHandler:" destination="erl-32-Uwx" id="9vM-R3-RaE"/>
+                    </connections>
+                </pinchGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="7018.8405797101459" y="-35.491071428571423"/>
+        </scene>
+        <!--Seating View Controller-->
+        <scene sceneID="W1N-3d-0xn">
+            <objects>
+                <viewController id="GZH-rg-frw" customClass="SeatingViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VCa-pJ-BiT"/>
+                        <viewControllerLayoutGuide type="bottom" id="mKc-Zy-gno"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7iN-ho-cBj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="house_seating.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="IJ9-NR-A8N">
+                                <rect key="frame" x="0.0" y="60" width="414" height="748"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="fQ0-T7-wdC" appends="YES" id="t6K-l7-obr"/>
+                                    <outletCollection property="gestureRecognizers" destination="93X-ei-h19" appends="YES" id="OXh-md-Nqu"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KAq-ES-8WT">
+                                <rect key="frame" x="5" y="7" width="72" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="72" id="NfA-In-NMj"/>
+                                    <constraint firstAttribute="height" constant="37" id="jQA-rG-snd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="  Back" backgroundImage="backButton.png">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="crk-yT-Cia" kind="push" animates="NO" id="ztL-Ur-28P"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="IJ9-NR-A8N" secondAttribute="trailing" id="D8x-SO-qNe"/>
+                            <constraint firstItem="IJ9-NR-A8N" firstAttribute="bottom" secondItem="mKc-Zy-gno" secondAttribute="top" id="PXe-Vp-cXv"/>
+                            <constraint firstItem="IJ9-NR-A8N" firstAttribute="top" secondItem="KAq-ES-8WT" secondAttribute="bottom" constant="16" id="Q41-L6-5eS"/>
+                            <constraint firstItem="KAq-ES-8WT" firstAttribute="top" secondItem="VCa-pJ-BiT" secondAttribute="bottom" constant="7" id="dt3-xK-q9v"/>
+                            <constraint firstItem="KAq-ES-8WT" firstAttribute="leading" secondItem="7iN-ho-cBj" secondAttribute="leadingMargin" constant="-15" id="ey2-yC-1G5"/>
+                            <constraint firstItem="IJ9-NR-A8N" firstAttribute="leading" secondItem="7iN-ho-cBj" secondAttribute="leading" id="sgz-HL-12Y"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="kyE-yW-6Vb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="18F-9O-dnu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="fQ0-T7-wdC">
+                    <connections>
+                        <action selector="PanHandler:" destination="GZH-rg-frw" id="utn-Pr-OlS"/>
+                    </connections>
+                </panGestureRecognizer>
+                <pinchGestureRecognizer id="93X-ei-h19">
+                    <connections>
+                        <action selector="PinchHandler:" destination="GZH-rg-frw" id="dFL-Qy-NIs"/>
+                    </connections>
+                </pinchGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="8059" y="727"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="8Gc-tq-bTr"/>
-        <segue reference="gqt-Ui-BYK"/>
-        <segue reference="mvI-18-VYp"/>
+        <segue reference="ztL-Ur-28P"/>
+        <segue reference="Wbi-Pl-a5M"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="About.png" width="14.399999618530273" height="14.399999618530273"/>
@@ -1614,12 +1779,15 @@
         <image name="Arrow_Left.png" width="28.91566276550293" height="27.469879150390625"/>
         <image name="Arrow_Right.png" width="28.91566276550293" height="27.469879150390625"/>
         <image name="Background.png" width="375" height="667"/>
+        <image name="BackgroundNoBack.png" width="375" height="667"/>
         <image name="Calendar.png" width="19.200000762939453" height="14.399999618530273"/>
         <image name="Federal.png" width="14.399999618530273" height="14.399999618530273"/>
         <image name="MapPin.png" width="14.399999618530273" height="14.399999618530273"/>
         <image name="State.png" width="19.200000762939453" height="14.399999618530273"/>
         <image name="about_oaec.png" width="321" height="337"/>
         <image name="backButton.png" width="43" height="30"/>
+        <image name="house_seating.jpg" width="597" height="864"/>
+        <image name="senate_seating.jpg" width="820" height="576"/>
         <image name="share.png" width="94" height="137"/>
     </resources>
 </document>
