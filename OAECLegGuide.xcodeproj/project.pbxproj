@@ -371,7 +371,6 @@
 		CE8BBB8B1EDE3B3400CF5448 /* RollCallListDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8BBB891EDE3B3400CF5448 /* RollCallListDelegate.m */; };
 		CE927F4E1F8738CE00015327 /* RosecrantsJacob.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE927F4D1F8738CE00015327 /* RosecrantsJacob.jpg */; };
 		CE927F501F87402E00015327 /* BrooksMichael.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE927F4F1F87402E00015327 /* BrooksMichael.jpg */; };
-		CE9AD38125D84A8000D7CF60 /* 58thLegislatureSeatingChart.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE9AD38025D84A7F00D7CF60 /* 58thLegislatureSeatingChart.jpg */; };
 		CE9AD38A25D87E6900D7CF60 /* SeatingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9AD38925D87E6900D7CF60 /* SeatingViewController.m */; };
 		CE9AD38D25D9FA1B00D7CF60 /* senate_seating.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE9AD38B25D9FA1A00D7CF60 /* senate_seating.jpg */; };
 		CE9AD38E25D9FA1B00D7CF60 /* house_seating.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE9AD38C25D9FA1B00D7CF60 /* house_seating.jpg */; };
@@ -857,7 +856,6 @@
 		CE8BBB8A1EDE3B3400CF5448 /* RollCallListDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RollCallListDelegate.h; sourceTree = "<group>"; };
 		CE927F4D1F8738CE00015327 /* RosecrantsJacob.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RosecrantsJacob.jpg; sourceTree = "<group>"; };
 		CE927F4F1F87402E00015327 /* BrooksMichael.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BrooksMichael.jpg; sourceTree = "<group>"; };
-		CE9AD38025D84A7F00D7CF60 /* 58thLegislatureSeatingChart.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 58thLegislatureSeatingChart.jpg; sourceTree = "<group>"; };
 		CE9AD38825D87E6900D7CF60 /* SeatingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SeatingViewController.h; sourceTree = "<group>"; };
 		CE9AD38925D87E6900D7CF60 /* SeatingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SeatingViewController.m; sourceTree = "<group>"; };
 		CE9AD38B25D9FA1A00D7CF60 /* senate_seating.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = senate_seating.jpg; sourceTree = "<group>"; };
@@ -1143,7 +1141,6 @@
 				CE9AD39025DA203D00D7CF60 /* BackgroundNoBack@2x.png */,
 				CE9AD38C25D9FA1B00D7CF60 /* house_seating.jpg */,
 				CE9AD38B25D9FA1A00D7CF60 /* senate_seating.jpg */,
-				CE9AD38025D84A7F00D7CF60 /* 58thLegislatureSeatingChart.jpg */,
 				CE371C88256EED4200C9D4CE /* AboutBackground-iPhone5@2x-back.png */,
 				CEA6036521F546A00033AC7D /* about_oaec.png */,
 				CEA9B52D1ECA9E7300035FF6 /* SenateCommittees__VoteTallyIcon.png */,
@@ -1999,7 +1996,6 @@
 				AFBC6F0116B0BF740052E385 /* DahmNathan.jpg in Resources */,
 				AFBC6F0216B0BF740052E385 /* DavidKim.jpg in Resources */,
 				CE7C6D451E385F7600874B14 /* DanielsJulie.jpg in Resources */,
-				CE9AD38125D84A8000D7CF60 /* 58thLegislatureSeatingChart.jpg in Resources */,
 				CEB7D56C1BC9A54100AD5CD2 /* MunsonCyndi.jpg in Resources */,
 				CE6C640B21EEE7C300A8044E /* BellMerleyn.jpg in Resources */,
 				AF577E621A0BED8D00994EA1 /* senateIcon.png in Resources */,
@@ -2308,7 +2304,7 @@
 				INFOPLIST_FILE = "OAECLegGuide/OAECLegGuide-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 5.0;
+				MARKETING_VERSION = 5.1;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = coop.oaec.ok56leg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2343,7 +2339,7 @@
 				INFOPLIST_FILE = "OAECLegGuide/OAECLegGuide-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 5.0;
+				MARKETING_VERSION = 5.1;
 				PRODUCT_BUNDLE_IDENTIFIER = coop.oaec.ok56leg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
