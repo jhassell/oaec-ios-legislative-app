@@ -28,7 +28,6 @@
 @interface MapsViewController () <CLLocationManagerDelegate> {
     BOOL firstLoad;
     BOOL isMapPage;
-    BOOL didDismissInstruction;
 }
 
 @property (retain, nonatomic) IBOutlet MKMapView *mapView;
@@ -724,11 +723,29 @@
 
 -(void) viewDidAppear:(BOOL)animated {
     
-    if (!didDismissInstruction && isMapPage) {
+    if (isMapPage) {
         
-        [ModalAlert okWithTitle:@"Map Instructions" message:@"Tap anywhere in Oklahoma to see the legislative districts."];
-        
-        didDismissInstruction=YES;
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Map Instructions" message:@"Tap anywhere in Oklahoma to see the legislative districts, or enter an address" preferredStyle:UIAlertControllerStyleAlert];
+        [alert addAction:[UIAlertAction actionWithTitle:@"Go to Map" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+            NSString *input = alert.textFields[0].text;
+            NSLog(@"input was '%@'", input);
+            CLGeocoder *geocoder = [[CLGeocoder alloc] init];
+            [geocoder geocodeAddressString:input completionHandler:^(NSArray *placemarks, NSError *error) {
+                if (error) {
+                    NSLog(@"%@", error);
+                } else {
+                    CLPlacemark *placemark = [placemarks lastObject];
+                    if ([placemark.administrativeArea isEqualToString:@"OK"]) {
+                        CLLocation *touchMapLocation = [[CLLocation alloc] initWithLatitude:placemark.location.coordinate.latitude longitude:placemark.location.coordinate.longitude];
+                        [self performSelector:@selector(getPinFor:) withObject:touchMapLocation afterDelay:0.1];
+                    }
+                }
+            }];
+        }]];
+        [alert addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+            textField.placeholder = @"Enter Oklahoma Address:";
+        }];
+        [self presentViewController:alert animated:YES completion:nil];
     }
 }
 
@@ -745,7 +762,6 @@
 {
     [super viewDidLoad];
     firstLoad=YES;
-    didDismissInstruction=NO;
 	// Do any additional setup after loading the view.
 }
 

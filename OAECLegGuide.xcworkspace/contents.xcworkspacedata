@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:OAECLegGuide/Images/senate_seating.png">
+   </FileRef>
+   <FileRef
       location = "group:OAECLegGuide.xcodeproj">
    </FileRef>
    <FileRef
