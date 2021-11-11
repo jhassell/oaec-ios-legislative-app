@@ -6,7 +6,6 @@
 //  Copyright (c) 2012 Architactile LLC. All rights reserved.
 //
 
-#import <Parse/Parse.h>
 #import "AppDelegate.h"
 #import "DataLoader.h"
 #import "Boundary.h"
@@ -18,6 +17,7 @@
 #import <UserNotifications/UserNotifications.h>
 #import "AFURLSessionManager.h"
 #import "SSZipArchive.h"
+#import <Pushwoosh/Pushwoosh.h>
 
 
 @implementation AppDelegate
@@ -48,23 +48,6 @@
 @synthesize coopBoundaries=_coopBoundaries;
 @synthesize alertView=_alertView;
 
-- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
-    // Store the deviceToken in the current installation and save it to Parse.
-    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
-    [currentInstallation setDeviceTokenFromData:deviceToken];
-    [currentInstallation saveInBackground];
-}
-
-- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
-    [PFPush handlePush:userInfo];
-    
-    if (application.applicationState == UIApplicationStateInactive) {
-        // The application was just brought from the background to the foreground,
-        // so we consider the app as having been "opened by a push notification."
-        [PFAnalytics trackAppOpenedWithRemoteNotificationPayload:userInfo];
-    }
-    
-}
 - (void)weblink {
     NSURL *url = [NSURL URLWithString:@"http://www.oaec.coop"];
     if (![[UIApplication sharedApplication] openURL:url])
@@ -72,35 +55,42 @@
 }
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [Parse setApplicationId:@"CAyQsLynTJcl5D93CGysLwghBdDnawaOnn51tdgy"
-                  clientKey:@"Gn3uq5QhvmtFq0U1GH9qyb9vF2SsqZqhvxbAj8Qs"];
-    
-    // Register for Push Notitications
-    UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert |
-                                                    UIUserNotificationTypeBadge |
-                                                    UIUserNotificationTypeSound);
-    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:userNotificationTypes
-                                                                             categories:nil];
-    [application registerUserNotificationSettings:settings];
-    [application registerForRemoteNotifications];
-    
-    if (application.applicationState != UIApplicationStateBackground) {
-        // Track an app open here if we launch with a push, unless
-        // "content_available" was used to trigger a background push (introduced
-        // in iOS 7). In that case, we skip tracking here to avoid double
-        // counting the app-open.
-        BOOL preBackgroundPush = ![application respondsToSelector:@selector(backgroundRefreshStatus)];
-        BOOL oldPushHandlerOnly = ![self respondsToSelector:@selector(application:didReceiveRemoteNotification:fetchCompletionHandler:)];
-        BOOL noPushPayload = ![launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
-        if (preBackgroundPush || oldPushHandlerOnly || noPushPayload) {
-            [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
-        }
-    }
-    
-    NSLog(@"finish load");
+    //-----------PUSHWOOSH PART-----------
+    // set custom delegate for push handling, in our case AppDelegate
+    [Pushwoosh sharedInstance].delegate = self;
+    //register for push notifications!
+    [[Pushwoosh sharedInstance] registerForPushNotifications];
 
+    NSLog(@"finish load");
     return YES;
 }
+
+//handle token received from APNS
+- (void)application:(UIApplication *)application
+    didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    [[Pushwoosh sharedInstance] handlePushRegistration:deviceToken];
+}
+
+//handle token receiving error
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
+    [[Pushwoosh sharedInstance] handlePushRegistrationFailure:error];
+}
+//this is for iOS < 10 and for silent push notifications
+- (void)application:(UIApplication *)application
+    didReceiveRemoteNotification:(NSDictionary *)userInfo
+          fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+        [[Pushwoosh sharedInstance] handlePushReceived:userInfo];
+        completionHandler(UIBackgroundFetchResultNoData);
+}
+//this event is fired when the push gets received
+- (void)pushwoosh:(Pushwoosh *)pushwoosh onMessageReceived:(PWMessage *)message {
+    NSLog(@"onMessageReceived: %@", message.payload);
+}
+//this event is fired when user taps the notification
+- (void)pushwoosh:(Pushwoosh *)pushwoosh onMessageOpened:(PWMessage *)message {
+    NSLog(@"onMessageOpened: %@", message.payload);
+}
+
 
 - (void)downloadImmediateData {
     [self downloadSpreadsheet];

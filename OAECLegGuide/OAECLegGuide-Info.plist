@@ -24,6 +24,19 @@
 	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>com.pushwoosh.scheme</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>pw-59A3A-CC434</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
@@ -34,6 +47,12 @@
 	<string>Real-time location used to show legislators at your device's location. This App does not retain or transmit your location.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Your position will be obtained to find your legislative region.</string>
+	<key>Pushwoosh_APPID</key>
+	<string>59A3A-CC434</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>remote-notification</string>
+	</array>
 	<key>UIMainStoryboardFile</key>
 	<string>MainStoryboard_iPhone</string>
 	<key>UIMainStoryboardFile~ipad</key>
