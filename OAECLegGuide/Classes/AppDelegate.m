@@ -377,9 +377,17 @@
     
     self.countyBoundaries        = [Boundary buildBoundaryDictionaryWithJSONFile:[[NSBundle mainBundle] pathForResource:@"Counties" ofType:@"json"]]; // TULSA
     //self.municipalBoundaries     = [Boundary buildBoundaryDictionaryWithJSONFile:[[NSBundle mainBundle] pathForResource:@"Municipalities" ofType:@"json"]]; // Tulsa
-    self.congressionalBoundaries = [Boundary buildBoundaryDictionaryWithJSONFile:[[NSBundle mainBundle] pathForResource:@"CongressionalDistricts" ofType:@"json"]]; // 01
-    self.stateSenateBoundaries   = [Boundary buildBoundaryDictionaryWithJSONFile:[[NSBundle mainBundle] pathForResource:@"StateSenateDistricts" ofType:@"json"]];
-    self.stateHouseBoundaries    = [Boundary buildBoundaryDictionaryWithJSONFile:[[NSBundle mainBundle] pathForResource:@"StateHouseDistricts" ofType:@"json"]];
+    //self.congressionalBoundaries = [Boundary buildBoundaryDictionaryWithJSONFile:[[NSBundle mainBundle] pathForResource:@"CongressionalDistricts" ofType:@"json"]]; // 01
+    self.congressionalBoundaries = [Boundary buildDistrictDictionaryWithGEOJSONFile:[[NSBundle mainBundle] pathForResource:@"Congress_Final_102621" ofType:@"json"] andDistrictType:@"Congressional District" ]; // 01
+
+    //self.stateSenateBoundaries   = [Boundary buildBoundaryDictionaryWithJSONFile:[[NSBundle mainBundle] pathForResource:@"StateSenateDistricts" ofType:@"json"]];
+    // self.stateSenateBoundaries   = [Boundary buildBoundaryDictionaryWithJSONFile:[[NSBundle mainBundle] pathForResource:@"Final_Senate_2021" ofType:@"json"]];
+
+    self.stateSenateBoundaries   = [Boundary buildDistrictDictionaryWithGEOJSONFile:[[NSBundle mainBundle] pathForResource:@"Final_Senate_2021" ofType:@"json" ] andDistrictType:@"State Senate District" ];
+
+    // self.stateHouseBoundaries    = [Boundary buildBoundaryDictionaryWithJSONFile:[[NSBundle mainBundle] pathForResource:@"StateHouseDistricts" ofType:@"json"]];
+    self.stateHouseBoundaries    = [Boundary buildDistrictDictionaryWithGEOJSONFile:[[NSBundle mainBundle] pathForResource:@"House_Final_102621" ofType:@"json"] andDistrictType:@"State House District" ];
+
     self.coopBoundaries          = [Boundary buildBoundaryDictionaryWithJSONFile:[[NSBundle mainBundle] pathForResource:@"OAECRegions" ofType:@"json"]];
     
     NSLog(@"stop load");

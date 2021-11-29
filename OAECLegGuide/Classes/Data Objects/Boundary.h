@@ -21,6 +21,9 @@
 
 + (Boundary *)boundaryWithBoundaryServiceDictionary:(NSDictionary *)boundaryServiceDictionary;
 + (NSDictionary *) buildBoundaryDictionaryWithJSONFile:(NSString *)jsonFilename;
++ (NSDictionary *) buildDistrictDictionaryWithGEOJSONFile:(NSString *)jsonFilename andDistrictType:(NSString *)districtType;
++ (Boundary *) boundaryDistrictWithBoundaryServiceDictionaryforGEOJSON:(NSDictionary *)boundaryServiceDictionary andDistrictType:(NSString *)districtType;
+
 
 -(void) addPolygons:(NSMutableArray *)polygons;
 -(BOOL)pointInside:(CLLocationCoordinate2D )point;
