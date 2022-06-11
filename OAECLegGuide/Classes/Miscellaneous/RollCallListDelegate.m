@@ -726,6 +726,17 @@ RLM_ARRAY_TYPE(Realm_tally)
         CELL_HEADSHOT.image=[UIImage imageNamed:person.photo];
         
         //NSLog(@"Attempt to load photo %@ %@",person.photo,(CELL_HEADSHOT.image==nil?@"FAILED":@"SUCCEEDED"));
+
+        if (CELL_HEADSHOT.image==nil)
+        {
+            //Attempt retrieve for photo in device Documents folder
+            NSArray *dirPaths;
+            NSString *docsDir;
+            dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+            docsDir = [dirPaths objectAtIndex:0];
+            NSString *docsPhotoFilename = [NSString stringWithFormat:@"%@/%@", docsDir, person.photo];
+            CELL_HEADSHOT.image=[UIImage imageNamed:docsPhotoFilename];
+        }
         
         if (CELL_HEADSHOT.image!=nil) hasPhoto=YES;
     }

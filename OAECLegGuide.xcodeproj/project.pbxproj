@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		323845AD0DC3A613D456F7E5 /* Pods_ok55leg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B39BA411D17704817919388 /* Pods_ok55leg.framework */; };
 		533C9FB11EE1A68A00B165FD /* VoteTallyHeaderView-iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE16008E1ED2556A00058C4D /* VoteTallyHeaderView-iPhone.xib */; };
 		AF092D3915DA0DC700AA4B6B /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = AF092D3115DA0DC700AA4B6B /* logo.png */; };
 		AF092D3A15DA0DC700AA4B6B /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF092D3215DA0DC700AA4B6B /* logo@2x.png */; };
@@ -236,6 +235,7 @@
 		CE38F84721F8A4AD002D7D6A /* HouseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE38F84621F8A4AD002D7D6A /* HouseViewController.m */; };
 		CE38F84A21F8B3A8002D7D6A /* StatewideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE38F84921F8B3A8002D7D6A /* StatewideViewController.m */; };
 		CE38F84D21F8B890002D7D6A /* RollCallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE38F84C21F8B890002D7D6A /* RollCallViewController.m */; };
+		CE459F006BD11DB4AEE8BCED /* Pods_ok55leg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95ABFB7EB8D7D6DED2C5CA7C /* Pods_ok55leg.framework */; };
 		CE5986021EE8DB8D007C5C3B /* Buttons in Resources */ = {isa = PBXBuildFile; fileRef = CE5986011EE8DB8D007C5C3B /* Buttons */; };
 		CE5DB05C2752C6320029057C /* Congress_Final_102621.json in Resources */ = {isa = PBXBuildFile; fileRef = CE5DB05B2752C6320029057C /* Congress_Final_102621.json */; };
 		CE5DB05E2752EA980029057C /* House_Final_102621.json in Resources */ = {isa = PBXBuildFile; fileRef = CE5DB05D2752EA980029057C /* House_Final_102621.json */; };
@@ -387,8 +387,6 @@
 		CEA9B5351ECA9E7300035FF6 /* House__VoteTallyIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA9B5301ECA9E7300035FF6 /* House__VoteTallyIcon.png */; };
 		CEA9B5361ECA9E7300035FF6 /* All_VoteTallyIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA9B5311ECA9E7300035FF6 /* All_VoteTallyIcon.png */; };
 		CEA9B55C1ECD4AF300035FF6 /* VotingListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA9B5591ECD4AF300035FF6 /* VotingListViewController.m */; };
-		CEB3DA5B1C2F98D10003A4B9 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB3DA591C2F98D10003A4B9 /* Bolts.framework */; };
-		CEB3DA5C1C2F98D10003A4B9 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB3DA5A1C2F98D10003A4B9 /* Parse.framework */; };
 		CEB3DA5F1C2F9A7F0003A4B9 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB3DA5D1C2F9A7F0003A4B9 /* libsqlite3.tbd */; };
 		CEB3DA601C2F9A7F0003A4B9 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB3DA5E1C2F9A7F0003A4B9 /* libz.tbd */; };
 		CEB3DA631C2F9ABC0003A4B9 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB3DA611C2F9ABC0003A4B9 /* AudioToolbox.framework */; };
@@ -399,7 +397,6 @@
 		CEB7D56C1BC9A54100AD5CD2 /* MunsonCyndi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEB7D56B1BC9A54100AD5CD2 /* MunsonCyndi.jpg */; };
 		CEB7D56E1BC9A55000AD5CD2 /* GoodwinRegina.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEB7D56D1BC9A55000AD5CD2 /* GoodwinRegina.jpg */; };
 		CEC68CA31EDD29AF00193036 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC68CA21EDD29AF00193036 /* Realm.framework */; };
-		CEC68CA41EDD2B8000193036 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEC68CA21EDD29AF00193036 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CEC865411EBDF7BC00363665 /* BlankYeaSlice.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC865401EBDF7BC00363665 /* BlankYeaSlice.png */; };
 		CEC865431EBE0F9300363665 /* CheckYea.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC865421EBE0F9300363665 /* CheckYea.png */; };
 		CEC865461EBE149100363665 /* CheckNay.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC865441EBE149100363665 /* CheckNay.png */; };
@@ -429,7 +426,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CEC68CA41EDD2B8000193036 /* Realm.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,7 +433,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5B39BA411D17704817919388 /* Pods_ok55leg.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ok55leg.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E4806F18DF0D2C7C98FF5AA /* Pods-ok55leg.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ok55leg.debug.xcconfig"; path = "Target Support Files/Pods-ok55leg/Pods-ok55leg.debug.xcconfig"; sourceTree = "<group>"; };
+		95ABFB7EB8D7D6DED2C5CA7C /* Pods_ok55leg.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ok55leg.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF092D3115DA0DC700AA4B6B /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		AF092D3215DA0DC700AA4B6B /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
 		AF092D3515DA0DC700AA4B6B /* SplashScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SplashScreen.png; sourceTree = "<group>"; };
@@ -672,7 +669,7 @@
 		AFF2BB1615C860BB00F1B379 /* CommitteeListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommitteeListViewController.h; sourceTree = "<group>"; };
 		AFF2BB1715C860BB00F1B379 /* CommitteeListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommitteeListViewController.m; sourceTree = "<group>"; };
 		AFF2BB1A15C8610100F1B379 /* CommitteeListView-iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "CommitteeListView-iPhone.xib"; sourceTree = "<group>"; };
-		CDBB45FC63B731F2783F019E /* Pods-ok55leg.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ok55leg.debug.xcconfig"; path = "Target Support Files/Pods-ok55leg/Pods-ok55leg.debug.xcconfig"; sourceTree = "<group>"; };
+		C8636A5DD0A710BF92098881 /* Pods-ok55leg.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ok55leg.release.xcconfig"; path = "Target Support Files/Pods-ok55leg/Pods-ok55leg.release.xcconfig"; sourceTree = "<group>"; };
 		CE00DF4D200DBE1800C246B8 /* RosinoPaul.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RosinoPaul.jpg; sourceTree = "<group>"; };
 		CE1600871ED1FB4A00058C4D /* VoteTallyHeaderView-iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "VoteTallyHeaderView-iPhone.xib"; sourceTree = "<group>"; };
 		CE16008E1ED2556A00058C4D /* VoteTallyHeaderView-iPhone.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "VoteTallyHeaderView-iPhone.xib"; path = "OAECLegGuide/NIBs/VoteTallyHeaderView-iPhone.xib"; sourceTree = "<group>"; };
@@ -915,7 +912,6 @@
 		CEE7CE4C1EE25DF100199948 /* CLLocation+Strings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocation+Strings.h"; sourceTree = "<group>"; };
 		CEE7CE4D1EE25DF100199948 /* CLLocation+Strings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocation+Strings.m"; sourceTree = "<group>"; };
 		CEEBF46725EF372700B0D440 /* house_seating.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = house_seating.png; sourceTree = "<group>"; };
-		FD82ABFE00ACBFCE0BE80C83 /* Pods-ok55leg.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ok55leg.release.xcconfig"; path = "Target Support Files/Pods-ok55leg/Pods-ok55leg.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -937,10 +933,8 @@
 				AF2482DA15BDE2AE0070924E /* MapKit.framework in Frameworks */,
 				AF2481A415BB6A260070924E /* UIKit.framework in Frameworks */,
 				AF2481A615BB6A260070924E /* Foundation.framework in Frameworks */,
-				CEB3DA5C1C2F98D10003A4B9 /* Parse.framework in Frameworks */,
 				CEC68CA31EDD29AF00193036 /* Realm.framework in Frameworks */,
-				CEB3DA5B1C2F98D10003A4B9 /* Bolts.framework in Frameworks */,
-				323845AD0DC3A613D456F7E5 /* Pods_ok55leg.framework in Frameworks */,
+				CE459F006BD11DB4AEE8BCED /* Pods_ok55leg.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -950,8 +944,8 @@
 		3BB1E1AB1B493383164DFDA3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				CDBB45FC63B731F2783F019E /* Pods-ok55leg.debug.xcconfig */,
-				FD82ABFE00ACBFCE0BE80C83 /* Pods-ok55leg.release.xcconfig */,
+				3E4806F18DF0D2C7C98FF5AA /* Pods-ok55leg.debug.xcconfig */,
+				C8636A5DD0A710BF92098881 /* Pods-ok55leg.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -1018,7 +1012,7 @@
 				AF2481A315BB6A260070924E /* UIKit.framework */,
 				AF2481A515BB6A260070924E /* Foundation.framework */,
 				AF2481A715BB6A260070924E /* CoreGraphics.framework */,
-				5B39BA411D17704817919388 /* Pods_ok55leg.framework */,
+				95ABFB7EB8D7D6DED2C5CA7C /* Pods_ok55leg.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1647,13 +1641,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF2481CB15BB6A260070924E /* Build configuration list for PBXNativeTarget "ok55leg" */;
 			buildPhases = (
-				392B0484EFABFEB42B6427E4 /* [CP] Check Pods Manifest.lock */,
+				7943F37C306059118CAA7AF1 /* [CP] Check Pods Manifest.lock */,
 				AF24819B15BB6A250070924E /* Sources */,
 				AF24819C15BB6A250070924E /* Frameworks */,
 				AF24819D15BB6A250070924E /* Resources */,
 				CEC68C9D1EDCFC8800193036 /* Embed Frameworks */,
 				CEAA26F71EB5A37B0012CEA5 /* ShellScript */,
-				E5A3B8EA23EC768FB894C708 /* [CP] Embed Pods Frameworks */,
+				D135C410F526F496A1C98935 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -2056,7 +2050,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		392B0484EFABFEB42B6427E4 /* [CP] Check Pods Manifest.lock */ = {
+		7943F37C306059118CAA7AF1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -2089,9 +2083,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework/strip-frameworks.sh\"";
+			shellScript = "# bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework/strip-frameworks.sh\"\n";
 		};
-		E5A3B8EA23EC768FB894C708 /* [CP] Embed Pods Frameworks */ = {
+		D135C410F526F496A1C98935 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -2099,12 +2093,16 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ok55leg/Pods-ok55leg-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/SSZipArchive/SSZipArchive.framework",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/PushwooshXCFramework/Core/Pushwoosh.framework/Pushwoosh",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SSZipArchive.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pushwoosh.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -2237,8 +2235,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				ONLY_ACTIVE_ARCH = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				ONLY_ACTIVE_ARCH = NO;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2283,7 +2281,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "e7bbb1d0-afc7-4284-a892-e24dd98297cb";
@@ -2297,7 +2295,7 @@
 		};
 		AF2481CC15BB6A260070924E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CDBB45FC63B731F2783F019E /* Pods-ok55leg.debug.xcconfig */;
+			baseConfigurationReference = 3E4806F18DF0D2C7C98FF5AA /* Pods-ok55leg.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
@@ -2317,7 +2315,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OAECLegGuide/OAECLegGuide-Prefix.pch";
 				INFOPLIST_FILE = "OAECLegGuide/OAECLegGuide-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 5.4;
 				ONLY_ACTIVE_ARCH = NO;
@@ -2336,7 +2334,7 @@
 		};
 		AF2481CD15BB6A260070924E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FD82ABFE00ACBFCE0BE80C83 /* Pods-ok55leg.release.xcconfig */;
+			baseConfigurationReference = C8636A5DD0A710BF92098881 /* Pods-ok55leg.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
@@ -2354,7 +2352,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OAECLegGuide/OAECLegGuide-Prefix.pch";
 				INFOPLIST_FILE = "OAECLegGuide/OAECLegGuide-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 5.4;
 				PRODUCT_BUNDLE_IDENTIFIER = coop.oaec.ok56leg;
