@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		533C9FB11EE1A68A00B165FD /* VoteTallyHeaderView-iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE16008E1ED2556A00058C4D /* VoteTallyHeaderView-iPhone.xib */; };
+		539D2F52285E75B400F66FCA /* LAAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 539D2F50285E75B400F66FCA /* LAAddress.m */; };
 		AF092D3915DA0DC700AA4B6B /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = AF092D3115DA0DC700AA4B6B /* logo.png */; };
 		AF092D3A15DA0DC700AA4B6B /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF092D3215DA0DC700AA4B6B /* logo@2x.png */; };
 		AF092D3D15DA0DC700AA4B6B /* SplashScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = AF092D3515DA0DC700AA4B6B /* SplashScreen.png */; };
@@ -434,6 +435,8 @@
 
 /* Begin PBXFileReference section */
 		3E4806F18DF0D2C7C98FF5AA /* Pods-ok55leg.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ok55leg.debug.xcconfig"; path = "Target Support Files/Pods-ok55leg/Pods-ok55leg.debug.xcconfig"; sourceTree = "<group>"; };
+		539D2F50285E75B400F66FCA /* LAAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAAddress.m; sourceTree = "<group>"; };
+		539D2F51285E75B400F66FCA /* LAAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAAddress.h; sourceTree = "<group>"; };
 		95ABFB7EB8D7D6DED2C5CA7C /* Pods_ok55leg.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ok55leg.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF092D3115DA0DC700AA4B6B /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		AF092D3215DA0DC700AA4B6B /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
@@ -1559,6 +1562,8 @@
 		AFDB1E6315C1D18600862F0F /* Miscellaneous */ = {
 			isa = PBXGroup;
 			children = (
+				539D2F51285E75B400F66FCA /* LAAddress.h */,
+				539D2F50285E75B400F66FCA /* LAAddress.m */,
 				AF71B99815CC4B0300D0D43B /* Address.h */,
 				AF71B99915CC4B0400D0D43B /* Address.m */,
 				AF15543515EB5FE400AA7794 /* AddressLAViewCell.h */,
@@ -2165,6 +2170,7 @@
 				AF15543715EB5FE400AA7794 /* AddressLAViewCell.m in Sources */,
 				AF14BD55160E4091003D2052 /* CommitteeListViewCell.m in Sources */,
 				CE38F84D21F8B890002D7D6A /* RollCallViewController.m in Sources */,
+				539D2F52285E75B400F66FCA /* LAAddress.m in Sources */,
 				AF9385FE1610FF9A00B34E92 /* GradientButton.m in Sources */,
 				AFDAD5AF186006AB00366D99 /* IOS7AdjustmentViewController.m in Sources */,
 				AF6987FF18E183A700144B92 /* NSDictionary+Committee.m in Sources */,
@@ -2305,7 +2311,7 @@
 				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 0;
 				DEVELOPMENT_TEAM = EH6BL4VM24;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2317,7 +2323,7 @@
 				INFOPLIST_FILE = "OAECLegGuide/OAECLegGuide-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 5.4;
+				MARKETING_VERSION = 5.5;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = coop.oaec.ok56leg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2343,7 +2349,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 0;
 				DEVELOPMENT_TEAM = EH6BL4VM24;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2354,7 +2360,7 @@
 				INFOPLIST_FILE = "OAECLegGuide/OAECLegGuide-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 5.4;
+				MARKETING_VERSION = 5.5;
 				PRODUCT_BUNDLE_IDENTIFIER = coop.oaec.ok56leg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

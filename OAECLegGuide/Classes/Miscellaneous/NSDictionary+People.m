@@ -44,6 +44,10 @@
     return [self objectForKey:@"E-mail"];
 }
 
+-(NSString *) laEmail {
+    return [self objectForKey:@"LA E-mail"];
+}
+
 -(NSString *) webpage {
     return [self objectForKey:@"Website"];
 }

@@ -13,6 +13,7 @@
 #import "ListSection.h"
 #import "Address.h"
 #import "AddressViewCell.h"
+#import "LAAddress.h"
 #import "CommitteeViewCell.h"
 #import "Committee.h"
 #import "PeopleListViewController.h"
@@ -31,7 +32,7 @@
 #define SECTION_OUTLINK    @"Outlink"
 
 #define ADDRESS_LINE_HEIGHT 38.0f
-#define ADDRESS_LA_HEIGHT 55.0f
+#define ADDRESS_LA_HEIGHT 100.0f
 
 @interface PersonViewController () {
     CGFloat _scrollOffsetY;
@@ -258,14 +259,43 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-- (IBAction)emailButtonPressed:(id)sender {
 
-    if ([MFMailComposeViewController canSendMail])
+- (BOOL) isValidEmailString: (NSString *) candidate {
+    NSString *emailRegex =
+@"(?:[a-z0-9!#$%\\&'*+/=?\\^_`{|}~-]+(?:\\.[a-z0-9!#$%\\&'*+/=?\\^_`{|}"
+@"~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\"
+@"x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[a-z0-9](?:[a-"
+@"z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5"
+@"]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-"
+@"9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21"
+@"-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])";
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES[c] %@", emailRegex];
+
+    return [emailTest evaluateWithObject:candidate];
+}
+
+
+
+- (IBAction)emailButtonPressed:(UIButton*)sender
+{
+
+    NSArray *toRecipients;
+
+    if (sender.tag == 2) {
+        toRecipients = [NSArray arrayWithObjects:[self.person.laEmail trim], nil];
+    } else {
+        toRecipients = [NSArray arrayWithObjects:[self.person.email trim], nil];
+    }
+    
+    NSString *recipient;
+    recipient = [toRecipients firstObject];
+    
+    if ([MFMailComposeViewController canSendMail] && [self isValidEmailString:recipient])
     {
         MFMailComposeViewController *mailer = [[MFMailComposeViewController alloc] init];
         mailer.mailComposeDelegate = self;
         [mailer setSubject:@""];
-        NSArray *toRecipients = [NSArray arrayWithObjects:[self.person.email trim], nil];
+
         [mailer setToRecipients:toRecipients];
         
         mailer.modalPresentationStyle = UIModalPresentationPageSheet;
@@ -274,6 +304,16 @@
         [self presentViewController:mailer animated:YES completion:nil];
         [mailer release];
         
+    }
+    else if (![self isValidEmailString:recipient]) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Can't Send Mail"
+                                                        message:@"Sorry, email address on file not valid."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+        [alert release];
+
     }
     else
     {
@@ -413,6 +453,28 @@
         self.activeMetersLabel.text=[numberFormat stringFromNumber:[NSNumber numberWithInt:[self.person.activeMeters intValue]]];
         self.activeMetersPerMileLabel.text=[numberFormat stringFromNumber:[NSNumber numberWithInt:[self.person.activeMetersMiles intValue]]];
         
+    } else if ([listSection.title isEqualToString:SECTION_ADDRESSES] && [[listSection.children objectAtIndex:indexPath.row] isKindOfClass:[LAAddress class]] ) {
+        
+        static NSString *AddressLACellIdentifier = @"AddressLACell";
+        AddressLAViewCell *laCell = [tableView dequeueReusableCellWithIdentifier:AddressLACellIdentifier];
+
+        if (laCell == nil) {
+            laCell = [[[NSBundle mainBundle] loadNibNamed:@"PersonViewAddressLACell-iPhone" owner:nil options:nil] objectAtIndex:0];
+        }
+        
+        laCell.pvc = self;
+
+        LAAddress *la_address = [listSection.children objectAtIndex:1];
+        laCell.laNameLabel.text = la_address.name;
+
+
+        laCell.laEmailLabel.text = la_address.email;
+        
+        if ([self.person.type isEqualToString:STATE_SENATE]) {
+            laCell.assistantTitleLabel.text = @"Executive Assistant";
+        }
+
+        cell=laCell;
     } else if ([listSection.title isEqualToString:SECTION_ADDRESSES] && [[listSection.children objectAtIndex:indexPath.row] isKindOfClass:[Address class]] ) {
 
         Address *address = [listSection.children objectAtIndex:indexPath.row];
@@ -424,7 +486,7 @@
             addressCell = [[[NSBundle mainBundle] loadNibNamed:@"PersonViewAddressCell-iPhone" owner:nil options:nil] objectAtIndex:0];
         }
         
-        CGFloat baseHeight = 165.0f;
+        CGFloat baseHeight = 220.0f;
         
         //NSLog(@"baseHeight %f",baseHeight);
         
@@ -832,9 +894,10 @@
         }
         
         if (self.person.laName!=nil && [[self.person.laName trim] length]>0) {
-            
-            [addressSection.children addObject:self.person.laName];
-            
+            LAAddress *la_address = [[[LAAddress alloc] init] autorelease];
+            la_address.name = self.person.laName;
+            la_address.email = self.person.laEmail;
+            [addressSection.children addObject:la_address];
         }
         
         Address *address2 = [[[Address alloc] init] autorelease];

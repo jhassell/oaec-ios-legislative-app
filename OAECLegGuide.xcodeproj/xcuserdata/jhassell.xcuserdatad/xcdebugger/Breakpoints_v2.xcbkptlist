@@ -187,7 +187,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "05697EE8-48DE-4B9F-89C6-F9C5E208A2C6"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OAECLegGuide/Classes/View Controllers/MapsViewController.m"

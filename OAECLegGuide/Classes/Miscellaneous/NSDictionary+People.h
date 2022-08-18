@@ -38,6 +38,7 @@
 @property (readonly) NSString *homeZip;
 @property (readonly) NSString *districtPhone;
 @property (readonly) NSString *laName;
+@property (readonly) NSString *laEmail;
 @property (readonly) NSString *predecessor;
 @property (readonly) NSMutableArray *committees;
 

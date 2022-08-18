@@ -10,6 +10,13 @@
 
 @implementation AddressLAViewCell
 @synthesize laNameLabel;
+@synthesize laEmailLabel;
+@synthesize pvc;
+
+
+- (IBAction)email:(id)sender {
+    [pvc emailButtonPressed:sender];
+}
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -29,6 +36,7 @@
 
 - (void)dealloc {
     [laNameLabel release];
+    [laEmailLabel release];
     [_assistantTitleLabel release];
     [super dealloc];
 }
