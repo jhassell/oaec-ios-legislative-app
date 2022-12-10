@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -47,13 +47,33 @@
                         <action selector="backButtonPushed:" destination="-1" eventType="touchUpInside" id="9"/>
                     </connections>
                 </button>
+                <button opaque="NO" userInteractionEnabled="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="klx-UQ-9iZ">
+                    <rect key="frame" x="143" y="9" width="168" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="168" id="GOd-se-b9U"/>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="168" id="Lzy-Hg-6IB"/>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="24" id="Wut-Qo-3vQ"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="bWq-NO-4Wh"/>
+                        <constraint firstAttribute="width" constant="168" id="hfb-mC-Isl"/>
+                        <constraint firstAttribute="height" constant="24" id="mdb-09-tsG"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="168" id="qYb-2F-TGB"/>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="24" id="yUS-Go-cD0"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="FromOAEC.png"/>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="klx-UQ-9iZ" firstAttribute="top" secondItem="1" secondAttribute="top" constant="9" id="g47-Gn-7JX"/>
+                <constraint firstAttribute="trailing" secondItem="klx-UQ-9iZ" secondAttribute="trailing" constant="9" id="olc-32-PZN"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="139" y="154"/>
         </view>
     </objects>
     <resources>
         <image name="Background.png" width="375" height="667"/>
+        <image name="FromOAEC.png" width="743" height="105"/>
     </resources>
 </document>

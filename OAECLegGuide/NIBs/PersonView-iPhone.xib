@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -99,8 +99,21 @@
                     </subviews>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
+                <button opaque="NO" userInteractionEnabled="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sca-C4-sSG">
+                    <rect key="frame" x="139" y="16" width="168" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="168" id="nTN-xe-60e"/>
+                        <constraint firstAttribute="height" constant="24" id="rOJ-PN-Vuc"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="FromOAEC.png"/>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Sca-C4-sSG" firstAttribute="top" secondItem="1" secondAttribute="top" constant="16" id="9yf-IF-9CO"/>
+                <constraint firstAttribute="trailing" secondItem="Sca-C4-sSG" secondAttribute="trailing" constant="13" id="Uit-py-nf4"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="130" y="133"/>
         </view>
@@ -566,6 +579,7 @@
     </objects>
     <resources>
         <image name="Background.png" width="375" height="667"/>
+        <image name="FromOAEC.png" width="743" height="105"/>
         <image name="browser.png" width="128" height="128"/>
         <image name="email.png" width="102.40000152587891" height="102.40000152587891"/>
         <image name="facebook.png" width="128" height="128"/>
