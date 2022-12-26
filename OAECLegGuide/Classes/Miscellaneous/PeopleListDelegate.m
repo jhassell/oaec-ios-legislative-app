@@ -206,6 +206,8 @@
         _searchViewCell = [[[[NSBundle mainBundle] loadNibNamed:@"PeopleListSearchCell-iPhone" owner:self options:nil] objectAtIndex:0] retain];
         _searchViewCell.searchBar.delegate=self;
         _searchViewCell.searchBar.showsCancelButton=NO;
+        _searchViewCell.searchBar.showsScopeBar = YES;
+        [_searchViewCell.searchBar sizeToFit];
     }
     
     return _searchViewCell;

@@ -120,12 +120,7 @@
 		538C96492939A9FE00EDC8C2 /* NewhouseJoe23.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 538C96272939A9FE00EDC8C2 /* NewhouseJoe23.jpg */; };
 		538C964A2939A9FE00EDC8C2 /* BergstromMichael23.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 538C96282939A9FE00EDC8C2 /* BergstromMichael23.jpg */; };
 		538C964B2939A9FE00EDC8C2 /* DossettJo Anna.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 538C96292939A9FE00EDC8C2 /* DossettJo Anna.jpg */; };
-		538C96522939AA1D00EDC8C2 /* DavidKim2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 538C964C2939AA1D00EDC8C2 /* DavidKim2.jpg */; };
-		538C96532939AA1D00EDC8C2 /* PinnellMatt2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 538C964D2939AA1D00EDC8C2 /* PinnellMatt2.jpg */; };
-		538C96542939AA1D00EDC8C2 /* GentnerDrummond.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 538C964E2939AA1D00EDC8C2 /* GentnerDrummond.jpg */; };
 		538C96552939AA1D00EDC8C2 /* StittKevin2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 538C964F2939AA1D00EDC8C2 /* StittKevin2.jpg */; };
-		538C96562939AA1D00EDC8C2 /* ToddRuss.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 538C96502939AA1D00EDC8C2 /* ToddRuss.jpg */; };
-		538C96572939AA1D00EDC8C2 /* RyanWalters.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 538C96512939AA1D00EDC8C2 /* RyanWalters.jpg */; };
 		539D2F52285E75B400F66FCA /* LAAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 539D2F50285E75B400F66FCA /* LAAddress.m */; };
 		AF092D3915DA0DC700AA4B6B /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = AF092D3115DA0DC700AA4B6B /* logo.png */; };
 		AF092D3A15DA0DC700AA4B6B /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF092D3215DA0DC700AA4B6B /* logo@2x.png */; };
@@ -217,7 +212,6 @@
 		AF82A25F1A7789B600A91552 /* LoringBen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF82A2481A7789B600A91552 /* LoringBen.jpg */; };
 		AF82A2681A7789B600A91552 /* WallaceKevin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF82A2511A7789B600A91552 /* WallaceKevin.jpg */; };
 		AF82A2771A7789C500A91552 /* JechDarcy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF82A26D1A7789C500A91552 /* JechDarcy.jpg */; };
-		AF82A2811A7789D100A91552 /* HiettTodd.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF82A27E1A7789D100A91552 /* HiettTodd.jpg */; };
 		AF866C9616B8F9C700E9DF01 /* OutlinkCell-iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF866C9516B8F9C700E9DF01 /* OutlinkCell-iPhone.xib */; };
 		AF9385FE1610FF9A00B34E92 /* GradientButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9385FB1610FF9A00B34E92 /* GradientButton.m */; };
 		AF9385FF1610FF9A00B34E92 /* RedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9385FD1610FF9A00B34E92 /* RedButton.m */; };
@@ -234,7 +228,6 @@
 		AFBC6EBD16B0BF740052E385 /* McCallCharles.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6DF016B0BF740052E385 /* McCallCharles.jpg */; };
 		AFBC6F1C16B0BF740052E385 /* StandridgeRob.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6E5016B0BF740052E385 /* StandridgeRob.jpg */; };
 		AFBC6F1F16B0BF740052E385 /* TreatGreg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6E5316B0BF740052E385 /* TreatGreg.jpg */; };
-		AFBC6F2116B0BF740052E385 /* AnthonyBob.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFBC6E5616B0BF740052E385 /* AnthonyBob.jpg */; };
 		AFBEF63E15C47A7100D785CD /* PeopleListDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBEF63D15C47A7100D785CD /* PeopleListDelegate.m */; };
 		AFBEF66A15D2B2D600D785CD /* PeopleListSearchCell-iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFBEF66915D2B2D600D785CD /* PeopleListSearchCell-iPhone.xib */; };
 		AFC4D5D21630BC8F0023EB2E /* ButtonLegislativeContacts@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC4D5CA1630BC8F0023EB2E /* ButtonLegislativeContacts@2x.png */; };
@@ -344,9 +337,6 @@
 		CE6C641521EEE7C300A8044E /* PittmanAjay.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C63E321EEE7C300A8044E /* PittmanAjay.jpg */; };
 		CE6C641921EEE7C300A8044E /* BurnsTy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C63E721EEE7C300A8044E /* BurnsTy.jpg */; };
 		CE6C641B21EEE7C300A8044E /* WaldronJohn.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C63E921EEE7C300A8044E /* WaldronJohn.jpg */; };
-		CE6C643421F025E800A8044E /* OsbornLeslie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C642C21F025E700A8044E /* OsbornLeslie.jpg */; };
-		CE6C643621F025E800A8044E /* ByrdCindy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C642E21F025E800A8044E /* ByrdCindy.jpg */; };
-		CE6C643B21F025E800A8044E /* MulreadyGlen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C643321F025E800A8044E /* MulreadyGlen.jpg */; };
 		CE6C644E21F0383500A8044E /* MurdockCasey.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C643E21F0383300A8044E /* MurdockCasey.jpg */; };
 		CE6C644F21F0383500A8044E /* BullardDavid.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C643F21F0383300A8044E /* BullardDavid.jpg */; };
 		CE6C645521F0383500A8044E /* StanleyBrenda.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE6C644521F0383400A8044E /* StanleyBrenda.jpg */; };
@@ -557,12 +547,7 @@
 		538C96272939A9FE00EDC8C2 /* NewhouseJoe23.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = NewhouseJoe23.jpg; sourceTree = "<group>"; };
 		538C96282939A9FE00EDC8C2 /* BergstromMichael23.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BergstromMichael23.jpg; sourceTree = "<group>"; };
 		538C96292939A9FE00EDC8C2 /* DossettJo Anna.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "DossettJo Anna.jpg"; sourceTree = "<group>"; };
-		538C964C2939AA1D00EDC8C2 /* DavidKim2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DavidKim2.jpg; sourceTree = "<group>"; };
-		538C964D2939AA1D00EDC8C2 /* PinnellMatt2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PinnellMatt2.jpg; sourceTree = "<group>"; };
-		538C964E2939AA1D00EDC8C2 /* GentnerDrummond.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GentnerDrummond.jpg; sourceTree = "<group>"; };
 		538C964F2939AA1D00EDC8C2 /* StittKevin2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = StittKevin2.jpg; sourceTree = "<group>"; };
-		538C96502939AA1D00EDC8C2 /* ToddRuss.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ToddRuss.jpg; sourceTree = "<group>"; };
-		538C96512939AA1D00EDC8C2 /* RyanWalters.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RyanWalters.jpg; sourceTree = "<group>"; };
 		539D2F50285E75B400F66FCA /* LAAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAAddress.m; sourceTree = "<group>"; };
 		539D2F51285E75B400F66FCA /* LAAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAAddress.h; sourceTree = "<group>"; };
 		95ABFB7EB8D7D6DED2C5CA7C /* Pods_ok55leg.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ok55leg.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -678,7 +663,6 @@
 		AF82A2481A7789B600A91552 /* LoringBen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LoringBen.jpg; sourceTree = "<group>"; };
 		AF82A2511A7789B600A91552 /* WallaceKevin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WallaceKevin.jpg; sourceTree = "<group>"; };
 		AF82A26D1A7789C500A91552 /* JechDarcy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = JechDarcy.jpg; sourceTree = "<group>"; };
-		AF82A27E1A7789D100A91552 /* HiettTodd.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HiettTodd.jpg; sourceTree = "<group>"; };
 		AF866C9516B8F9C700E9DF01 /* OutlinkCell-iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "OutlinkCell-iPhone.xib"; sourceTree = "<group>"; };
 		AF9385FA1610FF9A00B34E92 /* GradientButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientButton.h; sourceTree = "<group>"; };
 		AF9385FB1610FF9A00B34E92 /* GradientButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientButton.m; sourceTree = "<group>"; };
@@ -699,7 +683,6 @@
 		AFBC6DF016B0BF740052E385 /* McCallCharles.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = McCallCharles.jpg; sourceTree = "<group>"; };
 		AFBC6E5016B0BF740052E385 /* StandridgeRob.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = StandridgeRob.jpg; sourceTree = "<group>"; };
 		AFBC6E5316B0BF740052E385 /* TreatGreg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = TreatGreg.jpg; sourceTree = "<group>"; };
-		AFBC6E5616B0BF740052E385 /* AnthonyBob.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AnthonyBob.jpg; sourceTree = "<group>"; };
 		AFBEF63C15C47A7100D785CD /* PeopleListDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleListDelegate.h; sourceTree = "<group>"; };
 		AFBEF63D15C47A7100D785CD /* PeopleListDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleListDelegate.m; sourceTree = "<group>"; };
 		AFBEF66915D2B2D600D785CD /* PeopleListSearchCell-iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "PeopleListSearchCell-iPhone.xib"; sourceTree = "<group>"; };
@@ -835,9 +818,6 @@
 		CE6C63E321EEE7C300A8044E /* PittmanAjay.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PittmanAjay.jpg; sourceTree = "<group>"; };
 		CE6C63E721EEE7C300A8044E /* BurnsTy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BurnsTy.jpg; sourceTree = "<group>"; };
 		CE6C63E921EEE7C300A8044E /* WaldronJohn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WaldronJohn.jpg; sourceTree = "<group>"; };
-		CE6C642C21F025E700A8044E /* OsbornLeslie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = OsbornLeslie.jpg; sourceTree = "<group>"; };
-		CE6C642E21F025E800A8044E /* ByrdCindy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ByrdCindy.jpg; sourceTree = "<group>"; };
-		CE6C643321F025E800A8044E /* MulreadyGlen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MulreadyGlen.jpg; sourceTree = "<group>"; };
 		CE6C643E21F0383300A8044E /* MurdockCasey.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MurdockCasey.jpg; sourceTree = "<group>"; };
 		CE6C643F21F0383300A8044E /* BullardDavid.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BullardDavid.jpg; sourceTree = "<group>"; };
 		CE6C644521F0383400A8044E /* StanleyBrenda.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = StanleyBrenda.jpg; sourceTree = "<group>"; };
@@ -1525,17 +1505,7 @@
 		AFBC6E5516B0BF740052E385 /* Statewide Officials */ = {
 			isa = PBXGroup;
 			children = (
-				538C964C2939AA1D00EDC8C2 /* DavidKim2.jpg */,
-				538C964E2939AA1D00EDC8C2 /* GentnerDrummond.jpg */,
-				538C964D2939AA1D00EDC8C2 /* PinnellMatt2.jpg */,
-				538C96512939AA1D00EDC8C2 /* RyanWalters.jpg */,
 				538C964F2939AA1D00EDC8C2 /* StittKevin2.jpg */,
-				538C96502939AA1D00EDC8C2 /* ToddRuss.jpg */,
-				CE6C642E21F025E800A8044E /* ByrdCindy.jpg */,
-				CE6C643321F025E800A8044E /* MulreadyGlen.jpg */,
-				CE6C642C21F025E700A8044E /* OsbornLeslie.jpg */,
-				AF82A27E1A7789D100A91552 /* HiettTodd.jpg */,
-				AFBC6E5616B0BF740052E385 /* AnthonyBob.jpg */,
 			);
 			path = "Statewide Officials";
 			sourceTree = "<group>";
@@ -1746,7 +1716,6 @@
 				CE9AD38D25D9FA1B00D7CF60 /* senate_seating.jpg in Resources */,
 				538C957F2939A6A800EDC8C2 /* BiceStephanie.jpg in Resources */,
 				AF2482D615BDDA2A0070924E /* iconplaceholder.png in Resources */,
-				CE6C643421F025E800A8044E /* OsbornLeslie.jpg in Resources */,
 				538C96552939AA1D00EDC8C2 /* StittKevin2.jpg in Resources */,
 				538C96392939A9FE00EDC8C2 /* ThompsonRoger23.jpg in Resources */,
 				538C95A42939A8B400EDC8C2 /* BoeschJason.jpg in Resources */,
@@ -1807,7 +1776,6 @@
 				AF0A15D615DAD75C0063B0E7 /* Background@2x.png in Resources */,
 				AF3DEE5915DD3D5800151661 /* Counties.json in Resources */,
 				AF3DEE5A15DD3D5800151661 /* Municipalities.json in Resources */,
-				538C96532939AA1D00EDC8C2 /* PinnellMatt2.jpg in Resources */,
 				538C96412939A9FE00EDC8C2 /* WoodsTom.jpg in Resources */,
 				AFDAD5B31860070400366D99 /* Calendar@2x.png in Resources */,
 				AF6BF8B415DDA4F400F231A5 /* MapView-iPhone.xib in Resources */,
@@ -1873,7 +1841,6 @@
 				AFC4D5D21630BC8F0023EB2E /* ButtonLegislativeContacts@2x.png in Resources */,
 				CE6C640F21EEE7C300A8044E /* SterlingDanny.jpg in Resources */,
 				AF577E5A1A0BED8D00994EA1 /* houseCommittee.png in Resources */,
-				538C96542939AA1D00EDC8C2 /* GentnerDrummond.jpg in Resources */,
 				AFC4D5D31630BC8F0023EB2E /* ButtonLegislativeContacts.png in Resources */,
 				AFC4D5D41630BC8F0023EB2E /* ButtonAboutOAEC@2x.png in Resources */,
 				AFC4D5D51630BC8F0023EB2E /* ButtonAboutOAEC.png in Resources */,
@@ -1897,7 +1864,6 @@
 				AF82A25C1A7789B600A91552 /* KannadyChris.jpg in Resources */,
 				CE6C63F321EEE7C300A8044E /* OlsenJim.jpg in Resources */,
 				538C963C2939A9FE00EDC8C2 /* GollihareTodd.jpg in Resources */,
-				538C96572939AA1D00EDC8C2 /* RyanWalters.jpg in Resources */,
 				CE7C6D291E385F4C00874B14 /* NicholsMonroe.jpg in Resources */,
 				CE5DB05E2752EA980029057C /* House_Final_102621.json in Resources */,
 				AF6987F918E17E7100144B92 /* CommitteeHeaderView-iPhone.xib in Resources */,
@@ -1913,7 +1879,6 @@
 				CE6C640721EEE7C300A8044E /* TownleyTammy.jpg in Resources */,
 				CE18B54F1E4F72930067DCC1 /* Icon-App-72x72@2x.png in Resources */,
 				538C96332939A9FE00EDC8C2 /* BlakeStephens.jpg in Resources */,
-				538C96562939AA1D00EDC8C2 /* ToddRuss.jpg in Resources */,
 				CEA9B5331ECA9E7300035FF6 /* Senate_VoteTallyIcon.png in Resources */,
 				538C964B2939A9FE00EDC8C2 /* DossettJo Anna.jpg in Resources */,
 				CEB7D56E1BC9A55000AD5CD2 /* GoodwinRegina.jpg in Resources */,
@@ -1925,7 +1890,6 @@
 				CE7C6D521E385F7600874B14 /* PughAdam.jpg in Resources */,
 				CE927F4E1F8738CE00015327 /* RosecrantsJacob.jpg in Resources */,
 				AF577E661A0BED8D00994EA1 /* Statewide.png in Resources */,
-				538C96522939AA1D00EDC8C2 /* DavidKim2.jpg in Resources */,
 				CE6C63F821EEE7C300A8044E /* MartiTJ.jpg in Resources */,
 				538C95822939A6BD00EDC8C2 /* MullinsMark.jpg in Resources */,
 				CE6C640D21EEE7C300A8044E /* MillerNicole.jpg in Resources */,
@@ -2017,7 +1981,6 @@
 				538C95AA2939A8B400EDC8C2 /* WoodKevin.jpg in Resources */,
 				CED231E7275341B8001DD047 /* OAECRegions.json in Resources */,
 				538C95B22939A8B400EDC8C2 /* LittauTyson.jpg in Resources */,
-				CE6C643621F025E800A8044E /* ByrdCindy.jpg in Resources */,
 				CEDEF0DF1C0034BF0024A43F /* GurichNoma.jpg in Resources */,
 				CE7C6D491E385F7600874B14 /* KiddChris.jpg in Resources */,
 				538C96482939A9FE00EDC8C2 /* DanielsJulie23.jpg in Resources */,
@@ -2041,7 +2004,6 @@
 				538C96312939A9FE00EDC8C2 /* MontgomeryJohn23.jpg in Resources */,
 				538C95B32939A8B400EDC8C2 /* OrmeJuli1.jpg in Resources */,
 				AFBC6F1C16B0BF740052E385 /* StandridgeRob.jpg in Resources */,
-				CE6C643B21F025E800A8044E /* MulreadyGlen.jpg in Resources */,
 				538C95FA2939A9BB00EDC8C2 /* StinsonPreston.jpg in Resources */,
 				CE5986021EE8DB8D007C5C3B /* Buttons in Resources */,
 				538C95FF2939A9BB00EDC8C2 /* SuzanneSchreiber.jpg in Resources */,
@@ -2055,10 +2017,8 @@
 				538C95E62939A9BB00EDC8C2 /* JaredDeck.jpg in Resources */,
 				CE7C6D301E385F4C00874B14 /* WestTammy.jpg in Resources */,
 				538C96452939A9FE00EDC8C2 /* MatthewsKevin23.jpg in Resources */,
-				AFBC6F2116B0BF740052E385 /* AnthonyBob.jpg in Resources */,
 				CE18B5471E4F72930067DCC1 /* Icon-App-40x40@1x.png in Resources */,
 				538C95E32939A9BB00EDC8C2 /* BashoreSteve.jpg in Resources */,
-				AF82A2811A7789D100A91552 /* HiettTodd.jpg in Resources */,
 				CE6C646421F0399700A8044E /* AaronPaxton.jpg in Resources */,
 				CE6C63FA21EEE7C300A8044E /* CornwellRusty.jpg in Resources */,
 				CEC865471EBE149100363665 /* BlankNay.png in Resources */,
@@ -2359,7 +2319,7 @@
 				INFOPLIST_FILE = "OAECLegGuide/OAECLegGuide-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 5.7;
+				MARKETING_VERSION = 5.8;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = coop.oaec.ok56leg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2396,7 +2356,7 @@
 				INFOPLIST_FILE = "OAECLegGuide/OAECLegGuide-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 5.7;
+				MARKETING_VERSION = 5.8;
 				PRODUCT_BUNDLE_IDENTIFIER = coop.oaec.ok56leg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
