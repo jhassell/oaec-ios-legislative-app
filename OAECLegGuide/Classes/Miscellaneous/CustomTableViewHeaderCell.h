@@ -11,6 +11,8 @@
 @interface CustomTableViewHeaderCell : UITableViewCell
 @property (assign, nonatomic) IBOutlet UILabel *title;
 
+- (IBAction)CaucusPressed:(id)sender;
+
 @property (strong, nonatomic) IBOutlet UILabel *sectionHeaderLabel;
 
 @end

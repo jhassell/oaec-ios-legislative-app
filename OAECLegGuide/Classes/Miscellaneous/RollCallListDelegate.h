@@ -34,10 +34,12 @@
 @property (nonatomic) NSInteger rc_headerYesVotes;
 @property (nonatomic) NSInteger rc_headerNoVotes;
 @property (nonatomic) NSInteger rc_headerUnknownVotes;
+@property (nonatomic) NSInteger caucusStatus;
 
 
 
 -(void) rc_yeaButtonTapped:(UIButton *)sender forEvent:(UIEvent *)event;
 -(void) rc_nayCheckButtonTapped:(UIButton *) sender forEvent:(UIEvent *)event;
+-(void) rc_caucusButtonTapped:(UIButton *) sender forEvent:(UIEvent *)event;
 
 @end

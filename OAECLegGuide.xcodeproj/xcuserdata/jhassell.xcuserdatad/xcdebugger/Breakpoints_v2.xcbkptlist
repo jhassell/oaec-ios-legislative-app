@@ -8,7 +8,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "20E45EEA-886A-42B6-978C-AF4B0AE21CC4"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OAECLegGuide/Classes/Miscellaneous/PeopleListDelegate.m"
@@ -85,7 +85,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "F392DB9B-BD93-476D-AD79-9D745477C285"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OAECLegGuide/Classes/View Controllers/LocationDetailViewController.m"

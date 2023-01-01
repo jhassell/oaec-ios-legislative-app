@@ -2371,7 +2371,7 @@
 				INFOPLIST_FILE = "OAECLegGuide/OAECLegGuide-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 5.9;
+				MARKETING_VERSION = 6.00;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = coop.oaec.ok56leg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2408,7 +2408,7 @@
 				INFOPLIST_FILE = "OAECLegGuide/OAECLegGuide-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 5.9;
+				MARKETING_VERSION = 6.00;
 				PRODUCT_BUNDLE_IDENTIFIER = coop.oaec.ok56leg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

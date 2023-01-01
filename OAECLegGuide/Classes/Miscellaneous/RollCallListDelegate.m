@@ -68,6 +68,7 @@ RLM_ARRAY_TYPE(Realm_tally)
 @property (nonatomic, strong) Realm_tally_parent *parent;
 @property (nonatomic, strong) Tally *sectionTally;
 
+
 -(void) buildDisplaySections;
 
 @end
@@ -190,6 +191,18 @@ RLM_ARRAY_TYPE(Realm_tally)
             NSMutableArray *filteredChildren = [NSMutableArray arrayWithCapacity:[section.children count]];
             
             NSPredicate *filterPredicate=nil; 
+            
+            // if we are in a committee
+            if ([[section.children objectAtIndex:0] isKindOfClass:[CommitteeMember class]]) {
+                filterText = @"";
+            } else if (self.caucusStatus == 1) {
+                filterText=@"D";
+                filterType = 3; //JWH
+            } else if (self.caucusStatus == 2) {
+                filterText=@"R";
+                filterType = 3; //JWH
+            }
+            
             switch (filterType) {
   //              case 0:
   //                  filterPredicate = [NSPredicate predicateWithFormat:@"LastName contains[cd] %@",filterText];
@@ -202,6 +215,9 @@ RLM_ARRAY_TYPE(Realm_tally)
                     break;
                 case 2:
                     filterPredicate = [NSPredicate predicateWithFormat:@"DistrictNumber = %@",filterText];
+                    break;
+                case 3:
+                    filterPredicate = [NSPredicate predicateWithFormat:@"Party = %@",filterText];
                     break;
                 default:
                     filterPredicate=nil;
@@ -386,7 +402,8 @@ RLM_ARRAY_TYPE(Realm_tally)
     self.rc_headerUnknownVotes = 0;
     NSString *voteStatus = [[NSString alloc] init];
     NSInteger i;
-    for (i=0; i<realmTally.voteCount; i++) {
+    // JWH for (i=0; i<realmTally.voteCount; i++) {
+    for (i=0; i<[self.sectionTally.votes count]; i++) {
         voteStatus = realmTally.votes[i].status;
         if ([voteStatus isEqual:@"Yea"]) {
             self.rc_headerYesVotes++;
@@ -410,6 +427,8 @@ RLM_ARRAY_TYPE(Realm_tally)
 
 -(void) populateHeaderVotes{
     
+    NSString *buttonTitle;
+    
     UILabel *yeaHeaderLabel = (UILabel *)[self.rc_customHeaderCell.contentView viewWithTag:11];
     yeaHeaderLabel.text = [NSString stringWithFormat:@"%ld", (long)self.rc_headerYesVotes];
     
@@ -418,6 +437,29 @@ RLM_ARRAY_TYPE(Realm_tally)
     
     UILabel *undecidedHeaderLabel = (UILabel *)[self.rc_customHeaderCell.contentView viewWithTag:13];
     undecidedHeaderLabel.text = [NSString stringWithFormat:@"%ld", (long)self.rc_headerUnknownVotes];
+    
+    UIButton *caucusButton = (UIButton *)[self.rc_customHeaderCell.contentView viewWithTag:15];
+    NSString *buttonString = @"Caucus: All";
+    
+    if (self.caucusStatus == 1) {
+        buttonTitle = @"Democrat";
+    } else if (self.caucusStatus == 2) {
+        buttonTitle = @"Republican";
+    } else {
+        buttonTitle = @"Caucus: All";
+    }
+    
+    [caucusButton setTitle:buttonTitle forState:UIControlStateNormal];
+   
+    [caucusButton addTarget:self
+                     action:@selector(rc_caucusButtonTapped:forEvent:)
+       forControlEvents:UIControlEventTouchUpInside];
+    
+    if (self.rc_committee != nil)
+    {
+        caucusButton.hidden = YES;
+    }
+    
 }
 
 
@@ -456,6 +498,33 @@ RLM_ARRAY_TYPE(Realm_tally)
     
     [self sumVotes:realmTally];
     [self populateHeaderVotes];
+}
+
+
+-(void) rc_caucusButtonTapped:(UIButton *) sender forEvent:(UIEvent *)event {
+    
+    NSString *buttonTitle;
+    
+    UIButton *caucusButton = (UIButton *)[self.rc_customHeaderCell.contentView viewWithTag:15];
+    
+    self.caucusStatus++;
+    if (self.caucusStatus > 2) {
+        self.caucusStatus = 0;
+    }
+    
+    if (self.caucusStatus == 1) {
+        buttonTitle = @"Democrat";
+    } else if (self.caucusStatus == 2) {
+        buttonTitle = @"Republican";
+    } else {
+        buttonTitle = @"Caucus: All";
+    }
+    
+    [caucusButton setTitle:buttonTitle forState:UIControlStateNormal];
+    NSLog(@"Here");
+    [self buildDisplaySections];
+    [self clearCurrentTally];
+    [self.rc_peopleTable reloadData];
 }
 
 
