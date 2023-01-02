@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5338DD6728CD62B5003E9967 /* FromOAEC.png in Resources */ = {isa = PBXBuildFile; fileRef = 5338DD6628CD62B5003E9967 /* FromOAEC.png */; };
 		533C9FB11EE1A68A00B165FD /* VoteTallyHeaderView-iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE16008E1ED2556A00058C4D /* VoteTallyHeaderView-iPhone.xib */; };
 		538C956E2939A68E00EDC8C2 /* DarbyRichard1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 538C956A2939A68E00EDC8C2 /* DarbyRichard1.jpg */; };
 		538C956F2939A68E00EDC8C2 /* KaneJohn.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 538C956B2939A68E00EDC8C2 /* KaneJohn.jpg */; };
@@ -142,7 +141,6 @@
 		AF092D3D15DA0DC700AA4B6B /* SplashScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = AF092D3515DA0DC700AA4B6B /* SplashScreen.png */; };
 		AF092D3E15DA0DC700AA4B6B /* SplashScreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF092D3615DA0DC700AA4B6B /* SplashScreen@2x.png */; };
 		AF092D4115DA0FD200AA4B6B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = AF092D4015DA0FD100AA4B6B /* Default.png */; };
-		AF092D4315DA0FDC00AA4B6B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF092D4215DA0FDC00AA4B6B /* Default@2x.png */; };
 		AF092D4615DAC83F00AA4B6B /* SearchViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF092D4515DAC83E00AA4B6B /* SearchViewCell.m */; };
 		AF0A15D515DAD75C0063B0E7 /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = AF0A15D315DAD75C0063B0E7 /* Background.png */; };
 		AF0A15D615DAD75C0063B0E7 /* Background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF0A15D415DAD75C0063B0E7 /* Background@2x.png */; };
@@ -181,8 +179,6 @@
 		AF2482D615BDDA2A0070924E /* iconplaceholder.png in Resources */ = {isa = PBXBuildFile; fileRef = AF2482D415BDDA2A0070924E /* iconplaceholder.png */; };
 		AF2482D715BDDA2A0070924E /* iconplaceholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF2482D515BDDA2A0070924E /* iconplaceholder@2x.png */; };
 		AF2482DA15BDE2AE0070924E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF2482D915BDE2AE0070924E /* MapKit.framework */; };
-		AF255CC5184CBAF60053CC73 /* AppIcon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = AF255CC3184CBAF60053CC73 /* AppIcon-60.png */; };
-		AF255CC6184CBAF60053CC73 /* AppIcon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF255CC4184CBAF60053CC73 /* AppIcon-60@2x.png */; };
 		AF2B152716B08C1100A3A7F4 /* OutlinkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2B152616B08C1100A3A7F4 /* OutlinkCell.m */; };
 		AF3DEE4F15DD3A6D00151661 /* UIColor-Expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3DEE4E15DD3A6D00151661 /* UIColor-Expanded.m */; };
 		AF3DEE5215DD3AA500151661 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF3DEE5115DD3AA500151661 /* CoreLocation.framework */; };
@@ -248,14 +244,8 @@
 		AFC4D5D31630BC8F0023EB2E /* ButtonLegislativeContacts.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC4D5CB1630BC8F0023EB2E /* ButtonLegislativeContacts.png */; };
 		AFC4D5D41630BC8F0023EB2E /* ButtonAboutOAEC@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC4D5CC1630BC8F0023EB2E /* ButtonAboutOAEC@2x.png */; };
 		AFC4D5D51630BC8F0023EB2E /* ButtonAboutOAEC.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC4D5CD1630BC8F0023EB2E /* ButtonAboutOAEC.png */; };
-		AFC4D5D61630BC8F0023EB2E /* Button53rdSession@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC4D5CE1630BC8F0023EB2E /* Button53rdSession@2x.png */; };
-		AFC4D5D71630BC8F0023EB2E /* Button53rdSession.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC4D5CF1630BC8F0023EB2E /* Button53rdSession.png */; };
 		AFC4D5D81630BC8F0023EB2E /* AboutBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC4D5D01630BC8F0023EB2E /* AboutBackground@2x.png */; };
 		AFC4D5D91630BC8F0023EB2E /* AboutBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC4D5D11630BC8F0023EB2E /* AboutBackground.png */; };
-		AFC926AB161441E3009538FD /* AppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC926A7161441E3009538FD /* AppIcon.png */; };
-		AFC926AC161441E3009538FD /* AppIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC926A8161441E3009538FD /* AppIcon@2x.png */; };
-		AFC926AD161441E3009538FD /* AppIconiPad.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC926A9161441E3009538FD /* AppIconiPad.png */; };
-		AFC926AE161441E3009538FD /* AppIconiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC926AA161441E3009538FD /* AppIconiPad@2x.png */; };
 		AFDAD5AD186006AB00366D99 /* CalendarTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDAD5A7186006AB00366D99 /* CalendarTabViewController.m */; };
 		AFDAD5AE186006AB00366D99 /* CustomTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDAD5A8186006AB00366D99 /* CustomTabBarController.m */; };
 		AFDAD5AF186006AB00366D99 /* IOS7AdjustmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDAD5A9186006AB00366D99 /* IOS7AdjustmentViewController.m */; };
@@ -310,7 +300,6 @@
 		CE2DAF8C1E4EACFD002BCD60 /* BlancettMeloyde.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE2DAF891E4EACFD002BCD60 /* BlancettMeloyde.jpg */; };
 		CE2DAF961E4EC8A4002BCD60 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2DAF951E4EC8A4002BCD60 /* StoreKit.framework */; };
 		CE2E210E1EE65E2E00646C92 /* LocationDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E210D1EE65E2E00646C92 /* LocationDetailViewController.m */; };
-		CE371C89256EED4200C9D4CE /* AboutBackground-iPhone5@2x-back.png in Resources */ = {isa = PBXBuildFile; fileRef = CE371C88256EED4200C9D4CE /* AboutBackground-iPhone5@2x-back.png */; };
 		CE38F84421F83948002D7D6A /* SenateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE38F84321F83948002D7D6A /* SenateViewController.m */; };
 		CE38F84721F8A4AD002D7D6A /* HouseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE38F84621F8A4AD002D7D6A /* HouseViewController.m */; };
 		CE38F84A21F8B3A8002D7D6A /* StatewideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE38F84921F8B3A8002D7D6A /* StatewideViewController.m */; };
@@ -448,7 +437,6 @@
 
 /* Begin PBXFileReference section */
 		3E4806F18DF0D2C7C98FF5AA /* Pods-ok55leg.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ok55leg.debug.xcconfig"; path = "Target Support Files/Pods-ok55leg/Pods-ok55leg.debug.xcconfig"; sourceTree = "<group>"; };
-		5338DD6628CD62B5003E9967 /* FromOAEC.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FromOAEC.png; sourceTree = "<group>"; };
 		538C956A2939A68E00EDC8C2 /* DarbyRichard1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = DarbyRichard1.jpg; path = "State Judges/DarbyRichard1.jpg"; sourceTree = "<group>"; };
 		538C956B2939A68E00EDC8C2 /* KaneJohn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = KaneJohn.jpg; path = "State Judges/KaneJohn.jpg"; sourceTree = "<group>"; };
 		538C956C2939A68E00EDC8C2 /* DanaKuehn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = DanaKuehn.jpg; path = "State Judges/DanaKuehn.jpg"; sourceTree = "<group>"; };
@@ -584,7 +572,6 @@
 		AF092D3515DA0DC700AA4B6B /* SplashScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SplashScreen.png; sourceTree = "<group>"; };
 		AF092D3615DA0DC700AA4B6B /* SplashScreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SplashScreen@2x.png"; sourceTree = "<group>"; };
 		AF092D4015DA0FD100AA4B6B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		AF092D4215DA0FDC00AA4B6B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		AF092D4415DAC83E00AA4B6B /* SearchViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewCell.h; sourceTree = "<group>"; };
 		AF092D4515DAC83E00AA4B6B /* SearchViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewCell.m; sourceTree = "<group>"; };
 		AF0A15D315DAD75C0063B0E7 /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
@@ -634,8 +621,6 @@
 		AF2482D415BDDA2A0070924E /* iconplaceholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconplaceholder.png; sourceTree = "<group>"; };
 		AF2482D515BDDA2A0070924E /* iconplaceholder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconplaceholder@2x.png"; sourceTree = "<group>"; };
 		AF2482D915BDE2AE0070924E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		AF255CC3184CBAF60053CC73 /* AppIcon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon-60.png"; sourceTree = "<group>"; };
-		AF255CC4184CBAF60053CC73 /* AppIcon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon-60@2x.png"; sourceTree = "<group>"; };
 		AF2B152516B08C1100A3A7F4 /* OutlinkCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutlinkCell.h; sourceTree = "<group>"; };
 		AF2B152616B08C1100A3A7F4 /* OutlinkCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutlinkCell.m; sourceTree = "<group>"; };
 		AF3DEE4D15DD3A6D00151661 /* UIColor-Expanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor-Expanded.h"; sourceTree = "<group>"; };
@@ -717,14 +702,8 @@
 		AFC4D5CB1630BC8F0023EB2E /* ButtonLegislativeContacts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonLegislativeContacts.png; sourceTree = "<group>"; };
 		AFC4D5CC1630BC8F0023EB2E /* ButtonAboutOAEC@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ButtonAboutOAEC@2x.png"; sourceTree = "<group>"; };
 		AFC4D5CD1630BC8F0023EB2E /* ButtonAboutOAEC.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonAboutOAEC.png; sourceTree = "<group>"; };
-		AFC4D5CE1630BC8F0023EB2E /* Button53rdSession@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Button53rdSession@2x.png"; sourceTree = "<group>"; };
-		AFC4D5CF1630BC8F0023EB2E /* Button53rdSession.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button53rdSession.png; sourceTree = "<group>"; };
 		AFC4D5D01630BC8F0023EB2E /* AboutBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AboutBackground@2x.png"; sourceTree = "<group>"; };
 		AFC4D5D11630BC8F0023EB2E /* AboutBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AboutBackground.png; sourceTree = "<group>"; };
-		AFC926A7161441E3009538FD /* AppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon.png; sourceTree = SOURCE_ROOT; };
-		AFC926A8161441E3009538FD /* AppIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon@2x.png"; sourceTree = SOURCE_ROOT; };
-		AFC926A9161441E3009538FD /* AppIconiPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIconiPad.png; sourceTree = SOURCE_ROOT; };
-		AFC926AA161441E3009538FD /* AppIconiPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIconiPad@2x.png"; sourceTree = SOURCE_ROOT; };
 		AFDAD5A7186006AB00366D99 /* CalendarTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarTabViewController.m; sourceTree = "<group>"; };
 		AFDAD5A8186006AB00366D99 /* CustomTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTabBarController.m; sourceTree = "<group>"; };
 		AFDAD5A9186006AB00366D99 /* IOS7AdjustmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IOS7AdjustmentViewController.m; sourceTree = "<group>"; };
@@ -799,7 +778,6 @@
 		CE2DAF891E4EACFD002BCD60 /* BlancettMeloyde.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BlancettMeloyde.jpg; sourceTree = "<group>"; };
 		CE2DAF951E4EC8A4002BCD60 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		CE2E210D1EE65E2E00646C92 /* LocationDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationDetailViewController.m; sourceTree = "<group>"; };
-		CE371C88256EED4200C9D4CE /* AboutBackground-iPhone5@2x-back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AboutBackground-iPhone5@2x-back.png"; sourceTree = "<group>"; };
 		CE38F84221F83948002D7D6A /* SenateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SenateViewController.h; sourceTree = "<group>"; };
 		CE38F84321F83948002D7D6A /* SenateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SenateViewController.m; sourceTree = "<group>"; };
 		CE38F84521F8A4AD002D7D6A /* HouseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HouseViewController.h; sourceTree = "<group>"; };
@@ -1000,10 +978,7 @@
 				CE64C2BE1EDFBB1900FEF384 /* VoteListView-iPhone.xib */,
 				CE16008E1ED2556A00058C4D /* VoteTallyHeaderView-iPhone.xib */,
 				CE4ACD331E215057003A6655 /* ok56leg.entitlements */,
-				AF255CC4184CBAF60053CC73 /* AppIcon-60@2x.png */,
-				AF255CC3184CBAF60053CC73 /* AppIcon-60.png */,
 				CEC68CA21EDD29AF00193036 /* Realm.framework */,
-				AF092D4215DA0FDC00AA4B6B /* Default@2x.png */,
 				AF092D4015DA0FD100AA4B6B /* Default.png */,
 				AF2481A915BB6A260070924E /* OAECLegGuide */,
 				AF2481A215BB6A260070924E /* Frameworks */,
@@ -1164,9 +1139,7 @@
 				CE9AD38F25DA203D00D7CF60 /* BackgroundNoBack.png */,
 				CE9AD39025DA203D00D7CF60 /* BackgroundNoBack@2x.png */,
 				CE9AD38C25D9FA1B00D7CF60 /* house_seating.jpg */,
-				5338DD6628CD62B5003E9967 /* FromOAEC.png */,
 				CE9AD38B25D9FA1A00D7CF60 /* senate_seating.jpg */,
-				CE371C88256EED4200C9D4CE /* AboutBackground-iPhone5@2x-back.png */,
 				CEA6036521F546A00033AC7D /* about_oaec.png */,
 				CEA9B52D1ECA9E7300035FF6 /* SenateCommittees__VoteTallyIcon.png */,
 				CEA9B52E1ECA9E7300035FF6 /* Senate_VoteTallyIcon.png */,
@@ -1186,14 +1159,8 @@
 				AFC4D5CB1630BC8F0023EB2E /* ButtonLegislativeContacts.png */,
 				AFC4D5CC1630BC8F0023EB2E /* ButtonAboutOAEC@2x.png */,
 				AFC4D5CD1630BC8F0023EB2E /* ButtonAboutOAEC.png */,
-				AFC4D5CE1630BC8F0023EB2E /* Button53rdSession@2x.png */,
-				AFC4D5CF1630BC8F0023EB2E /* Button53rdSession.png */,
 				AFC4D5D01630BC8F0023EB2E /* AboutBackground@2x.png */,
 				AFC4D5D11630BC8F0023EB2E /* AboutBackground.png */,
-				AFC926A7161441E3009538FD /* AppIcon.png */,
-				AFC926A8161441E3009538FD /* AppIcon@2x.png */,
-				AFC926A9161441E3009538FD /* AppIconiPad.png */,
-				AFC926AA161441E3009538FD /* AppIconiPad@2x.png */,
 				AF14BD8F160E7F8C003D2052 /* MapPin.png */,
 				AF14BD90160E7F8C003D2052 /* MapPin@2x.png */,
 				AF14BD5B160E73A5003D2052 /* About.png */,
@@ -1808,7 +1775,6 @@
 				AF092D3D15DA0DC700AA4B6B /* SplashScreen.png in Resources */,
 				AF092D3E15DA0DC700AA4B6B /* SplashScreen@2x.png in Resources */,
 				AF092D4115DA0FD200AA4B6B /* Default.png in Resources */,
-				AF092D4315DA0FDC00AA4B6B /* Default@2x.png in Resources */,
 				538C95B12939A8B400EDC8C2 /* SchroederTodd.jpg in Resources */,
 				AF0A15D515DAD75C0063B0E7 /* Background.png in Resources */,
 				CE6C63EA21EEE7C300A8044E /* SmithDavid.jpg in Resources */,
@@ -1838,7 +1804,6 @@
 				CE6C640421EEE7C300A8044E /* HumphreyJJ.jpg in Resources */,
 				538C96072939A9BB00EDC8C2 /* RansonTrish2.jpg in Resources */,
 				53D530FD295A99A6000828C3 /* HefnerEllyn23r.jpg in Resources */,
-				CE371C89256EED4200C9D4CE /* AboutBackground-iPhone5@2x-back.png in Resources */,
 				AFE5630215E6977B0047FE0A /* backButton.png in Resources */,
 				CE6C640C21EEE7C300A8044E /* SteagallJay.jpg in Resources */,
 				538C96022939A9BB00EDC8C2 /* SneedChris2.jpg in Resources */,
@@ -1878,15 +1843,10 @@
 				538C962C2939A9FE00EDC8C2 /* BorenMary2.jpg in Resources */,
 				AF14BD8A160E73A5003D2052 /* State@2x.png in Resources */,
 				AF14BD91160E7F8C003D2052 /* MapPin.png in Resources */,
-				5338DD6728CD62B5003E9967 /* FromOAEC.png in Resources */,
 				538C962D2939A9FE00EDC8C2 /* SeifriedAlly23.jpg in Resources */,
 				AF14BD92160E7F8C003D2052 /* MapPin@2x.png in Resources */,
-				AFC926AB161441E3009538FD /* AppIcon.png in Resources */,
-				AFC926AC161441E3009538FD /* AppIcon@2x.png in Resources */,
 				CE6C63FB21EEE7C300A8044E /* RandlemanRandy.jpg in Resources */,
 				538C95EC2939A9BB00EDC8C2 /* HilbertKyle23.jpg in Resources */,
-				AFC926AD161441E3009538FD /* AppIconiPad.png in Resources */,
-				AFC926AE161441E3009538FD /* AppIconiPad@2x.png in Resources */,
 				AFC4D5D21630BC8F0023EB2E /* ButtonLegislativeContacts@2x.png in Resources */,
 				CE6C640F21EEE7C300A8044E /* SterlingDanny.jpg in Resources */,
 				AF577E5A1A0BED8D00994EA1 /* houseCommittee.png in Resources */,
@@ -1894,10 +1854,8 @@
 				AFC4D5D41630BC8F0023EB2E /* ButtonAboutOAEC@2x.png in Resources */,
 				AFC4D5D51630BC8F0023EB2E /* ButtonAboutOAEC.png in Resources */,
 				538C95AD2939A8B400EDC8C2 /* JohnsonMitchell.jpg in Resources */,
-				AFC4D5D61630BC8F0023EB2E /* Button53rdSession@2x.png in Resources */,
 				CE7C6D221E385F4C00874B14 /* MartinezRyan.jpg in Resources */,
 				CEA6036621F546A00033AC7D /* about_oaec.png in Resources */,
-				AFC4D5D71630BC8F0023EB2E /* Button53rdSession.png in Resources */,
 				AFC4D5D81630BC8F0023EB2E /* AboutBackground@2x.png in Resources */,
 				53D530FA295A99A6000828C3 /* TurnerMauree23.jpg in Resources */,
 				AFC4D5D91630BC8F0023EB2E /* AboutBackground.png in Resources */,
@@ -2095,8 +2053,6 @@
 				538C96372939A9FE00EDC8C2 /* McCortneyGreg23.jpg in Resources */,
 				CE18B5491E4F72930067DCC1 /* Icon-App-40x40@3x.png in Resources */,
 				CE18B54C1E4F72930067DCC1 /* Icon-App-60x60@1x.png in Resources */,
-				AF255CC5184CBAF60053CC73 /* AppIcon-60.png in Resources */,
-				AF255CC6184CBAF60053CC73 /* AppIcon-60@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2352,6 +2308,7 @@
 			baseConfigurationReference = 3E4806F18DF0D2C7C98FF5AA /* Pods-ok55leg.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_ENTITLEMENTS = ok56leg.entitlements;
@@ -2359,7 +2316,7 @@
 				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 0;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = EH6BL4VM24;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2369,6 +2326,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OAECLegGuide/OAECLegGuide-Prefix.pch";
 				INFOPLIST_FILE = "OAECLegGuide/OAECLegGuide-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "OK 59th";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 6.00;
@@ -2391,13 +2349,14 @@
 			baseConfigurationReference = C8636A5DD0A710BF92098881 /* Pods-ok55leg.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_ENTITLEMENTS = ok56leg.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 0;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = EH6BL4VM24;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2406,6 +2365,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OAECLegGuide/OAECLegGuide-Prefix.pch";
 				INFOPLIST_FILE = "OAECLegGuide/OAECLegGuide-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "OK 59th";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 6.00;
