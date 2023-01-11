@@ -109,9 +109,9 @@
             timestampString = "518165154.439901"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "727"
-            endingLineNumber = "727"
-            landmarkName = "-viewDidAppear:"
+            startingLineNumber = "721"
+            endingLineNumber = "721"
+            landmarkName = "-locationManager:didFailWithError:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -126,9 +126,9 @@
             timestampString = "518165154.439901"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "650"
-            endingLineNumber = "650"
-            landmarkName = "-stopUpdatingLocationWithMessage:"
+            startingLineNumber = "644"
+            endingLineNumber = "644"
+            landmarkName = "-viewWillAppear:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -143,10 +143,10 @@
             timestampString = "518165154.439901"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "668"
-            endingLineNumber = "668"
-            landmarkName = "-locationManager:didUpdateToLocation:fromLocation:"
-            landmarkType = "7">
+            startingLineNumber = "662"
+            endingLineNumber = "662"
+            landmarkName = "MapsViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -194,8 +194,8 @@
             timestampString = "518165154.439901"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "687"
-            endingLineNumber = "687"
+            startingLineNumber = "681"
+            endingLineNumber = "681"
             landmarkName = "-locationManager:didUpdateToLocation:fromLocation:"
             landmarkType = "7">
          </BreakpointContent>

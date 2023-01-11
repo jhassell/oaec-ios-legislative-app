@@ -196,10 +196,10 @@ RLM_ARRAY_TYPE(Realm_tally)
             if ([[section.children objectAtIndex:0] isKindOfClass:[CommitteeMember class]]) {
                 filterText = @"";
             } else if (self.caucusStatus == 1) {
-                filterText=@"D";
+                filterText=@"R";
                 filterType = 3; //JWH
             } else if (self.caucusStatus == 2) {
-                filterText=@"R";
+                filterText=@"D";
                 filterType = 3; //JWH
             }
             
@@ -442,9 +442,9 @@ RLM_ARRAY_TYPE(Realm_tally)
     NSString *buttonString = @"Caucus: All";
     
     if (self.caucusStatus == 1) {
-        buttonTitle = @"Democrat";
-    } else if (self.caucusStatus == 2) {
         buttonTitle = @"Republican";
+    } else if (self.caucusStatus == 2) {
+        buttonTitle = @"Democratic";
     } else {
         buttonTitle = @"Caucus: All";
     }
@@ -513,9 +513,9 @@ RLM_ARRAY_TYPE(Realm_tally)
     }
     
     if (self.caucusStatus == 1) {
-        buttonTitle = @"Democrat";
-    } else if (self.caucusStatus == 2) {
         buttonTitle = @"Republican";
+    } else if (self.caucusStatus == 2) {
+        buttonTitle = @"Democratic";
     } else {
         buttonTitle = @"Caucus: All";
     }
