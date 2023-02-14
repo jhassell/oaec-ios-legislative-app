@@ -10,6 +10,7 @@
 
 @interface AboutViewController : UIViewController
 
+@property (retain, nonatomic) IBOutlet UIButton *openQuizTapped;
 
 
 

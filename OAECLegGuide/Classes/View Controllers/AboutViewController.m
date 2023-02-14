@@ -79,6 +79,13 @@
     
 }
 
+- (IBAction)openQuizTapped:(UITapGestureRecognizer *)sender { UILabel *label = (UILabel *)sender.view;
+    NSURL *url = [NSURL URLWithString:@"https://www.proprofs.com/quiz-school/ugc/story.php?title=oaecs-knowyourlegislator-quiz"];
+    [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
+}
+
+
+
 -(void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
     //if ([[UIScreen mainScreen]bounds].size.height - 480.0 > DBL_EPSILON) {
@@ -109,6 +116,9 @@
 {
     [super viewDidLoad];
     firstLaunch=YES;
+    self.openQuizTapped.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(openQuizTapped:)];
+    [self.openQuizTapped addGestureRecognizer:tapGestureRecognizer];
 }
 
 - (void)viewDidUnload
@@ -128,6 +138,7 @@
 
 - (void)dealloc {
     [_backgroundImage release];
+    [_openQuizTapped release];
     [super dealloc];
 }
 @end
