@@ -57,6 +57,15 @@
 
 #pragma mark - Table view data source
 
+- (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section {
+    if ([view isKindOfClass:[UITableViewHeaderFooterView class]]) {
+        UITableViewHeaderFooterView *headerView = (UITableViewHeaderFooterView *)view;
+        headerView.textLabel.textColor = [UIColor colorWithRed:0.0 green:100.0/255.0 blue:0.0 alpha:1.0]; // Dark green color
+        headerView.textLabel.font = [UIFont boldSystemFontOfSize:20]; // Optional: make the font bold
+    }
+}
+
+
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     cell.textLabel.textColor=[UIColor whiteColor];
 }
@@ -65,7 +74,19 @@
     if (self.sections==nil) return nil;
     if ([self.sections count]<=section) return nil;
     ListSection *listSection = [self.sections objectAtIndex:section];
-    return [NSString stringWithFormat:@"%@s",listSection.title];
+
+    // Check if the section has any committees
+    if (listSection.children == nil || [listSection.children count] == 0) {
+        return nil; // No header for sections without committees
+    }
+    
+    NSString *title = listSection.title;
+    
+    // Append "s" conditionally
+    if ([title isEqualToString:@"Standing Committee"] || [title isEqualToString:@"Appropriations Subcommittee"]) {
+        return [NSString stringWithFormat:@"%@s", title];
+    }
+    return title;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

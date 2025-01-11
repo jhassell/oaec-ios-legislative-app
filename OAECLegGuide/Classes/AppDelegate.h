@@ -19,6 +19,14 @@
 
 #define STANDING        @"Standing Committee"
 #define APPROPRIATIONS  @"Appropriations Subcommittee"
+#define CAEDOCOMMITTEES @"Commerce & Economic Development Oversight Committees"
+#define EOCOMMITTEES    @"Education Oversight Committees"
+#define GOCOMMITTEES    @"Government Oversight Committees"
+#define HHSOCOMMITTEES  @"Health & Human Services Oversight Committees"
+#define ENROCOMMITTEES  @"Energy & Natural Resources Oversight Committees"
+#define JPSCOMMITTEES   @"Judiciary & Public Safety Oversight Committees"
+
+
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate> {
     
@@ -41,6 +49,18 @@
 
 @property (nonatomic, strong) NSArray *stateSenateStandingCommittees; 
 @property (nonatomic, strong) NSArray *stateHouseStandingCommittees; 
+@property (nonatomic, strong) NSArray *stateSenateCAEDOCommittees;
+@property (nonatomic, strong) NSArray *stateHouseCAEDOCommittees;
+@property (nonatomic, strong) NSArray *stateSenateEducationOversightCommittees;
+@property (nonatomic, strong) NSArray *stateHouseEducationOversightCommittees;
+@property (nonatomic, strong) NSArray *stateSenateGovernmentOversightCommittees;
+@property (nonatomic, strong) NSArray *stateHouseGovernmentOversightCommittees;
+@property (nonatomic, strong) NSArray *stateSenateHealthOversightCommittees;
+@property (nonatomic, strong) NSArray *stateHouseHealthOversightCommittees;
+@property (nonatomic, strong) NSArray *stateSenateEnergyOversightCommittees;
+@property (nonatomic, strong) NSArray *stateHouseEnergyOversightCommittees;
+@property (nonatomic, strong) NSArray *stateSenateJudiciaryOversightCommittees;
+@property (nonatomic, strong) NSArray *stateHouseJudiciaryOversightCommittees;
 
 @property (nonatomic, strong) NSArray *stateSenateAppropriationsSubcommittees;
 @property (nonatomic, strong) NSArray *stateHouseAppropriationsSubcommittees;

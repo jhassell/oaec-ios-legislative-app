@@ -110,7 +110,31 @@
     ls2.title=APPROPRIATIONS;
     ls2.children=[[NSArray arrayWithArray:ad.stateSenateAppropriationsSubcommittees] mutableCopy];
     
-    clvc.sections = [NSArray arrayWithObjects:ls1,ls2,nil];
+    ListSection *ls3 = [[[ListSection alloc] init] autorelease];
+    ls3.title=CAEDOCOMMITTEES;
+    ls3.children=[[NSArray arrayWithArray:ad.stateSenateCAEDOCommittees] mutableCopy];
+
+    ListSection *ls4 = [[[ListSection alloc] init] autorelease];
+    ls4.title=EOCOMMITTEES;
+    ls4.children=[[NSArray arrayWithArray:ad.stateSenateEducationOversightCommittees] mutableCopy];
+
+    ListSection *ls5 = [[[ListSection alloc] init] autorelease];
+    ls5.title=GOCOMMITTEES;
+    ls5.children=[[NSArray arrayWithArray:ad.stateSenateGovernmentOversightCommittees] mutableCopy];
+
+    ListSection *ls6 = [[[ListSection alloc] init] autorelease];
+    ls6.title=HHSOCOMMITTEES;
+    ls6.children=[[NSArray arrayWithArray:ad.stateSenateHealthOversightCommittees] mutableCopy];
+
+    ListSection *ls7 = [[[ListSection alloc] init] autorelease];
+    ls7.title=ENROCOMMITTEES;
+    ls7.children=[[NSArray arrayWithArray:ad.stateSenateEnergyOversightCommittees] mutableCopy];
+    
+    ListSection *ls8 = [[[ListSection alloc] init] autorelease];
+    ls8.title=JPSCOMMITTEES;
+    ls8.children=[[NSArray arrayWithArray:ad.stateSenateJudiciaryOversightCommittees] mutableCopy];
+    
+    clvc.sections = [NSArray arrayWithObjects:ls1,ls2,ls3,ls4,ls5,ls6,ls7,ls8,nil];
     
     [self.navigationController pushViewController:clvc animated:YES];
     
@@ -132,7 +156,31 @@
     ls2.title=APPROPRIATIONS;
     ls2.children=[[NSArray arrayWithArray:ad.stateSenateAppropriationsSubcommittees] mutableCopy];
     
-    clvc.sections = [NSArray arrayWithObjects:ls1,ls2,nil];
+    ListSection *ls3 = [[[ListSection alloc] init] autorelease];
+    ls3.title=CAEDOCOMMITTEES;
+    ls3.children=[[NSArray arrayWithArray:ad.stateSenateCAEDOCommittees] mutableCopy];
+
+    ListSection *ls4 = [[[ListSection alloc] init] autorelease];
+    ls4.title=EOCOMMITTEES;
+    ls4.children=[[NSArray arrayWithArray:ad.stateSenateEducationOversightCommittees] mutableCopy];
+
+    ListSection *ls5 = [[[ListSection alloc] init] autorelease];
+    ls5.title=GOCOMMITTEES;
+    ls5.children=[[NSArray arrayWithArray:ad.stateSenateGovernmentOversightCommittees] mutableCopy];
+
+    ListSection *ls6 = [[[ListSection alloc] init] autorelease];
+    ls6.title=HHSOCOMMITTEES;
+    ls6.children=[[NSArray arrayWithArray:ad.stateSenateHealthOversightCommittees] mutableCopy];
+
+    ListSection *ls7 = [[[ListSection alloc] init] autorelease];
+    ls7.title=ENROCOMMITTEES;
+    ls7.children=[[NSArray arrayWithArray:ad.stateSenateEnergyOversightCommittees] mutableCopy];
+    
+    ListSection *ls8 = [[[ListSection alloc] init] autorelease];
+    ls8.title=JPSCOMMITTEES;
+    ls8.children=[[NSArray arrayWithArray:ad.stateSenateJudiciaryOversightCommittees] mutableCopy];
+    
+    clvc.sections = [NSArray arrayWithObjects:ls1,ls2,ls3,ls4,ls5,ls6,ls7,ls8,nil];
     
     [self.navigationController pushViewController:clvc animated:YES];
     
@@ -185,7 +233,31 @@
     ls2.title=APPROPRIATIONS;
     ls2.children=[[NSArray arrayWithArray:ad.stateHouseAppropriationsSubcommittees] mutableCopy];
     
-    clvc.sections = [NSArray arrayWithObjects:ls1,ls2,nil];
+    ListSection *ls3 = [[[ListSection alloc] init] autorelease];
+    ls3.title=CAEDOCOMMITTEES;
+    ls3.children=[[NSArray arrayWithArray:ad.stateHouseCAEDOCommittees] mutableCopy];
+
+    ListSection *ls4 = [[[ListSection alloc] init] autorelease];
+    ls4.title=EOCOMMITTEES;
+    ls4.children=[[NSArray arrayWithArray:ad.stateHouseEnergyOversightCommittees] mutableCopy];
+
+    ListSection *ls5 = [[[ListSection alloc] init] autorelease];
+    ls5.title=GOCOMMITTEES;
+    ls5.children=[[NSArray arrayWithArray:ad.stateHouseGovernmentOversightCommittees] mutableCopy];
+
+    ListSection *ls6 = [[[ListSection alloc] init] autorelease];
+    ls6.title=HHSOCOMMITTEES;
+    ls6.children=[[NSArray arrayWithArray:ad.stateHouseHealthOversightCommittees] mutableCopy];
+
+    ListSection *ls7 = [[[ListSection alloc] init] autorelease];
+    ls7.title=ENROCOMMITTEES;
+    ls7.children=[[NSArray arrayWithArray:ad.stateHouseEnergyOversightCommittees] mutableCopy];
+    
+    ListSection *ls8 = [[[ListSection alloc] init] autorelease];
+    ls8.title=JPSCOMMITTEES;
+    ls8.children=[[NSArray arrayWithArray:ad.stateHouseJudiciaryOversightCommittees] mutableCopy];
+    
+    clvc.sections = [NSArray arrayWithObjects:ls1,ls2,ls3,ls4,ls5,ls6,ls7,ls8,nil];
     
     [self.navigationController pushViewController:clvc animated:YES];
 
@@ -205,7 +277,31 @@
     ls2.title=APPROPRIATIONS;
     ls2.children=[[NSArray arrayWithArray:ad.stateHouseAppropriationsSubcommittees] mutableCopy];
     
-    clvc.sections = [NSArray arrayWithObjects:ls1,ls2,nil];
+    ListSection *ls3 = [[[ListSection alloc] init] autorelease];
+    ls3.title=CAEDOCOMMITTEES;
+    ls3.children=[[NSArray arrayWithArray:ad.stateHouseCAEDOCommittees] mutableCopy];
+
+    ListSection *ls4 = [[[ListSection alloc] init] autorelease];
+    ls4.title=EOCOMMITTEES;
+    ls4.children=[[NSArray arrayWithArray:ad.stateHouseEnergyOversightCommittees] mutableCopy];
+
+    ListSection *ls5 = [[[ListSection alloc] init] autorelease];
+    ls5.title=GOCOMMITTEES;
+    ls5.children=[[NSArray arrayWithArray:ad.stateHouseGovernmentOversightCommittees] mutableCopy];
+
+    ListSection *ls6 = [[[ListSection alloc] init] autorelease];
+    ls6.title=HHSOCOMMITTEES;
+    ls6.children=[[NSArray arrayWithArray:ad.stateHouseHealthOversightCommittees] mutableCopy];
+
+    ListSection *ls7 = [[[ListSection alloc] init] autorelease];
+    ls7.title=ENROCOMMITTEES;
+    ls7.children=[[NSArray arrayWithArray:ad.stateHouseEnergyOversightCommittees] mutableCopy];
+    
+    ListSection *ls8 = [[[ListSection alloc] init] autorelease];
+    ls8.title=JPSCOMMITTEES;
+    ls8.children=[[NSArray arrayWithArray:ad.stateHouseJudiciaryOversightCommittees] mutableCopy];
+    
+    clvc.sections = [NSArray arrayWithObjects:ls1,ls2,ls3,ls4,ls5,ls6,ls7,ls8,nil];
     
     [self.navigationController pushViewController:clvc animated:YES];
     

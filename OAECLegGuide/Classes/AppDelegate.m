@@ -17,7 +17,7 @@
 #import <UserNotifications/UserNotifications.h>
 #import "AFURLSessionManager.h"
 #import "SSZipArchive.h"
-#import <Pushwoosh/Pushwoosh.h>
+#import <PushwooshFramework/PushwooshFramework.h>
 
 
 @implementation AppDelegate
@@ -38,6 +38,19 @@
 
 @synthesize stateSenateStandingCommittees=_stateSenateStandingCommittees;
 @synthesize stateHouseStandingCommittees=_stateHouseStandingCommittees;
+@synthesize stateSenateCAEDOCommittees=_stateSenateCAEDOCommittees;
+@synthesize stateHouseCAEDOCommittees=_stateHouseCAEDOCommittees;
+@synthesize stateSenateEducationOversightCommittees=_stateSenateEducationOversightCommittees;
+@synthesize stateHouseEducationOversightCommittees=_stateHouseEducationOversightCommittees;
+@synthesize stateSenateGovernmentOversightCommittees=_stateSenateGovernmentOversightCommittees;
+@synthesize stateHouseGovernmentOversightCommittees=_stateHouseGovernmentOversightCommittees;
+@synthesize stateSenateHealthOversightCommittees=_stateSenateHealthOversightCommittees;
+@synthesize stateHouseHealthOversightCommittees=_stateHouseHealthOversightCommittees;
+@synthesize stateSenateEnergyOversightCommittees=_stateSenateEnergyOversightCommittees;
+@synthesize stateHouseEnergyOversightCommittees=_stateHouseEnergyOversightCommittees;
+@synthesize stateSenateJudiciaryOversightCommittees=_stateSenateJudiciaryOversightCommittees;
+@synthesize stateHouseJudiciaryOversightCommittees=_stateHouseJudiciaryOversightCommittees;
+
 @synthesize stateSenateAppropriationsSubcommittees=_stateSenateAppropriationsSubcommittees;
 @synthesize stateHouseAppropriationsSubcommittees=_stateHouseAppropriationsSubcommittees;
 @synthesize countyBoundaries=_countyBoundaries;
@@ -141,9 +154,24 @@
     
     self.stateSenateStandingCommittees = [DataLoader buildCommitteesFromPeople:self.stateSenate committeeKey:STANDING];
     self.stateHouseStandingCommittees  = [DataLoader buildCommitteesFromPeople:self.stateHouse committeeKey:STANDING];
+    self.stateSenateCAEDOCommittees =[DataLoader buildCommitteesFromPeople:self.stateSenate committeeKey:CAEDOCOMMITTEES];
+    self.stateHouseCAEDOCommittees =[DataLoader buildCommitteesFromPeople:self.stateHouse committeeKey:CAEDOCOMMITTEES];
+   
+    
+    self.stateSenateEducationOversightCommittees=[DataLoader buildCommitteesFromPeople:self.stateSenate committeeKey:EOCOMMITTEES];
+    self.stateHouseEducationOversightCommittees=[DataLoader buildCommitteesFromPeople:self.stateHouse committeeKey:EOCOMMITTEES];
+    self.stateSenateGovernmentOversightCommittees=[DataLoader buildCommitteesFromPeople:self.stateSenate committeeKey:GOCOMMITTEES];
+    self.stateHouseGovernmentOversightCommittees=[DataLoader buildCommitteesFromPeople:self.stateHouse committeeKey:GOCOMMITTEES];
+    self.stateSenateHealthOversightCommittees=[DataLoader buildCommitteesFromPeople:self.stateSenate committeeKey:HHSOCOMMITTEES];
+    self.stateHouseHealthOversightCommittees=[DataLoader buildCommitteesFromPeople:self.stateHouse committeeKey:HHSOCOMMITTEES];
+    self.stateSenateEnergyOversightCommittees=[DataLoader buildCommitteesFromPeople:self.stateSenate committeeKey:ENROCOMMITTEES];
+    self.stateHouseEnergyOversightCommittees=[DataLoader buildCommitteesFromPeople:self.stateHouse committeeKey:ENROCOMMITTEES];
+    self.stateSenateJudiciaryOversightCommittees=[DataLoader buildCommitteesFromPeople:self.stateSenate committeeKey:JPSCOMMITTEES];
+    self.stateHouseJudiciaryOversightCommittees=[DataLoader buildCommitteesFromPeople:self.stateHouse committeeKey:JPSCOMMITTEES];
+                                                 
     self.stateSenateAppropriationsSubcommittees  = [DataLoader buildCommitteesFromPeople:self.stateSenate committeeKey:APPROPRIATIONS];
     self.stateHouseAppropriationsSubcommittees = [DataLoader buildCommitteesFromPeople:self.stateHouse committeeKey:APPROPRIATIONS];
-   
+
 
     
     // Resort OAEC Member Systems by company name then contact name
@@ -153,11 +181,41 @@
     
     NSMutableArray *allCommittees = [NSMutableArray arrayWithCapacity:self.stateSenateStandingCommittees.count+
                                      self.stateHouseStandingCommittees.count+
+                                     self.stateSenateCAEDOCommittees.count+
+                                     self.stateHouseCAEDOCommittees.count+
+                                     self.stateSenateStandingCommittees.count+
+                                     self.stateHouseStandingCommittees.count+
+                                     self.stateSenateCAEDOCommittees.count+
+                                     self.stateHouseCAEDOCommittees.count+
+                                     self.stateSenateEducationOversightCommittees.count+
+                                     self.stateHouseEducationOversightCommittees.count+
+                                     self.stateSenateGovernmentOversightCommittees.count+
+                                     self.stateHouseGovernmentOversightCommittees.count+
+                                     self.stateSenateHealthOversightCommittees.count+
+                                     self.stateHouseHealthOversightCommittees.count+
+                                     self.stateSenateEnergyOversightCommittees.count+
+                                     self.stateHouseEnergyOversightCommittees.count+
+                                     self.stateSenateJudiciaryOversightCommittees.count+
+                                     self.stateHouseJudiciaryOversightCommittees.count+
                                      self.stateSenateAppropriationsSubcommittees.count+
                                      self.stateHouseAppropriationsSubcommittees.count];
     
     [allCommittees addObjectsFromArray:self.stateSenateStandingCommittees];
     [allCommittees addObjectsFromArray:self.stateHouseStandingCommittees];
+    [allCommittees addObjectsFromArray:self.stateSenateCAEDOCommittees];
+    [allCommittees addObjectsFromArray:self.stateHouseCAEDOCommittees];
+    [allCommittees addObjectsFromArray:self.stateSenateEducationOversightCommittees];
+    [allCommittees addObjectsFromArray:self.stateHouseEducationOversightCommittees];
+    [allCommittees addObjectsFromArray:self.stateSenateGovernmentOversightCommittees];
+    [allCommittees addObjectsFromArray:self.stateHouseGovernmentOversightCommittees];
+    [allCommittees addObjectsFromArray:self.stateSenateHealthOversightCommittees];
+    [allCommittees addObjectsFromArray:self.stateHouseHealthOversightCommittees];
+    [allCommittees addObjectsFromArray:self.stateSenateEnergyOversightCommittees];
+    [allCommittees addObjectsFromArray:self.stateHouseEnergyOversightCommittees];
+    [allCommittees addObjectsFromArray:self.stateSenateJudiciaryOversightCommittees];
+    [allCommittees addObjectsFromArray:self.stateHouseJudiciaryOversightCommittees];
+    [allCommittees addObjectsFromArray:self.stateSenateAppropriationsSubcommittees];
+    [allCommittees addObjectsFromArray:self.stateHouseAppropriationsSubcommittees];
     //[allCommittees addObjectsFromArray:self.stateSenateAppropriationsSubcommittees];
     //[allCommittees addObjectsFromArray:self.stateHouseAppropriationsSubcommittees];
     
@@ -567,7 +625,21 @@
     [_stateHouseBoundaries release];
     [_coopBoundaries release];
     [_stateSenateStandingCommittees release]; 
-    [_stateHouseStandingCommittees release]; 
+    [_stateHouseStandingCommittees release];
+    [_stateSenateCAEDOCommittees release];
+    [_stateHouseCAEDOCommittees release];
+    
+    [_stateSenateEducationOversightCommittees release];
+    [_stateHouseEducationOversightCommittees release];
+    [_stateSenateGovernmentOversightCommittees release];
+    [_stateHouseGovernmentOversightCommittees release];
+    [_stateSenateHealthOversightCommittees release];
+    [_stateHouseHealthOversightCommittees release];
+    [_stateSenateEnergyOversightCommittees release];
+    [_stateHouseEnergyOversightCommittees release];
+    [_stateSenateJudiciaryOversightCommittees release];
+    [_stateHouseJudiciaryOversightCommittees release];
+    
     [_stateSenateAppropriationsSubcommittees release];
     [_stateHouseAppropriationsSubcommittees release];
     [_window release];

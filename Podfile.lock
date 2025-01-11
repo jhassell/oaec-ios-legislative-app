@@ -14,12 +14,12 @@ PODS:
   - AFNetworking/Serialization (4.0.1)
   - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
-  - PushwooshXCFramework (6.4.1):
-    - PushwooshXCFramework/Core (= 6.4.1)
-  - PushwooshXCFramework/Core (6.4.1)
-  - Realm (10.25.2):
-    - Realm/Headers (= 10.25.2)
-  - Realm/Headers (10.25.2)
+  - PushwooshXCFramework (6.7.11):
+    - PushwooshXCFramework/Core (= 6.7.11)
+  - PushwooshXCFramework/Core (6.7.11)
+  - Realm (10.54.2):
+    - Realm/Headers (= 10.54.2)
+  - Realm/Headers (10.54.2)
   - SSZipArchive (2.4.3)
 
 DEPENDENCIES:
@@ -36,11 +36,11 @@ SPEC REPOS:
     - SSZipArchive
 
 SPEC CHECKSUMS:
-  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
-  PushwooshXCFramework: a0554648cebfbfb791ec564bab3ac3659299f5d9
-  Realm: 978303663d0509166498f423d112e5ee97d4c91b
+  AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
+  PushwooshXCFramework: 9e66100c5477924a56cdc3a7158837b0ab7404e0
+  Realm: 16852517a207e98cc6acba9336b56c30d06d84ad
   SSZipArchive: fe6a26b2a54d5a0890f2567b5cc6de5caa600aef
 
 PODFILE CHECKSUM: 86a0753f574cbb826c1277e1aaeea3cccc2aaad3
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.16.2

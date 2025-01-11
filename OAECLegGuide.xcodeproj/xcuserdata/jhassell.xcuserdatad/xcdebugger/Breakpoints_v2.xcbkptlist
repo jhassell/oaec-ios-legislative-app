@@ -94,7 +94,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "10"
             endingLineNumber = "10"
-            landmarkName = "@interface LocationDetailViewController()"
+            landmarkName = "LocationDetailViewController()"
             landmarkType = "2">
          </BreakpointContent>
       </BreakpointProxy>
