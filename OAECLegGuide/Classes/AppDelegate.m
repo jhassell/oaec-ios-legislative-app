@@ -63,9 +63,17 @@
 
 - (void)weblink {
     NSURL *url = [NSURL URLWithString:@"http://www.oaec.coop"];
-    if (![[UIApplication sharedApplication] openURL:url])
-        NSLog(@"%@%@",@"Failed to open url:",[url description]);
+    if ([[UIApplication sharedApplication] canOpenURL:url]) {
+        [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:^(BOOL success) {
+            if (!success) {
+                NSLog(@"Failed to open URL: %@", url.absoluteString);
+            }
+        }];
+    } else {
+        NSLog(@"Cannot open URL: %@", url.absoluteString);
+    }
 }
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     //-----------PUSHWOOSH PART-----------
@@ -525,13 +533,24 @@
     
     NSUInteger answer = [ModalAlert queryWith:messageText title:messageTitle button1:buttonText button2:button2Text];
     
-    //NSLog(@"Answer == %i",answer);
+    // NSLog(@"Answer == %i",answer);
 
-    if (answer==0 && buttonText!=nil) {
+    if (answer == 0 && buttonText != nil) {
         NSURL *url = [NSURL URLWithString:messageURL];
-        [[UIApplication sharedApplication] openURL:url];
+        
+        if ([[UIApplication sharedApplication] canOpenURL:url]) {
+            [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:^(BOOL success) {
+                if (!success) {
+                    NSLog(@"Failed to open URL: %@", url.absoluteString);
+                }
+            }];
+        } else {
+            NSLog(@"Cannot open URL: %@", url.absoluteString);
+        }
     }
 }
+
+
 
 -(void) startTheTimer {
     [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(displayMessage:) userInfo:nil repeats:YES];

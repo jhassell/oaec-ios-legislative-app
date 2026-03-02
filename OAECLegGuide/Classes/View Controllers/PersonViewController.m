@@ -329,27 +329,33 @@
 }
 
 - (IBAction)facebookButtonPressed:(id)sender {
-    NSURL *url = [NSURL URLWithString:[self.person.facebook trim]];
-    if (![[UIApplication sharedApplication] openURL:url])
-        NSLog(@"%@%@",@"Failed to open url:",[url description]);
+    [self openURL:[self.person.facebook trim]];
 }
 
 - (IBAction)twitterButtonPressed:(id)sender {
-    NSURL *url = [NSURL URLWithString:[self.person.twitter trim]];
-    if (![[UIApplication sharedApplication] openURL:url])
-        NSLog(@"%@%@",@"Failed to open url:",[url description]);
+    [self openURL:[self.person.twitter trim]];
 }
 
 - (IBAction)linkedInButtonPressed:(id)sender {
-    NSURL *url = [NSURL URLWithString:[self.person.linkedIn trim]];
-    if (![[UIApplication sharedApplication] openURL:url])
-        NSLog(@"%@%@",@"Failed to open url:",[url description]);
+    [self openURL:[self.person.linkedIn trim]];
 }
 
 - (IBAction)webButtonPressed:(id)sender {
-    NSURL *url = [NSURL URLWithString:[self.person.webpage trim]];
-    if (![[UIApplication sharedApplication] openURL:url])
-        NSLog(@"%@%@",@"Failed to open url:",[url description]);
+    [self openURL:[self.person.webpage trim]];
+}
+
+- (void)openURL:(NSString *)urlString {
+    NSURL *url = [NSURL URLWithString:urlString];
+    
+    if (url && [[UIApplication sharedApplication] canOpenURL:url]) {
+        [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:^(BOOL success) {
+            if (!success) {
+                NSLog(@"Failed to open URL: %@", url.absoluteString);
+            }
+        }];
+    } else {
+        NSLog(@"Cannot open URL: %@", urlString);
+    }
 }
 
 - (IBAction)districtMapButtonPressed:(id)sender {

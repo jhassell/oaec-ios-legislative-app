@@ -1753,7 +1753,7 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.reference";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 6.07;
+				MARKETING_VERSION = 6.08;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = coop.oaec.ok56leg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1793,7 +1793,7 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.reference";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 6.07;
+				MARKETING_VERSION = 6.08;
 				PRODUCT_BUNDLE_IDENTIFIER = coop.oaec.ok56leg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
