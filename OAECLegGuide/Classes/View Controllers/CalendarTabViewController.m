@@ -84,10 +84,48 @@
 
 #pragma mark - Life Cycle Stuff
 
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
+    self.navigationItem.leftBarButtonItem = nil;
+    self.navigationItem.leftBarButtonItems = nil;
+    self.navigationItem.hidesBackButton = YES;
+    self.navigationItem.backBarButtonItem = [[[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil] autorelease];
+    if (@available(iOS 14.0, *)) {
+        self.navigationItem.backButtonDisplayMode = UINavigationItemBackButtonDisplayModeMinimal;
+    }
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    self.navigationItem.hidesBackButton = YES;
+    self.navigationItem.backBarButtonItem = [[[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil] autorelease];
+    if (@available(iOS 14.0, *)) {
+        self.navigationItem.backButtonDisplayMode = UINavigationItemBackButtonDisplayModeMinimal;
+    }
+    UIButton *backBtn = (UIButton *)[self.view viewWithTag:9001];
+    if ([backBtn isKindOfClass:[UIButton class]]) {
+        UIImage *chevron = [UIImage systemImageNamed:@"chevron.left"];
+        if (chevron) {
+            UIImageSymbolConfiguration *config = [UIImageSymbolConfiguration configurationWithPointSize:20 weight:UIImageSymbolWeightMedium];
+            chevron = [chevron imageByApplyingSymbolConfiguration:config];
+            [backBtn setImage:chevron forState:UIControlStateNormal];
+            [backBtn setBackgroundImage:nil forState:UIControlStateNormal];
+            [backBtn setAttributedTitle:nil forState:UIControlStateNormal];
+            [backBtn setAttributedTitle:nil forState:UIControlStateHighlighted];
+            [backBtn setTitle:@"" forState:UIControlStateNormal];
+            [backBtn setTitle:@"" forState:UIControlStateHighlighted];
+            [backBtn setTitle:@"" forState:UIControlStateSelected];
+            [backBtn setTitle:@"" forState:UIControlStateDisabled];
+            backBtn.tintColor = [UIColor labelColor];
+        }
+    }
     self.dateFormatter = [[[NSDateFormatter alloc] init] autorelease];
     
     [self.dateFormatter setDateStyle:NSDateFormatterFullStyle];

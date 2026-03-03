@@ -347,7 +347,16 @@ RLM_ARRAY_TYPE(Realm_tally)
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if (self.filteredSections!=nil && section==0) return 1; // Search View Cell
+    if (self.filteredSections!=nil && section==0) {
+        NSUInteger totalCards = 0;
+        for (ListSection *ls in self.filteredSections) {
+            NSUInteger n = [ls.children count];
+            if ([self.filteredSections count]+1==2 && n<4) n = 4;
+            totalCards += n;
+        }
+        if (self.committeeHeaderView!=nil && [self.filteredSections count]>0) totalCards += 1;
+        return (totalCards > 10) ? 1 : 0;
+    }
     if (self.filteredSections==nil || [self.filteredSections count]<=(section-1)) return 0;
 
     ListSection *listSection = [self.filteredSections objectAtIndex:(section-1)];

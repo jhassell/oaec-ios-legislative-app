@@ -92,6 +92,7 @@
 		AF2481B015BB6A260070924E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2481AF15BB6A260070924E /* main.m */; };
 		AF2481DE15BB6C5E0070924E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2481D015BB6C5E0070924E /* AppDelegate.m */; };
 		AF2481E615BB6C5E0070924E /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF2481DD15BB6C5E0070924E /* MainStoryboard_iPhone.storyboard */; };
+		AF3DEF1115DD432100151662 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF3DEF1015DD432100151662 /* LaunchScreen.storyboard */; };
 		AF2481F515BB72FA0070924E /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2481F415BB72FA0070924E /* AboutViewController.m */; };
 		AF2481F815BB730A0070924E /* StateTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2481F715BB730A0070924E /* StateTabViewController.m */; };
 		AF2481FB15BB73190070924E /* FederalTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2481FA15BB73190070924E /* FederalTabViewController.m */; };
@@ -385,7 +386,9 @@
 		AF2481B115BB6A260070924E /* OAECLegGuide-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OAECLegGuide-Prefix.pch"; sourceTree = "<group>"; };
 		AF2481CF15BB6C5E0070924E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AF2481D015BB6C5E0070924E /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AF3DEF0015DD432100151661 /* Definitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Definitions.h; sourceTree = "<group>"; };
 		AF2481DD15BB6C5E0070924E /* MainStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		AF3DEF1015DD432100151662 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF2481F315BB72FA0070924E /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		AF2481F415BB72FA0070924E /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		AF2481F615BB730A0070924E /* StateTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StateTabViewController.h; sourceTree = "<group>"; };
@@ -793,6 +796,7 @@
 				AFDAD5B71860096900366D99 /* Cell Views */,
 				AF2481CF15BB6C5E0070924E /* AppDelegate.h */,
 				AF2481D015BB6C5E0070924E /* AppDelegate.m */,
+				AF3DEF0015DD432100151661 /* Definitions.h */,
 				AF9B4A7915DCB8540071CB88 /* Data Objects */,
 				AF2481D115BB6C5E0070924E /* View Controllers */,
 				AFDB1E6315C1D18600862F0F /* Miscellaneous */,
@@ -921,6 +925,7 @@
 				AF866C9516B8F9C700E9DF01 /* OutlinkCell-iPhone.xib */,
 				AF15543215EB5E6700AA7794 /* PersonViewAddressLACell-iPhone.xib */,
 				AF2481DD15BB6C5E0070924E /* MainStoryboard_iPhone.storyboard */,
+				AF3DEF1015DD432100151662 /* LaunchScreen.storyboard */,
 				AFEF4BAC15C50ECB00896FA9 /* PeopleListCell-iPhone.xib */,
 				CE9CAE881EB8AB9100C20CAF /* VotingListCell-iPhone.xib */,
 				AFF2BB1A15C8610100F1B379 /* CommitteeListView-iPhone.xib */,
@@ -1290,6 +1295,7 @@
 				AF2481AE15BB6A260070924E /* InfoPlist.strings in Resources */,
 				CE18B5551E4F72930067DCC1 /* Icon-Small-50x50@2x.png in Resources */,
 				AF2481E615BB6C5E0070924E /* MainStoryboard_iPhone.storyboard in Resources */,
+				AF3DEF1115DD432100151662 /* LaunchScreen.storyboard in Resources */,
 				CE18B5421E4F72930067DCC1 /* Icon-App-20x20@2x.png in Resources */,
 				CE9AD38D25D9FA1B00D7CF60 /* senate_seating.jpg in Resources */,
 				538C957F2939A6A800EDC8C2 /* BiceStephanie.jpg in Resources */,

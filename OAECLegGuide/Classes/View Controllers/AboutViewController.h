@@ -10,9 +10,9 @@
 
 @interface AboutViewController : UIViewController
 
-@property (retain, nonatomic) IBOutlet UIButton *openQuizTapped;
-
-
-
+@property (retain, nonatomic) IBOutlet UIImageView *backgroundImage;
+@property (retain, nonatomic) IBOutlet UIButton *legislatureButton;
+@property (retain, nonatomic) IBOutlet UIButton *aboutOAECButton;
+@property (retain, nonatomic) IBOutlet UIButton *graphicOverlayButton;
 
 @end

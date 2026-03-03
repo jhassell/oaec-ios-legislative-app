@@ -9,13 +9,12 @@
 #import "AppDelegate.h"
 #import "DataLoader.h"
 #import "Boundary.h"
-#import "ModalAlert.h"
+#import "Definitions.h"
 #import "NSDictionary+People.h"
 #import "NSString+Stuff.h"
 #import "Committee.h"
 #import "NSDictionary+Committee.h"
 #import <UserNotifications/UserNotifications.h>
-#import "AFURLSessionManager.h"
 #import "SSZipArchive.h"
 #import <PushwooshFramework/PushwooshFramework.h>
 
@@ -61,21 +60,79 @@
 @synthesize coopBoundaries=_coopBoundaries;
 @synthesize alertView=_alertView;
 
-- (void)weblink {
-    NSURL *url = [NSURL URLWithString:@"http://www.oaec.coop"];
-    if ([[UIApplication sharedApplication] canOpenURL:url]) {
-        [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:^(BOOL success) {
-            if (!success) {
-                NSLog(@"Failed to open URL: %@", url.absoluteString);
-            }
-        }];
+static void OpenExternalURLWithLogging(NSURL *url) {
+    if (url == nil) return;
+    [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:^(BOOL success) {
+        if (!success) NSLog(@"Failed to open url: %@", [url description]);
+    }];
+}
+
+- (UIViewController *)topPresentedViewController {
+    UIViewController *vc = self.window.rootViewController;
+    while (vc.presentedViewController != nil) vc = vc.presentedViewController;
+    return vc;
+}
+
+- (void)presentLoadingAlert {
+    UIViewController *presenter = [self topPresentedViewController];
+    if (presenter == nil || self.alertView != nil) return;
+    UIAlertController *loadingAlert = [UIAlertController alertControllerWithTitle:@"Loading Map Data"
+                                                                           message:@"\n\nPlease wait..."
+                                                                    preferredStyle:UIAlertControllerStyleAlert];
+    UIActivityIndicatorView *activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleMedium];
+    activity.translatesAutoresizingMaskIntoConstraints = NO;
+    [loadingAlert.view addSubview:activity];
+    [NSLayoutConstraint activateConstraints:@[
+        [activity.centerXAnchor constraintEqualToAnchor:loadingAlert.view.centerXAnchor],
+        [activity.topAnchor constraintEqualToAnchor:loadingAlert.view.topAnchor constant:52.0f]
+    ]];
+    [activity startAnimating];
+    self.alertView = loadingAlert;
+    [presenter presentViewController:loadingAlert animated:YES completion:nil];
+}
+
+- (void)dismissLoadingAlertIfNeeded {
+    if (self.alertView == nil) return;
+    [self.alertView dismissViewControllerAnimated:YES completion:nil];
+    self.alertView = nil;
+}
+
+- (void)presentUpdateMessageWithTitle:(NSString *)messageTitle
+                              message:(NSString *)messageText
+                                  url:(NSString *)messageURL
+                     actionButtonText:(NSString *)buttonText {
+    UIViewController *presenter = [self topPresentedViewController];
+    if (presenter == nil) return;
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:messageTitle
+                                                                   message:messageText
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    if (buttonText != nil && buttonText.length > 0) {
+        [alert addAction:[UIAlertAction actionWithTitle:buttonText style:UIAlertActionStyleDefault handler:^(__unused UIAlertAction *action) {
+            OpenExternalURLWithLogging([NSURL URLWithString:messageURL]);
+        }]];
+        [alert addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil]];
     } else {
-        NSLog(@"Cannot open URL: %@", url.absoluteString);
+        [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
     }
+    [presenter presentViewController:alert animated:YES completion:nil];
+}
+
+- (void)weblink {
+    OpenExternalURLWithLogging([NSURL URLWithString:WEB_ADDRESS]);
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // Hide back button text globally so only chevrons are ever shown.
+    UIOffset offscreenOffset = UIOffsetMake(-1000.0f, 0.0f);
+    if (@available(iOS 9.0, *)) {
+        UIBarButtonItem *appearance = [UIBarButtonItem appearanceWhenContainedInInstancesOfClasses:@[[UINavigationBar class]]];
+        [appearance setBackButtonTitlePositionAdjustment:offscreenOffset forBarMetrics:UIBarMetricsDefault];
+        [appearance setBackButtonTitlePositionAdjustment:offscreenOffset forBarMetrics:UIBarMetricsCompact];
+    } else {
+        [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:offscreenOffset forBarMetrics:UIBarMetricsDefault];
+    }
+
     //-----------PUSHWOOSH PART-----------
     // set custom delegate for push handling, in our case AppDelegate
     [Pushwoosh sharedInstance].delegate = self;
@@ -267,175 +324,111 @@
 
 
 - (void)downloadSpreadsheet {
-    
     NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSArray *dirPaths;
-    NSString *docsDir;
-    
-    
+    NSString *docsDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     NSURL *URL = [NSURL URLWithString:@"https://www.dropbox.com/s/1f6ymjx2mjq0wn6/data58.csv?raw=1"];
-    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
-    
-    dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
-                                                   NSUserDomainMask, YES);
-    docsDir = [dirPaths objectAtIndex:0];
-    
-    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
-    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
-    
-    NSString *csvFilename = [NSString stringWithFormat:@"%@/%@", docsDir, @"data58.csv"];
-    if ([fileManager fileExistsAtPath:csvFilename ] == YES)
-    {
-        NSError *error;
-        [fileManager removeItemAtPath:csvFilename error:&error];
-        NSLog (@"File deleted");
-    }
-    else
-    {
-        NSLog (@"File not found");
-    }
-    
-    NSURLSessionDownloadTask *downloadTask = [manager downloadTaskWithRequest:request progress:nil destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
-        NSURL *documentsDirectoryURL = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:nil];
-        return [documentsDirectoryURL URLByAppendingPathComponent:[response suggestedFilename]];
-    } completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
+    NSString *csvFilename = [NSString stringWithFormat:@"%@/data58.csv", docsDir];
+    NSString *previousDataFilename = [NSString stringWithFormat:@"%@/previousdata.csv", docsDir];
+    [fileManager removeItemAtPath:csvFilename error:nil];
+
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+    NSURLSessionDownloadTask *downloadTask = [session downloadTaskWithRequest:[NSURLRequest requestWithURL:URL] completionHandler:^(NSURL *location, NSURLResponse *response, NSError *error) {
         mapDataLoaded = NO;
+        NSError *fmError = nil;
         NSString *harddataFilename = [[NSBundle mainBundle] pathForResource:@"data" ofType:@"csv"];
-        NSString *previousDataFilename = [NSString stringWithFormat:@"%@/%@", docsDir, @"previousdata.csv"];
-        NSString *csvFilename = [NSString stringWithFormat:@"%@/%@", docsDir, @"data58.csv"];
-        if ([fileManager fileExistsAtPath:csvFilename] == YES) {
-            // Load from recently downloaded csvFilename
-            self.all = [DataLoader loadCSVFile:csvFilename];
-            // Remove previousDataFilename
-            [fileManager removeItemAtPath:previousDataFilename error:&error];
-            // Copy recently downloaded csvFilename to previousDataFilename
-            [fileManager copyItemAtPath:csvFilename toPath:previousDataFilename error:&error];
-            // Remove csvFilename in preparation for next download
-            [fileManager removeItemAtPath:csvFilename error:&error];
-        } else if ([fileManager fileExistsAtPath:previousDataFilename]) {
-            self.all = [DataLoader loadCSVFile:previousDataFilename];
-        } else {
-            self.all = [DataLoader loadCSVFile:harddataFilename];
+        if (location != nil) {
+            NSURL *destURL = [NSURL fileURLWithPath:csvFilename];
+            [fileManager removeItemAtURL:destURL error:nil];
+            [fileManager copyItemAtURL:location toURL:destURL error:nil];
         }
+        BOOL usedDownloaded = NO, usedPrevious = NO, usedBundle = NO;
+        if ([fileManager fileExistsAtPath:csvFilename]) {
+            self.all = [DataLoader loadCSVFile:csvFilename];
+            if (self.all != nil && self.all.count > 0) {
+                usedDownloaded = YES;
+                [fileManager removeItemAtPath:previousDataFilename error:&fmError];
+                [fileManager copyItemAtPath:csvFilename toPath:previousDataFilename error:&fmError];
+                [fileManager removeItemAtPath:csvFilename error:&fmError];
+            }
+        }
+        if (!usedDownloaded && [fileManager fileExistsAtPath:previousDataFilename]) {
+            self.all = [DataLoader loadCSVFile:previousDataFilename];
+            if (self.all != nil && self.all.count > 0) usedPrevious = YES;
+        }
+        if (!usedDownloaded && !usedPrevious && harddataFilename != nil) {
+            self.all = [DataLoader loadCSVFile:harddataFilename];
+            if (self.all != nil && self.all.count > 0) usedBundle = YES;
+        }
+        if (self.all == nil || self.all.count == 0) self.all = @[];
         [self populateSpreadsheetData];
     }];
     [downloadTask resume];
-    
 }
 
 
 - (void)downloadCalendar {
-
     NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSArray *dirPaths;
-    NSString *docsDir;
-    
-    dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
-                                                   NSUserDomainMask, YES);
-    docsDir = [dirPaths objectAtIndex:0];
-    
-    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
-    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
-    
-    // Download calendar
+    NSString *docsDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *calendarFilename = [NSString stringWithFormat:@"%@/calendar58.csv", docsDir];
+    NSString *previousCalendarFilename = [NSString stringWithFormat:@"%@/previouscalendar.csv", docsDir];
+    [fileManager removeItemAtPath:calendarFilename error:nil];
+
     NSURL *CALENDAR_URL = [NSURL URLWithString:@"https://www.dropbox.com/s/hp0z3dgq5ajjenw/calendar58.csv?raw=1"];
-    NSURLRequest *calendar_request = [NSURLRequest requestWithURL:CALENDAR_URL];
-    
-    NSString *calendarFilename = [NSString stringWithFormat:@"%@/%@", docsDir, @"calendar58.csv"];
-    if ([fileManager fileExistsAtPath:calendarFilename ] == YES)
-    {
-        NSError *error;
-        [fileManager removeItemAtPath:calendarFilename error:&error];
-        NSLog (@"File deleted");
-    }
-    else
-    {
-        NSLog (@"File not found");
-    }
-    
-    NSURLSessionDownloadTask *calendarDownloadTask = [manager downloadTaskWithRequest:calendar_request progress:nil destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
-        NSURL *documentsDirectoryURL = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:nil];
-        return [documentsDirectoryURL URLByAppendingPathComponent:[response suggestedFilename]];
-    } completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+    NSURLSessionDownloadTask *calendarDownloadTask = [session downloadTaskWithRequest:[NSURLRequest requestWithURL:CALENDAR_URL] completionHandler:^(NSURL *location, NSURLResponse *response, NSError *error) {
+        NSError *fmError = nil;
         NSString *hardcalendarFilename = [[NSBundle mainBundle] pathForResource:@"calendar" ofType:@"csv"];
-        NSString *previousCalendarFilename = [NSString stringWithFormat:@"%@/%@", docsDir, @"previouscalendar.csv"];
-        NSString *calendarFilename = [NSString stringWithFormat:@"%@/%@", docsDir, @"calendar58.csv"];
-        if ([fileManager fileExistsAtPath:calendarFilename] == YES) {
-            // Load from recently downloaded csvFilename
+        if (location != nil) {
+            NSURL *destURL = [NSURL fileURLWithPath:calendarFilename];
+            [fileManager removeItemAtURL:destURL error:nil];
+            [fileManager copyItemAtURL:location toURL:destURL error:nil];
+        }
+        if ([fileManager fileExistsAtPath:calendarFilename]) {
             self.calendar = [DataLoader loadCalendarCSVFile:calendarFilename];
-            // Remove previousDataFilename
-            [fileManager removeItemAtPath:previousCalendarFilename error:&error];
-            // Copy recently downloaded csvFilename to previousDataFilename
-            [fileManager copyItemAtPath:calendarFilename toPath:previousCalendarFilename error:&error];
-            // Remove csvFilename in preparation for next download
-            [fileManager removeItemAtPath:calendarFilename error:&error];
+            [fileManager removeItemAtPath:previousCalendarFilename error:&fmError];
+            [fileManager copyItemAtPath:calendarFilename toPath:previousCalendarFilename error:&fmError];
+            [fileManager removeItemAtPath:calendarFilename error:&fmError];
         } else if ([fileManager fileExistsAtPath:previousCalendarFilename]) {
             self.calendar = [DataLoader loadCalendarCSVFile:previousCalendarFilename];
-        } else {
+        } else if (hardcalendarFilename != nil) {
             self.calendar = [DataLoader loadCalendarCSVFile:hardcalendarFilename];
         }
-        
     }];
     [calendarDownloadTask resume];
-
 }
 
 
 - (void)downloadPhotosZipFile {
-    
     NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSArray *dirPaths;
-    NSString *docsDir;
-    
-    dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
-                                                   NSUserDomainMask, YES);
-    docsDir = [dirPaths objectAtIndex:0];
-    
-    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
-    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
-    
-    // Download photos
+    NSString *docsDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *bundledPhotosPath = [[NSBundle mainBundle] pathForResource:@"photos" ofType:@"zip"];
+    if (bundledPhotosPath != nil) [DataLoader loadPhotosFile:bundledPhotosPath];
+
     NSURL *PHOTOS_URL = [NSURL URLWithString:@"https://www.dropbox.com/s/9cl4vth7q57qpt6/photos58.zip?raw=1"];
-    
-    NSURLRequest *photo_file_request = [NSURLRequest requestWithURL:PHOTOS_URL];
-    
-    NSString *photosFilename = [NSString stringWithFormat:@"%@/%@", docsDir, @"photos58.zip"];
-    if ([fileManager fileExistsAtPath:photosFilename ] == YES)
-    {
-        NSError *error;
-        [fileManager removeItemAtPath:photosFilename error:&error];
-        NSLog (@"File deleted");
-    }
-    else
-    {
-        NSLog (@"File not found");
-    }
-    
-    NSURLSessionDownloadTask *photosDownloadTask = [manager downloadTaskWithRequest:photo_file_request progress:nil destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
-        NSURL *documentsDirectoryURL = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:nil];
-        return [documentsDirectoryURL URLByAppendingPathComponent:[response suggestedFilename]];
-    } completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
-        NSString *hardphotosFilename = [[NSBundle mainBundle] pathForResource:@"photos" ofType:@"zip"];
-        NSString *previousPhotosFilename = [NSString stringWithFormat:@"%@/%@", docsDir, @"previousphotos.zip"];
-        NSString *photosFilename = [NSString stringWithFormat:@"%@/%@", docsDir, @"photos58.zip"];
-        if ([fileManager fileExistsAtPath:photosFilename] == YES) {
-            // Load from recently downloaded csvFilename
+    NSString *photosFilename = [NSString stringWithFormat:@"%@/photos58.zip", docsDir];
+    NSString *previousPhotosFilename = [NSString stringWithFormat:@"%@/previousphotos.zip", docsDir];
+    [fileManager removeItemAtPath:photosFilename error:nil];
+
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+    NSURLSessionDownloadTask *photosDownloadTask = [session downloadTaskWithRequest:[NSURLRequest requestWithURL:PHOTOS_URL] completionHandler:^(NSURL *location, NSURLResponse *response, NSError *error) {
+        NSError *fmError = nil;
+        if (location != nil) {
+            NSURL *destURL = [NSURL fileURLWithPath:photosFilename];
+            [fileManager removeItemAtURL:destURL error:nil];
+            [fileManager copyItemAtURL:location toURL:destURL error:nil];
+        }
+        if ([fileManager fileExistsAtPath:photosFilename]) {
             [DataLoader loadPhotosFile:photosFilename];
-            // Remove previousDataFilename
-            [fileManager removeItemAtPath:previousPhotosFilename error:&error];
-            // Copy recently downloaded csvFilename to previousDataFilename
-            [fileManager copyItemAtPath:photosFilename toPath:previousPhotosFilename error:&error];
-            // Remove csvFilename in preparation for next download
-            [fileManager removeItemAtPath:photosFilename error:&error];
+            [fileManager removeItemAtPath:previousPhotosFilename error:&fmError];
+            [fileManager copyItemAtPath:photosFilename toPath:previousPhotosFilename error:&fmError];
+            [fileManager removeItemAtPath:photosFilename error:&fmError];
         } else if ([fileManager fileExistsAtPath:previousPhotosFilename]) {
             [DataLoader loadPhotosFile:previousPhotosFilename];
-        } else {
-            [DataLoader loadPhotosFile:hardphotosFilename];
+        } else if (bundledPhotosPath != nil) {
+            [DataLoader loadPhotosFile:bundledPhotosPath];
         }
-        
     }];
     [photosDownloadTask resume];
-    
 }
 
 -(void) realLoadBoundaries {
@@ -499,55 +492,27 @@
         
     }
     
-    [self.alertView dismissWithClickedButtonIndex:0 animated:YES];
-    self.alertView=nil;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self dismissLoadingAlertIfNeeded];
+    });
 }
 
 -(void) loadBoundaries {
     if (mapDataLoaded) return;
-
     mapDataLoaded = YES;
-    self.alertView = [ModalAlert noButtonAlertWithTitle:@"Loading Map Data" message:@"Please wait..."];
+    [self presentLoadingAlert];
     [self performSelector:@selector(realLoadBoundaries) withObject:nil afterDelay:0.01];
 }
 
 -(void) displayMessage:(NSTimer *)theTimer {
-    NSLog(@"Now?");
-    if (!mapDataLoaded || self.alertView!=nil) return;
-    
-    
-    NSLog(@"Fire!");
+    if (!mapDataLoaded || self.alertView != nil) return;
     [theTimer invalidate];
-    
     NSString *messageTitle = [self.message objectAtIndex:0];
     NSString *messageText = [self.message objectAtIndex:1];
     NSString *messageURL = [self.message objectAtIndex:2];
     NSString *buttonText = [self.message objectAtIndex:3];
-    
-    NSString *button2Text = @"Cancel";
-    
-    if (messageText==nil || [messageText length]==0) {
-        buttonText=nil;
-        button2Text=@"Ok";
-    }
-    
-    NSUInteger answer = [ModalAlert queryWith:messageText title:messageTitle button1:buttonText button2:button2Text];
-    
-    // NSLog(@"Answer == %i",answer);
-
-    if (answer == 0 && buttonText != nil) {
-        NSURL *url = [NSURL URLWithString:messageURL];
-        
-        if ([[UIApplication sharedApplication] canOpenURL:url]) {
-            [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:^(BOOL success) {
-                if (!success) {
-                    NSLog(@"Failed to open URL: %@", url.absoluteString);
-                }
-            }];
-        } else {
-            NSLog(@"Cannot open URL: %@", url.absoluteString);
-        }
-    }
+    if (messageText == nil || messageText.length == 0) buttonText = nil;
+    [self presentUpdateMessageWithTitle:messageTitle message:messageText url:messageURL actionButtonText:buttonText];
 }
 
 
@@ -557,41 +522,21 @@
 }
 
 -(void) checkForUpdateMessage {
-    
-    NSLog(@"Check");
-    
-    
     NSString *filename = [NSString stringWithFormat:@"updatemessage.%@.json", [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]];
-    
-    NSString *stringURL = [NSString stringWithFormat:@"http://architactile.com/OAECMessage/%@/%@",[[NSBundle mainBundle] bundleIdentifier],filename];
-    
-    NSLog(@"Url = %@",stringURL);
-    
-    NSURL  *url = [NSURL URLWithString:stringURL];
-    
-    NSURLRequest * urlRequest = [NSURLRequest requestWithURL:url];
-    NSURLResponse * response = nil;
-    NSError * error = nil;
-    NSData * data = [NSURLConnection sendSynchronousRequest:urlRequest returningResponse:&response error:&error];
-    
-    NSHTTPURLResponse* httpResponse = (NSHTTPURLResponse*)response;
-    NSInteger code = [httpResponse statusCode];
-    
-    if (code==200) {
-        
-        NSLog(@"Yulp.");
-        error = nil;
-        self.message = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
-        
-
-        if (error == nil && self.message !=nil && [self.message count]==4) {
-        
-            NSLog(@"Yulp!");
-
-            [self performSelectorOnMainThread:@selector(startTheTimer) withObject:nil waitUntilDone:NO];
+    NSString *stringURL = [NSString stringWithFormat:@"http://architactile.com/OAECMessage/%@/%@", [[NSBundle mainBundle] bundleIdentifier], filename];
+    NSURL *url = [NSURL URLWithString:stringURL];
+    NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithRequest:[NSURLRequest requestWithURL:url]
+                                                                 completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
+        if (error != nil || (int)httpResponse.statusCode != 200 || data == nil) return;
+        NSError *jsonError = nil;
+        NSArray *message = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&jsonError];
+        if (jsonError == nil && message != nil && message.count == 4) {
+            self.message = message;
+            dispatch_async(dispatch_get_main_queue(), ^{ [self startTheTimer]; });
         }
-        
-    }
+    }];
+    [task resume];
 }
 
 

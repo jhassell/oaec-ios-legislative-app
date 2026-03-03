@@ -12,19 +12,39 @@
 @interface CustomTabBarController ()
 
 @property (nonatomic,strong) NSMutableArray *navControllers;
+- (void)resetSelectedControllerToRoot:(UIViewController *)selected animated:(BOOL)animated;
 
 @end
 
 @implementation CustomTabBarController
 
 - (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController {
-
-    if (self.selectedViewController==viewController) {
-        [((IOS7AdjustmentViewController *)viewController) popToRootViewControllerAnimated:YES];
+    if (tabBarController.selectedViewController == viewController) {
+        [self resetSelectedControllerToRoot:viewController animated:NO];
+        return NO;
     }
     
     return YES;
     
+}
+
+- (void)resetSelectedControllerToRoot:(UIViewController *)selected animated:(BOOL)animated {
+    if ([selected isKindOfClass:[UINavigationController class]]) {
+        UINavigationController *nav = (UINavigationController *)selected;
+        [nav popToRootViewControllerAnimated:animated];
+        [nav setNavigationBarHidden:YES animated:NO];
+        return;
+    }
+
+    if ([selected isKindOfClass:[IOS7AdjustmentViewController class]]) {
+        [((IOS7AdjustmentViewController *)selected) popToRootViewControllerAnimated:animated];
+        return;
+    }
+
+    if (selected.navigationController != nil) {
+        [selected.navigationController popToRootViewControllerAnimated:animated];
+        [selected.navigationController setNavigationBarHidden:YES animated:NO];
+    }
 }
 
 -(void) viewDidLoad {

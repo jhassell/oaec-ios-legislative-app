@@ -18,56 +18,42 @@
 @implementation DataLoader
 
 +(NSArray *) loadCSVFile:(NSString *) csvPath {
-    
-    NSError *error;
-	NSString *csvString = [NSString stringWithContentsOfFile:csvPath encoding:NSUTF8StringEncoding error:&error];
-
-    NSArray *dirPaths;
-    NSString *docsDir;
-    
-    dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
-                                                   NSUserDomainMask, YES);
-    
-    docsDir = [dirPaths objectAtIndex:0];
-    
-    
-    NSArray * directoryContents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:docsDir error:&error];
-
-    NSFileHandle *file;
-    NSData *databuffer;
-    
-    file = [NSFileHandle fileHandleForReadingAtPath:csvPath];
-    
-    if (file == nil)
-        NSLog(@"Failed to open file");
-    
-    [file seekToFileOffset: 10];
-    
-    databuffer = [file readDataOfLength: 5];
-    
-    [file closeFile];
-    
-    
-    
-	if (!csvString)
-	{
-		printf("Couldn't read file at path %s\n. Error: %s",
-               [csvPath UTF8String],
-               [[error localizedDescription] ? [error localizedDescription] : [error description] UTF8String]);
+    NSError *error = nil;
+    NSString *csvString = [NSString stringWithContentsOfFile:csvPath encoding:NSUTF8StringEncoding error:&error];
+    if (!csvString) {
+        NSLog(@"DataLoader: Could not read file at %@. Error: %@", csvPath, error ? error.localizedDescription : @"unknown");
         return nil;
-	}
-	
-	
-	CSVParser *parser =
-    [[[CSVParser alloc]
-      initWithString:csvString
-      separator:@","
-      hasHeader:YES
-      fieldNames:nil]
-     autorelease];
-    
+    }
+    if ([csvString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]].length == 0) {
+        NSLog(@"DataLoader: CSV file is empty or whitespace-only: %@", csvPath);
+        return nil;
+    }
+    static NSString * const kBOM = @"\uFEFF";
+    if ([csvString hasPrefix:kBOM]) {
+        csvString = [csvString substringFromIndex:kBOM.length];
+        NSLog(@"DataLoader: Stripped UTF-8 BOM from %@", csvPath);
+    }
+
+    CSVParser *parser = [[[CSVParser alloc] initWithString:csvString separator:@"," hasHeader:YES fieldNames:nil] autorelease];
     NSArray *rows = [parser arrayOfParsedRows];
-    
+    if (!rows || rows.count == 0) {
+        NSLog(@"DataLoader: CSV parsed to no data rows: %@", csvPath);
+        return nil;
+    }
+    static NSArray *requiredHeaders = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{ requiredHeaders = @[ @"Type", @"Photo", @"Last Name", @"First Name", @"District #" ]; });
+    NSDictionary *firstRow = rows.firstObject;
+    NSArray *actualKeys = firstRow.allKeys;
+    NSMutableArray *missing = [NSMutableArray array];
+    for (NSString *required in requiredHeaders) {
+        if (![actualKeys containsObject:required]) [missing addObject:required];
+    }
+    if (missing.count > 0) {
+        NSLog(@"DataLoader: Invalid header row in %@ - missing required columns: %@", csvPath, missing);
+        return nil;
+    }
+
     for (NSDictionary *row in rows) {
         if (row.lastName!=nil) {
             [row setValue:row.lastName forKey:@"LastName"];

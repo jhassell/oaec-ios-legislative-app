@@ -985,6 +985,16 @@
     [super viewDidLoad];
     [self populateNotes];
     firstLoad=YES;
+    if (self.backButton) {
+        UIImage *chevron = [UIImage systemImageNamed:@"chevron.left"];
+        if (chevron) {
+            UIImageSymbolConfiguration *config = [UIImageSymbolConfiguration configurationWithPointSize:20 weight:UIImageSymbolWeightMedium];
+            chevron = [chevron imageByApplyingSymbolConfiguration:config];
+            [self.backButton setImage:chevron forState:UIControlStateNormal];
+            [self.backButton setTitle:nil forState:UIControlStateNormal];
+            self.backButton.tintColor = [UIColor labelColor];
+        }
+    }
 }
 
 - (void)viewDidUnload

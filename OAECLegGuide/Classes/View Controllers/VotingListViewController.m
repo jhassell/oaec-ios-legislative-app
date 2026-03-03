@@ -86,7 +86,7 @@
         self.rollCallListDelegate.rc_sections = self.rc_sections;
         self.rc_peopleTable.delegate=self.rollCallListDelegate;
         self.rc_peopleTable.dataSource=self.rollCallListDelegate;
-        self.rc_peopleTable.contentOffset = CGPointMake(0, SEARCH_VIEW_HEIGHT);
+        self.rc_peopleTable.contentOffset = CGPointZero;
         self.rollCallListDelegate.rc_peopleTable=self.rc_peopleTable;
         
         

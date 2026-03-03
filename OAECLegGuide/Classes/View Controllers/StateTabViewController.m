@@ -438,6 +438,23 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    UIButton *backBtn = (UIButton *)[self.view viewWithTag:9001];
+    if ([backBtn isKindOfClass:[UIButton class]]) {
+        UIImage *chevron = [UIImage systemImageNamed:@"chevron.left"];
+        if (chevron) {
+            UIImageSymbolConfiguration *config = [UIImageSymbolConfiguration configurationWithPointSize:20 weight:UIImageSymbolWeightMedium];
+            chevron = [chevron imageByApplyingSymbolConfiguration:config];
+            [backBtn setImage:chevron forState:UIControlStateNormal];
+            [backBtn setBackgroundImage:nil forState:UIControlStateNormal];
+            [backBtn setAttributedTitle:nil forState:UIControlStateNormal];
+            [backBtn setAttributedTitle:nil forState:UIControlStateHighlighted];
+            [backBtn setTitle:@"" forState:UIControlStateNormal];
+            [backBtn setTitle:@"" forState:UIControlStateHighlighted];
+            [backBtn setTitle:@"" forState:UIControlStateSelected];
+            [backBtn setTitle:@"" forState:UIControlStateDisabled];
+            backBtn.tintColor = [UIColor labelColor];
+        }
+    }
 }
 
 - (void)viewDidUnload
@@ -447,7 +464,28 @@
 
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    self.navigationController.navigationBarHidden=YES;
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
+    self.navigationItem.leftBarButtonItem = nil;
+    self.navigationItem.leftBarButtonItems = nil;
+    self.navigationItem.hidesBackButton = YES;
+    self.navigationItem.backBarButtonItem = [[[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil] autorelease];
+    if (@available(iOS 14.0, *)) {
+        self.navigationItem.backButtonDisplayMode = UINavigationItemBackButtonDisplayModeMinimal;
+    }
+    // When switching to this tab, ensure we are at root so nav bar doesn’t show a back button
+    if ([self.navigationController.viewControllers count] > 1) {
+        [self.navigationController popToRootViewControllerAnimated:NO];
+    }
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    self.navigationController.navigationBar.hidden = YES;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

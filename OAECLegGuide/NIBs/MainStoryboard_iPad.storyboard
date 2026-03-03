@@ -500,7 +500,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Maps" id="Oom-Nx-6wq"/>
                     <navigationItem key="navigationItem" id="u76-v2-ba2">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="Enj-MM-ovd"/>
+                        <barButtonItem key="backBarButtonItem" title="" id="Enj-MM-ovd"/>
                     </navigationItem>
                     <connections>
                         <outlet property="leftArrowButton" destination="ESa-uS-L06" id="9YI-3Q-ylg"/>

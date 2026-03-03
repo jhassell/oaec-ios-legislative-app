@@ -12,6 +12,7 @@
 @interface IOS7AdjustmentViewController ()
 @property (retain, nonatomic) IBOutlet UIView *adjustmentContainerView;
 @property (retain, nonatomic) UINavigationController *navController;
+- (void)attachContentControllerIfNeeded;
 
 @end
 
@@ -27,8 +28,6 @@
 }
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    NSLog(@"Preparing for segue");
-    
     if ([segue.destinationViewController isKindOfClass:[UINavigationController class]]) {
         self.navController=segue.destinationViewController;
     }
@@ -56,13 +55,28 @@
     if (SYSTEM_VERSION_LESS_THAN(@"7.0")) {
         self.adjustmentContainerView.frame=self.view.frame;
     }
+    [self attachContentControllerIfNeeded];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    self.adjustmentContainerView.frame = self.view.bounds;
+    if (self.navController.view.superview == self.adjustmentContainerView) {
+        self.navController.view.frame = self.adjustmentContainerView.bounds;
+    }
+}
+
+- (void)attachContentControllerIfNeeded {
+    if (self.navController == nil) return;
+    if (self.navController.parentViewController == self) return;
     [self addChildViewController:self.navController];
-    self.navController.view.frame=self.adjustmentContainerView.bounds;
+    self.navController.view.frame = self.adjustmentContainerView.bounds;
+    self.navController.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     [self.adjustmentContainerView addSubview:self.navController.view];
     [self.navController didMoveToParentViewController:self];
 }

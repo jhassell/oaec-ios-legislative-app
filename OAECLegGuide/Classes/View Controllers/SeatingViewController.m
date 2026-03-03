@@ -17,6 +17,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    UIButton *backBtn = (UIButton *)[self.view viewWithTag:9001];
+    if ([backBtn isKindOfClass:[UIButton class]]) {
+        UIImage *chevron = [UIImage systemImageNamed:@"chevron.left"];
+        if (chevron) {
+            UIImageSymbolConfiguration *config = [UIImageSymbolConfiguration configurationWithPointSize:20 weight:UIImageSymbolWeightMedium];
+            chevron = [chevron imageByApplyingSymbolConfiguration:config];
+            [backBtn setImage:chevron forState:UIControlStateNormal];
+            [backBtn setTitle:nil forState:UIControlStateNormal];
+            [backBtn setBackgroundImage:nil forState:UIControlStateNormal];
+            backBtn.tintColor = [UIColor labelColor];
+        }
+    }
 }
 - (IBAction)PanHandler:(UIPanGestureRecognizer *)recognizer {
     CGPoint translation = [recognizer translationInView:self.view];

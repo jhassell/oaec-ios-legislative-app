@@ -42,6 +42,33 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navigationItem.hidesBackButton = YES;
+    self.navigationItem.backBarButtonItem = [[[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil] autorelease];
+    if (@available(iOS 14.0, *)) {
+        self.navigationItem.backButtonDisplayMode = UINavigationItemBackButtonDisplayModeMinimal;
+    }
+    UIButton *backBtn = (UIButton *)[self.view viewWithTag:9001];
+    if ([backBtn isKindOfClass:[UIButton class]]) {
+        UIImage *chevron = [UIImage systemImageNamed:@"chevron.left"];
+        if (chevron) {
+            UIImageSymbolConfiguration *config = [UIImageSymbolConfiguration configurationWithPointSize:20 weight:UIImageSymbolWeightMedium];
+            chevron = [chevron imageByApplyingSymbolConfiguration:config];
+            [backBtn setImage:chevron forState:UIControlStateNormal];
+            [backBtn setBackgroundImage:nil forState:UIControlStateNormal];
+            [backBtn setAttributedTitle:nil forState:UIControlStateNormal];
+            [backBtn setAttributedTitle:nil forState:UIControlStateHighlighted];
+            [backBtn setTitle:@"" forState:UIControlStateNormal];
+            [backBtn setTitle:@"" forState:UIControlStateHighlighted];
+            [backBtn setTitle:@"" forState:UIControlStateSelected];
+            [backBtn setTitle:@"" forState:UIControlStateDisabled];
+            backBtn.tintColor = [UIColor labelColor];
+        }
+    }
+    self.peopleListDelegate = [[[PeopleListDelegate alloc] init] autorelease];
+    self.peopleListDelegate.viewController = self;
+    self.peopleListDelegate.peopleTable = self.peopleTable;
+    self.peopleTable.delegate = self.peopleListDelegate;
+    self.peopleTable.dataSource = self.peopleListDelegate;
 }
 
 - (void)viewDidUnload
@@ -51,18 +78,33 @@
 
 -(void) viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
+    if (self.peopleTable.window != nil) {
+        self.peopleTable.contentOffset = CGPointZero;
+        [self.peopleTable reloadData];
+    }
     if (self.peopleTable.indexPathForSelectedRow!=nil) {
         [self.peopleTable deselectRowAtIndexPath:self.peopleTable.indexPathForSelectedRow animated:YES];
     }
 }
 
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
+}
+
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    self.navigationController.navigationBarHidden=YES;
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
+    self.navigationItem.leftBarButtonItem = nil;
+    self.navigationItem.leftBarButtonItems = nil;
+    self.navigationItem.hidesBackButton = YES;
+    self.navigationItem.backBarButtonItem = [[[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil] autorelease];
+    if (@available(iOS 14.0, *)) {
+        self.navigationItem.backButtonDisplayMode = UINavigationItemBackButtonDisplayModeMinimal;
+    }
     
     AppDelegate *ad = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    
-    self.peopleListDelegate = [[[PeopleListDelegate alloc] init] autorelease];
     
     NSArray *sections = [ListSection buildSectionsFrom:ad.all dividedBy:@"Type" catchAllKey:nil includeKeys:[NSArray arrayWithObjects:FEDERAL_SENATE, FEDERAL_HOUSE, nil]];
     
@@ -71,15 +113,6 @@
     }
     
     self.peopleListDelegate.sections = sections;
-    
-    self.peopleListDelegate.viewController=self;
-    self.peopleListDelegate.peopleTable=self.peopleTable;
-    
-    self.peopleTable.delegate=self.peopleListDelegate;
-    self.peopleTable.dataSource=self.peopleListDelegate;
-    self.peopleTable.contentOffset = CGPointMake(0, SEARCH_VIEW_HEIGHT);
-    
-    [self.peopleTable reloadData];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
