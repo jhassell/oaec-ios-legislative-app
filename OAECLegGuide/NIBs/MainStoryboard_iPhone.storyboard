@@ -178,7 +178,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30d-96-XZU">
                                 <rect key="frame" x="31" y="109" width="349" height="343"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title=""/>
                                 <buttonConfiguration key="configuration" style="plain"/>
                                 <connections>
                                     <action selector="legislatureButtonPressed:" destination="C73-Ox-BrY" eventType="touchUpInside" id="f0R-Oy-xMv"/>
