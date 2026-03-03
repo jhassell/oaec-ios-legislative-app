@@ -273,8 +273,6 @@ RLM_ARRAY_TYPE(Realm_tally)
         
         _committee=committee;
         
-        NSLog(@"SETTING COMMITTEE: %@ %@ %@",committee.room,committee.time,committee.dow);
-        
         CommitteeHeaderView *chv = [[[NSBundle mainBundle] loadNibNamed:@"CommitteeHeaderView-iPhone" owner:self options:nil] lastObject];
         
         chv.chamberLabel.text=self.committee.body;
@@ -384,16 +382,9 @@ RLM_ARRAY_TYPE(Realm_tally)
     
     
     self.parent = Realm_tally_parent.allObjects.firstObject;
-    NSLog(@"%@", self.parent.tallies[0].votes[0].status);
-    NSLog(@"%@", self.parent.tallies[0].votes[1].status);
-    NSLog(@"%@", self.parent.tallies[0].votes[2].status);
-    NSLog(@"%@", self.parent.tallies[0].votes[3].status);
-    NSLog(@"%@", self.parent.tallies[0].votes[4].status);
 
     NSString *listSectionTitle = listSection.title;
-    NSLog(@"Section title: %@", listSection.title);
     Realm_tally *realmTally = [[Realm_tally objectsWhere:@"name == %@ AND body == %@", listSectionTitle, self.committee.body] firstObject];
-    NSLog(@"Here's the name of the found entity: %@ in body: %@", realmTally.name, self.committee.body);
 
     if (realmTally) {
         int i;
@@ -635,7 +626,6 @@ RLM_ARRAY_TYPE(Realm_tally)
         
         CELL_HEADSHOT.image=[UIImage imageNamed:person.photo];
         
-        //NSLog(@"Attempt to load photo %@ %@",person.photo,(CELL_HEADSHOT.image==nil?@"FAILED":@"SUCCEEDED"));
         
         if (CELL_HEADSHOT.image!=nil) hasPhoto=YES;
     }
@@ -702,9 +692,6 @@ RLM_ARRAY_TYPE(Realm_tally)
 
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
 {
-
-    NSLog(@"At accessoryButtonTappedForRowWithIndexPath" );
-
     //BOOL checked = [[itsToDoChecked objectAtIndex:indexPath.row] boolValue];
     //[itsToDoChecked removeObjectAtIndex:indexPath.row];
     //[itsToDoChecked insertObject:(checked) ? @"FALSE":@"TRUE" atIndex:indexPath.row];
@@ -738,7 +725,6 @@ RLM_ARRAY_TYPE(Realm_tally)
             (self.committee.room==nil || [self.committee.room trim].length==0) ) {
             return 73.0;
         }
-        NSLog(@"self.committeeHeaderView.frame.size.height = %f",self.committeeHeaderView.frame.size.height);
         return self.committeeHeaderView.frame.size.height;
     }
     
@@ -770,7 +756,7 @@ RLM_ARRAY_TYPE(Realm_tally)
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
         if (self.committee.website!=nil && [self.committee.website trim].length>0) {
             NSURL *url = [NSURL URLWithString:[self.committee.website trim]];
-            [[UIApplication sharedApplication] openURL:url];
+            [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
         }
         return;
     }

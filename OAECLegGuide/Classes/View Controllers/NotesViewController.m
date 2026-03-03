@@ -116,11 +116,4 @@
     [_notes release];
     [super dealloc];
 }
-- (void)viewDidUnload {
-    [self setBackButton:nil];
-    [self setNotesForLabel:nil];
-    [self setShareButton:nil];
-    [self setNotesTextView:nil];
-    [super viewDidUnload];
-}
 @end

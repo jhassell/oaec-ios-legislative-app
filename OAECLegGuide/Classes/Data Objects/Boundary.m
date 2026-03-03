@@ -165,10 +165,8 @@
         
         MKPolygon *polygon=nil;
         if ([innerPolygons count]==0) {
-            //NSLog(@"outer only, %i points",outerPolygonPointCount); 
             polygon = [MKPolygon polygonWithCoordinates:outerPolygonCoordinates count:outerPolygonPointCount];
         } else {
-            //NSLog(@"outer with %i points, %i inners",outerPolygonPointCount, [innerPolygons count]);
             polygon = [MKPolygon polygonWithCoordinates:outerPolygonCoordinates count:outerPolygonPointCount interiorPolygons:innerPolygons];        
         }
         free(outerPolygonCoordinates);
@@ -179,8 +177,6 @@
         [multiPolygons addObject:boundaryPolygon];
     }
 
-//    NSLog(@"Name: %@",[boundaryServiceDictionary objectForKey:@"name"]);
-//    NSLog(@"Kind: %@",[boundaryServiceDictionary objectForKey:@"kind"]);
 
     NSString *set = [[boundaryServiceDictionary objectForKey:@"set"] lastPathComponent];
     
@@ -232,10 +228,8 @@
         
         MKPolygon *polygon=nil;
         if ([innerPolygons count]==0) {
-            //NSLog(@"outer only, %i points",outerPolygonPointCount);
             polygon = [MKPolygon polygonWithCoordinates:outerPolygonCoordinates count:outerPolygonPointCount];
         } else {
-            //NSLog(@"outer with %i points, %i inners",outerPolygonPointCount, [innerPolygons count]);
             polygon = [MKPolygon polygonWithCoordinates:outerPolygonCoordinates count:outerPolygonPointCount interiorPolygons:innerPolygons];
         }
         free(outerPolygonCoordinates);

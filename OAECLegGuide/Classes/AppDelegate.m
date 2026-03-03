@@ -63,7 +63,7 @@
 static void OpenExternalURLWithLogging(NSURL *url) {
     if (url == nil) return;
     [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:^(BOOL success) {
-        if (!success) NSLog(@"Failed to open url: %@", [url description]);
+        if (!success) NSLog(@"[OAEC][URL] Failed to open: %@", [url description]);
     }];
 }
 
@@ -79,7 +79,12 @@ static void OpenExternalURLWithLogging(NSURL *url) {
     UIAlertController *loadingAlert = [UIAlertController alertControllerWithTitle:@"Loading Map Data"
                                                                            message:@"\n\nPlease wait..."
                                                                     preferredStyle:UIAlertControllerStyleAlert];
-    UIActivityIndicatorView *activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleMedium];
+    UIActivityIndicatorView *activity;
+    if (@available(iOS 13.0, *)) {
+        activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleMedium];
+    } else {
+        activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    }
     activity.translatesAutoresizingMaskIntoConstraints = NO;
     [loadingAlert.view addSubview:activity];
     [NSLayoutConstraint activateConstraints:@[
@@ -135,11 +140,11 @@ static void OpenExternalURLWithLogging(NSURL *url) {
 
     //-----------PUSHWOOSH PART-----------
     // set custom delegate for push handling, in our case AppDelegate
-    [Pushwoosh sharedInstance].delegate = self;
+    [Pushwoosh sharedInstance].delegate = (id<PWMessagingDelegate>)self;
     //register for push notifications!
     [[Pushwoosh sharedInstance] registerForPushNotifications];
 
-    NSLog(@"finish load");
+    NSLog(@"[OAEC][App] Launch complete");
     return YES;
 }
 
@@ -162,11 +167,11 @@ static void OpenExternalURLWithLogging(NSURL *url) {
 }
 //this event is fired when the push gets received
 - (void)pushwoosh:(Pushwoosh *)pushwoosh onMessageReceived:(PWMessage *)message {
-    NSLog(@"onMessageReceived: %@", message.payload);
+    NSLog(@"[OAEC][Push] Message received");
 }
 //this event is fired when user taps the notification
 - (void)pushwoosh:(Pushwoosh *)pushwoosh onMessageOpened:(PWMessage *)message {
-    NSLog(@"onMessageOpened: %@", message.payload);
+    NSLog(@"[OAEC][Push] Message opened");
 }
 
 
@@ -178,7 +183,7 @@ static void OpenExternalURLWithLogging(NSURL *url) {
 
 - (void)populateSpreadsheetData {
     
-    NSLog(@"start load");
+    NSLog(@"[OAEC][Data] Populating in-memory datasets");
     
     self.stateSenate   = [self.all filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"Type=%@",STATE_SENATE]];
     self.stateHouse    = [self.all filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"Type=%@",STATE_HOUSE]];
@@ -213,9 +218,11 @@ static void OpenExternalURLWithLogging(NSURL *url) {
 
     
     
-    NSLog(@"all count %lu",(unsigned long)[self.all count]);
-    NSLog(@"state senate count %lu",(unsigned long)[self.stateSenate count]);
-    NSLog(@"state judiciary count %lu",(unsigned long)[self.stateJudiciary count]);
+    NSLog(@"[OAEC][Data] Loaded people: total=%lu senate=%lu house=%lu judiciary=%lu",
+          (unsigned long)[self.all count],
+          (unsigned long)[self.stateSenate count],
+          (unsigned long)[self.stateHouse count],
+          (unsigned long)[self.stateJudiciary count]);
     
     self.stateSenateStandingCommittees = [DataLoader buildCommitteesFromPeople:self.stateSenate committeeKey:STANDING];
     self.stateHouseStandingCommittees  = [DataLoader buildCommitteesFromPeople:self.stateHouse committeeKey:STANDING];
@@ -287,8 +294,6 @@ static void OpenExternalURLWithLogging(NSURL *url) {
     NSMutableDictionary *committeeLookup = [NSMutableDictionary dictionaryWithCapacity:allCommittees.count];
     for (Committee *committee in allCommittees) {
         committee.key = [[NSString stringWithFormat:@"%@:%@",[committee.body trim],[committee.name trim]] lowercaseString];
-        //NSLog(@"name: %@  body: %@ type: %@",committee.name,committee.body,committee.type);
-        NSLog(@"Committee key: *%@*",committee.key);
         [committeeLookup setObject:committee forKey:committee.key];
     }
     
@@ -304,20 +309,18 @@ static void OpenExternalURLWithLogging(NSURL *url) {
         
         if (committee!=nil) {
             
-            NSLog(@"committee.name = %@ -> %@",committee.name,committeeDict.committeeName);
             committee.room=committeeDict.committeeRoom;
             committee.time=committeeDict.committeeTime;
             committee.dow=committeeDict.committeeDOW;
             committee.website=committeeDict.committeeWebsite;
-            NSLog(@"%@ %@ %@",committee.room,committee.time,committee.dow);
         } else {
-            NSLog(@"Committee NOT FOUND: %@",key);
+            NSLog(@"[OAEC][Data] Committee metadata missing for key: %@", key);
         }
     }
 
     
     
-    NSLog(@"finish load");
+    NSLog(@"[OAEC][Data] Dataset population complete");
 
 }
 
@@ -331,11 +334,15 @@ static void OpenExternalURLWithLogging(NSURL *url) {
     NSString *previousDataFilename = [NSString stringWithFormat:@"%@/previousdata.csv", docsDir];
     [fileManager removeItemAtPath:csvFilename error:nil];
 
+    NSLog(@"[OAEC][Download] Starting data58.csv download");
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     NSURLSessionDownloadTask *downloadTask = [session downloadTaskWithRequest:[NSURLRequest requestWithURL:URL] completionHandler:^(NSURL *location, NSURLResponse *response, NSError *error) {
         mapDataLoaded = NO;
         NSError *fmError = nil;
         NSString *harddataFilename = [[NSBundle mainBundle] pathForResource:@"data" ofType:@"csv"];
+        if (error != nil) {
+            NSLog(@"[OAEC][Download] data58.csv download failed: %@", error.localizedDescription);
+        }
         if (location != nil) {
             NSURL *destURL = [NSURL fileURLWithPath:csvFilename];
             [fileManager removeItemAtURL:destURL error:nil];
@@ -346,6 +353,7 @@ static void OpenExternalURLWithLogging(NSURL *url) {
             self.all = [DataLoader loadCSVFile:csvFilename];
             if (self.all != nil && self.all.count > 0) {
                 usedDownloaded = YES;
+                NSLog(@"[OAEC][Download] data58.csv loaded from network (%lu rows)", (unsigned long)self.all.count);
                 [fileManager removeItemAtPath:previousDataFilename error:&fmError];
                 [fileManager copyItemAtPath:csvFilename toPath:previousDataFilename error:&fmError];
                 [fileManager removeItemAtPath:csvFilename error:&fmError];
@@ -353,13 +361,22 @@ static void OpenExternalURLWithLogging(NSURL *url) {
         }
         if (!usedDownloaded && [fileManager fileExistsAtPath:previousDataFilename]) {
             self.all = [DataLoader loadCSVFile:previousDataFilename];
-            if (self.all != nil && self.all.count > 0) usedPrevious = YES;
+            if (self.all != nil && self.all.count > 0) {
+                usedPrevious = YES;
+                NSLog(@"[OAEC][Download] data58.csv fallback to cached previousdata.csv (%lu rows)", (unsigned long)self.all.count);
+            }
         }
         if (!usedDownloaded && !usedPrevious && harddataFilename != nil) {
             self.all = [DataLoader loadCSVFile:harddataFilename];
-            if (self.all != nil && self.all.count > 0) usedBundle = YES;
+            if (self.all != nil && self.all.count > 0) {
+                usedBundle = YES;
+                NSLog(@"[OAEC][Download] data58.csv fallback to bundled data.csv (%lu rows)", (unsigned long)self.all.count);
+            }
         }
         if (self.all == nil || self.all.count == 0) self.all = @[];
+        if (!usedDownloaded && !usedPrevious && !usedBundle) {
+            NSLog(@"[OAEC][Download] data58.csv unavailable; continuing with empty dataset");
+        }
         [self populateSpreadsheetData];
     }];
     [downloadTask resume];
@@ -402,16 +419,23 @@ static void OpenExternalURLWithLogging(NSURL *url) {
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSString *docsDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     NSString *bundledPhotosPath = [[NSBundle mainBundle] pathForResource:@"photos" ofType:@"zip"];
-    if (bundledPhotosPath != nil) [DataLoader loadPhotosFile:bundledPhotosPath];
+    if (bundledPhotosPath != nil) {
+        [DataLoader loadPhotosFile:bundledPhotosPath];
+        NSLog(@"[OAEC][Download] Loaded bundled photos.zip for immediate availability");
+    }
 
     NSURL *PHOTOS_URL = [NSURL URLWithString:@"https://www.dropbox.com/s/9cl4vth7q57qpt6/photos58.zip?raw=1"];
     NSString *photosFilename = [NSString stringWithFormat:@"%@/photos58.zip", docsDir];
     NSString *previousPhotosFilename = [NSString stringWithFormat:@"%@/previousphotos.zip", docsDir];
     [fileManager removeItemAtPath:photosFilename error:nil];
 
+    NSLog(@"[OAEC][Download] Starting photos58.zip download");
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     NSURLSessionDownloadTask *photosDownloadTask = [session downloadTaskWithRequest:[NSURLRequest requestWithURL:PHOTOS_URL] completionHandler:^(NSURL *location, NSURLResponse *response, NSError *error) {
         NSError *fmError = nil;
+        if (error != nil) {
+            NSLog(@"[OAEC][Download] photos58.zip download failed: %@", error.localizedDescription);
+        }
         if (location != nil) {
             NSURL *destURL = [NSURL fileURLWithPath:photosFilename];
             [fileManager removeItemAtURL:destURL error:nil];
@@ -419,20 +443,23 @@ static void OpenExternalURLWithLogging(NSURL *url) {
         }
         if ([fileManager fileExistsAtPath:photosFilename]) {
             [DataLoader loadPhotosFile:photosFilename];
+            NSLog(@"[OAEC][Download] photos58.zip loaded from network");
             [fileManager removeItemAtPath:previousPhotosFilename error:&fmError];
             [fileManager copyItemAtPath:photosFilename toPath:previousPhotosFilename error:&fmError];
             [fileManager removeItemAtPath:photosFilename error:&fmError];
         } else if ([fileManager fileExistsAtPath:previousPhotosFilename]) {
             [DataLoader loadPhotosFile:previousPhotosFilename];
+            NSLog(@"[OAEC][Download] photos58.zip fallback to cached previousphotos.zip");
         } else if (bundledPhotosPath != nil) {
             [DataLoader loadPhotosFile:bundledPhotosPath];
+            NSLog(@"[OAEC][Download] photos58.zip fallback to bundled photos.zip");
         }
     }];
     [photosDownloadTask resume];
 }
 
 -(void) realLoadBoundaries {
-    NSLog(@"Load boundaries");
+    NSLog(@"[OAEC][Map] Loading boundary data");
     
     self.countyBoundaries        = [Boundary buildBoundaryDictionaryWithJSONFile:[[NSBundle mainBundle] pathForResource:@"Counties" ofType:@"json"]]; // TULSA
     //self.municipalBoundaries     = [Boundary buildBoundaryDictionaryWithJSONFile:[[NSBundle mainBundle] pathForResource:@"Municipalities" ofType:@"json"]]; // Tulsa
@@ -449,7 +476,7 @@ static void OpenExternalURLWithLogging(NSURL *url) {
 
     self.coopBoundaries          = [Boundary buildBoundaryDictionaryWithJSONFile:[[NSBundle mainBundle] pathForResource:@"OAECRegions" ofType:@"json"]];
     
-    NSLog(@"stop load");
+    NSLog(@"[OAEC][Map] Boundary data ready");
     
     
     // Data Integrity Test
@@ -477,7 +504,7 @@ static void OpenExternalURLWithLogging(NSURL *url) {
             if (districtBoundaries!=nil) {
                 Boundary *districtBoundary = [districtBoundaries objectForKey:districtNumber];
                 if (districtBoundary==nil) {
-                    NSLog(@"%@ %@ %@ District NOT found: %@",person.type,person.firstName,person.lastName,districtNumber);
+                    NSLog(@"[OAEC][Integrity] %@ %@ %@ District NOT found: %@",person.type,person.firstName,person.lastName,districtNumber);
                 }
             }
             
@@ -485,7 +512,7 @@ static void OpenExternalURLWithLogging(NSURL *url) {
             for (NSString *county in counties) {
                 Boundary *countyBoundary = [self.countyBoundaries objectForKey:[[county uppercaseString] trim]];
                 if (county!=nil && [county length]>0 && countyBoundary==nil) {
-                    NSLog(@"%@ %@ %@ County NOT found: %@",person.type,person.firstName,person.lastName,[[county uppercaseString] trim]);
+                    NSLog(@"[OAEC][Integrity] %@ %@ %@ County NOT found: %@",person.type,person.firstName,person.lastName,[[county uppercaseString] trim]);
                 }
             }
         }
@@ -503,44 +530,6 @@ static void OpenExternalURLWithLogging(NSURL *url) {
     [self presentLoadingAlert];
     [self performSelector:@selector(realLoadBoundaries) withObject:nil afterDelay:0.01];
 }
-
--(void) displayMessage:(NSTimer *)theTimer {
-    if (!mapDataLoaded || self.alertView != nil) return;
-    [theTimer invalidate];
-    NSString *messageTitle = [self.message objectAtIndex:0];
-    NSString *messageText = [self.message objectAtIndex:1];
-    NSString *messageURL = [self.message objectAtIndex:2];
-    NSString *buttonText = [self.message objectAtIndex:3];
-    if (messageText == nil || messageText.length == 0) buttonText = nil;
-    [self presentUpdateMessageWithTitle:messageTitle message:messageText url:messageURL actionButtonText:buttonText];
-}
-
-
-
--(void) startTheTimer {
-    [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(displayMessage:) userInfo:nil repeats:YES];
-}
-
--(void) checkForUpdateMessage {
-    NSString *filename = [NSString stringWithFormat:@"updatemessage.%@.json", [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]];
-    NSString *stringURL = [NSString stringWithFormat:@"http://architactile.com/OAECMessage/%@/%@", [[NSBundle mainBundle] bundleIdentifier], filename];
-    NSURL *url = [NSURL URLWithString:stringURL];
-    NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithRequest:[NSURLRequest requestWithURL:url]
-                                                                 completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
-        if (error != nil || (int)httpResponse.statusCode != 200 || data == nil) return;
-        NSError *jsonError = nil;
-        NSArray *message = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&jsonError];
-        if (jsonError == nil && message != nil && message.count == 4) {
-            self.message = message;
-            dispatch_async(dispatch_get_main_queue(), ^{ [self startTheTimer]; });
-        }
-    }];
-    [task resume];
-}
-
-
-
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
@@ -564,11 +553,10 @@ static void OpenExternalURLWithLogging(NSURL *url) {
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 
-    NSLog(@"Did become active");
+    NSLog(@"[OAEC][App] Application became active");
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,
                                              (unsigned long)NULL), ^(void) {
-        [self checkForUpdateMessage];
         [self downloadImmediateData];
     });
 }

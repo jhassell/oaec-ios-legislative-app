@@ -83,7 +83,6 @@
 -(void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
     //if ([[UIScreen mainScreen]bounds].size.height - 480.0 > DBL_EPSILON) {
-    //    NSLog(@"Use bigger image");
     //    self.backgroundImage.image=[UIImage imageNamed:@"AboutBackground-iPhone5@2x.png"];
     //}
 }
@@ -173,21 +172,6 @@
         button.layer.cornerCurve = kCACornerCurveContinuous;
     }
 }
-
-- (void)viewDidUnload
-{
-    [self setBackgroundImage:nil];
-    [super viewDidUnload];
-}
-
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-
-
-
 
 - (void)dealloc {
     [_backgroundImage release];

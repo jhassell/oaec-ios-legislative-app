@@ -627,8 +627,6 @@ RLM_ARRAY_TYPE(Realm_tally)
     
     //shareController.completionHandler = ^(NSString *activityType, BOOL completed)
     //{
-    //    NSLog(@" activityType: %@", activityType);
-    //    NSLog(@" completed: %i", completed);
     //};
     
     //[self presentViewController: shareController animated: YES completion: nil];
@@ -807,7 +805,6 @@ RLM_ARRAY_TYPE(Realm_tally)
         
         CELL_HEADSHOT.image=[UIImage imageNamed:person.photo];
         
-        //NSLog(@"Attempt to load photo %@ %@",person.photo,(CELL_HEADSHOT.image==nil?@"FAILED":@"SUCCEEDED"));
         
         if (CELL_HEADSHOT.image!=nil) hasPhoto=YES;
     }

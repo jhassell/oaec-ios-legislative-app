@@ -223,8 +223,6 @@
         
         _committee=committee;
         
-        NSLog(@"SETTING COMMITTEE: %@ %@ %@",committee.room,committee.time,committee.dow);
-        
         CommitteeHeaderView *chv = [[[NSBundle mainBundle] loadNibNamed:@"CommitteeHeaderView-iPhone" owner:self options:nil] lastObject];
         
         chv.chamberLabel.text=self.committee.body;
@@ -442,7 +440,6 @@
         
         CELL_HEADSHOT.image=[UIImage imageNamed:person.photo];
         
-        //NSLog(@"Attempt to load photo %@ %@",person.photo,(CELL_HEADSHOT.image==nil?@"FAILED":@"SUCCEEDED"));
 
         if (CELL_HEADSHOT.image==nil)
         {
@@ -485,7 +482,6 @@
             (self.committee.room==nil || [self.committee.room trim].length==0) ) {
             return 73.0;
         }
-        NSLog(@"self.committeeHeaderView.frame.size.height = %f",self.committeeHeaderView.frame.size.height);
         return self.committeeHeaderView.frame.size.height;
     }
     
@@ -512,7 +508,7 @@
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
         if (self.committee.website!=nil && [self.committee.website trim].length>0) {
             NSURL *url = [NSURL URLWithString:[self.committee.website trim]];
-            [[UIApplication sharedApplication] openURL:url];
+            [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
         }
         return;
     }

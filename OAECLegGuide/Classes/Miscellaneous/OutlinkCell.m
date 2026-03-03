@@ -16,10 +16,12 @@
     if (self.linkUrlString==nil) return;
     
     NSURL *url = [NSURL URLWithString:self.linkUrlString];
-    
-    if (![[UIApplication sharedApplication] openURL:url])
-        
-        NSLog(@"%@%@",@"Failed to open url:",[url description]);
+    if (url == nil) return;
+    [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:^(BOOL success) {
+        if (!success) {
+            NSLog(@"[OAEC][URL] Failed to open outlink: %@", [url description]);
+        }
+    }];
 }
 
 

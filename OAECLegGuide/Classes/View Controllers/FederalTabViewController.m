@@ -71,11 +71,6 @@
     self.peopleTable.dataSource = self.peopleListDelegate;
 }
 
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-}
-
 -(void) viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:NO];
@@ -113,11 +108,6 @@
     }
     
     self.peopleListDelegate.sections = sections;
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 - (void)dealloc

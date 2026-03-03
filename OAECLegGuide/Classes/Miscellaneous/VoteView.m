@@ -19,7 +19,7 @@
 */
 
 - (IBAction)buttonPressed:(id)sender {
-    NSLog(@"button pressed");
+    // Action retained for legacy nib wiring.
 }
 
 @end

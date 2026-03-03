@@ -57,11 +57,6 @@
 	// Do any additional setup after loading the view.
 }
 
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-}
-
 -(void) viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     if (self.peopleTable.indexPathForSelectedRow!=nil) {
@@ -82,12 +77,6 @@
         self.peopleListDelegate.peopleTable=self.peopleTable;
     }
 }
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-
 
 - (void)dealloc
 {

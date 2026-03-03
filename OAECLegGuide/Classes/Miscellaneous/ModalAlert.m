@@ -13,6 +13,10 @@
 #import "ModalAlert.h"
 #import <AVFoundation/AVFoundation.h>
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+#pragma clang diagnostic ignored "-Wdeprecated-implementations"
+
 @interface ModalAlertDelegate : NSObject <UIAlertViewDelegate>
 {
 	CFRunLoopRef currentLoop;
@@ -77,12 +81,12 @@
     [alertView show];
 }
 
-+(UIAlertView *) noButtonAlertWithTitle:(NSString *) title message:(NSString *) message {
++(id) noButtonAlertWithTitle:(NSString *) title message:(NSString *) message {
     
     UIAlertView *av =[[[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:nil otherButtonTitles:nil] autorelease];
     [av show];
     
-    UIActivityIndicatorView *aiv = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    UIActivityIndicatorView *aiv = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleLarge];
     aiv.center = CGPointMake(av.bounds.size.width / 2.0f, av.bounds.size.height - 40.0f);
     [aiv startAnimating];
     [av addSubview:aiv];
@@ -92,4 +96,6 @@
 
 
 @end
+
+#pragma clang diagnostic pop
 

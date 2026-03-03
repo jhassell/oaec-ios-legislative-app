@@ -71,11 +71,9 @@
     
     plvc.sections = [NSArray arrayWithObject:ls1];
     
-    //NSLog(@"%i sections",[plvc.sections count]);
     
     // for (ListSection *section in plvc.sections) {
     
-    //NSLog(@"Section %@ has %i children",section.title,[section.children count]);
     
     // }
     
@@ -105,11 +103,9 @@
     
     vlvc.rc_sections = [NSArray arrayWithObject:ls1];
     
-    //NSLog(@"%i sections",[plvc.sections count]);
     
     // for (ListSection *section in plvc.sections) {
     
-    //NSLog(@"Section %@ has %i children",section.title,[section.children count]);
     
     // }
     

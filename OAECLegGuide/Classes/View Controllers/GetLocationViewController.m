@@ -120,7 +120,9 @@ See LICENSE.txt for this sample’s licensing information
 // For this example, we are going to use horizontal accuracy as the deciding factor.
 // In other cases, you may wish to use vertical accuracy, or both together.
 //
-- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
+    CLLocation *newLocation = [locations lastObject];
+    if (newLocation == nil) return;
     // store all of the measurements, just so we can see what kind of data we might receive
     [self.locationMeasurements addObject:newLocation];
     
@@ -250,7 +252,7 @@ See LICENSE.txt for this sample’s licensing information
             if (cell == nil) {
                 cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:kStatusCellID];
                 cell.selectionStyle = UITableViewCellSelectionStyleNone;
-                activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+                activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleMedium];
                 CGRect frame = activityIndicator.frame;
                 frame.origin = CGPointMake(290.0, 12.0);
                 activityIndicator.frame = frame;

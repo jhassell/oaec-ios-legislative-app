@@ -56,7 +56,7 @@
 @property (nonatomic, strong) SetupViewController* setupViewController;
 @property (nonatomic, copy) NSString *stateString;
 
-@property (retain, nonatomic) UIAlertView *instructionView;
+@property (retain, nonatomic) UIAlertController *instructionView;
 
 - (IBAction)rightArrowButtonPressed:(id)sender;
 - (IBAction)leftArrowButtonPressed:(id)sender;
@@ -94,7 +94,6 @@
 
 - (void)handleGesture:(UIGestureRecognizer *)gestureRecognizer
 {
-    //NSLog(@"Gesture Recognized!");
     if (gestureRecognizer.state != UIGestureRecognizerStateEnded)
         return;
     CGPoint touchPoint = [gestureRecognizer locationInView:self.mapView];
@@ -118,7 +117,7 @@
         // if an existing pin view was not available, create one
         MKPinAnnotationView* customPinView = [[[MKPinAnnotationView alloc]
                                                initWithAnnotation:annotation reuseIdentifier:@"pin"] autorelease];
-        customPinView.pinColor = MKPinAnnotationColorGreen;            
+        customPinView.pinTintColor = [UIColor greenColor];
         customPinView.animatesDrop = YES;
         customPinView.canShowCallout = NO;        
         return customPinView;
@@ -130,7 +129,7 @@
 }
 
 
-- (MKPolygonRenderer *)mapView:(MKMapView *)mapView viewForOverlay:(id <MKOverlay>)overlay
+- (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id <MKOverlay>)overlay
 {
     BoundaryPolygon *boundaryPolygon = (BoundaryPolygon *) overlay;
     
@@ -180,7 +179,6 @@
 
 
 - (IBAction)personInfoButtonPressed:(id)sender {
-    //NSLog(@"Button pressed");
     
     if (self.person==nil) return;
     
@@ -207,10 +205,8 @@
     CLLocationCoordinate2D coordinate = location.coordinate;
     
     [self.mapView removeOverlays:self.mapView.overlays];
-    //NSLog(@"Overlays removed");
     
     [self.mapView removeAnnotations:self.mapView.annotations];
-    //NSLog(@"Annotation removed");
     
     MKPointAnnotation *pointAnnotation = [[MKPointAnnotation alloc] init];
     pointAnnotation.title=@"Here.";
@@ -316,8 +312,6 @@
         NSArray *peopleList=nil;
         NSString *title=nil;
         
-        //NSLog(@"boundary type: *%@*  name: %@",boundaryToFrame.type,boundaryToFrame.name);
-        //NSLog(@"*%@* *%@* *%@*",STATE_SENATE,STATE_HOUSE,FEDERAL_HOUSE);
         if ([boundaryToFrame.type isEqualToString:BOUNDARY_TYPE_STATE_HOUSE ]) {
             districtNumber = [NSString stringWithFormat:@"%i",[boundaryToFrame.name intValue]];
             peopleList=ad.stateHouse;
@@ -334,10 +328,9 @@
             peopleList=ad.oaecMembers;
             title = boundaryToFrame.name;
         } else {
-            NSLog(@"?????");
+            NSLog(@"[OAEC][Map] Unknown boundary type '%@' for boundary '%@'", boundaryToFrame.type, boundaryToFrame.name);
         }
         
-        //NSLog(@"districtNumber %@\ntitle %@",districtNumber,title);
         
         if (title!=nil) {
             self.mapTitleLabel.text = title;
@@ -356,11 +349,9 @@
         }
         
         
-        //NSLog(@"peopleArray has %i objects",[peopleArray count]);
         
         if ([peopleArray count]>0) {
             self.person=[peopleArray objectAtIndex:0];
-            //NSLog(@"self.person set to %@ %@",self.person.firstName,self.person.lastName);
             [self updatePersonInfo];
         }
         
@@ -454,7 +445,6 @@
                 if (countyBoundary!=nil) {
                     [self.countyBoundaries addObject:countyBoundary];
                 } else {
-                    // NSLog(@"County NOT found: %@",[[county uppercaseString] trim]);
                 }
             }
             
@@ -551,7 +541,6 @@
             if (self.personImageView.image!=nil) hasPhoto=YES;
         }
         
-        //NSLog(@"---------->hasPhoto %@",(hasPhoto?@"YES":@"NO"));
               
         if (hasPhoto) {
             self.personImageView.hidden=NO;
@@ -664,7 +653,12 @@
 // For this example, we are going to use horizontal accuracy as the deciding factor.
 // In other cases, you may wish to use vertical accuracy, or both together.
 //
-- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
+    CLLocation *newLocation = [locations lastObject];
+    if (!newLocation) {
+        return;
+    }
+
     // store all of the measurements, just so we can see what kind of data we might receive
     [self.locationMeasurements addObject:newLocation];
     
@@ -685,7 +679,6 @@
     if (self.bestEffortAtLocation == nil || self.bestEffortAtLocation.horizontalAccuracy > newLocation.horizontalAccuracy) {
         // store the location as the "best effort"
         _bestEffortAtLocation = newLocation;
-        NSLog(@"bestEfforLocation: %@", self.bestEffortAtLocation);
         
         // test the measurement to see if it meets the desired accuracy
         //
@@ -728,11 +721,10 @@
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Map Instructions" message:@"Tap anywhere in Oklahoma to see the legislative districts, or enter an address" preferredStyle:UIAlertControllerStyleAlert];
         [alert addAction:[UIAlertAction actionWithTitle:@"Go to Map" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
             NSString *input = alert.textFields[0].text;
-            NSLog(@"input was '%@'", input);
             CLGeocoder *geocoder = [[CLGeocoder alloc] init];
             [geocoder geocodeAddressString:input completionHandler:^(NSArray *placemarks, NSError *error) {
                 if (error) {
-                    NSLog(@"%@", error);
+                    NSLog(@"[OAEC][Map] Address geocode failed: %@", error.localizedDescription);
                 } else {
                     CLPlacemark *placemark = [placemarks lastObject];
                     if ([placemark.administrativeArea isEqualToString:@"OK"]) {
@@ -765,26 +757,18 @@
 	// Do any additional setup after loading the view.
     UIButton *backBtn = self.leftArrowButton ?: (UIButton *)[self.view viewWithTag:9001];
     if ([backBtn isKindOfClass:[UIButton class]]) {
-        UIImage *chevron = [UIImage systemImageNamed:@"chevron.left"];
-        if (chevron) {
-            UIImageSymbolConfiguration *config = [UIImageSymbolConfiguration configurationWithPointSize:20 weight:UIImageSymbolWeightMedium];
-            chevron = [chevron imageByApplyingSymbolConfiguration:config];
-            [backBtn setImage:chevron forState:UIControlStateNormal];
-            [backBtn setTitle:nil forState:UIControlStateNormal];
-            [backBtn setBackgroundImage:nil forState:UIControlStateNormal];
-            backBtn.tintColor = [UIColor labelColor];
+        if (@available(iOS 13.0, *)) {
+            UIImage *chevron = [UIImage systemImageNamed:@"chevron.left"];
+            if (chevron) {
+                UIImageSymbolConfiguration *config = [UIImageSymbolConfiguration configurationWithPointSize:20 weight:UIImageSymbolWeightMedium];
+                chevron = [chevron imageByApplyingSymbolConfiguration:config];
+                [backBtn setImage:chevron forState:UIControlStateNormal];
+                [backBtn setTitle:nil forState:UIControlStateNormal];
+                [backBtn setBackgroundImage:nil forState:UIControlStateNormal];
+                backBtn.tintColor = [UIColor labelColor];
+            }
         }
     }
-}
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 - (void)dealloc {

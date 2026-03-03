@@ -10,6 +10,6 @@
 + (BOOL) ask: (NSString *) question;
 + (BOOL) confirm:(NSString *) statement;
 + (void) okWithTitle:(NSString *)title message:(NSString *)message;
-+ (UIAlertView *) noButtonAlertWithTitle:(NSString *) title message:(NSString *) message;
++ (id) noButtonAlertWithTitle:(NSString *) title message:(NSString *) message;
 +(NSUInteger) queryWith: (NSString *)question title:(NSString *)title button1: (NSString *)button1 button2: (NSString *)button2;
 @end

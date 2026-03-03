@@ -1445,7 +1445,7 @@
         <!--Navigation Controller-->
         <scene sceneID="DGl-1c-m70">
             <objects>
-                <navigationController id="eZZ-gd-mpJ" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="LegacyNav-eZZ-gd-mpJ" id="eZZ-gd-mpJ" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="rjl-Ei-7gk"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0ah-nz-0m2">
                         <rect key="frame" x="0.0" y="48" width="414" height="44"/>
@@ -1459,7 +1459,7 @@
         <!--State-->
         <scene sceneID="SNi-zm-IMZ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="G5m-6Q-7I0" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="LegacyState-G5m-6Q-7I0" automaticallyAdjustsScrollViewInsets="NO" id="G5m-6Q-7I0" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="State" id="bxq-Ag-Nrl"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="D05-yj-vGQ"/>
@@ -1613,7 +1613,7 @@
         <!--Navigation Controller-->
         <scene sceneID="9eZ-Kv-3UN">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NM3-2Y-jDB" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="LegacyNav-NM3-2Y-jDB" automaticallyAdjustsScrollViewInsets="NO" id="NM3-2Y-jDB" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="2Hh-ZR-0lh"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FbR-VA-2fB">
@@ -1632,7 +1632,7 @@
         <!--Navigation Controller-->
         <scene sceneID="F1k-DW-fYc">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SU8-hK-q6X" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="LegacyNav-SU8-hK-q6X" automaticallyAdjustsScrollViewInsets="NO" id="SU8-hK-q6X" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="b63-Av-zwo">
                         <rect key="frame" x="0.0" y="48" width="414" height="44"/>
@@ -1650,7 +1650,7 @@
         <!--Navigation Controller-->
         <scene sceneID="xuL-Rb-D0C">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QJE-qH-2G0" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="LegacyNav-QJE-qH-2G0" automaticallyAdjustsScrollViewInsets="NO" id="QJE-qH-2G0" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sDQ-PS-xBc">
                         <rect key="frame" x="0.0" y="48" width="414" height="44"/>

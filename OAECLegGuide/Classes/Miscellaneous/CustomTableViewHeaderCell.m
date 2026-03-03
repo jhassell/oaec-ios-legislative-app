@@ -28,6 +28,6 @@
 
 
 - (IBAction)CaucusPressed:(id)sender {
-    NSLog(@"Something To Print");
+    // Intentionally left blank; action is wired for storyboard compatibility.
 }
 @end

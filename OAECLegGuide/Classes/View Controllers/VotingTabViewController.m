@@ -148,11 +148,9 @@
     
     plvc.sections = [NSArray arrayWithObject:ls1];
     
-    //NSLog(@"%i sections",[plvc.sections count]);
     
     // for (ListSection *section in plvc.sections) {
     
-    //NSLog(@"Section %@ has %i children",section.title,[section.children count]);
     
     // }
     
@@ -224,19 +222,9 @@
     // Do any additional setup after loading the view.
 }
 
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-}
-
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     self.navigationController.navigationBarHidden=YES;
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 

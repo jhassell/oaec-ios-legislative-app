@@ -31,11 +31,11 @@
         if ([[UIApplication sharedApplication] canOpenURL:phoneURL]) {
             [[UIApplication sharedApplication] openURL:phoneURL options:@{} completionHandler:^(BOOL success) {
                 if (!success) {
-                    NSLog(@"Failed to open phone URL: %@", phoneURL.absoluteString);
+                    NSLog(@"[OAEC][URL] Failed to open phone URL: %@", phoneURL.absoluteString);
                 }
             }];
         } else {
-            NSLog(@"Cannot dial phone number: %@", phoneNumber);
+            NSLog(@"[OAEC][URL] Cannot dial phone number: %@", phoneNumber);
         }
     } else {
         [self showAlertWithTitle:@"Alert" message:@"Sorry, but I can't seem to figure out how to dial the phone on this device."];
@@ -48,7 +48,6 @@
 
 - (IBAction)mapButtonPressed:(id)sender {
     NSString *addrurl = [NSString stringWithFormat:@"http://maps.google.com/maps?q=%@, %@", addressLine1.text, addressLine2.text];
-    NSLog(@"addurl = %@", addrurl);
     
     NSString *escapedAddress = [addrurl stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
     NSURL *url = [NSURL URLWithString:escapedAddress];
@@ -56,7 +55,7 @@
     if ([[UIApplication sharedApplication] canOpenURL:url]) {
         [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:^(BOOL success) {
             if (!success) {
-                NSLog(@"Failed to open Maps URL: %@", url.absoluteString);
+                NSLog(@"[OAEC][URL] Failed to open Maps URL: %@", url.absoluteString);
             }
         }];
     } else {
@@ -78,7 +77,10 @@
 
     // Present the alert on the main thread
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self presentViewController:alertController animated:YES completion:nil];
+        UIViewController *presenter = self.pvc;
+        if (presenter != nil) {
+            [presenter presentViewController:alertController animated:YES completion:nil];
+        }
     });
 }
 

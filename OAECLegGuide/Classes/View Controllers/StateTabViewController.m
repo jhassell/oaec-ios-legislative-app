@@ -331,11 +331,9 @@
     
     plvc.sections = [NSArray arrayWithObject:ls1];
     
-    //NSLog(@"%i sections",[plvc.sections count]);
     
     // for (ListSection *section in plvc.sections) {
         
-        //NSLog(@"Section %@ has %i children",section.title,[section.children count]);
         
     // }
     
@@ -365,11 +363,9 @@
     
     vlvc.rc_sections = [NSArray arrayWithObject:ls1];
     
-    //NSLog(@"%i sections",[plvc.sections count]);
     
     // for (ListSection *section in plvc.sections) {
     
-    //NSLog(@"Section %@ has %i children",section.title,[section.children count]);
     
     // }
     
@@ -440,26 +436,23 @@
 	// Do any additional setup after loading the view.
     UIButton *backBtn = (UIButton *)[self.view viewWithTag:9001];
     if ([backBtn isKindOfClass:[UIButton class]]) {
-        UIImage *chevron = [UIImage systemImageNamed:@"chevron.left"];
-        if (chevron) {
-            UIImageSymbolConfiguration *config = [UIImageSymbolConfiguration configurationWithPointSize:20 weight:UIImageSymbolWeightMedium];
-            chevron = [chevron imageByApplyingSymbolConfiguration:config];
-            [backBtn setImage:chevron forState:UIControlStateNormal];
-            [backBtn setBackgroundImage:nil forState:UIControlStateNormal];
-            [backBtn setAttributedTitle:nil forState:UIControlStateNormal];
-            [backBtn setAttributedTitle:nil forState:UIControlStateHighlighted];
-            [backBtn setTitle:@"" forState:UIControlStateNormal];
-            [backBtn setTitle:@"" forState:UIControlStateHighlighted];
-            [backBtn setTitle:@"" forState:UIControlStateSelected];
-            [backBtn setTitle:@"" forState:UIControlStateDisabled];
-            backBtn.tintColor = [UIColor labelColor];
+        if (@available(iOS 13.0, *)) {
+            UIImage *chevron = [UIImage systemImageNamed:@"chevron.left"];
+            if (chevron) {
+                UIImageSymbolConfiguration *config = [UIImageSymbolConfiguration configurationWithPointSize:20 weight:UIImageSymbolWeightMedium];
+                chevron = [chevron imageByApplyingSymbolConfiguration:config];
+                [backBtn setImage:chevron forState:UIControlStateNormal];
+                [backBtn setBackgroundImage:nil forState:UIControlStateNormal];
+                [backBtn setAttributedTitle:nil forState:UIControlStateNormal];
+                [backBtn setAttributedTitle:nil forState:UIControlStateHighlighted];
+                [backBtn setTitle:@"" forState:UIControlStateNormal];
+                [backBtn setTitle:@"" forState:UIControlStateHighlighted];
+                [backBtn setTitle:@"" forState:UIControlStateSelected];
+                [backBtn setTitle:@"" forState:UIControlStateDisabled];
+                backBtn.tintColor = [UIColor labelColor];
+            }
         }
     }
-}
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
 }
 
 - (void) viewWillAppear:(BOOL)animated {
@@ -487,11 +480,5 @@
     [super viewDidLayoutSubviews];
     self.navigationController.navigationBar.hidden = YES;
 }
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-
 
 @end

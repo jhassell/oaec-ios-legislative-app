@@ -456,7 +456,7 @@ static NSLock *crayolaNameCacheLock;
 + (UIColor *)colorWithString:(NSString *)stringToConvert {
 	NSScanner *scanner = [NSScanner scannerWithString:stringToConvert];
 	if (![scanner scanString:@"{" intoString:NULL]) return nil;
-	const NSUInteger kMaxComponents = 4;
+	enum { kMaxComponents = 4 };
 	CGFloat c[kMaxComponents];
 	NSUInteger i = 0;
 	if (![scanner scanFloat:(float *)&c[i++]]) return nil;

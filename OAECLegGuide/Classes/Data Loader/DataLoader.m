@@ -21,23 +21,23 @@
     NSError *error = nil;
     NSString *csvString = [NSString stringWithContentsOfFile:csvPath encoding:NSUTF8StringEncoding error:&error];
     if (!csvString) {
-        NSLog(@"DataLoader: Could not read file at %@. Error: %@", csvPath, error ? error.localizedDescription : @"unknown");
+        NSLog(@"[OAEC][DataLoader] Could not read CSV at %@. Error: %@", csvPath, error ? error.localizedDescription : @"unknown");
         return nil;
     }
     if ([csvString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]].length == 0) {
-        NSLog(@"DataLoader: CSV file is empty or whitespace-only: %@", csvPath);
+        NSLog(@"[OAEC][DataLoader] CSV is empty/whitespace-only: %@", csvPath);
         return nil;
     }
     static NSString * const kBOM = @"\uFEFF";
     if ([csvString hasPrefix:kBOM]) {
         csvString = [csvString substringFromIndex:kBOM.length];
-        NSLog(@"DataLoader: Stripped UTF-8 BOM from %@", csvPath);
+        NSLog(@"[OAEC][DataLoader] Stripped UTF-8 BOM from %@", csvPath);
     }
 
     CSVParser *parser = [[[CSVParser alloc] initWithString:csvString separator:@"," hasHeader:YES fieldNames:nil] autorelease];
     NSArray *rows = [parser arrayOfParsedRows];
     if (!rows || rows.count == 0) {
-        NSLog(@"DataLoader: CSV parsed to no data rows: %@", csvPath);
+        NSLog(@"[OAEC][DataLoader] CSV parsed to no data rows: %@", csvPath);
         return nil;
     }
     static NSArray *requiredHeaders = nil;
@@ -50,7 +50,7 @@
         if (![actualKeys containsObject:required]) [missing addObject:required];
     }
     if (missing.count > 0) {
-        NSLog(@"DataLoader: Invalid header row in %@ - missing required columns: %@", csvPath, missing);
+        NSLog(@"[OAEC][DataLoader] Invalid CSV header in %@. Missing columns: %@", csvPath, missing);
         return nil;
     }
 
@@ -91,7 +91,6 @@
 
 
 +(void) loadPhotosFile:(NSString *) zipPath {
-    NSError *error;
     NSArray *dirPaths;
     NSString *docsDir;
     
@@ -99,10 +98,12 @@
                                                    NSUserDomainMask, YES);
     docsDir = [dirPaths objectAtIndex:0];
     
-    printf("Photo file path: %s\n", [zipPath UTF8String]);
-    
-    // Unzip
-    [SSZipArchive unzipFileAtPath:zipPath toDestination:docsDir];
+    BOOL didUnzip = [SSZipArchive unzipFileAtPath:zipPath toDestination:docsDir];
+    if (didUnzip) {
+        NSLog(@"[OAEC][DataLoader] Unzipped photos archive: %@", [zipPath lastPathComponent]);
+    } else {
+        NSLog(@"[OAEC][DataLoader] Failed to unzip photos archive: %@", zipPath);
+    }
 }
 
 
@@ -114,9 +115,9 @@
     
 	if (!csvString)
 	{
-		printf("Couldn't read file at path %s\n. Error: %s",
-               [csvPath UTF8String],
-               [[error localizedDescription] ? [error localizedDescription] : [error description] UTF8String]);
+        NSLog(@"[OAEC][DataLoader] Could not read calendar CSV at %@. Error: %@",
+              csvPath,
+              [error localizedDescription] ? [error localizedDescription] : [error description]);
         return nil;
 	}
 	
@@ -158,7 +159,7 @@
                                                                            options:NSRegularExpressionCaseInsensitive
                                                                              error:&error];
     if (error!=nil) {
-        NSLog(@"Error parsing regex '%@' for '%@' :%@",regexString,committeeString,[error localizedDescription]);
+        NSLog(@"[OAEC][DataLoader] Regex parse error '%@' for '%@': %@", regexString, committeeString, [error localizedDescription]);
     }
     
     NSArray *matches = [regex matchesInString:committeeString options:0 range:NSMakeRange(0, [committeeString length])];

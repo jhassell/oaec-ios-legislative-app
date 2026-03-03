@@ -125,6 +125,14 @@
 
 @synthesize person=_person;
 
+- (void)showAlertWithTitle:(NSString *)title message:(NSString *)message {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title
+                                                                   message:message
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
 -(NSString *) addNewLineForStates:(NSString *)countiesConvered {
     
     NSString *newString = [NSString stringWithString:countiesConvered];
@@ -198,22 +206,11 @@
 
 - (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
 {
-    switch (result)
-    {
-        case MFMailComposeResultCancelled:
-            NSLog(@"Mail cancelled: you cancelled the operation and no email message was queued.");
-            break;
-        case MFMailComposeResultSaved:
-            NSLog(@"Mail saved: you saved the email message in the drafts folder.");
-            break;
-        case MFMailComposeResultSent:
-            NSLog(@"Mail send: the email message is queued in the outbox. It is ready to send.");
-            break;
+    switch (result) {
         case MFMailComposeResultFailed:
-            NSLog(@"Mail failed: the email message was not saved or queued, possibly due to an error.");
+            NSLog(@"[OAEC][Mail] Failed to compose/send mail: %@", error.localizedDescription ?: @"unknown error");
             break;
         default:
-            NSLog(@"Mail not sent.");
             break;
     }
     // Remove the mail view
@@ -229,13 +226,12 @@
     self.headshotModalView.alpha=0.0;
     self.headshotModalView.hidden = NO;
     
-    [UIView beginAnimations:nil context:nil];
-    [UIView setAnimationDuration:0.5];
-    [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
-    
-    self.headshotModalView.alpha = 1.0;
-    
-    [UIView commitAnimations];
+    [UIView animateWithDuration:0.5
+                          delay:0.0
+                        options:UIViewAnimationOptionCurveEaseOut
+                     animations:^{
+        self.headshotModalView.alpha = 1.0;
+    } completion:nil];
     
 }
 
@@ -244,14 +240,14 @@
 }
 
 - (IBAction)headshotModelCloseButtonPressed:(id)sender {
-    
-    [UIView beginAnimations:nil context:nil];
-    [UIView setAnimationDuration:0.5];
-    [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
-    self.headshotModalView.alpha = 0.0;
-    [UIView commitAnimations];
-    
-    [self performSelector:@selector(hideHeadhotModal) withObject:nil afterDelay:0.6];
+    [UIView animateWithDuration:0.5
+                          delay:0.0
+                        options:UIViewAnimationOptionCurveEaseOut
+                     animations:^{
+        self.headshotModalView.alpha = 0.0;
+    } completion:^(BOOL finished) {
+        [self hideHeadhotModal];
+    }];
     
 }
 
@@ -306,24 +302,14 @@
         
     }
     else if (![self isValidEmailString:recipient]) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Can't Send Mail"
-                                                        message:@"Sorry, email address on file not valid."
-                                                       delegate:nil
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil];
-        [alert show];
-        [alert release];
+        [self showAlertWithTitle:@"Can't Send Mail"
+                         message:@"Sorry, email address on file not valid."];
 
     }
     else
     {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Can't Send Mail"
-                                                        message:@"Sorry, your device doesn't support sending email."
-                                                       delegate:nil
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil];
-        [alert show];
-        [alert release];
+        [self showAlertWithTitle:@"Can't Send Mail"
+                         message:@"Sorry, your device doesn't support sending email."];
     }
     
 }
@@ -350,11 +336,11 @@
     if (url && [[UIApplication sharedApplication] canOpenURL:url]) {
         [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:^(BOOL success) {
             if (!success) {
-                NSLog(@"Failed to open URL: %@", url.absoluteString);
+                NSLog(@"[OAEC][URL] Failed to open URL: %@", url.absoluteString);
             }
         }];
     } else {
-        NSLog(@"Cannot open URL: %@", urlString);
+        NSLog(@"[OAEC][URL] Cannot open URL: %@", urlString);
     }
 }
 
@@ -403,7 +389,6 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //NSLog(@"Cell for %i->%i",indexPath.section,indexPath.row);
 
     UITableViewCell *cell=nil;
     
@@ -437,8 +422,6 @@
         
         self.notesLabel.text=self.noteText;
         
-        NSLog(@"*%@*",self.notesLabel.text);
-
         self.notesLabel.numberOfLines=0;
         self.notesLabel.frame = CGRectMake(self.notesLabel.frame.origin.x,
                                            self.notesLabel.frame.origin.y,
@@ -494,7 +477,6 @@
         
         CGFloat baseHeight = 220.0f;
         
-        //NSLog(@"baseHeight %f",baseHeight);
         
         if (address.phone==nil || [[address.phone trim] length]==0) {
             baseHeight-=ADDRESS_LINE_HEIGHT;
@@ -504,7 +486,6 @@
             baseHeight-=ADDRESS_LINE_HEIGHT;
         }
         
-        //NSLog(@"Resetting frame height to %f",baseHeight);
         
         addressCell.frame = CGRectMake(cell.frame.origin.x, cell.frame.origin.y, cell.frame.size.width, baseHeight);
         
@@ -610,12 +591,9 @@
 #pragma mark - Table view delegate
 
 -(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"Height for %li->%i",(long)indexPath.section,(int)indexPath.row);
     ListSection *listSection = [self.sections objectAtIndex:indexPath.section];
     
     if (indexPath.row==0 && listSection.firstRowHeight>0.5) {
-        NSLog(@"Returning %f",listSection.firstRowHeight);
-        
         return listSection.firstRowHeight;
     } else if  ([listSection.title isEqualToString:SECTION_NOTES]) {
         
@@ -626,7 +604,6 @@
         label.font=[UIFont systemFontOfSize:20.0];
         label.text = self.noteText;
         [label sizeToFit];
-        NSLog(@"label.text = *%@*",label.text);
         CGSize size = label.frame.size;
         
         if (size.height<76.0) {
@@ -649,17 +626,11 @@
             baseHeight-=ADDRESS_LINE_HEIGHT;
         }
         
-        NSLog(@"2 returning cell height of %f",baseHeight);
-        
         return baseHeight;
     } else if ([listSection.title isEqualToString:SECTION_ADDRESSES]) {
         
-        NSLog(@"3 returning cell height of %f",ADDRESS_LA_HEIGHT);
-
         return ADDRESS_LA_HEIGHT;
     }
-
-    NSLog(@"4 returning cell height of %f",listSection.rowHeight);
 
     return listSection.rowHeight;
 }
@@ -936,7 +907,6 @@
             [committeeSection.children addObject:@"Committees"];
             
             for(Committee *committee in self.person.committees) {
-                NSLog(@"Person %@ %@ Committee %@",self.person.firstName,self.person.lastName,committee.name);
                 [committeeSection.children addObject:committee];
             }
             
@@ -986,28 +956,18 @@
     [self populateNotes];
     firstLoad=YES;
     if (self.backButton) {
-        UIImage *chevron = [UIImage systemImageNamed:@"chevron.left"];
-        if (chevron) {
-            UIImageSymbolConfiguration *config = [UIImageSymbolConfiguration configurationWithPointSize:20 weight:UIImageSymbolWeightMedium];
-            chevron = [chevron imageByApplyingSymbolConfiguration:config];
-            [self.backButton setImage:chevron forState:UIControlStateNormal];
-            [self.backButton setTitle:nil forState:UIControlStateNormal];
-            self.backButton.tintColor = [UIColor labelColor];
+        if (@available(iOS 13.0, *)) {
+            UIImage *chevron = [UIImage systemImageNamed:@"chevron.left"];
+            if (chevron) {
+                UIImageSymbolConfiguration *config = [UIImageSymbolConfiguration configurationWithPointSize:20 weight:UIImageSymbolWeightMedium];
+                chevron = [chevron imageByApplyingSymbolConfiguration:config];
+                [self.backButton setImage:chevron forState:UIControlStateNormal];
+                [self.backButton setTitle:nil forState:UIControlStateNormal];
+                self.backButton.tintColor = [UIColor labelColor];
+            }
         }
     }
 }
-
-- (void)viewDidUnload
-{
-    [self setShareNotesButton:nil];
-    [super viewDidUnload];
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-
 
 - (void)dealloc {
     [_backButton release];

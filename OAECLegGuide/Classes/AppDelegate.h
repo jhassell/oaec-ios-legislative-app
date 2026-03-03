@@ -74,8 +74,6 @@
 
 @property (nonatomic, strong) UIAlertController *alertView;
 
-@property (nonatomic, strong) NSArray *message;
-
 -(void) loadBoundaries;
 -(void) weblink;
 

@@ -91,8 +91,4 @@
     [_adjustmentContainerView release];
     [super dealloc];
 }
-- (void)viewDidUnload {
-    [self setAdjustmentContainerView:nil];
-    [super viewDidUnload];
-}
 @end

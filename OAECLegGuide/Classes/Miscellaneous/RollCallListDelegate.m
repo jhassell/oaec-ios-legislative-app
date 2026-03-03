@@ -29,8 +29,11 @@
 #define CELL_YEA_VOTE       ((UIButton *)[cell viewWithTag:106])
 #define CELL_NAY_VOTE       ((UIButton *)[cell viewWithTag:107])
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 RLM_ARRAY_TYPE(Realm_vote)
 RLM_ARRAY_TYPE(Realm_tally)
+#pragma clang diagnostic pop
 
 @interface Realm_vote : RLMObject
 @property (nonatomic, strong) NSString *status;
@@ -275,8 +278,6 @@ RLM_ARRAY_TYPE(Realm_tally)
         
         _rc_committee=rc_committee;
         
-        NSLog(@"SETTING COMMITTEE: %@ %@ %@",rc_committee.room,rc_committee.time,rc_committee.dow);
-        
         CommitteeHeaderView *chv = [[[NSBundle mainBundle] loadNibNamed:@"CommitteeHeaderView-iPhone" owner:self options:nil] lastObject];
         
         chv.chamberLabel.text=self.rc_committee.body;
@@ -426,8 +427,6 @@ RLM_ARRAY_TYPE(Realm_tally)
 
 
 -(void) emailTallyButtonTapped:(UIButton *)sender forEvent:(UIEvent *)event {
-    NSLog(@"Email Roll Call Button Tapped");
-    
     NSMutableArray *sharingArray = [[NSMutableArray alloc] init];
     [sharingArray addObject:@"Hey"];
     [self shareItemToOtherApp:sharingArray];
@@ -448,7 +447,6 @@ RLM_ARRAY_TYPE(Realm_tally)
     undecidedHeaderLabel.text = [NSString stringWithFormat:@"%ld", (long)self.rc_headerUnknownVotes];
     
     UIButton *caucusButton = (UIButton *)[self.rc_customHeaderCell.contentView viewWithTag:15];
-    NSString *buttonString = @"Caucus: All";
     
     if (self.caucusStatus == 1) {
         buttonTitle = @"Republican";
@@ -530,7 +528,6 @@ RLM_ARRAY_TYPE(Realm_tally)
     }
     
     [caucusButton setTitle:buttonTitle forState:UIControlStateNormal];
-    NSLog(@"Here");
     [self buildDisplaySections];
     [self clearCurrentTally];
     [self.rc_peopleTable reloadData];
@@ -637,25 +634,14 @@ RLM_ARRAY_TYPE(Realm_tally)
 
 
 - (void) sharingCompleted {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Clear Roll Call?"
-                                                    message:@""
-                                                   delegate:self
-                                          cancelButtonTitle:@"Retain"
-                                          otherButtonTitles:@"Clear", nil];
-    [alert show];
-    [alert release];
-}
-
-
-- (void)alertView:(UIAlertView *)alert clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    NSString *title = [alert buttonTitleAtIndex:buttonIndex];
-    
-    if([title isEqualToString:@"Clear"])
-    {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Clear Roll Call?"
+                                                                   message:@""
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    [alert addAction:[UIAlertAction actionWithTitle:@"Retain" style:UIAlertActionStyleCancel handler:nil]];
+    [alert addAction:[UIAlertAction actionWithTitle:@"Clear" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         [self clearCurrentTally];
-    }
-
+    }]];
+    [self.rc_viewController presentViewController:alert animated:YES completion:nil];
 }
 
 - (void) clearCurrentTally {
@@ -803,7 +789,6 @@ RLM_ARRAY_TYPE(Realm_tally)
         
         CELL_HEADSHOT.image=[UIImage imageNamed:person.photo];
         
-        //NSLog(@"Attempt to load photo %@ %@",person.photo,(CELL_HEADSHOT.image==nil?@"FAILED":@"SUCCEEDED"));
 
         if (CELL_HEADSHOT.image==nil)
         {
@@ -931,7 +916,6 @@ RLM_ARRAY_TYPE(Realm_tally)
             (self.rc_committee.room==nil || [self.rc_committee.room trim].length==0) ) {
             return 73.0;
         }
-        NSLog(@"self.committeeHeaderView.frame.size.height = %f",self.committeeHeaderView.frame.size.height);
         return self.committeeHeaderView.frame.size.height;
     }
     
@@ -1006,7 +990,7 @@ RLM_ARRAY_TYPE(Realm_tally)
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
         if (self.rc_committee.website!=nil && [self.rc_committee.website trim].length>0) {
             NSURL *url = [NSURL URLWithString:[self.rc_committee.website trim]];
-            [[UIApplication sharedApplication] openURL:url];
+            [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
         }
         return;
     }
