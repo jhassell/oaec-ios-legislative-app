@@ -252,7 +252,11 @@ See LICENSE.txt for this sample’s licensing information
             if (cell == nil) {
                 cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:kStatusCellID];
                 cell.selectionStyle = UITableViewCellSelectionStyleNone;
-                activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleMedium];
+                if (@available(iOS 13.0, *)) {
+                    activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleMedium];
+                } else {
+                    activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+                }
                 CGRect frame = activityIndicator.frame;
                 frame.origin = CGPointMake(290.0, 12.0);
                 activityIndicator.frame = frame;

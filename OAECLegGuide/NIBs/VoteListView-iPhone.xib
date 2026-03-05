@@ -23,8 +23,8 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="Background.png" id="15">
-                            <rect key="frame" x="0.0" y="-18" width="320" height="620"/>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="BackgroundNoBack.png" id="15">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         </imageView>
                     </subviews>
@@ -58,6 +58,6 @@
         </view>
     </objects>
     <resources>
-        <image name="Background.png" width="375" height="667"/>
+        <image name="BackgroundNoBack.png" width="375" height="667"/>
     </resources>
 </document>

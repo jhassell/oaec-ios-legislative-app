@@ -86,7 +86,12 @@
     UIAlertView *av =[[[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:nil otherButtonTitles:nil] autorelease];
     [av show];
     
-    UIActivityIndicatorView *aiv = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleLarge];
+    UIActivityIndicatorView *aiv = nil;
+    if (@available(iOS 13.0, *)) {
+        aiv = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleLarge];
+    } else {
+        aiv = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    }
     aiv.center = CGPointMake(av.bounds.size.width / 2.0f, av.bounds.size.height - 40.0f);
     [aiv startAnimating];
     [av addSubview:aiv];

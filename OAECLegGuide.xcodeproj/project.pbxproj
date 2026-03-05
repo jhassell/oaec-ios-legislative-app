@@ -1225,6 +1225,7 @@
 				AF24819D15BB6A250070924E /* Resources */,
 				CEC68C9D1EDCFC8800193036 /* Embed Frameworks */,
 				F570F776EAD903846B05C830 /* [CP] Embed Pods Frameworks */,
+				28BAC2B9D2711A3A807382C2 /* Generate Pushwoosh dSYM for Archive */,
 			);
 			buildRules = (
 			);
@@ -1504,6 +1505,30 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		28BAC2B9D2711A3A807382C2 /* Generate Pushwoosh dSYM for Archive */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PushwooshFramework.framework/PushwooshFramework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PushwooshBridge.framework/PushwooshBridge",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PushwooshCore.framework/PushwooshCore",
+			);
+			name = "Generate Pushwoosh dSYM for Archive";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/PushwooshFramework.framework.dSYM/Contents/Resources/DWARF/PushwooshFramework",
+				"${DWARF_DSYM_FOLDER_PATH}/PushwooshBridge.framework.dSYM/Contents/Resources/DWARF/PushwooshBridge",
+				"${DWARF_DSYM_FOLDER_PATH}/PushwooshCore.framework.dSYM/Contents/Resources/DWARF/PushwooshCore",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -euo pipefail\n\nif [ \"${ACTION:-}\" != \"install\" ]; then\n  exit 0\nfi\n\nDSYM_OUTPUT_DIR=\"${DWARF_DSYM_FOLDER_PATH}\"\nmkdir -p \"$DSYM_OUTPUT_DIR\"\n\nfor framework_name in PushwooshFramework PushwooshBridge PushwooshCore; do\n  FRAMEWORK_BINARY=\"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/${framework_name}.framework/${framework_name}\"\n  DSYM_OUTPUT_PATH=\"${DSYM_OUTPUT_DIR}/${framework_name}.framework.dSYM\"\n\n  if [ ! -f \"$FRAMEWORK_BINARY\" ]; then\n    echo \"[OAEC][dSYM] ${framework_name} binary not found at $FRAMEWORK_BINARY\"\n    continue\n  fi\n\n  DSYM_STDERR_LOG=\"$(mktemp)\"\n  if ! /usr/bin/dsymutil \"$FRAMEWORK_BINARY\" -o \"$DSYM_OUTPUT_PATH\" 2>\"$DSYM_STDERR_LOG\"; then\n    cat \"$DSYM_STDERR_LOG\" >&2\n    rm -f \"$DSYM_STDERR_LOG\"\n    exit 1\n  fi\n  # Pushwoosh ships precompiled without full debug symbols; suppress that noisy warning.\n  /usr/bin/grep -v \"warning: no debug symbols in executable\" \"$DSYM_STDERR_LOG\" >&2 || true\n  rm -f \"$DSYM_STDERR_LOG\"\n  echo \"[OAEC][dSYM] Generated ${framework_name} dSYM at $DSYM_OUTPUT_PATH\"\ndone\n";
+		};
 		F570F776EAD903846B05C830 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1515,6 +1540,8 @@
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/SSZipArchive/SSZipArchive.framework",
 				"${PODS_XCFRAMEWORKS_BUILD_DIR}/PushwooshXCFramework/Core/PushwooshFramework.framework/PushwooshFramework",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/PushwooshXCFramework/PushwooshBridge/PushwooshBridge.framework/PushwooshBridge",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/PushwooshXCFramework/PushwooshCore/PushwooshCore.framework/PushwooshCore",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -1522,6 +1549,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SSZipArchive.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PushwooshFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PushwooshBridge.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PushwooshCore.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1735,11 +1764,13 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 0;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OAECLegGuide/OAECLegGuide-Prefix.pch";
 				INFOPLIST_FILE = "OAECLegGuide/OAECLegGuide-Info.plist";
@@ -1750,7 +1781,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 6.09;
+				MARKETING_VERSION = 6.10;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = coop.oaec.ok56leg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1778,11 +1809,13 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 0;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OAECLegGuide/OAECLegGuide-Prefix.pch";
 				INFOPLIST_FILE = "OAECLegGuide/OAECLegGuide-Info.plist";
@@ -1793,7 +1826,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 6.09;
+				MARKETING_VERSION = 6.10;
 				PRODUCT_BUNDLE_IDENTIFIER = coop.oaec.ok56leg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

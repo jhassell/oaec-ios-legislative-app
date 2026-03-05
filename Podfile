@@ -67,7 +67,57 @@ post_install do |installer|
       native_target.build_configurations.each do |config|
         config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = MIN_IOS_VERSION
         config.build_settings['ENABLE_USER_SCRIPT_SANDBOXING'] = 'NO'
+        config.build_settings['GCC_GENERATE_DEBUGGING_SYMBOLS'] = 'YES'
+        config.build_settings['DEBUG_INFORMATION_FORMAT'] = 'dwarf-with-dsym'
       end
+
+      next unless native_target.name == 'ok55leg'
+
+      phase_name = 'Generate Pushwoosh dSYM for Archive'
+      phase = native_target.shell_script_build_phases.find { |p| p.name == phase_name }
+      phase ||= native_target.new_shell_script_build_phase(phase_name)
+      phase.shell_path = '/bin/sh'
+      phase.input_paths = [
+        '${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PushwooshFramework.framework/PushwooshFramework',
+        '${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PushwooshBridge.framework/PushwooshBridge',
+        '${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PushwooshCore.framework/PushwooshCore'
+      ]
+      phase.output_paths = [
+        '${DWARF_DSYM_FOLDER_PATH}/PushwooshFramework.framework.dSYM/Contents/Resources/DWARF/PushwooshFramework',
+        '${DWARF_DSYM_FOLDER_PATH}/PushwooshBridge.framework.dSYM/Contents/Resources/DWARF/PushwooshBridge',
+        '${DWARF_DSYM_FOLDER_PATH}/PushwooshCore.framework.dSYM/Contents/Resources/DWARF/PushwooshCore'
+      ]
+      phase.shell_script = <<~'SCRIPT'
+        set -euo pipefail
+
+        if [ "${ACTION:-}" != "install" ]; then
+          exit 0
+        fi
+
+        DSYM_OUTPUT_DIR="${DWARF_DSYM_FOLDER_PATH}"
+        mkdir -p "$DSYM_OUTPUT_DIR"
+
+        for framework_name in PushwooshFramework PushwooshBridge PushwooshCore; do
+          FRAMEWORK_BINARY="${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/${framework_name}.framework/${framework_name}"
+          DSYM_OUTPUT_PATH="${DSYM_OUTPUT_DIR}/${framework_name}.framework.dSYM"
+
+          if [ ! -f "$FRAMEWORK_BINARY" ]; then
+            echo "[OAEC][dSYM] ${framework_name} binary not found at $FRAMEWORK_BINARY"
+            continue
+          fi
+
+          DSYM_STDERR_LOG="$(mktemp)"
+          if ! /usr/bin/dsymutil "$FRAMEWORK_BINARY" -o "$DSYM_OUTPUT_PATH" 2>"$DSYM_STDERR_LOG"; then
+            cat "$DSYM_STDERR_LOG" >&2
+            rm -f "$DSYM_STDERR_LOG"
+            exit 1
+          fi
+          # Pushwoosh ships precompiled without full debug symbols; suppress that noisy warning.
+          /usr/bin/grep -v "warning: no debug symbols in executable" "$DSYM_STDERR_LOG" >&2 || true
+          rm -f "$DSYM_STDERR_LOG"
+          echo "[OAEC][dSYM] Generated ${framework_name} dSYM at $DSYM_OUTPUT_PATH"
+        done
+      SCRIPT
     end
     user_project.save
   end

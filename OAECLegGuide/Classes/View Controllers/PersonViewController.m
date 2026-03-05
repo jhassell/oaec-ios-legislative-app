@@ -94,6 +94,10 @@
 - (IBAction)linkedInButtonPressed:(id)sender;
 - (IBAction)webButtonPressed:(id)sender;
 - (IBAction)districtMapButtonPressed:(id)sender;
+- (void)layoutBackButtonForSafeArea;
+- (UIButton *)headshotCloseButton;
+- (void)layoutHeadshotCloseButton;
+- (void)layoutPersonCardBelowBackButton;
 
 @end
 
@@ -225,6 +229,11 @@
     
     self.headshotModalView.alpha=0.0;
     self.headshotModalView.hidden = NO;
+    [self layoutHeadshotCloseButton];
+    UIButton *closeButton = [self headshotCloseButton];
+    if (closeButton) {
+        [self.headshotModalView bringSubviewToFront:closeButton];
+    }
     
     [UIView animateWithDuration:0.5
                           delay:0.0
@@ -253,6 +262,78 @@
 
 - (IBAction)backButtonPressed:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)layoutBackButtonForSafeArea {
+    if (!self.backButton) return;
+
+    CGFloat topInset = 0.0f;
+    if (@available(iOS 11.0, *)) {
+        topInset = self.view.safeAreaInsets.top;
+    }
+
+    CGRect frame = self.backButton.frame;
+    frame.origin.x = 10.0f;
+    // Keep control below status bar and visually separated.
+    frame.origin.y = MAX(34.0f, topInset + 4.0f);
+    frame.size.width = 36.0f;
+    frame.size.height = 36.0f;
+    self.backButton.frame = frame;
+    self.backButton.layer.cornerRadius = 18.0f;
+    self.backButton.layer.borderWidth = 1.0f;
+    self.backButton.layer.borderColor = [[UIColor whiteColor] colorWithAlphaComponent:0.9f].CGColor;
+    self.backButton.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.35f];
+    self.backButton.clipsToBounds = YES;
+
+    [self.view bringSubviewToFront:self.backButton];
+}
+
+- (UIButton *)headshotCloseButton {
+    if (!self.headshotModalView) return nil;
+    for (UIView *subview in self.headshotModalView.subviews) {
+        if ([subview isKindOfClass:[UIButton class]]) {
+            return (UIButton *)subview;
+        }
+    }
+    return nil;
+}
+
+- (void)layoutHeadshotCloseButton {
+    UIButton *closeButton = [self headshotCloseButton];
+    if (!closeButton) return;
+
+    CGFloat topInset = 0.0f;
+    if (@available(iOS 11.0, *)) {
+        topInset = self.view.safeAreaInsets.top;
+    }
+
+    CGRect frame = closeButton.frame;
+    frame.origin.x = 12.0f;
+    frame.origin.y = MAX(14.0f, topInset + 8.0f);
+    frame.size.width = 34.0f;
+    frame.size.height = 34.0f;
+    closeButton.frame = frame;
+
+    [closeButton setTitle:@"X" forState:UIControlStateNormal];
+    [closeButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    closeButton.titleLabel.font = [UIFont boldSystemFontOfSize:20.0f];
+    closeButton.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.55f];
+    closeButton.layer.cornerRadius = 17.0f;
+    closeButton.layer.borderWidth = 1.0f;
+    closeButton.layer.borderColor = [[UIColor whiteColor] colorWithAlphaComponent:0.9f].CGColor;
+    closeButton.clipsToBounds = YES;
+}
+
+- (void)layoutPersonCardBelowBackButton {
+    if (!self.table || !self.backButton) return;
+
+    CGRect tableFrame = self.table.frame;
+    CGFloat desiredTop = CGRectGetMaxY(self.backButton.frame) + 10.0f;
+    if (tableFrame.origin.y < desiredTop) {
+        tableFrame.origin.y = desiredTop;
+        tableFrame.size.height = MAX(0.0f, self.view.bounds.size.height - desiredTop);
+        self.table.frame = tableFrame;
+    }
 }
 
 
@@ -698,6 +779,8 @@
 
 -(void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
+    [self layoutBackButtonForSafeArea];
     
     
     if (firstLoad) {
@@ -949,6 +1032,12 @@
     
 }
 
+-(void) viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
+    [self layoutBackButtonForSafeArea];
+}
+
 
 - (void)viewDidLoad
 {
@@ -956,17 +1045,49 @@
     [self populateNotes];
     firstLoad=YES;
     if (self.backButton) {
+        [self.backButton setBackgroundImage:nil forState:UIControlStateNormal];
+        [self.backButton setBackgroundImage:nil forState:UIControlStateHighlighted];
+        [self.backButton setBackgroundImage:nil forState:UIControlStateSelected];
+        [self.backButton setTitle:nil forState:UIControlStateNormal];
+        [self.backButton setTitle:nil forState:UIControlStateHighlighted];
+        [self.backButton setTitle:nil forState:UIControlStateSelected];
+        [self.backButton setAttributedTitle:nil forState:UIControlStateNormal];
+        [self.backButton setAttributedTitle:nil forState:UIControlStateHighlighted];
+        [self.backButton setAttributedTitle:nil forState:UIControlStateSelected];
+        self.backButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
+        self.backButton.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+        self.backButton.contentEdgeInsets = UIEdgeInsetsZero;
+        self.backButton.imageEdgeInsets = UIEdgeInsetsZero;
+        [self.backButton removeTarget:nil action:NULL forControlEvents:UIControlEventTouchUpInside];
+        [self.backButton addTarget:self action:@selector(backButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+        [self.backButton setExclusiveTouch:YES];
+        [self layoutBackButtonForSafeArea];
+        [self layoutHeadshotCloseButton];
         if (@available(iOS 13.0, *)) {
             UIImage *chevron = [UIImage systemImageNamed:@"chevron.left"];
             if (chevron) {
-                UIImageSymbolConfiguration *config = [UIImageSymbolConfiguration configurationWithPointSize:20 weight:UIImageSymbolWeightMedium];
+                UIImageSymbolConfiguration *config = [UIImageSymbolConfiguration configurationWithPointSize:18 weight:UIImageSymbolWeightBold];
                 chevron = [chevron imageByApplyingSymbolConfiguration:config];
                 [self.backButton setImage:chevron forState:UIControlStateNormal];
+                [self.backButton setImage:chevron forState:UIControlStateHighlighted];
+                [self.backButton setImage:chevron forState:UIControlStateSelected];
                 [self.backButton setTitle:nil forState:UIControlStateNormal];
-                self.backButton.tintColor = [UIColor labelColor];
+                self.backButton.tintColor = [UIColor whiteColor];
             }
+        } else {
+            [self.backButton setImage:nil forState:UIControlStateNormal];
+            [self.backButton setTitle:@"\u2039" forState:UIControlStateNormal];
+            self.backButton.titleLabel.font = [UIFont boldSystemFontOfSize:22.0];
+            [self.backButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         }
     }
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    [self layoutBackButtonForSafeArea];
+    [self layoutHeadshotCloseButton];
+    [self layoutPersonCardBelowBackButton];
 }
 
 - (void)dealloc {

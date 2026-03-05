@@ -1,0 +1,111 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "iOS: Build (Simulator Debug)",
+      "type": "shell",
+      "command": "xcodebuild -workspace OAECLegGuide.xcworkspace -scheme ok56leg -configuration Debug -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' build",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": [
+        "$gcc"
+      ]
+    },
+    {
+      "label": "iOS: Clean Build (Simulator Debug)",
+      "type": "shell",
+      "command": "xcodebuild -workspace OAECLegGuide.xcworkspace -scheme ok56leg -configuration Debug -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' clean build",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ]
+    },
+    {
+      "label": "iOS: Test (Simulator Debug)",
+      "type": "shell",
+      "command": "xcodebuild -workspace OAECLegGuide.xcworkspace -scheme ok56leg -configuration Debug -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' test",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "group": "test",
+      "problemMatcher": [
+        "$gcc"
+      ]
+    },
+    {
+      "label": "iOS: Pod Install",
+      "type": "shell",
+      "command": "pod install",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "iOS: Archive (Release)",
+      "type": "shell",
+      "command": "xcodebuild -workspace OAECLegGuide.xcworkspace -scheme ok56leg -configuration Release -destination 'generic/platform=iOS' -archivePath build/ok56leg.xcarchive archive",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ]
+    },
+    {
+      "label": "iOS: Open In Xcode",
+      "type": "shell",
+      "command": "xed .",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "iOS: List Connected Devices",
+      "type": "shell",
+      "command": "xcrun xctrace list devices",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "iOS: Build (Connected iPhone Debug)",
+      "type": "shell",
+      "command": "xcodebuild -workspace OAECLegGuide.xcworkspace -scheme ok56leg -configuration Debug -destination 'id=${input:iosDeviceUDID}' -derivedDataPath build/DerivedData build",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ]
+    },
+    {
+      "label": "iOS: Run (Connected iPhone Debug)",
+      "type": "shell",
+      "command": "bash -lc \"set -euo pipefail; xcodebuild -workspace OAECLegGuide.xcworkspace -scheme ok56leg -configuration Debug -destination 'id=${input:iosDeviceUDID}' -derivedDataPath build/DerivedData build; APP_PATH='build/DerivedData/Build/Products/Debug-iphoneos/ok55leg.app'; xcrun devicectl device install app --device '${input:iosDeviceUDID}' \\\"$APP_PATH\\\"; xcrun devicectl device process launch --device '${input:iosDeviceUDID}' --terminate-existing coop.oaec.ok56leg\"",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ]
+    }
+  ],
+  "inputs": [
+    {
+      "id": "iosDeviceUDID",
+      "type": "promptString",
+      "description": "Connected iPhone UDID (use iOS: List Connected Devices)",
+      "default": "00008110-001649423E53801E"
+    }
+  ]
+}

@@ -64,6 +64,7 @@
 
 -(void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
     
     if (self.person!=nil) {
         
@@ -84,19 +85,33 @@
     }
 }
 
+-(void) viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     if (self.backButton) {
-        UIImage *chevron = [UIImage systemImageNamed:@"chevron.left"];
-        if (chevron) {
-            UIImageSymbolConfiguration *config = [UIImageSymbolConfiguration configurationWithPointSize:20 weight:UIImageSymbolWeightMedium];
-            chevron = [chevron imageByApplyingSymbolConfiguration:config];
-            [self.backButton setImage:chevron forState:UIControlStateNormal];
-            [self.backButton setTitle:nil forState:UIControlStateNormal];
-            [self.backButton setBackgroundImage:nil forState:UIControlStateNormal];
-            self.backButton.tintColor = [UIColor labelColor];
+        [self.backButton setBackgroundImage:nil forState:UIControlStateNormal];
+        [self.backButton setAttributedTitle:nil forState:UIControlStateNormal];
+        [self.backButton setAttributedTitle:nil forState:UIControlStateHighlighted];
+        if (@available(iOS 13.0, *)) {
+            UIImage *chevron = [UIImage systemImageNamed:@"chevron.left"];
+            if (chevron) {
+                UIImageSymbolConfiguration *config = [UIImageSymbolConfiguration configurationWithPointSize:20 weight:UIImageSymbolWeightMedium];
+                chevron = [chevron imageByApplyingSymbolConfiguration:config];
+                [self.backButton setImage:chevron forState:UIControlStateNormal];
+                [self.backButton setTitle:nil forState:UIControlStateNormal];
+                self.backButton.tintColor = [UIColor labelColor];
+            }
+        } else {
+            [self.backButton setImage:nil forState:UIControlStateNormal];
+            [self.backButton setTitle:@"\u2039" forState:UIControlStateNormal];
+            self.backButton.titleLabel.font = [UIFont boldSystemFontOfSize:24.0];
+            [self.backButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         }
     }
 }

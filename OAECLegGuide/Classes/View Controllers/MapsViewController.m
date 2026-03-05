@@ -571,6 +571,7 @@
 #pragma mark - Lifecycle Stuff
 
 -(void) viewWillAppear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
     
     if (firstLoad) {
         
@@ -757,6 +758,9 @@
 	// Do any additional setup after loading the view.
     UIButton *backBtn = self.leftArrowButton ?: (UIButton *)[self.view viewWithTag:9001];
     if ([backBtn isKindOfClass:[UIButton class]]) {
+        [backBtn setBackgroundImage:nil forState:UIControlStateNormal];
+        [backBtn setAttributedTitle:nil forState:UIControlStateNormal];
+        [backBtn setAttributedTitle:nil forState:UIControlStateHighlighted];
         if (@available(iOS 13.0, *)) {
             UIImage *chevron = [UIImage systemImageNamed:@"chevron.left"];
             if (chevron) {
@@ -764,9 +768,13 @@
                 chevron = [chevron imageByApplyingSymbolConfiguration:config];
                 [backBtn setImage:chevron forState:UIControlStateNormal];
                 [backBtn setTitle:nil forState:UIControlStateNormal];
-                [backBtn setBackgroundImage:nil forState:UIControlStateNormal];
                 backBtn.tintColor = [UIColor labelColor];
             }
+        } else {
+            [backBtn setImage:nil forState:UIControlStateNormal];
+            [backBtn setTitle:@"\u2039" forState:UIControlStateNormal];
+            backBtn.titleLabel.font = [UIFont boldSystemFontOfSize:24.0];
+            [backBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         }
     }
 }
