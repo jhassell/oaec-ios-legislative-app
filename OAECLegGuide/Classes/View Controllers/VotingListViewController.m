@@ -25,6 +25,7 @@
 @property (retain, nonatomic) IBOutlet UITableView *rc_peopleTable;
 
 - (IBAction)backButtonPushed:(id)sender;
+- (void)layoutRollCallScreen;
 
 @end
 
@@ -84,11 +85,22 @@
             [backBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         }
     }
+    if ([self.rc_peopleTable respondsToSelector:@selector(setSeparatorInset:)]) {
+        self.rc_peopleTable.separatorInset = UIEdgeInsetsZero;
+    }
+    if ([self.rc_peopleTable respondsToSelector:@selector(setLayoutMargins:)]) {
+        self.rc_peopleTable.layoutMargins = UIEdgeInsetsZero;
+    }
+    if ([self.rc_peopleTable respondsToSelector:@selector(setCellLayoutMarginsFollowReadableWidth:)]) {
+        self.rc_peopleTable.cellLayoutMarginsFollowReadableWidth = NO;
+    }
+    [self layoutRollCallScreen];
 }
 
 -(void) viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:NO];
+    [self layoutRollCallScreen];
     if (self.rc_peopleTable.indexPathForSelectedRow!=nil) {
         [self.rc_peopleTable deselectRowAtIndexPath:self.rc_peopleTable.indexPathForSelectedRow animated:YES];
     }
@@ -97,6 +109,7 @@
 -(void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:NO];
+    [self layoutRollCallScreen];
     if (self.rollCallListDelegate==nil) {
         self.rollCallListDelegate = [[[RollCallListDelegate alloc] init] autorelease];
         self.rollCallListDelegate.rc_viewController = self;
@@ -110,6 +123,39 @@
         
         
     }
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    [self layoutRollCallScreen];
+}
+
+- (void)layoutRollCallScreen {
+    for (UIView *subview in self.view.subviews) {
+        if ([subview isKindOfClass:[UIImageView class]]) {
+            subview.frame = self.view.bounds;
+            subview.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+            [self.view sendSubviewToBack:subview];
+            continue;
+        }
+
+        if (subview.subviews.count == 1 && [subview.subviews.firstObject isKindOfClass:[UIImageView class]]) {
+            UIImageView *backgroundImageView = (UIImageView *)subview.subviews.firstObject;
+            subview.frame = self.view.bounds;
+            subview.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+            backgroundImageView.frame = subview.bounds;
+            backgroundImageView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+            [self.view sendSubviewToBack:subview];
+        }
+    }
+
+    UIButton *backBtn = (UIButton *)[self.view viewWithTag:9001];
+    CGFloat top = 52.0f;
+    if ([backBtn isKindOfClass:[UIButton class]]) {
+        top = MAX(top, CGRectGetMaxY(backBtn.frame) + 8.0f);
+    }
+    self.rc_peopleTable.frame = CGRectMake(0.0f, top, self.view.bounds.size.width, self.view.bounds.size.height - top);
+    self.rc_peopleTable.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 }
 
 - (void)dealloc

@@ -29,6 +29,22 @@
 #define CELL_YEA_VOTE       ((UIButton *)[cell viewWithTag:106])
 #define CELL_NAY_VOTE       ((UIButton *)[cell viewWithTag:107])
 
+static NSString *VotingSubtitleWithRoom(NSString *title, NSString *room) {
+    NSString *trimmedTitle = [title trim];
+    NSString *trimmedRoom = [room trim];
+    BOOL hasTitle = (trimmedTitle != nil && trimmedTitle.length > 0);
+    BOOL hasRoom = (trimmedRoom != nil && trimmedRoom.length > 0);
+
+    if (hasTitle && hasRoom) {
+        return [NSString stringWithFormat:@"%@, %@", trimmedTitle, trimmedRoom];
+    } else if (hasTitle) {
+        return trimmedTitle;
+    } else if (hasRoom) {
+        return trimmedRoom;
+    }
+    return @"";
+}
+
 
 // Data models: GroupParent contains all of the data for a TableView, with a
 // Group per section and an Entry per row in each section
@@ -618,6 +634,8 @@ RLM_ARRAY_TYPE(Realm_tally)
             CELL_SUBTITLE.text = @"";
         }
     }
+
+    CELL_SUBTITLE.text = VotingSubtitleWithRoom(CELL_SUBTITLE.text, person.officeRmNumber);
     
     
     BOOL hasPhoto=NO;
@@ -661,6 +679,52 @@ RLM_ARRAY_TYPE(Realm_tally)
     UIButton *nayButton = CELL_NAY_VOTE;
     self.sectionTally.yeaButtonRef[row] = yeaButton;
     self.sectionTally.nayButtonRef[row] = nayButton;
+
+    CGRect contentFrame = cell.contentView.frame;
+    contentFrame.size.width = tableView.bounds.size.width;
+    cell.contentView.frame = contentFrame;
+    CGFloat contentWidth = contentFrame.size.width;
+
+    CGFloat voteButtonSize = 29.0f;
+    CGFloat voteRightPadding = 8.0f;
+    CGFloat voteGap = 8.0f;
+    CGRect nayFrame = nayButton.frame;
+    nayFrame.size.width = voteButtonSize;
+    nayFrame.size.height = voteButtonSize;
+    nayFrame.origin.x = contentWidth - voteRightPadding - voteButtonSize;
+    nayButton.frame = nayFrame;
+    nayButton.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
+
+    CGRect yeaFrame = yeaButton.frame;
+    yeaFrame.size.width = voteButtonSize;
+    yeaFrame.size.height = voteButtonSize;
+    yeaFrame.origin.x = nayFrame.origin.x - voteGap - voteButtonSize;
+    yeaButton.frame = yeaFrame;
+    yeaButton.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
+
+    CGFloat textLeft = CGRectGetMaxX(CELL_HEADSHOT.frame) + 10.0f;
+    CGFloat textRight = MAX(textLeft + 80.0f, yeaFrame.origin.x - 10.0f);
+    CGFloat textWidth = MAX(80.0f, textRight - textLeft);
+
+    CGRect districtFrame = CELL_DISTRICT.frame;
+    districtFrame.size.width = MIN(120.0f, textWidth * 0.42f);
+    districtFrame.origin.x = textRight - districtFrame.size.width;
+    CELL_DISTRICT.frame = districtFrame;
+
+    CGRect titleFrame = CELL_TITLE.frame;
+    titleFrame.origin.x = textLeft;
+    titleFrame.size.width = MAX(60.0f, districtFrame.origin.x - textLeft - 6.0f);
+    CELL_TITLE.frame = titleFrame;
+
+    CGRect nameFrame = CELL_NAME.frame;
+    nameFrame.origin.x = textLeft;
+    nameFrame.size.width = textWidth;
+    CELL_NAME.frame = nameFrame;
+
+    CGRect subtitleFrame = CELL_SUBTITLE.frame;
+    subtitleFrame.origin.x = textLeft;
+    subtitleFrame.size.width = textWidth;
+    CELL_SUBTITLE.frame = subtitleFrame;
     
     
     [yeaButton setImage:yeaImage forState:UIControlStateNormal];
@@ -685,7 +749,30 @@ RLM_ARRAY_TYPE(Realm_tally)
     // set the button's target to this table view controller so we can interpret touch events and map that to a NSIndexSet
     [nayButton addTarget:self action:@selector(nayCheckButtonTapped:forEvent:) forControlEvents:UIControlEventTouchUpInside];
 
+    cell.frame = CGRectMake(0.0f, cell.frame.origin.y, tableView.bounds.size.width, cell.frame.size.height);
+    if ([cell respondsToSelector:@selector(setSeparatorInset:)]) {
+        cell.separatorInset = UIEdgeInsetsZero;
+    }
+    if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
+        cell.layoutMargins = UIEdgeInsetsZero;
+    }
+    if ([cell respondsToSelector:@selector(setPreservesSuperviewLayoutMargins:)]) {
+        cell.preservesSuperviewLayoutMargins = NO;
+    }
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    cell.frame = CGRectMake(0.0f, cell.frame.origin.y, tableView.bounds.size.width, cell.frame.size.height);
+    if ([cell respondsToSelector:@selector(setSeparatorInset:)]) {
+        cell.separatorInset = UIEdgeInsetsZero;
+    }
+    if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
+        cell.layoutMargins = UIEdgeInsetsZero;
+    }
+    if ([cell respondsToSelector:@selector(setPreservesSuperviewLayoutMargins:)]) {
+        cell.preservesSuperviewLayoutMargins = NO;
+    }
 }
 
 

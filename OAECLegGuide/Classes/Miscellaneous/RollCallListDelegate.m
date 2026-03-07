@@ -29,6 +29,46 @@
 #define CELL_YEA_VOTE       ((UIButton *)[cell viewWithTag:106])
 #define CELL_NAY_VOTE       ((UIButton *)[cell viewWithTag:107])
 
+static NSString *RCSubtitleWithRoom(NSString *title, NSString *room) {
+    NSString *trimmedTitle = [title trim];
+    NSString *trimmedRoom = [room trim];
+    BOOL hasTitle = (trimmedTitle != nil && trimmedTitle.length > 0);
+    BOOL hasRoom = (trimmedRoom != nil && trimmedRoom.length > 0);
+
+    if (hasTitle && hasRoom) {
+        return [NSString stringWithFormat:@"%@, %@", trimmedTitle, trimmedRoom];
+    } else if (hasTitle) {
+        return trimmedTitle;
+    } else if (hasRoom) {
+        return trimmedRoom;
+    }
+    return @"";
+}
+
+static void RCCenterLabelInContainer(UILabel *label, CGFloat containerWidth, CGFloat horizontalPadding) {
+    if (!label) return;
+    CGRect frame = label.frame;
+    frame.origin.x = horizontalPadding;
+    frame.size.width = MAX(40.0f, containerWidth - (horizontalPadding * 2.0f));
+    label.frame = frame;
+    label.textAlignment = NSTextAlignmentCenter;
+}
+
+static UILabel *RCFindLabelWithExactText(UIView *rootView, NSString *text) {
+    if (![rootView isKindOfClass:[UIView class]]) return nil;
+    for (UIView *subview in rootView.subviews) {
+        if ([subview isKindOfClass:[UILabel class]]) {
+            UILabel *label = (UILabel *)subview;
+            if ([label.text isEqualToString:text]) {
+                return label;
+            }
+        }
+        UILabel *nested = RCFindLabelWithExactText(subview, text);
+        if (nested) return nested;
+    }
+    return nil;
+}
+
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
 RLM_ARRAY_TYPE(Realm_vote)
@@ -680,6 +720,17 @@ RLM_ARRAY_TYPE(Realm_tally)
     }
     
     if (indexPath.section==1 && indexPath.row==0 && self.committeeHeaderView!=nil) {
+        CGRect headerFrame = self.committeeHeaderView.frame;
+        headerFrame.size.width = tableView.bounds.size.width;
+        self.committeeHeaderView.frame = headerFrame;
+        self.committeeHeaderView.contentView.frame = CGRectMake(0.0f, 0.0f, tableView.bounds.size.width, self.committeeHeaderView.contentView.frame.size.height);
+
+        CommitteeHeaderView *headerCell = (CommitteeHeaderView *)self.committeeHeaderView;
+        CGFloat headerWidth = self.committeeHeaderView.contentView.frame.size.width;
+        RCCenterLabelInContainer(headerCell.chamberLabel, headerWidth, 8.0f);
+        RCCenterLabelInContainer(headerCell.committeeNameLabel, headerWidth, 8.0f);
+        RCCenterLabelInContainer(headerCell.committeeSubtypeLabel, headerWidth, 8.0f);
+
         return self.committeeHeaderView;
     }
 
@@ -782,6 +833,8 @@ RLM_ARRAY_TYPE(Realm_tally)
             CELL_SUBTITLE.text = @"";
         }
     }
+
+    CELL_SUBTITLE.text = RCSubtitleWithRoom(CELL_SUBTITLE.text, person.officeRmNumber);
     
     BOOL hasPhoto=NO;
     if (person.photo!=nil && [person.photo length]>0) {
@@ -832,6 +885,52 @@ RLM_ARRAY_TYPE(Realm_tally)
     self.sectionTally.yeaButtonRef[row] = yeaButton;
     self.sectionTally.nayButtonRef[row] = nayButton;
 
+    CGRect contentFrame = cell.contentView.frame;
+    contentFrame.size.width = tableView.bounds.size.width;
+    cell.contentView.frame = contentFrame;
+    CGFloat contentWidth = contentFrame.size.width;
+
+    CGFloat voteButtonSize = 29.0f;
+    CGFloat voteRightPadding = 8.0f;
+    CGFloat voteGap = 8.0f;
+    CGRect nayFrame = nayButton.frame;
+    nayFrame.size.width = voteButtonSize;
+    nayFrame.size.height = voteButtonSize;
+    nayFrame.origin.x = contentWidth - voteRightPadding - voteButtonSize;
+    nayButton.frame = nayFrame;
+    nayButton.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
+
+    CGRect yeaFrame = yeaButton.frame;
+    yeaFrame.size.width = voteButtonSize;
+    yeaFrame.size.height = voteButtonSize;
+    yeaFrame.origin.x = nayFrame.origin.x - voteGap - voteButtonSize;
+    yeaButton.frame = yeaFrame;
+    yeaButton.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
+
+    CGFloat textLeft = CGRectGetMaxX(CELL_HEADSHOT.frame) + 10.0f;
+    CGFloat textRight = MAX(textLeft + 80.0f, yeaFrame.origin.x - 10.0f);
+    CGFloat textWidth = MAX(80.0f, textRight - textLeft);
+
+    CGRect districtFrame = CELL_DISTRICT.frame;
+    districtFrame.size.width = MIN(120.0f, textWidth * 0.42f);
+    districtFrame.origin.x = textRight - districtFrame.size.width;
+    CELL_DISTRICT.frame = districtFrame;
+
+    CGRect titleFrame = CELL_TITLE.frame;
+    titleFrame.origin.x = textLeft;
+    titleFrame.size.width = MAX(60.0f, districtFrame.origin.x - textLeft - 6.0f);
+    CELL_TITLE.frame = titleFrame;
+
+    CGRect nameFrame = CELL_NAME.frame;
+    nameFrame.origin.x = textLeft;
+    nameFrame.size.width = textWidth;
+    CELL_NAME.frame = nameFrame;
+
+    CGRect subtitleFrame = CELL_SUBTITLE.frame;
+    subtitleFrame.origin.x = textLeft;
+    subtitleFrame.size.width = textWidth;
+    CELL_SUBTITLE.frame = subtitleFrame;
+
     [yeaButton setImage:yeaImage forState:UIControlStateNormal];
     [yeaButton setTitle:[NSString stringWithFormat:@"%ld",(long)row] forState:UIControlStateNormal];
     [yeaButton setTitleColor:yeaButton.backgroundColor forState:UIControlStateNormal];
@@ -851,7 +950,30 @@ RLM_ARRAY_TYPE(Realm_tally)
     // set the button's target to this table view controller so we can interpret touch events and map that to a NSIndexSet
     [nayButton addTarget:self action:@selector(rc_nayCheckButtonTapped:forEvent:) forControlEvents:UIControlEventTouchUpInside];
 
+    cell.frame = CGRectMake(0.0f, cell.frame.origin.y, tableView.bounds.size.width, cell.frame.size.height);
+    if ([cell respondsToSelector:@selector(setSeparatorInset:)]) {
+        cell.separatorInset = UIEdgeInsetsZero;
+    }
+    if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
+        cell.layoutMargins = UIEdgeInsetsZero;
+    }
+    if ([cell respondsToSelector:@selector(setPreservesSuperviewLayoutMargins:)]) {
+        cell.preservesSuperviewLayoutMargins = NO;
+    }
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    cell.frame = CGRectMake(0.0f, cell.frame.origin.y, tableView.bounds.size.width, cell.frame.size.height);
+    if ([cell respondsToSelector:@selector(setSeparatorInset:)]) {
+        cell.separatorInset = UIEdgeInsetsZero;
+    }
+    if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
+        cell.layoutMargins = UIEdgeInsetsZero;
+    }
+    if ([cell respondsToSelector:@selector(setPreservesSuperviewLayoutMargins:)]) {
+        cell.preservesSuperviewLayoutMargins = NO;
+    }
 }
 
 #pragma mark - Table view delegate
@@ -867,6 +989,8 @@ RLM_ARRAY_TYPE(Realm_tally)
         
         headerTitle.text = [NSString stringWithFormat:@"Your %@ Roll Call", self.rc_tallyGroupTitle];
         headerTitle.text = [headerTitle.text stringByReplacingOccurrencesOfString:@"Oklahoma " withString:@""];
+        self.rc_customHeaderCell.contentView.frame = CGRectMake(0.0f, 0.0f, tableView.bounds.size.width, self.rc_customHeaderCell.contentView.frame.size.height);
+        RCCenterLabelInContainer(headerTitle, tableView.bounds.size.width, 8.0f);
 
         UILabel *yeaHeaderLabel = (UILabel *)[self.rc_customHeaderCell.contentView viewWithTag:11];
         UILabel *nayHeaderLabel = (UILabel *)[self.rc_customHeaderCell.contentView viewWithTag:12];
@@ -880,6 +1004,49 @@ RLM_ARRAY_TYPE(Realm_tally)
         undecidedHeaderLabel.layer.borderWidth = 4.0;
         
         UIButton *emailTallyButton = (UIButton *)[self.rc_customHeaderCell.contentView viewWithTag:14];
+
+        CGFloat countWidth = yeaHeaderLabel.frame.size.width;
+        CGFloat countHeight = yeaHeaderLabel.frame.size.height;
+        CGFloat countSpacing = 30.0f;
+        CGFloat countsGroupWidth = (countWidth * 3.0f) + (countSpacing * 2.0f);
+        CGFloat leftX = floor((tableView.bounds.size.width - countsGroupWidth) / 2.0f);
+        CGFloat countY = yeaHeaderLabel.frame.origin.y;
+
+        yeaHeaderLabel.frame = CGRectMake(leftX, countY, countWidth, countHeight);
+        nayHeaderLabel.frame = CGRectMake(CGRectGetMaxX(yeaHeaderLabel.frame) + countSpacing, countY, countWidth, countHeight);
+        undecidedHeaderLabel.frame = CGRectMake(CGRectGetMaxX(nayHeaderLabel.frame) + countSpacing, countY, countWidth, countHeight);
+
+        UILabel *yeaTextLabel = RCFindLabelWithExactText(self.rc_customHeaderCell.contentView, @"YEA");
+        UILabel *nayTextLabel = RCFindLabelWithExactText(self.rc_customHeaderCell.contentView, @"NAY");
+        UILabel *undecidedTextLabel = RCFindLabelWithExactText(self.rc_customHeaderCell.contentView, @"UNDECIDED");
+        if (yeaTextLabel) {
+            CGRect frame = yeaTextLabel.frame;
+            CGSize textSize = [yeaTextLabel.text sizeWithAttributes:@{NSFontAttributeName: yeaTextLabel.font ?: [UIFont systemFontOfSize:13.0f]}];
+            frame.size.width = ceil(textSize.width);
+            frame.origin.x = floor(CGRectGetMidX(yeaHeaderLabel.frame) - (frame.size.width / 2.0f));
+            yeaTextLabel.frame = frame;
+            yeaTextLabel.textAlignment = NSTextAlignmentCenter;
+        }
+        if (nayTextLabel) {
+            CGRect frame = nayTextLabel.frame;
+            CGSize textSize = [nayTextLabel.text sizeWithAttributes:@{NSFontAttributeName: nayTextLabel.font ?: [UIFont systemFontOfSize:13.0f]}];
+            frame.size.width = ceil(textSize.width);
+            frame.origin.x = floor(CGRectGetMidX(nayHeaderLabel.frame) - (frame.size.width / 2.0f));
+            nayTextLabel.frame = frame;
+            nayTextLabel.textAlignment = NSTextAlignmentCenter;
+        }
+        if (undecidedTextLabel) {
+            CGRect frame = undecidedTextLabel.frame;
+            CGSize textSize = [undecidedTextLabel.text sizeWithAttributes:@{NSFontAttributeName: undecidedTextLabel.font ?: [UIFont systemFontOfSize:13.0f]}];
+            frame.size.width = ceil(textSize.width);
+            frame.origin.x = floor(CGRectGetMidX(undecidedHeaderLabel.frame) - (frame.size.width / 2.0f));
+            undecidedTextLabel.frame = frame;
+            undecidedTextLabel.textAlignment = NSTextAlignmentCenter;
+        }
+
+        CGRect shareFrame = emailTallyButton.frame;
+        shareFrame.origin.x = floor((tableView.bounds.size.width - shareFrame.size.width) / 2.0f);
+        emailTallyButton.frame = shareFrame;
         
         [emailTallyButton addTarget:self action:@selector(emailTallyButtonTapped:forEvent:) forControlEvents:UIControlEventTouchUpInside];
         
