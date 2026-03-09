@@ -131,10 +131,12 @@
 }
 
 - (void)layoutRollCallScreen {
+    const CGFloat backgroundGraphicAlpha = 0.10f;
     for (UIView *subview in self.view.subviews) {
         if ([subview isKindOfClass:[UIImageView class]]) {
             subview.frame = self.view.bounds;
             subview.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+            subview.alpha = backgroundGraphicAlpha;
             [self.view sendSubviewToBack:subview];
             continue;
         }
@@ -145,6 +147,7 @@
             subview.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
             backgroundImageView.frame = subview.bounds;
             backgroundImageView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+            backgroundImageView.alpha = backgroundGraphicAlpha;
             [self.view sendSubviewToBack:subview];
         }
     }

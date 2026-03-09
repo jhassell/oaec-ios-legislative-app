@@ -26,6 +26,8 @@
 #define ENROCOMMITTEES  @"Energy & Natural Resources Oversight Committees"
 #define JPSCOMMITTEES   @"Judiciary & Public Safety Oversight Committees"
 
+extern NSString * const OAECSpreadsheetDataDidReloadNotification;
+
 
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate> {

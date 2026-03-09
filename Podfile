@@ -134,5 +134,34 @@ post_install do |installer|
     File.write(xcconfig_path, updated)
   end
 
+  sszip_header_rewrites = {
+    installer.sandbox.root + 'SSZipArchive/SSZipArchive/SSZipArchive.h' => [
+      ['#import <SSZipArchive/SSZipCommon.h>', '#import "SSZipCommon.h"']
+    ],
+    installer.sandbox.root + 'Target Support Files/SSZipArchive/SSZipArchive-umbrella.h' => [
+      ['#import <SSZipArchive/SSZipArchive.h>', '#import "SSZipArchive.h"'],
+      ['#import <SSZipArchive/SSZipCommon.h>', '#import "SSZipCommon.h"']
+    ]
+  }
+
+  sszip_header_rewrites.each do |header_path, replacements|
+    next unless File.exist?(header_path)
+
+    begin
+      File.chmod(0644, header_path)
+    rescue SystemCallError
+      # Best effort; continue so installs do not fail if permissions are already correct.
+    end
+
+    content = File.read(header_path)
+    updated = replacements.reduce(content) do |memo, (old_string, new_string)|
+      memo.gsub(old_string, new_string)
+    end
+
+    next if updated == content
+
+    File.write(header_path, updated)
+  end
+
   installer.pods_project.save
 end

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AboutViewController : UIViewController
+@interface AboutViewController : UIViewController <UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate>
 
 @property (retain, nonatomic) IBOutlet UIImageView *backgroundImage;
 @property (retain, nonatomic) IBOutlet UIButton *legislatureButton;

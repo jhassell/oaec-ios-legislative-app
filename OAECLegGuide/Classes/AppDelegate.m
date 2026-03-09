@@ -16,8 +16,17 @@
 #import "NSDictionary+Committee.h"
 #import <UserNotifications/UserNotifications.h>
 #import "SSZipArchive.h"
+#if __has_feature(modules)
+@import PushwooshFramework;
+#elif __has_include(<PushwooshFramework/PushwooshFramework.h>)
 #import <PushwooshFramework/PushwooshFramework.h>
+#elif __has_include("PushwooshFramework.h")
+#import "PushwooshFramework.h"
+#elif __has_include(<PushwooshFramework.h>)
+#import <PushwooshFramework.h>
+#endif
 
+NSString * const OAECSpreadsheetDataDidReloadNotification = @"OAECSpreadsheetDataDidReloadNotification";
 
 @implementation AppDelegate
 
@@ -318,10 +327,41 @@ static void OpenExternalURLWithLogging(NSURL *url) {
         }
     }
 
-    
-    
     NSLog(@"[OAEC][Data] Dataset population complete");
 
+}
+
+- (void)publishSpreadsheetPeopleOnMainThread:(NSArray *)people {
+    self.all = people ?: @[];
+    [self populateSpreadsheetData];
+    [[NSNotificationCenter defaultCenter] postNotificationName:OAECSpreadsheetDataDidReloadNotification object:self];
+}
+
+- (NSArray *)loadPreferredLocalSpreadsheetPeople {
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSString *docsDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *previousDataFilename = [NSString stringWithFormat:@"%@/previousdata.csv", docsDir];
+    NSString *bundledDataFilename = [[NSBundle mainBundle] pathForResource:@"data" ofType:@"csv"];
+
+    if ([fileManager fileExistsAtPath:previousDataFilename]) {
+        NSArray *cachedPeople = [DataLoader loadCSVFile:previousDataFilename];
+        if (cachedPeople != nil && cachedPeople.count > 0) {
+            NSLog(@"[OAEC][Download] Preloaded cached previousdata.csv (%lu rows)", (unsigned long)cachedPeople.count);
+            return cachedPeople;
+        }
+        NSLog(@"[OAEC][Download] Cached previousdata.csv was empty or invalid; falling back to bundled data.csv");
+    }
+
+    if (bundledDataFilename != nil) {
+        NSArray *bundledPeople = [DataLoader loadCSVFile:bundledDataFilename];
+        if (bundledPeople != nil && bundledPeople.count > 0) {
+            NSLog(@"[OAEC][Download] Preloaded bundled data.csv (%lu rows)", (unsigned long)bundledPeople.count);
+            return bundledPeople;
+        }
+    }
+
+    NSLog(@"[OAEC][Download] No usable local spreadsheet was available before download");
+    return nil;
 }
 
 
@@ -332,6 +372,17 @@ static void OpenExternalURLWithLogging(NSURL *url) {
     NSURL *URL = [NSURL URLWithString:@"https://www.dropbox.com/s/1f6ymjx2mjq0wn6/data58.csv?raw=1"];
     NSString *csvFilename = [NSString stringWithFormat:@"%@/data58.csv", docsDir];
     NSString *previousDataFilename = [NSString stringWithFormat:@"%@/previousdata.csv", docsDir];
+    NSArray *preloadedPeople = nil;
+    if (self.all == nil || self.all.count == 0) {
+        preloadedPeople = [self loadPreferredLocalSpreadsheetPeople];
+    }
+    if (preloadedPeople != nil && preloadedPeople.count > 0) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (self.all == nil || self.all.count == 0) {
+                [self publishSpreadsheetPeopleOnMainThread:preloadedPeople];
+            }
+        });
+    }
     [fileManager removeItemAtPath:csvFilename error:nil];
 
     NSLog(@"[OAEC][Download] Starting data58.csv download");
@@ -340,6 +391,7 @@ static void OpenExternalURLWithLogging(NSURL *url) {
         mapDataLoaded = NO;
         NSError *fmError = nil;
         NSString *harddataFilename = [[NSBundle mainBundle] pathForResource:@"data" ofType:@"csv"];
+        NSArray *loadedPeople = nil;
         if (error != nil) {
             NSLog(@"[OAEC][Download] data58.csv download failed: %@", error.localizedDescription);
         }
@@ -350,34 +402,38 @@ static void OpenExternalURLWithLogging(NSURL *url) {
         }
         BOOL usedDownloaded = NO, usedPrevious = NO, usedBundle = NO;
         if ([fileManager fileExistsAtPath:csvFilename]) {
-            self.all = [DataLoader loadCSVFile:csvFilename];
-            if (self.all != nil && self.all.count > 0) {
+            loadedPeople = [DataLoader loadCSVFile:csvFilename];
+            if (loadedPeople != nil && loadedPeople.count > 0) {
                 usedDownloaded = YES;
-                NSLog(@"[OAEC][Download] data58.csv loaded from network (%lu rows)", (unsigned long)self.all.count);
+                NSLog(@"[OAEC][Download] data58.csv loaded from network (%lu rows)", (unsigned long)loadedPeople.count);
                 [fileManager removeItemAtPath:previousDataFilename error:&fmError];
                 [fileManager copyItemAtPath:csvFilename toPath:previousDataFilename error:&fmError];
                 [fileManager removeItemAtPath:csvFilename error:&fmError];
             }
         }
         if (!usedDownloaded && [fileManager fileExistsAtPath:previousDataFilename]) {
-            self.all = [DataLoader loadCSVFile:previousDataFilename];
-            if (self.all != nil && self.all.count > 0) {
+            loadedPeople = [DataLoader loadCSVFile:previousDataFilename];
+            if (loadedPeople != nil && loadedPeople.count > 0) {
                 usedPrevious = YES;
-                NSLog(@"[OAEC][Download] data58.csv fallback to cached previousdata.csv (%lu rows)", (unsigned long)self.all.count);
+                NSLog(@"[OAEC][Download] data58.csv fallback to cached previousdata.csv (%lu rows)", (unsigned long)loadedPeople.count);
             }
         }
         if (!usedDownloaded && !usedPrevious && harddataFilename != nil) {
-            self.all = [DataLoader loadCSVFile:harddataFilename];
-            if (self.all != nil && self.all.count > 0) {
+            loadedPeople = [DataLoader loadCSVFile:harddataFilename];
+            if (loadedPeople != nil && loadedPeople.count > 0) {
                 usedBundle = YES;
-                NSLog(@"[OAEC][Download] data58.csv fallback to bundled data.csv (%lu rows)", (unsigned long)self.all.count);
+                NSLog(@"[OAEC][Download] data58.csv fallback to bundled data.csv (%lu rows)", (unsigned long)loadedPeople.count);
             }
         }
-        if (self.all == nil || self.all.count == 0) self.all = @[];
+        if (loadedPeople == nil || loadedPeople.count == 0) loadedPeople = @[];
         if (!usedDownloaded && !usedPrevious && !usedBundle) {
             NSLog(@"[OAEC][Download] data58.csv unavailable; continuing with empty dataset");
         }
-        [self populateSpreadsheetData];
+
+        dispatch_async(dispatch_get_main_queue(), ^{
+            // Keep dataset publication on the main thread so UI readers never race background writes.
+            [self publishSpreadsheetPeopleOnMainThread:loadedPeople];
+        });
     }];
     [downloadTask resume];
 }
@@ -525,10 +581,18 @@ static void OpenExternalURLWithLogging(NSURL *url) {
 }
 
 -(void) loadBoundaries {
-    if (mapDataLoaded) return;
-    mapDataLoaded = YES;
-    [self presentLoadingAlert];
-    [self performSelector:@selector(realLoadBoundaries) withObject:nil afterDelay:0.01];
+    @synchronized (self) {
+        if (mapDataLoaded) return;
+        mapDataLoaded = YES;
+    }
+
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self presentLoadingAlert];
+    });
+
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [self realLoadBoundaries];
+    });
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

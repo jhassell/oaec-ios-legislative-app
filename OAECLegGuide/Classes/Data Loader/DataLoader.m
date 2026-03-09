@@ -17,6 +17,28 @@
 
 @implementation DataLoader
 
++ (NSArray *)validatedMutableRowsFromParsedRows:(id)parsedRows context:(NSString *)context {
+    if (![parsedRows isKindOfClass:[NSArray class]]) {
+        NSLog(@"[OAEC][DataLoader] Expected parsed rows array for %@ but received %@.",
+              context ?: @"CSV",
+              parsedRows ? NSStringFromClass([parsedRows class]) : @"nil");
+        return nil;
+    }
+
+    NSMutableArray *validatedRows = [NSMutableArray arrayWithCapacity:[(NSArray *)parsedRows count]];
+    for (id rowCandidate in (NSArray *)parsedRows) {
+        if (![rowCandidate isKindOfClass:[NSDictionary class]]) {
+            NSLog(@"[OAEC][DataLoader] Skipping unexpected %@ parsed row of type %@.",
+                  context ?: @"CSV",
+                  NSStringFromClass([rowCandidate class]));
+            continue;
+        }
+        NSMutableDictionary *mutableRow = [[(NSDictionary *)rowCandidate mutableCopy] autorelease];
+        [validatedRows addObject:mutableRow];
+    }
+    return validatedRows;
+}
+
 +(NSArray *) loadCSVFile:(NSString *) csvPath {
     NSError *error = nil;
     NSString *csvString = [NSString stringWithContentsOfFile:csvPath encoding:NSUTF8StringEncoding error:&error];
@@ -35,14 +57,23 @@
     }
 
     CSVParser *parser = [[[CSVParser alloc] initWithString:csvString separator:@"," hasHeader:YES fieldNames:nil] autorelease];
-    NSArray *rows = [parser arrayOfParsedRows];
+    NSArray *rows = [DataLoader validatedMutableRowsFromParsedRows:[parser arrayOfParsedRows]
+                                                           context:[csvPath lastPathComponent]];
     if (!rows || rows.count == 0) {
         NSLog(@"[OAEC][DataLoader] CSV parsed to no data rows: %@", csvPath);
         return nil;
     }
     static NSArray *requiredHeaders = nil;
     static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{ requiredHeaders = @[ @"Type", @"Photo", @"Last Name", @"First Name", @"District #" ]; });
+    dispatch_once(&onceToken, ^{
+        requiredHeaders = [[NSArray alloc] initWithObjects:
+                           @"Type",
+                           @"Photo",
+                           @"Last Name",
+                           @"First Name",
+                           @"District #",
+                           nil];
+    });
     NSDictionary *firstRow = rows.firstObject;
     NSArray *actualKeys = firstRow.allKeys;
     NSMutableArray *missing = [NSMutableArray array];
@@ -129,15 +160,48 @@
       fieldNames:nil]
      autorelease];
     
-    NSArray *rows = [parser arrayOfParsedRows];
+    NSArray *rows = [DataLoader validatedMutableRowsFromParsedRows:[parser arrayOfParsedRows]
+                                                           context:[csvPath lastPathComponent]];
+    if (rows == nil || [rows count] == 0) {
+        NSLog(@"[OAEC][DataLoader] Calendar CSV parsed to no data rows: %@", csvPath);
+        return nil;
+    }
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"MM/dd/yy"];
     
-    for (NSMutableDictionary *row in rows) {
-        NSDate *date = [dateFormatter dateFromString:[row objectForKey:@"Date"]];
-        [row setObject:date forKey:@"Date"];
-        [row setObject:[row.details trim] forKey:@"Details"];
+    for (id rowCandidate in rows) {
+        if (![rowCandidate isKindOfClass:[NSMutableDictionary class]]) {
+            NSLog(@"[OAEC][DataLoader] Skipping unexpected calendar row type %@ in %@.",
+                  NSStringFromClass([rowCandidate class]),
+                  csvPath);
+            continue;
+        }
+        NSMutableDictionary *row = (NSMutableDictionary *)rowCandidate;
+        id rawDate = [row objectForKey:@"Date"];
+        NSString *dateString = [rawDate isKindOfClass:[NSString class]] ? rawDate : nil;
+        if (rawDate != nil && dateString == nil) {
+            NSLog(@"[OAEC][DataLoader] Skipping calendar row with unexpected Date type %@ in %@.",
+                  NSStringFromClass([rawDate class]),
+                  csvPath);
+            continue;
+        }
+        NSDate *date = dateString != nil ? [dateFormatter dateFromString:dateString] : nil;
+        if (date != nil) {
+            [row setObject:date forKey:@"Date"];
+        } else {
+            [row removeObjectForKey:@"Date"];
+        }
+
+        id rawDetails = [row objectForKey:@"Details"];
+        NSString *details = [rawDetails isKindOfClass:[NSString class]] ? rawDetails : nil;
+        if (rawDetails != nil && details == nil) {
+            NSLog(@"[OAEC][DataLoader] Replacing unexpected Details type %@ in %@.",
+                  NSStringFromClass([rawDetails class]),
+                  csvPath);
+            details = @"";
+        }
+        [row setObject:[details trim] ?: @"" forKey:@"Details"];
     }
     
     NSSortDescriptor *sortByDate = [[[NSSortDescriptor alloc] initWithKey:@"Date" ascending:YES] autorelease];
@@ -188,12 +252,34 @@
 }
 
 +(NSArray *) buildCommitteesFromPeople:(NSArray *) people committeeKey:(NSString *) committeeKey {
+    if (![people isKindOfClass:[NSArray class]]) {
+        NSLog(@"[OAEC][DataLoader] Expected people array for committee key %@ but received %@.",
+              committeeKey,
+              people ? NSStringFromClass([people class]) : @"nil");
+        return @[];
+    }
     
     NSMutableDictionary *committees=[NSMutableDictionary dictionaryWithCapacity:10];
         
-    for (NSDictionary *person  in people) {
+    for (id personCandidate in people) {
+        if (![personCandidate isKindOfClass:[NSDictionary class]]) {
+            NSLog(@"[OAEC][DataLoader] Skipping unexpected people entry of type %@ for committee key %@.",
+                  NSStringFromClass([personCandidate class]),
+                  committeeKey);
+            continue;
+        }
+        NSDictionary *person = (NSDictionary *)personCandidate;
         
-        NSString *committeeListString = [person objectForKey:committeeKey];
+        id committeeListValue = [person objectForKey:committeeKey];
+        NSString *committeeListString = [committeeListValue isKindOfClass:[NSString class]] ? committeeListValue : nil;
+        if (committeeListValue != nil && committeeListString == nil) {
+            NSLog(@"[OAEC][DataLoader] Skipping unexpected %@ value of type %@ for %@ %@.",
+                  committeeKey,
+                  NSStringFromClass([committeeListValue class]),
+                  [person.firstName trim] ?: @"",
+                  [person.lastName trim] ?: @"");
+            continue;
+        }
         
         NSArray *committeeList = [committeeListString componentsSeparatedByString:@"~"];
         
@@ -234,7 +320,8 @@
                 [committeeArray addObject:committee];
             }
         }
-        NSMutableArray *currentArray = [person valueForKey:@"Committees"];
+        id currentArrayValue = [person valueForKey:@"Committees"];
+        NSArray *currentArray = [currentArrayValue isKindOfClass:[NSArray class]] ? currentArrayValue : nil;
         
         if (currentArray==nil) {
             [person setValue:committeeArray forKey:@"Committees"];

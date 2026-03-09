@@ -811,7 +811,10 @@
         if ([self.person.party isEqualToString:@"R"]) self.partyAndDistrictLabel.backgroundColor = [UIColor colorWithRed:1.0 green:0.0 blue:0.0 alpha:0.5];
         if ([self.person.party isEqualToString:@"D"]) self.partyAndDistrictLabel.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:1.0 alpha:0.5];
         
-        if (self.person.termLimit!=nil && [[self.person.termLimit trim] length]>0) {
+        BOOL showsLegislativeTermLimit =
+        ![self.person.type isEqualToString:OAEC_MEMBER] &&
+        ![self.person.type isEqualToString:LEGISLATIVE_CONTACT];
+        if (showsLegislativeTermLimit && self.person.termLimit!=nil && [[self.person.termLimit trim] length]>0) {
             self.termLimitLabel.text=[NSString stringWithFormat:@"Term Limit %@",self.person.termLimit];
         }
         
@@ -979,7 +982,16 @@
             [self.sections addObject:addressSection];
         }
         
-        if (self.person.committees!=nil && [self.person.committees count]>0) {
+        id rawCommittees = self.person.committees;
+        NSArray *personCommittees = [rawCommittees isKindOfClass:[NSArray class]] ? rawCommittees : nil;
+        if (rawCommittees != nil && personCommittees == nil) {
+            NSLog(@"[OAEC][PersonCard] Ignoring unexpected Committees payload of type %@ for %@ %@.",
+                  NSStringFromClass([rawCommittees class]),
+                  [self.person.firstName trim] ?: @"",
+                  [self.person.lastName trim] ?: @"");
+        }
+
+        if (personCommittees != nil && [personCommittees count] > 0) {
             ListSection *committeeSection = [[[ListSection alloc] init] autorelease];
             
             committeeSection.title = SECTION_COMMITTEE;
@@ -989,7 +1001,7 @@
             
             [committeeSection.children addObject:@"Committees"];
             
-            for(Committee *committee in self.person.committees) {
+            for (Committee *committee in personCommittees) {
                 [committeeSection.children addObject:committee];
             }
             
