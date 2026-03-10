@@ -62,6 +62,8 @@
 - (IBAction)leftArrowButtonPressed:(id)sender;
 - (void) displayCurrentMapOverlays;
 - (void) getPinFor:(CLLocation *)location;
+- (void)layoutTopMapChrome;
+- (void)layoutBottomInfoChrome;
 - (IBAction)personInfoButtonPressed:(id)sender;
 
 @end
@@ -742,6 +744,116 @@
     }
 }
 
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    [self layoutTopMapChrome];
+    [self layoutBottomInfoChrome];
+}
+
+- (void)layoutTopMapChrome {
+    CGFloat safeTop = 0.0f;
+    if (@available(iOS 11.0, *)) {
+        safeTop = self.view.safeAreaInsets.top;
+    }
+
+    UIView *topBar = self.mapTitleBackgroundView;
+    if (topBar == nil) return;
+
+    CGRect bounds = self.view.bounds;
+    CGFloat horizontalPadding = 8.0f;
+    CGFloat topPadding = 6.0f;
+    CGFloat topBarY = safeTop + topPadding;
+    CGFloat topBarHeight = MAX(36.0f, CGRectGetHeight(topBar.frame));
+    topBar.frame = CGRectMake(0.0f, topBarY, CGRectGetWidth(bounds), topBarHeight);
+
+    UIButton *leftButton = self.leftArrowButton;
+    UIButton *rightButton = self.rightArrowButton;
+    UILabel *titleLabel = self.mapTitleLabel;
+    if (leftButton == nil || rightButton == nil || titleLabel == nil) return;
+
+    CGSize leftSize = leftButton.frame.size;
+    CGSize rightSize = rightButton.frame.size;
+    CGFloat centerY = floor((topBarHeight - leftSize.height) / 2.0f);
+    leftButton.frame = CGRectMake(horizontalPadding, centerY, leftSize.width, leftSize.height);
+    rightButton.frame = CGRectMake(CGRectGetWidth(topBar.frame) - horizontalPadding - rightSize.width,
+                                   floor((topBarHeight - rightSize.height) / 2.0f),
+                                   rightSize.width,
+                                   rightSize.height);
+
+    CGFloat titleX = CGRectGetMaxX(leftButton.frame) + 6.0f;
+    CGFloat titleRight = CGRectGetMinX(rightButton.frame) - 6.0f;
+    CGFloat titleWidth = MAX(60.0f, titleRight - titleX);
+    titleLabel.frame = CGRectMake(titleX, 0.0f, titleWidth, topBarHeight);
+    titleLabel.adjustsFontSizeToFitWidth = YES;
+    titleLabel.minimumScaleFactor = 0.7f;
+    titleLabel.lineBreakMode = NSLineBreakByTruncatingTail;
+}
+
+- (void)layoutBottomInfoChrome {
+    UIView *bottomBar = self.nameBackgroundView;
+    if (bottomBar == nil) return;
+
+    CGFloat safeBottom = 0.0f;
+    if (@available(iOS 11.0, *)) {
+        safeBottom = self.view.safeAreaInsets.bottom;
+    }
+
+    CGFloat tabBarOverlap = 0.0f;
+    if (self.tabBarController != nil && self.tabBarController.tabBar != nil && !self.tabBarController.tabBar.hidden) {
+        CGRect viewInWindow = [self.view convertRect:self.view.bounds toView:nil];
+        CGRect tabBarInWindow = [self.tabBarController.tabBar convertRect:self.tabBarController.tabBar.bounds toView:nil];
+        CGRect overlap = CGRectIntersection(viewInWindow, tabBarInWindow);
+        if (!CGRectIsNull(overlap)) {
+            tabBarOverlap = CGRectGetHeight(overlap);
+        }
+    }
+
+    CGFloat bottomInset = MAX(safeBottom, tabBarOverlap);
+    CGRect bounds = self.view.bounds;
+    CGFloat barHeight = CGRectGetHeight(bottomBar.frame);
+    CGFloat bottomBarY = CGRectGetHeight(bounds) - bottomInset - barHeight;
+
+    CGFloat titleOffset = 0.0f;
+    if (self.personNameLabel != nil && self.personTitleLabel != nil) {
+        titleOffset = self.personTitleLabel.frame.origin.y - self.personNameLabel.frame.origin.y;
+    }
+    CGFloat imageOffset = 0.0f;
+    if (self.personImageView != nil) {
+        imageOffset = self.personImageView.frame.origin.y - bottomBar.frame.origin.y;
+    }
+
+    bottomBar.frame = CGRectMake(0.0f, bottomBarY, CGRectGetWidth(bounds), barHeight);
+
+    if (self.personNameLabel != nil) {
+        self.personNameLabel.frame = CGRectMake(self.personNameLabel.frame.origin.x,
+                                                bottomBarY,
+                                                self.personNameLabel.frame.size.width,
+                                                self.personNameLabel.frame.size.height);
+    }
+    if (self.personTitleLabel != nil) {
+        self.personTitleLabel.frame = CGRectMake(self.personTitleLabel.frame.origin.x,
+                                                 bottomBarY + titleOffset,
+                                                 self.personTitleLabel.frame.size.width,
+                                                 self.personTitleLabel.frame.size.height);
+    }
+    if (self.personImageView != nil) {
+        self.personImageView.frame = CGRectMake(self.personImageView.frame.origin.x,
+                                                bottomBarY + imageOffset,
+                                                self.personImageView.frame.size.width,
+                                                self.personImageView.frame.size.height);
+    }
+
+    for (UIView *subview in self.view.subviews) {
+        if (![subview isKindOfClass:[UIButton class]]) continue;
+        if (subview == self.leftArrowButton || subview == self.rightArrowButton) continue;
+        if (fabs(CGRectGetWidth(subview.frame) - CGRectGetWidth(bounds)) > 1.0f) continue;
+        if (fabs(CGRectGetHeight(subview.frame) - barHeight) > 1.0f) continue;
+
+        subview.frame = CGRectMake(0.0f, bottomBarY, CGRectGetWidth(bounds), barHeight);
+        break;
+    }
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -756,27 +868,20 @@
     [super viewDidLoad];
     firstLoad=YES;
 	// Do any additional setup after loading the view.
-    UIButton *backBtn = self.leftArrowButton ?: (UIButton *)[self.view viewWithTag:9001];
+    UIButton *backBtn = self.leftArrowButton;
     if ([backBtn isKindOfClass:[UIButton class]]) {
-        [backBtn setBackgroundImage:nil forState:UIControlStateNormal];
+        UIImage *leftArrowImage = [UIImage imageNamed:@"Arrow_Left.png"];
         [backBtn setAttributedTitle:nil forState:UIControlStateNormal];
         [backBtn setAttributedTitle:nil forState:UIControlStateHighlighted];
-        if (@available(iOS 13.0, *)) {
-            UIImage *chevron = [UIImage systemImageNamed:@"chevron.left"];
-            if (chevron) {
-                UIImageSymbolConfiguration *config = [UIImageSymbolConfiguration configurationWithPointSize:20 weight:UIImageSymbolWeightMedium];
-                chevron = [chevron imageByApplyingSymbolConfiguration:config];
-                [backBtn setImage:chevron forState:UIControlStateNormal];
-                [backBtn setTitle:nil forState:UIControlStateNormal];
-                backBtn.tintColor = [UIColor labelColor];
-            }
-        } else {
-            [backBtn setImage:nil forState:UIControlStateNormal];
-            [backBtn setTitle:@"\u2039" forState:UIControlStateNormal];
-            backBtn.titleLabel.font = [UIFont boldSystemFontOfSize:24.0];
-            [backBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [backBtn setTitle:nil forState:UIControlStateNormal];
+        [backBtn setTitle:nil forState:UIControlStateHighlighted];
+        [backBtn setBackgroundImage:nil forState:UIControlStateNormal];
+        if (leftArrowImage != nil) {
+            [backBtn setImage:leftArrowImage forState:UIControlStateNormal];
+            [backBtn setImage:leftArrowImage forState:UIControlStateHighlighted];
         }
     }
+    [self layoutTopMapChrome];
 }
 
 - (void)dealloc {
